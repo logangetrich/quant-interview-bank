@@ -1,0 +1,177 @@
+[
+  {
+    "id": 135,
+    "title": "归并排序复杂度",
+    "answer": "归并排序的时间与空间复杂度？稳定吗？<br/><br/>时间始终 <strong>O(n log n)</strong>（最好/最坏）；空间O(n)（辅助数组）。<br/>稳定。分治典型。"
+  },
+  {
+    "id": 136,
+    "title": "快速排序复杂度",
+    "answer": "快排平均与最坏时间？如何避免最坏？<br/><br/>平均 <strong>O(n log n)</strong>；最坏（已排序且选端）O(n²)。<br/>随机化选 pivot 或三数取中→几乎总O(n log n)。最坏空间O(log n)。"
+  },
+  {
+    "id": 137,
+    "title": "检测链表环（Floyd）",
+    "answer": "如何判断单链表有环？复杂度？<br/><br/>快慢指针：快走2步、慢走1步，相遇则有环。<br/>时间O(n)，空间<strong>O(1)</strong>。相遇点再定位可求环入口。"
+  },
+  {
+    "id": 138,
+    "title": "Two Sum",
+    "answer": "给定数组与target，找两数和为target的下标。最优做法？<br/><br/>哈希表存'值→下标'，遍历时查 target-x 是否已在表中。<br/>时间<strong>O(n)</strong>，空间O(n)。"
+  },
+  {
+    "id": 139,
+    "title": "Kadane 最大子数组",
+    "answer": "求数组最大连续子数组和，时间O(n)做法？<br/><br/>维护 cur=max(x, cur+x)，ans=max(ans,cur)。<br/>一次遍历：<strong>O(n)</strong>。负全时返回最大（最小负）元素。"
+  },
+  {
+    "id": 140,
+    "title": "Fisher-Yates 洗牌",
+    "answer": "如何均匀随机打乱数组？为什么不能'对每个位置随机选任一位置'？<br/><br/>从尾到头，位置i与[0,i]随机交换。每个排列等概率。<br/>若每次与[0,n-1]交换则分布不均（nⁿ种≠n!排列）。"
+  },
+  {
+    "id": 141,
+    "title": "BFS 与 DFS 区别",
+    "answer": "图的BFS与DFS各自适合什么？复杂度？<br/><br/>均 O(V+E)。BFS求最短路径（无权）、层序；DFS探路径/拓扑/连通分量。<br/>BFS用队列，DFS用栈/递归。"
+  },
+  {
+    "id": 142,
+    "title": "汉诺塔递推",
+    "answer": "n盘汉诺塔最少移动次数？递归思路？<br/><br/>T(n)=2T(n-1)+1 → T(n)=<strong>2ⁿ-1</strong>。<br/>把n-1盘移到辅助柱，移最大盘，再移回。"
+  },
+  {
+    "id": 143,
+    "title": "堆求数据流中位数",
+    "answer": "如何O(log n)插入、O(1)取中位数维护数据流？<br/><br/>两个堆：大顶堆存较小半、小顶堆存较大半，保持大小差≤1。<br/>中位数=堆顶之一（或平均）。插入O(log n)。"
+  },
+  {
+    "id": 144,
+    "title": "骑士与无赖（Knights & Knaves）",
+    "answer": "岛上骑士只说真话、无赖只说假话。A说'我们俩都是无赖'。A、B各是谁？<br/><br/>假设A是骑士→其话为真→两人都是无赖，与'A是骑士'矛盾，故A不可能是骑士。<br/>所以A是无赖→其话为假→'并非两人都是无赖'→至少有一人是骑士→<strong>B是骑士</strong>。<br/><strong>答案：A是无赖，B是骑士。</strong>"
+  },
+  {
+    "id": 145,
+    "title": "两守卫两门",
+    "answer": "两门一宝一虎，两守卫一总真一总假，只能问一句。怎么问知宝门？<br/><br/>问任一守卫：'<strong>另一个守卫会说哪扇是宝门？</strong>'然后选相反的。<br/>真守卫会转述假的（指向虎门），假守卫也会指向虎门→总得虎门，取反即宝门。"
+  },
+  {
+    "id": 146,
+    "title": "称球逻辑（信息论下界）",
+    "answer": "12球1异（不知轻重），天平3次能找出，信息论下界为何是3次？<br/><br/>可能状态 12×2=24 种。每次称量3结果→3次覆盖3³=27≥24。<br/>2次仅9<24不够→<strong>至少3次</strong>。"
+  },
+  {
+    "id": 147,
+    "title": "三个开关与灯泡（接上一题变体）",
+    "answer": "房间外3开关控1灯泡，进房1次判定。用'热'解决（见上）。若只允许看亮灭（不看热）还需几开关？<br/><br/>仅看亮灭时2态/次，1灯泡最多区分2状态→只能定位1个开关；3开关需额外信息（热/声音）。"
+  },
+  {
+    "id": 148,
+    "title": "说谎者悖论",
+    "answer": "'这句话是假的'为何是悖论？它在逻辑系统中说明什么？<br/><br/>若真则假，若假则真，无一致真值。<br/>说明朴素自指会导致不一致，推动了塔斯基真值分层、哥德尔不完备等理论。"
+  },
+  {
+    "id": 149,
+    "title": "毒酒问题（信息论）",
+    "answer": "1000桶酒1桶毒，用最少的老鼠（喝后次日死）找出毒桶，要几只？<br/><br/>每只老鼠 binary：喝/不喝。n只老鼠可区分2ⁿ桶。<br/>2¹⁰=1024≥1000 → <strong>10只</strong>（按二进制编码每桶对应老鼠组合）。"
+  },
+  {
+    "id": 66,
+    "title": "移动平均的高效计算",
+    "answer": "计算大小为k的滑动窗口平均值。<br/><br/> <strong>朴素方法：</strong>O(n×k)<br/> <strong>高效方法：</strong>O(n)<br/><br/> <code>sum = sum(arr[0:k]);<br/>for (i = k; i < n; i++) {<br/>    sum += arr[i] - arr[i-k];<br/>    avg = sum / k;<br/>}</code><br/><br/> <div class=\"answer-hint\">💡 每次只加上新元素减去旧元素，避免重复求和。</div>"
+  },
+  {
+    "id": 67,
+    "title": "随机排列（Fisher-Yates）",
+    "answer": "生成1到n的随机排列。<br/><br/> <strong>Fisher-Yates洗牌算法（O(n)）：</strong><br/> <code>for (i = n-1; i > 0; i--) {<br/>    j = rand(0, i);<br/>    swap(arr[i], arr[j]);<br/>}</code><br/><br/> <strong>正确性：</strong>每个位置等概率地被分配到剩余位置中的任意一个，保证所有n!种排列等概率出现。"
+  },
+  {
+    "id": 68,
+    "title": "斐波那契数列",
+    "answer": "F(n) = F(n-1) + F(n-2), F(0)=0, F(1)=1<br/><br/> <strong>递归：</strong> O(2ⁿ) —— 太慢<br/> <strong>动态规划：</strong> O(n) —— 空间O(n)或O(1)<br/> <strong>矩阵快速幂：</strong> O(log n)<br/><br/> <code>// 矩阵快速幂<br/>[[F(n)], [F(n-1)]] = [[1,1],[1,0]]^(n-1) × [[1],[0]]</code><br/><br/> <div class=\"answer-hint\">💡 通项公式：F(n) = (φⁿ - ψⁿ)/√5，其中φ=(1+√5)/2（黄金比）。</div>"
+  },
+  {
+    "id": 69,
+    "title": "最大连续子数组和（Kadane算法）",
+    "answer": "求数组中连续子数组的最大和。<br/><br/> <strong>Kadane算法 O(n)：</strong><br/> <code>max_ending = arr[0]; max_so_far = arr[0];<br/>for (i = 1; i < n; i++) {<br/>    max_ending = max(arr[i], max_ending + arr[i]);<br/>    max_so_far = max(max_so_far, max_ending);<br/>}<br/>return max_so_far;</code><br/><br/> <strong>关键思想：</strong>到位置i的最大和，要么包含i-1的最大和+arr[i]，要么只有arr[i]本身。<br/> <div class=\"answer-hint\">💡 变体：二维最大子矩阵、不允许全负的变种、返回子数组本身等。</div>"
+  },
+  {
+    "id": 70,
+    "title": "毒酒问题（信息论/二进制）",
+    "answer": "1000瓶酒中1瓶有毒，毒药24小时后发作。用最少老鼠在24小时内找出毒酒。<br/><br/> <strong>答案：10只老鼠。</strong><br/><br/> <strong>方法：</strong>将1000瓶酒编号为1-1000(二进制最多10位)。<br/> 第j只老鼠喝所有第j位为1的酒。<br/><br/> 24小时后，哪些老鼠死了构成一个10位二进制数，直接对应毒酒的编号。<br/><br/> <div class=\"formula\">⌈log₂(1000)⌉ = 10</div><br/> <div class=\"answer-hint\">💡 本质是信息论：1000种可能需要log₂1000 ≈ 10 bits信息，每只老鼠提供1 bit。</div>"
+  },
+  {
+    "id": 71,
+    "title": "蒙特卡洛模拟",
+    "answer": "用随机数模拟解决确定性问题。<br/><br/> <strong>基本步骤：</strong><br/> 1. 定义输入变量的概率分布<br/> 2. 随机采样生成场景<br/> 3. 对每个场景计算输出<br/> 4. 统计输出分布<br/><br/> <strong>误差估计：</strong><br/> <div class=\"formula\">标准误差 = σ/√N</div><br/> 要将误差减半，需要4倍的样本量。<br/><br/> <strong>方差缩减技术：</strong><br/> • 对偶变量法（Antithetic variates）<br/> • 控制变量法（Control variates）<br/> • 重要性采样（Importance sampling）<br/> • 分层采样（Stratified sampling）"
+  },
+  {
+    "id": 72,
+    "title": "有限差分法",
+    "answer": "用差分近似微分方程，将PDE转化为线性方程组。<br/><br/> <strong>三种差分格式：</strong><br/> • 前向差分：f'(x) ≈ [f(x+h) - f(x)] / h （显式，有条件稳定）<br/> • 后向差分：f'(x) ≈ [f(x) - f(x-h)] / h （隐式，无条件稳定）<br/> • 中心差分：f'(x) ≈ [f(x+h) - f(x-h)] / (2h) （二阶精度）<br/><br/> <strong>Crank-Nicolson格式：</strong><br/> 平均前向和后向差分 → 二阶精度且无条件稳定<br/><br/> <div class=\"answer-hint\">💡 用于期权定价时，显式格式有稳定性条件 Δt ≤ Δx²/(2σ²)，隐式和CN无此限制。</div>"
+  },
+  {
+    "id": 73,
+    "title": "C++虚函数与多态",
+    "answer": "<strong>虚函数（virtual function）</strong>实现运行时多态：<br/><br/> <code>class Base {<br/>    virtual void foo() { cout << \"Base\"; }<br/>};<br/>class Derived : public Base {<br/>    void foo() override { cout << \"Derived\"; }<br/>};<br/>// Base* p = new Derived();<br/>// p->foo(); // 输出 \"Derived\"</code><br/><br/> <strong>原理：</strong>每个含虚函数的类有虚函数表（vtable），对象中存储vtable指针。调用时通过vtable查找实际函数地址。<br/><br/> <strong>注意：</strong><br/> • 构造函数不能是虚函数<br/> • 析构函数应为虚函数（避免内存泄漏）<br/> • 虚函数有微小的运行时开销"
+  },
+  {
+    "id": 74,
+    "title": "智能指针（C++11）",
+    "answer": "<strong>unique_ptr：</strong>独占所有权，不可拷贝，可移动<br/> <code>std::unique_ptr<T> p(new T());</code><br/><br/> <strong>shared_ptr：</strong>共享所有权，引用计数<br/> <code>std::shared_ptr<T> p = std::make_shared<T>();</code><br/><br/> <strong>weak_ptr：</strong>不增加引用计数，解决shared_ptr循环引用<br/> <code>std::weak_ptr<T> wp = sp;</code><br/><br/> <div class=\"answer-hint\">💡 优先使用make_unique/make_shared而非直接new，可减少内存泄漏和提高性能。</div>"
+  },
+  {
+    "id": 75,
+    "title": "两扇门与两个守卫",
+    "answer": "两扇门：一扇通向offer，一扇通向出口。两个守卫：一个总说真话，一个总说假话。只能问一个是非问题。<br/><br/> <strong>问：\"另一个守卫会说你守卫的是通向offer的门吗？\"</strong><br/><br/> • 回答\"是\" → 选另一扇门<br/> • 回答\"否\" → 选这扇门<br/><br/> <strong>分析：</strong><br/> 情景1：真话守卫在offer门前 → 假话守卫会说\"否\" → 真话守卫如实转述\"否\"<br/> 情景2：假话守卫在offer门前 → 真话守卫会说\"是\" → 假话守卫谎称\"否\"<br/><br/> 两种情景下回答都是\"否\"，所以\"否\"→选此门，\"是\"→选另一扇。"
+  },
+  {
+    "id": 76,
+    "title": "安全传递文件（密码学思维）",
+    "answer": "你需要通过不可靠快递向同事发送机密文件。你们各有自己的锁和唯一钥匙，但快递过程中未锁箱内的东西会丢失。如何安全传递？<br/><br/> <strong>三步协议：</strong><br/> 1. 你将文件放入箱中，用你的锁锁上 → 寄给同事<br/> 2. 同事收到后，用自己的锁再锁一道（现在箱上有两把锁）→ 寄回给你<br/> 3. 你收到后，用你的钥匙打开你的锁 → 寄回给同事<br/> 4. 同事用自己的钥匙打开，取出文件<br/><br/> <div class=\"answer-hint\">💡 这本质上是Diffie-Hellman密钥交换的物理类比——无需共享密钥即可安全通信。</div>"
+  },
+  {
+    "id": 77,
+    "title": "日历骰子",
+    "answer": "两个骰子，每面放一个数字（0-9），通过排列两骰子表示01-31的日期。如何放置？<br/><br/> <strong>关键洞察：6可以当9用！</strong><br/><br/> 必须有的数字：0,0,1,1,2,2（日期11和22需要两个1和两个2，01-09需要两个0）<br/><br/> 剩余4个面放3,4,5,6,7,8中的4个 → 但有7个数字！<br/><br/> <strong>解决：6和9共用一个面</strong><br/><br/> <strong>最终方案：</strong><br/> 骰子A：0, 1, 2, 3, 4, 5<br/> 骰子B：0, 1, 2, 6(=9), 7, 8"
+  },
+  {
+    "id": 78,
+    "title": "量化的平均工资",
+    "answer": "8个量化分析师想知道团队平均工资，但都不想透露自己的工资。如何实现？<br/><br/> <strong>方案：</strong><br/> 1. 第一个人选一个随机数R，加上自己的工资S₁，传给第二人<br/> 2. 第二人加上S₂，传给第三人<br/> 3. ...第八人加上S₈，传回第一个人<br/> 4. 第一人减去R，除以8得到平均工资<br/><br/> <div class=\"answer-hint\">💡 实际应用：基金持仓数据匿名化——给每个持仓的基金ID加随机数再分发，防止反推策略。</div>"
+  },
+  {
+    "id": 79,
+    "title": "50个智者与玻璃杯",
+    "answer": "50个智者被关在各自房间。有一个玻璃杯（初始口朝下）。每分钟苏丹随机叫一人，此人可选择翻转或不翻。当有人正确声明\"所有人至少被叫过一次\"时全部释放，错误则全部处死。事先可商量策略。<br/><br/> <strong>策略：</strong><br/> 选1人为\"发言人\"，其余49人为\"计数者\"<br/><br/> • 计数者：第一次看到口朝下→翻转为口朝上，之后不再翻<br/> • 发言人：每次看到口朝上→翻为口朝下并计数+1<br/> • 发言人计到49 → 声明所有人被叫过<br/><br/> <div class=\"answer-hint\">💡 49人各自翻1次，发言人翻49次收回，计数=49即所有人到过。</div>"
+  },
+  {
+    "id": 80,
+    "title": "七彩帽子（模运算证明）",
+    "answer": "7个囚徒，每人戴彩虹七色之一的帽子（颜色可重复），能看到其他6人但看不到自己。各写一个猜测，至少1人猜对则全释放。如何保证？<br/><br/> <strong>策略：用模7运算</strong><br/><br/> 给颜色编号0-6，设囚徒也编号0-6。<br/> 囚徒i的猜测gᵢ满足： (gᵢ + Σ_{k≠i} x_k) mod 7 = i<br/><br/> <strong>证明至少1人对：</strong><br/> 设真实颜色和为 S = Σ x_k，则 S mod 7 ∈ {0,1,...,6}<br/> 当 S mod 7 = i 时，囚徒i猜对（因为gᵢ = i - Σ_{k≠i} x_k mod 7 = x_i mod 7）<br/><br/> S mod 7必等于某个i，所以至少1人猜对。"
+  },
+  {
+    "id": 81,
+    "title": "√2是无理数（反证法）",
+    "answer": "<strong>反证法：</strong>假设 √2 = m/n 且 m,n 互质。<br/><br/> m² = 2n² → m²是偶数 → m是偶数<br/> 设 m = 2k → 4k² = 2n² → n² = 2k² → n也是偶数<br/><br/> m和n都是偶数 → 有公因子2 → 与互质矛盾！<br/><br/> <strong>因此 √2 是无理数。</strong>"
+  },
+  {
+    "id": 82,
+    "title": "缺失的整数",
+    "answer": "1到100中随机去掉2个数，如何高效找出？<br/><br/> <strong>方法（O(n)时间O(1)空间）：</strong><br/><br/> 设缺失的数为x和y：<br/> <div class=\"formula\">x + y = (1+2+...+100) - Σ(已知数) = 5050 - S₁</div><br/> <div class=\"formula\">x² + y² = (1²+2²+...+100²) - Σ(已知数²) = 338350 - S₂</div><br/><br/> 两个方程两个未知数，解出x和y。<br/> <div class=\"answer-hint\">💡 推广：去掉k个数可用前k个幂和方程组，但空间O(k)。</div>"
+  },
+  {
+    "id": 83,
+    "title": "时钟碎成三块",
+    "answer": "时钟(1-12)摔成三块，每块数字之和相等。各块上有哪些数字？<br/><br/> Σ(1到12) = 78，每块和 = 26。<br/><br/> <strong>注意12和1在钟面上是相邻的！</strong><br/><br/> • 第一块：5, 6, 7, 8 → 和26 ✓<br/> • 第二块：11, 12, 1, 2 → 和26 ✓（12+1=13, 11+2=13）<br/> • 第三块：3, 4, 9, 10 → 和26 ✓"
+  },
+  {
+    "id": 84,
+    "title": "100层楼的鸡蛋",
+    "answer": "100层楼，2个鸡蛋。鸡蛋从≥N层扔会碎。最坏情况下最少扔几次确定N？<br/><br/> <strong>答案：14次</strong><br/><br/> 设最多扔k次，覆盖的楼层数为：<br/> k + (k-1) + (k-2) + ... + 1 = k(k+1)/2 ≥ 100<br/><br/> k=14: 14×15/2 = 105 ≥ 100 ✓<br/> k=13: 13×14/2 = 91 < 100 ✗<br/><br/> <strong>策略：</strong>14→27→39→50→60→69→77→84→90→95→99→100<br/> 碎了则用第2个鸡蛋从上次位置+1逐层试。"
+  },
+  {
+    "id": 85,
+    "title": "25匹马找前3名",
+    "answer": "（同前文马赛问题，此处补充说明）<br/><br/> <strong>7场比赛：</strong><br/> 1-5. 分5组各跑1场（5场）<br/> 6. 5个第一名跑第6场<br/> 7. 候选马（第6场第1名所在组的2-3名 + 第2名所在组的1-2名 + 第3名所在组的第1名）跑最后一场<br/><br/> <div class=\"answer-hint\">💡 核心推理：第6场后可知各组之间的整体快慢关系，排除大量不可能的马。</div>"
+  }
+]

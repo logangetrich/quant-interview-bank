@@ -1,0 +1,41 @@
+# 大二进制（不应入仓的 OCR 安装包）
+tess_installer.exe
+
+# OCR 原始日志（体积大且与最终产品无关）
+hots_ocr.txt
+red_ocr.txt
+yellow_ocr.txt
+yellow_ocr_sample.txt
+
+# 中间/老批次 JSON（已被最终版取代）
+batch*.json
+new_questions.json
+questions.json
+to_translate_*.json
+to_translate_v2_*.json
+trans_0[0-7].json
+
+# 一次性调试输出与空日志
+*_err.txt
+*_out.txt
+extract_err.txt
+extract_log.txt
+id_log.txt
+node_err.txt
+node_out.txt
+slice_err.txt
+slice_out.txt
+validate_err.txt
+validate_out.txt
+ocr_all.log
+
+# 系统与本地记忆
+.workbuddy/
+*.zip
+*.tar.gz
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 430,
+    "title": "我的一名学生去面试，面试官们想了解他对公式的熟悉程度，以及向客户解释问题的能力。他们问到：为什么如果 p 是大于 3 的素数，那么 p?…",
+    "answer": "<br/>\n    <strong>原题：</strong>我的一名学生去面试，面试官们想了解他对公式的熟悉程度，以及向客户解释问题的能力。他们问到：为什么如果 p 是大于 3 的素数，那么 p? — 1 总是能被 24 整除且没有余数。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 431,
+    "title": "你正在竞标一家公司，其未知的真实价值在 0 和 1 之间均匀分布。虽然你不知道公司的真实价值 S'，但你的确知道，一旦人们得知你已出价…",
+    "answer": "<strong>原题：</strong> 你正在竞标一家公司，其未知的真实价值在 0 和 1 之间均匀分布。虽然你不知道公司的真实价值 S'，但你的确知道，一旦人们得知你已出价，这一消息就会使价值翻倍至 2S'。然而，只有当你的出价至少与公司原始价值一样大时，你的出价才会被接受。你应如何出价以使你的期望收益最大化？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 432,
+    "title": "你有一根线状的引信，它恰好燃烧一分钟。这根引信是不均匀的，它可能起初烧得慢，然后快，然后又慢，如此反复。你有一根火柴…",
+    "answer": "<strong>原题：</strong> 你有一根线状的引信，它恰好燃烧一分钟。这根引信是不均匀的，它可能起初烧得慢，然后快，然后又慢，如此反复。你有一根火柴，但没有手表。你如何精确测量出 30 秒？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 433,
+    "title": "在地球上有多少个地方，你可以向南走一英里、向东走一英里、再向北走一英里，最终恰好回到起点？",
+    "answer": "<strong>原题：</strong> 在地球上有多少个地方，你可以向南走一英里、向东走一英里、再向北走一英里，最终恰好回到起点？假设地球是一个完美的球体，你在每一段路程上的罗盘方位保持恒定，地球的所有部分都可以行走，并且你的脚任意小。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 434,
+    "title": "这是一个绝对经典的题。一位国王向他的国家 10 个地区中的每一个征收 1000 枚金币的税。…",
+    "answer": "<strong>原题：</strong> 这是一个绝对经典的题。一位国王向他的国家 10 个地区中的每一个征收 1000 枚金币的税。 每个地区的收税官在年末把所要求的那袋金币带给他。一名线人告诉国王，有一个收税官在作弊，给出的金币始终比应有的轻 10%，但他不知道是哪一个收税官在作弊。国王知道每枚金币应恰好重一盎司。国王如何只使用一次称重装置就找出作弊者？ !2 直树佐藤（Naoki Sato）提出了一个后续问题。在两个方格上各标一个“X”：一个黑格，一个白格。你能否用多米诺骨牌覆盖剩下的方格？参见解答 1.43。 ©2004 Timothy Falcon Crack 23 保留所有权利 第 1 章 纯量化与逻辑问题<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 435,
+    "title": "再说一个绝对经典的题。你雇了一个人在你的院子里工作七天。你想用黄金付他工钱。你有一根分成七段的金条——就像巧克力条一样。你想每天付给他一段金…",
+    "answer": "<strong>原题：</strong> 再说一个绝对经典的题。你雇了一个人在你的院子里工作七天。你想用黄金付他工钱。你有一根分成七段的金条——就像巧克力条一样。你想每天付给他一段金子，但你只能把金条掰断两处。你应在哪里掰断金条，才能每天结束时付给他工钱，并且在随后的日子里他可以用你之前付给他的金子来找零？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 436,
+    "title": "在 100!（100 的阶乘）的末尾有多少个连续的零？",
+    "answer": "<br/>\n    <strong>原题：</strong>在 100!（100 的阶乘）的末尾有多少个连续的零？<br/>\n    <br/>\n    例如，12! = 479,001,600 的末尾有两个连续的零。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 437,
+    "title": "为什么镜子里的影像是水平翻转而不是垂直翻转？",
+    "answer": "<strong>原题：</strong> 为什么镜子里的影像是水平翻转而不是垂直翻转？ 例如，虽然我把手表戴在左腕上，而我的镜像把它戴在右腕上，但我的镜像并不是倒立着的。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 438,
+    "title": "据称这是一个真实的金融面试问题。它必定是交易员面试，因为除了交易员没人会在面试中问这个。我曾考虑改写这个问题…",
+    "answer": "<strong>原题：</strong> 据称这是一个真实的金融面试问题。它必定是交易员面试，因为除了交易员没人会在面试中问这个。我曾考虑改写这个问题，但为了真实性原样保留。如果你容易感到被冒犯，请移开视线！ 三个男人和一个女人如何只用两个避孕套就能进行彼此安全的异性性行为？假设避孕套都不会破裂或渗漏，并且你不能清洗用过的避孕套。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 439,
+    "title": "最后，任意两个连续素数的平均数有可能也是素数吗？",
+    "answer": "<strong>原题：</strong> 最后，任意两个连续素数的平均数有可能也是素数吗？ !3 如果是一个男人和三个女人，答案是类似类型的，但不同。 ©2004 Timothy Falcon Crack 24 保留所有权利 第 2 章 衍生品问题 回答本章问题的一个先决条件是对基本期权定价理论的了解。我强烈推荐我的书《Basic Black-Scholes: Option Pricing and Trading》（Crack [2004]）作为最佳参考资料。它为你打下坚实的 Black-Scholes 期权定价基础，并提供关于期权交易的实用建议。参见本书最后一页的广告，或直接访问 www.BasicBlackScholes.com。本章的解答见附录 B。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 440,
+    "title": "所有 Black-Scholes 假设都成立。假设无股息。 股票价格为 100 美元。无风险利率为每年 5%。考虑一份一年期…",
+    "answer": "<br/>\n    <strong>原题：</strong>所有 Black-Scholes 假设都成立。假设无股息。<br/>\n    <br/>\n    股票价格为 100 美元。无风险利率为每年 5%。考虑一份一年期、执行价为平值（即执行价等于当前现货价）的欧式看涨期权。如果波动率为零（即 σ = 0），这份看涨期权值多少钱？在给看涨期权定价后，请告诉我如何对冲这份看涨期权。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 441,
+    "title": "两个标准期权具有完全相同的特征，只除了一点：一个期限长，另一个期限短。哪一个的 gamma 更高？",
+    "answer": "<strong>原题：</strong> 两个标准期权具有完全相同的特征，只除了一点：一个期限长，另一个期限短。哪一个的 gamma 更高？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 442,
+    "title": "假设 IBM 每股交易价格为 75 美元。构建一份在 IBM 首次触及 100 美元时恰好支付一美元的衍生证券…",
+    "answer": "<strong>原题：</strong> 假设 IBM 每股交易价格为 75 美元。构建一份在 IBM 首次触及 100 美元时恰好支付一美元的衍生证券，成本是多少？请仔细解释这份证券的构建方式。你可以忽略 IBM 的股息，假设无风险利率为零，假设所有资产可无限分割，忽略任何卖空限制，并忽略任何税收或交易成本。* 这会在一定程度上模糊问题，但你可以把这份衍生品看作一份永久欧式向上敲出期权，其敲出障碍在 100 美元，回偿为 1 美元。你不需要知道执行价是多少，也不需要知道它是看跌还是看涨，因为这份衍生品实际上就只是回偿本身，仅此而已。 ©2004 Timothy Falcon Crack 25 保留所有权利 第 2 章 衍生品问题<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 443,
+    "title": "假设一个无股息的 Black-Scholes 世界。考虑一份标准欧式看涨期权，执行价为平值（即执行价等于当前现货价）…",
+    "answer": "<strong>原题：</strong> 假设一个无股息的 Black-Scholes 世界。考虑一份标准欧式看涨期权，执行价为平值（即执行价等于当前现货价），期限为一年。如果利率为 r = 0.06，这份期权的 delta 是大于还是小于 0.5？它取决于什么？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 444,
+    "title": "假设一个带有连续股息的 Black-Scholes 世界。考虑一份标准欧式看涨期权，执行价为平值（即执行价等于当前现货价）…",
+    "answer": "<br/>\n    <strong>原题：</strong>假设一个带有连续股息的 Black-Scholes 世界。考虑一份标准欧式看涨期权，执行价为平值（即执行价等于当前现货价），期限为一年。如果利率为 r = 0.06，股息率为 q = 0.03，你能否判断这份期权的 delta 是大于还是小于 0.5？它取决于什么？<br/>\n    <br/>\n    小故事：最近的一些问题包括“你认为投资银行家是做什么的？”不仅如此，还有“你理解投资银行家的工作时长及其原因吗？”这些人中的一些人当你见到他们时看起来糟透了。你确定自己的职业选择吗？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 445,
+    "title": "你持有一份 MITCO 股票的看涨期权多头。你已经对头寸做了 delta 对冲。你在收音机里听到，MITCO 的 CEO…",
+    "answer": "<strong>原题：</strong> 你持有一份 MITCO 股票的看涨期权多头。你已经对头寸做了 delta 对冲。你在收音机里听到，MITCO 的 CEO 出于个人原因从纽约 MITCO 摩天大楼的楼顶跳了下去。股价随之下跌 10 美元。你如何调整你的对冲（定性地）？也就是说，你是借入并买入股票，还是卖出股票并贷出？请仔细解释。 永久欧式向上敲出期权，敲出障碍在 100 美元，回偿为 1 美元。你不需要知道执行价是多少，也不需要知道它是看跌还是看涨，因为这份衍生品实际上就只是回偿本身，仅此而已。 ©2004 Timothy Falcon Crack 26 保留所有权利<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 446,
+    "title": "你如何计算期权的 delta？",
+    "answer": "<br/>\n    <strong>原题：</strong>你如何计算期权的 delta？？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 447,
+    "title": "请非常仔细地解释标准 Black-Scholes 欧式看涨期权定价公式（无股息）中出现的 N(d₁) 和 N(d₂) 这两个项",
+    "answer": "<br/>\n    <strong>原题：</strong>请非常仔细地解释，在无股息的标准 Black-Scholes 欧式看涨期权定价公式中出现的 N(d₁) 和 N(d₂) 这两个项。？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 448,
+    "title": "考虑一份欧式数字期权（或称“二元期权”），它在到期时若股票价格高于执行价 X，则支付常数 H，否则支付零。这份期权的价格是多少？它与标准…",
+    "answer": "<strong>原题：</strong> 考虑一份欧式数字期权（或称“二元期权”），它在到期时若股票价格高于执行价 X，则支付常数 H，否则支付零。这份期权的价格是多少？它与标准 Black-Scholes 欧式看涨期权的价格有何关系？请仔细解释。*<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 449,
+    "title": "比较标准欧式看涨期权的“delta”与障碍期权（例如“向下敲出”看涨期权）的 delta。 ? 分别对带股息和不带股息的标准欧式看涨期权…",
+    "answer": "<br/>\n    <strong>原题：</strong>比较标准欧式看涨期权的“delta”与障碍期权（例如“向下敲出”看涨期权）的 delta。<br/>\n    <br/>\n    ? 分别对带股息和不带股息的标准欧式看涨期权，以及没有闭式解的外资期权作答。<br/>\n    <br/>\n    3 现在用这一解释推导出标准 Black-Scholes 欧式看跌期权定价公式——如果你能做到的话。验证这些定价公式满足看跌-看涨平价关系（其中 D = 0）：S(t) + p(t) = c(t) + Xe^{-r(T-t)} + D。<br/>\n    <br/>\n    这是“现金或无物”数字期权。你也应该能对“资产或无物”数字期权（若 S(T) > X 则给你资产，否则什么都没有）回答这个问题。<br/>\n    <br/>\n    =T 对于向上敲出看涨期权，答案是否不同？请仔细解释。顺便问一句，谁会买向上敲出看涨期权？嗯，假设你预期某只证券只有有限的上行空间。如果你想参与这一上行，却又不想为你认为极不可能的进一步价格上涨付费，那么向上敲出看涨期权可能正是你想要的（见 Derman and Kani [1993, pp3-4]）。<br/>\n    <br/>\n    ©2004 Timothy Falcon Crack 27 保留所有权利<br/>\n    <br/>\n    <br/>\n    第 2 章 衍生品问题<br/>\n    <br/>\n    小故事：我的一名学生曾被要求“描述你参加过的最棒的派对”。她说这家知名的华尔街投资银行正在寻找“爱玩”的人。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 450,
+    "title": "(**) 这是一个应用性的期权定价理论问题，取自一名 MIT 学生的电话面试。给定行业板块指数 ISI50…",
+    "answer": "<strong>原题：</strong> (**) 这是一个应用性的期权定价理论问题，取自一名 MIT 学生的电话面试。给定行业板块指数 ISI50 的连续复利收益率的三个时间序列。这些时间序列在相同的时间段内分别是日度、周度和月度的。你要为以 ISI50 的水平为标的、距到期还有一个月的一份标准欧式看涨期权定价。你决定使用可靠的 Black-Scholes 模型。你观察到了所有输入变量，唯独波动率项 σ² 除外。你不确定该用三个时间序列中的哪一个来估计波动率项，于是计算了每个时间序列的样本波动率。你认为这些估计量（σ²_d, σ²_w, σ²_m）之间应满足 σ²_m ≈ 20σ²_d、σ²_w ≈ 4σ²_d 等关系。因此，你既可以从月度估计中显式得到月度波动率，也可以隐式地从周度或日度估计中得到。你认为日度数据最可靠（它们的观测值最多）。令你大为惊恐的是，你发现 σ²_m > 4σ²_w、σ²_w > 4σ²_d，以及 σ²_m > 20σ²_d。进一步调查表明这些差异在统计上高度显著。因此你的统计观察是：隐含在日度和周度时间序列中的月度波动率，显著小于月度时间序列中的月度波动率。你如何为这份期权定价？请仔细解释你的推理。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 451,
+    "title": "考虑一份不分红股票上的普通美式看涨期权。在时间 t 该看涨期权的价格为 C(t)。该看涨期权的“内在价值”为 max[S(t) — X,…",
+    "answer": "<br/>\n    <strong>原题：</strong>考虑一份不分红股票上的普通美式看涨期权。在时间 t 该看涨期权的价格为 C(t)。该看涨期权的“内在价值”为 max[S(t) — X, 0]（其中 S(t) 是时间 t 的股票价格，X 是执行价格）。看涨期权价值超出内在价值的部分就是该期权的“时间价值”。请画出时间价值 C(t) — max[S(t) — X, 0] 相对于 S(t) 的图形。请仔细解释该图的各种特征。<br/>\n    <br/>\n    ® 你可以自由假设一周恰好是五天，一个月恰好是 20 天，并且没有缺失的观测值或交易所假日。<br/>\n    <br/>\n    \" 提示：首先解释你的统计观察可能如何以及为何会出现。哪里出了问题？问问自己 Black-Scholes 定价是否仍然适用。如果不适用，你该转向何处？<br/>\n    <br/>\n    ©2004 Timothy Falcon Crack 28 保留所有权利<br/>\n    <br/>\n    <br/>\n    小故事：我的一名学生曾被问到“你会如何为你自己估值？”也就是说，用贴现现金流分析给出一个关于你自身价值的美元数字。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 452,
+    "title": "你卖给客户一份一年期欧式看涨期权已经 10 个月了。自卖出该期权以来，你一直在对其敞口做 delta 对冲。现在该期权处于深度实值状态…",
+    "answer": "<br/>\n    <strong>原题：</strong>你卖给客户一份一年期欧式看涨期权已经 10 个月了。自卖出该期权以来，你一直在对其敞口做 delta 对冲。现在该期权处于深度实值状态，你的复制组合的 delta 相应地很高（比如说大约 0.90）。<br/>\n    <br/>\n    假设在期权存续期的最后两个月里，你观察到标的股票价格在温和下跌。随着股价在这段时间内下跌，复制组合的 delta 会发生什么变化？也就是说，在你看股价下跌的过程中，你是在买入股票还是在卖出股票？你可能需要描述几种不同的可能情景——请清楚地说明你所做的假设。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 453,
+    "title": "你对跳跃过程和跳跃扩散过程了解多少？",
+    "answer": "<br/>\n    <strong>原题：</strong>你对跳跃过程和跳跃扩散过程了解多少？请解释，对于价格水平遵循跳跃过程的资产所写的看涨期权，其定价公式在何时能够、何时不能用 Black-Scholes/Merton 无套利技术推导出来。<br/>\n    <br/>\n    8 或许更自然的内在价值定义是 max[S(t)—Xe^{-r(T-t)}, 0]（Merton (1973, p145)；Merton [1992, p260]；Smith [1976, p11]）。用这个内在价值的定义，时间价值相对于 S(t) 的图会是什么样子？<br/>\n    <br/>\n    ° 描述一份以股票为标的的欧式看涨期权的定价公式形式，该股票价格水平遵循跳跃扩散过程（采用 Merton 的记号）：dS = (α — λk)S dt + σ S dZ + dq，其中若“泊松事件”（即跳跃）不发生，则 dq = 0；若跳跃发生，则 dq = (Y — 1)，(Y — 1) 是一个脉冲，使股票价格从 S 有限地跳跃到 SY；α 是股票的瞬时预期收益率，σ² 是假设不发生跳跃时收益的瞬时方差，dZ 是标准维纳过程，λ 是你每单位时间预期发生的次数，k = E(Y —1)，其中 E 是关于随机变量 Y 的期望算子，并且假设 dZ 独立于泊松过程 dq（见 Merton [1992, p313]）。<br/>\n    <br/>\n    ©2004 Timothy Falcon Crack 29 保留所有权利<br/>\n    <br/>\n    <br/>\n    第 2 章 衍生品问题<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 454,
+    "title": "本题涉及不分红股票上的标准欧式看涨期权。要求你画出三幅紧密相关的图形如下： 1. 请画出到期时（时间 T）看涨期权价格相对于期末股票价格…",
+    "answer": "<br/>\n    <strong>原题：</strong>本题涉及不分红股票上的标准欧式看涨期权。要求你画出三幅紧密相关的图形如下：<br/>\n    <br/>\n    1. 请画出到期时（时间 T）看涨期权价格相对于期末股票价格 S(T) 的图。<br/>\n    <br/>\n    2. 请画出时间 t 的看涨期权价格相对于期货价格 F(t,T) 的图。期货价格 F(t, T) 是在到期前的时间 t 观测到的。期货合约和期权都在同一日期 T 到期。<br/>\n    <br/>\n    3. 现在画出到期前时间 t 的看涨期权价格相对于股票价格的图。<br/>\n    <br/>\n    请仔细解释这三幅图之间的关系。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 455,
+    "title": "考虑同一标的股票上的两个欧式看涨期权。这两个期权具有相同的执行价。假设利率恒定。一个期权一年到期；另一个四年到期。假设你在…",
+    "answer": "<br/>\n    <strong>原题：</strong>考虑同一标的股票上的两个欧式看涨期权。这两个期权具有相同的执行价。假设利率恒定。一个期权一年到期；另一个四年到期。假设你在 Black-Scholes 公式中代入 σ = 15% 来为一年期期权估值。那么你在 Black-Scholes 公式中应代入什么数值的 σ 来为四年期期权估值？假设在两种情况下你都在 Black-Scholes 公式中设定 T—t = 1（即第二种情况下一个时间单位等于四年，而第一种情况下只等于一年）。<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 456,
+    "title": "(***) Black-Scholes 公式是在假设股票价格过程 S(t) 遵循几何布朗运动的条件下推导出来的：dS(t) =…",
+    "answer": "<strong>原题：</strong> (***) Black-Scholes 公式是在假设股票价格过程 S(t) 遵循几何布朗运动的条件下推导出来的：dS(t) = μS(t)dt + σS(t)dw(t)，其中 w(t) 是标准布朗运动。现在假设股票价格过程 S(t) 遵循算术布朗运动：dS(t) = μdt + σdw(t)。请推导以 S(t) 为标的的看涨期权定价公式。请假设该期权为平值【即 S(t) = X】，无风险利率 r = 0，且股票不支付股息。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 457,
+    "title": "面试官：“你对 Black-Scholes 定价很熟悉，对吧？",
+    "answer": "<strong>原题：</strong> 面试官：“你对 Black-Scholes 定价很熟悉，对吧？”面试者（略作停顿后，自信地）：“的确如此。”面试官：“当隐含波动率为 40 时，一份以 100 美元股票为标的、三个月期、平值（即 S = X）的看涨期权价值是多少？请假设 r = 0（反正这是最不重要的输入变量），并同样假设股票不支付股息。你有 10 秒钟在脑中算出结果。现在告诉我，如果换成看跌期权，你的答案会如何变化。” 10 直到最近（2002 年 11 月），单只股票的期货才在美国开始交易。详见 www.OneChicago.com。 ©2004 Timothy Falcon Crack 30 保留所有权利<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 458,
+    "title": "<有一个客户打来电话，想要一份 100 天期欧式看涨期权的报价。你报出 100 美元。一分钟后他回电话，想要同一份期权但期限为 200…",
+    "answer": "<strong>原题：</strong> <有一个客户打来电话，想要一份 100 天期欧式看涨期权的报价。你报出 100 美元。一分钟后他回电话，想要同一份期权但期限为 200 天的报价。第二份报价与第一份报价相比如何？请仔细解释。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 459,
+    "title": "假设一个 Black-Scholes 世界。你持有一份股票的一年期欧式看涨期权。没有股息，利率假设为零…",
+    "answer": "<strong>原题：</strong> 假设一个 Black-Scholes 世界。你持有一份股票的一年期欧式看涨期权。没有股息，利率假设为零，期权为平值（即执行价等于当前现货价）。当前现货价为 100 美元。期末股票价格（以当前股票价格为条件）的标准差为 10 美元。这份看涨期权的价格更接近 1 美元、5 美元，还是 10 美元？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 460,
+    "title": "你持有一份股票的 100 天欧式看涨期权，其隐含波动率为 20。假设你现在就知道，明天隐含波动率将上升到 25，但在此之后…",
+    "answer": "<strong>原题：</strong> 你持有一份股票的 100 天欧式看涨期权，其隐含波动率为 20。假设你现在就知道，明天隐含波动率将上升到 25，但在此之后，在剩余存续期内它将回到 20。那么，对看涨期权期限做多长的延展，才能产生与上述单日波动率上升相同的看涨期权现值变化（假设隐含波动率恒定为 20）？也就是说，在其他条件相同的情况下，期限上的何种变化等价于所报出的单日隐含波动率变化？请仔细解释。<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 461,
+    "title": "你持有一个执行价为 25 美元的跨式组合多头。标的资产当前在 25 美元。建立这个跨式组合花费了你 5…",
+    "answer": "<strong>原题：</strong> 你持有一个执行价为 25 美元的跨式组合多头。标的资产当前在 25 美元。建立这个跨式组合花费了你 5 美元。你在标的资产上寻求怎样的价格变动？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 462,
+    "title": "你正在考虑两份合约：一份欧洲美元期货合约，六个月到期，以 5% 卖出，基于三个月期 LIBOR 结算，每日盯市；以及一份欧洲美元远期合约…",
+    "answer": "<strong>原题：</strong> 你正在考虑两份合约：一份欧洲美元期货合约，六个月到期，以 5% 卖出，基于三个月期 LIBOR 结算，每日盯市；以及一份欧洲美元远期合约，六个月到期，以 5% 卖出，在到期时基于三个月期 LIBOR 结算。 1. 你更偏好哪份合约（还是无差异）？ 2. 你认为存在错误定价吗？ 3. 如果你做多其中一份并做空另一份，哪一份应该做多，哪一份应该做空（还是无差异）？ 11 由此可得，连续复利收益率的标准差约为每年 10%。 12 如果标准差为每年 20 美元，这份看涨期权的价格更接近 5 美元、10 美元，还是 20 美元？ ©2004 Timothy Falcon Crack 31 保留所有权利 第 2 章 衍生品问题<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 463,
+    "title": "你要用蒙特卡洛模拟来对一份看涨期权估值。是模拟看涨期权本身的几何布朗运动（GBM）过程更好，还是模拟标的资产的 GBM 过程更好？",
+    "answer": "<br/>\n    <strong>原题：</strong>你要用蒙特卡洛模拟来对一份看涨期权估值。是模拟看涨期权本身的几何布朗运动（GBM）过程更好，还是模拟标的资产的 GBM 过程更好？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 464,
+    "title": "假设你持有抵押贷款支持证券的多头头寸。如果你预期债券市场会上涨，那么正凸性还是负凸性对你更有利？ 小故事：有个老故事…",
+    "answer": "<br/>\n    <strong>原题：</strong>假设你持有抵押贷款支持证券的多头头寸。如果你预期债券市场会上涨，那么正凸性还是负凸性对你更有利？<br/>\n    <br/>\n    小故事：有个老故事，讲一位候选人飞到伦敦去面试。面试时，面试官借口离开几分钟。然而在离开前，他让面试者去打开一扇窗户。一旦独处，面试者发现所有的窗户都被封死了。妙极了！Michael Lewis（在他出色的著作《说谎者的扑克牌》中）谈到了这种手法在华尔街的运用（Lewis, 1990, p27）。他提到，一位绝望的面试者把一把椅子直接扔穿了曼哈顿 Lehman 大厦 48 层（48rd，应为 48th）的窗户！<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 465,
+    "title": "以下用于对冲空头看涨期权的策略有什么问题：如果股票价格超过执行价就买入一股，如果股票价格跌破执行价就卖出这一股？",
+    "answer": "<strong>原题：</strong> 以下用于对冲空头看涨期权的策略有什么问题：如果股票价格超过执行价就买入一股，如果股票价格跌破执行价就卖出这一股？<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 466,
+    "title": "你的随机微积分生疏了吗？关于 ∫ w(t)dt，你能说些什么，其中 w(t) 是标准布朗运动？",
+    "answer": "<br/>\n    <strong>原题：</strong>你的随机微积分生疏了吗？关于 ∫ w(t)dt，你能告诉我些什么，其中 w(t) 是标准布朗运动？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 467,
+    "title": "关于 ∫ w(t)dw(t)，你能说些什么，其中 w(t) 是标准布朗运动？",
+    "answer": "<br/>\n    <strong>原题：</strong>关于 ∫ w(t)dw(t)，你能说些什么，其中 w(t) 是标准布朗运动？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  },
+  {
+    "id": 468,
+    "title": "(**) 一份欧式“幂看涨期权”的支付由 max(S²—X,0) 给出。请用 Black-Scholes…",
+    "answer": "<strong>原题：</strong> (**) 一份欧式“幂看涨期权”的支付由 max(S²—X,0) 给出。请用 Black-Scholes 定价推导一份欧式幂看涨期权的价格。 ©2004 Timothy Falcon Crack 32 保留所有权利 小故事：这里有一个他们可能会突然抛出的问题，用来试探你对这份特定工作的热情：“如果我们现在就给你一份工作，你会接受吗？”<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>"
+  },
+  {
+    "id": 469,
+    "title": "为什么当你把期权的隐含波动率对其执行价格作图时，会出现“波动率微笑”效应？",
+    "answer": "<br/>\n    <strong>原题：</strong>为什么当你把期权的隐含波动率对其执行价格作图时，会出现“波动率微笑”效应？<br/><br/>\n    <strong>参考解答：</strong>(答案见原书 / see original book)"
+  }
+]

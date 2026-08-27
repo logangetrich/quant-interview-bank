@@ -1,0 +1,202 @@
+[
+  {
+    "id": 310,
+    "title": "从第一性原理出发，推导 g(x) = e^{cos(x)} 的导数。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>从第一性原理出发，推导<br/>\r\n    <br/>\r\n    <br/>\r\n    cos(x) 的导数。<br/>\r\n    <br/>\r\n    g(x) = e^{cos(x)}<br/><br/>\r\n    <strong>参考解答：</strong>从第一性原理推导，意味着我们必须使用函数 f(x) 的导数定义，即作为极限<br/>\r\n    f'(x) = lim_{h→0} (f(x+h) − f(x)) / h。<br/>\r\n    <br/>\r\n    首先，最好先明确我们要得到什么结果。虽然题目要求我们从第一性原理求出导数，但先用标准方法计算一遍或许会有帮助，它能给你一些指引，让你在推导过程中看清正确的结果。因此，应用标准的链式法则我们有<br/>\r\n    g'(x) = −sin(x) e^{cos(x)}。<br/>\r\n    <br/>\r\n    即便你觉得面试官不会因为先做这一步计算而印象深刻，这也是一个无需纸笔就能完成的一行心算，或许对你有帮助。<br/>\r\n    <br/>\r\n    让我们回到原题。我们的任务是求<br/>\r\n    <br/>\r\n    g'(x) = lim_{h→0} (e^{cos(x+h)} − e^{cos(x)}) / h。<br/>\r\n    <br/>\r\n    首先将分子改写为<br/>\r\n    <br/>\r\n    e^{cos(x+h)} − e^{cos(x)} = e^{cos(x)} (e^{cos(x+h)−cos(x)} − 1)。<br/>\r\n    <br/>\r\n    然后回忆 e^u 的级数展开为<br/>\r\n    <br/>\r\n    e^u = 1 + u + u^2/2 + O(u^2)，<br/>\r\n    <br/>\r\n    而 cos(x) 的级数展开为<br/>\r\n    <br/>\r\n    cos(x) = 1 − x^2/2 + x^4/24 + O(x^6)，<br/>\r\n    <br/>\r\n    <br/>\r\n    6.3. SOLUTIONS 213<br/>\r\n    <br/>\r\n    因此<br/>\r\n    cos(x + h) − cos(x) = O(h)，<br/>\r\n    进而<br/>\r\n    e^{cos(x+h)−cos(x)} − 1 = (cos(x+h) − cos(x)) + O(h^2)。<br/>\r\n    于是导数为<br/>\r\n    g'(x) = e^{cos(x)} · lim_{h→0} (cos(x+h) − cos(x)) / h。<br/>\r\n    由于 d/dx cos(x) = −sin(x)，代入得<br/>\r\n    g'(x) = −sin(x) e^{cos(x)}。<br/>\r\n    这与用链式法则得到的预期结果一致。"
+  },
+  {
+    "id": 311,
+    "title": "你用过哪些 C++ 设计模式？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>你用过哪些 C++ 设计模式？<br/><br/>\r\n    <strong>参考解答：</strong>同样地，答案只能是你实际用过的内容。不过，和往常一样，你要让自己能给出一个好的回答。一个好的起点是阅读文献 [7]。对于每一种模式，都要在脑海中准备一个可以与面试官讨论的例子。通过文献 [6] 中的项目练习使用这些模式，以便积累大量好的例子。尤其要能够解释并举例说明你何时使用了以下每一种模式：<br/>\r\n    <br/>\r\n    策略（strategy）；<br/>\r\n    <br/>\r\n    模板（template）；<br/>\r\n    <br/>\r\n    桥接（bridge）；<br/>\r\n    <br/>\r\n    虚构造函数（virtual construction）；<br/>\r\n    装饰（decoration）；<br/>\r\n    单例（singleton）；<br/>\r\n    <br/>\r\n    工厂（factory）。<br/>\r\n    <br/>\r\n    你要确保能解释为什么使用这种模式而不是另一种模式。如果有多种选择，你应当准备好解释各自的优缺点。"
+  },
+  {
+    "id": 312,
+    "title": "C++ 中内联函数（inline function）和宏（macro）有什么区别？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>C++ 中内联函数和宏有什么区别？<br/>\r\n    <br/>\r\n    <br/><br/>\r\n    <strong>参考解答：</strong>这个问题有点奇怪，因为它暗示二者相似，而实际上它们几乎没有什么共同点。<br/>\r\n    <br/>\r\n    我们先讨论 inline 关键字。把它放在函数声明前面，就是告诉编译器你希望它把每次对该函数的调用替换为函数内部的代码。这样就消除了调用函数带来的开销。<br/>\r\n    <br/>\r\n    不过有一些微妙之处：<br/>\r\n    <br/>\r\n    它只是对编译器的建议，而不是命令；<br/>\r\n    <br/>\r\n    代码可能会变长，因为函数的定义被重复了很多次；<br/>\r\n    <br/>\r\n    代码必须包含在头文件中，以便客户端可用，因此修改它会引发大量重编译，而且它所带有的任何编译期依赖也会成为客户端的依赖；<br/>\r\n    <br/>\r\n    从好的方面看，由于代码在使用上下文中对编译器可见，编译器可能利用这一点做额外的优化；<br/>\r\n    <br/>\r\n    添加或移除 inline 永远不应影响程序除效率之外的任何行为。<br/>\r\n    <br/>\r\n    <br/>\r\n    236 7. CODING IN C++<br/>\r\n    <br/>\r\n    宏实际上与编译器无关。相反，它是对 C 预处理器（Cpp）的一条指令。Cpp 在编译器开始工作之前重新组织文件，包括包含所指定的所有文件，以及展开宏。因此宏是一种直接的文本到文本的替换，发生在编译器工作之前。它与 inline 函数不同，没有类型检查，并且可能由于多次求值参数而产生副作用问题。"
+  },
+  {
+    "id": 313,
+    "title": "在 C++ 的构造函数中抛出异常是否允许？请证明你的观点。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>在 C++ 的构造函数中抛出异常是否允许？请证明你的观点。<br/><br/>\r\n    <strong>参考解答：</strong>这是一个棘手的问题，因为社区似乎分成两派：一派认为在构造函数中抛异常是错误的，另一派认为不抛才是愚蠢的。因此最好的回答是：你知道对此存在不同意见，并列出优缺点，最后给出你自己的看法。<br/>\r\n    <br/>\r\n    关键事实是：如果你在构造函数中抛异常，那么该对象的析构函数不会被调用。而且由于对象在构造期间抛异常后并不真正存在，它永远不会被调用。但是，每一个已完全构造的数据成员的析构函数会被调用。如果你处在构造函数大括号内（即主体部分），那么所有数据成员都已完全构造，因此会被销毁。<br/>\r\n    <br/>\r\n    反对在构造函数中抛异常的主要论点是：析构函数不会被调用，因此不会执行通常在对象销毁时做的清理工作。例如，在构造函数中分配的任何内存都不会被释放。<br/>\r\n    <br/>\r\n    因此，只要在构造函数中确保一切都被正确销毁和释放，在其中抛异常是可以的。最简单的方法是使用智能指针作为数据成员，而不是裸指针。它们会在退出时被销毁并自动完成所需的释放。<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 237<br/>\r\n    <br/>\r\n    如果你定下“构造函数中不抛异常”的规则，问题就变成了：当构造的某方面失败时你该怎么办。通常的做法是抛异常，因为只有这样才能可靠地报告构造失败。"
+  },
+  {
+    "id": 314,
+    "title": "在 C++ 的析构函数中抛出异常是否允许？请证明你的观点。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>在 C++ 的析构函数中抛出异常是否允许？请证明你的观点。<br/><br/>\r\n    <strong>参考解答：</strong>这比构造函数的类似问题争议小一些，尽管你确实会遇到个别唱反调的人。但有充分的理由永远不要这样做。<br/>\r\n    <br/>\r\n    根本问题在于：如果同时存在两个未捕获的异常，C++ 标准规定应用程序将终止。如果允许析构函数抛异常，就非常难以避免两个异常同时发生：当抛出一个异常时，当前作用域中声明的所有自动（即普通）对象在 catch 执行之前被销毁。如果其中任何一个的析构函数可能抛异常，你就会同时得到两个异常，从而导致崩溃。<br/>\r\n    <br/>\r\n    所以永远永远不要在析构函数中抛异常。<br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    数据成员和基类的析构函数按什么顺序调用？为什么要这样做？<br/>\r\n    <br/>\r\n    代码“异常安全”是什么意思？<br/>\r\n    <br/>\r\n    <br/>\r\n    <br/>\r\n    238 7. CODING IN C++"
+  },
+  {
+    "id": 315,
+    "title": "如何拷贝一个类型未知的多态对象？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>如何拷贝一个类型未知的多态对象？<br/><br/>\r\n    <strong>参考解答：</strong>这是一个标准问题，文献 [7] 中有详细讨论。标准的做法是使用虚构造函数（virtual constructor）。注意，不能声明一个标准的虚构造函数，但我们可以通过把一个类方法声明为虚函数来达到同样的效果。<br/>\r\n    <br/>\r\n    因此我们在基类中定义<br/>\r\n    <br/>\r\n    virtual Base* clone() const = 0;<br/>\r\n    <br/>\r\n    并在每个派生类中定义<br/>\r\n    <br/>\r\n    virtual Inherited* clone() const<br/>\r\n    {<br/>\r\n    return new Inherited(*this);<br/>\r\n    }<br/>\r\n    <br/>\r\n    关键在于派生类知道自己的类型，因此可以毫无问题地拷贝自身。返回类型是指向在堆上分配的该类对象的指针，因为调用代码并不知道具体类型。<br/>\r\n    <br/>\r\n    还要注意返回类型是指向派生类的指针，而不是基类指针；在派生类中重写时允许改变返回类型。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    你会用智能指针还是裸指针作为返回类型？<br/>\r\n    <br/>\r\n    你会如何管理新对象的生命周期？<br/>\r\n    为什么不在栈上为新对象分配空间？<br/>\r\n    <br/>\r\n    0"
+  },
+  {
+    "id": 316,
+    "title": "在 C++ 中，如果基类定义了用户自定义的赋值运算符，派生类还需要吗？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>在 C++ 中，如果基类有用户自定义的赋值运算符，派生类还需要一个吗？<br/><br/>\r\n    <strong>参考解答：</strong>简短的答案是：不需要！遗憾的是，面试官可能误以为答案是需要，所以我们需要能够论证这个答案。<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 239<br/>\r\n    <br/>\r\n    如果我有一个从 Y 继承来的类 X，并写<br/>\r\n    <br/>\r\n    X a;<br/>\r\n    X b;<br/>\r\n    a = b;<br/>\r\n    <br/>\r\n    如果没有为 X 定义赋值运算符，编译器就会使用它自动生成的那个。它会调用 X 的每个基类和每个成员的赋值运算符，因此 Y 有用户自定义的运算符还是隐式的运算符都无关紧要。如果与此相反——即改变基类的实现细节就需要重写得派生类——那才是语言的一个重大缺陷。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    拷贝构造函数的情况是否相同？<br/>\r\n    假设某个数据成员有用户自定义的赋值运算符，这是否意味着该类也需要一个？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 317,
+    "title": "声明函数指针的 C++ 语法是什么？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>声明函数指针的 C++ 语法是什么？<br/><br/>\r\n    <strong>参考解答：</strong>要声明一个名为 “MyPointer”、指向一个返回类型 A 的对象、并接受一个类型 B 的对象的函数的指针，语法是<br/>\r\n    <br/>\r\n    A (*MyPointer)(B);<br/>\r\n    <br/>\r\n    注意指针名周围和 “*” 周围关键的括号。如果要将该指针赋给函数 “MyFunction”，我们可能有<br/>\r\n    <br/>\r\n    A MyFunction(B);<br/>\r\n    <br/>\r\n    <br/>\r\n    240 7. CODING IN C++<br/>\r\n    <br/>\r\n    void f()<br/>\r\n    {<br/>\r\n    A (*MyPointer)(B);<br/>\r\n    MyPointer = &MyFunction;<br/>\r\n    }<br/>\r\n    <br/>\r\n    更多讨论见 Stroustrup 第 7.7 节，文献 [18]。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    如果 “MyFunction” 接受对 B 的常量引用，我还能做上面的赋值吗？<br/>\r\n    <br/>\r\n    如果函数是一个类的数据成员，语法是怎样的？<br/>\r\n    <br/>\r\n    你认为函数指针在 C++ 中有用吗？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 318,
+    "title": "你对 C++ 编程与金融了解多少？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>你对 C++ 编程与金融了解多少？<br/><br/>\r\n    <strong>参考解答：</strong>显然，这个问题没有唯一的正确答案。不过，有一个明显的错误答案：“什么都不知道。”<br/>\r\n    <br/>\r\n    然而，最严重的错误是在你其实不懂的时候声称自己很懂这个话题。例如，有位候选人在面试中说他用 C++ 实现过 BGM，但当被要求写一个 for 循环时却写不出来。一句诚实的“我不懂 C++，但我会另一种语言，并且很愿意学习”比假装比实际懂得更多要好得多。不过，你最好等到能诚实地说自己确实懂一些时再去面试。<br/>\r\n    <br/>\r\n    达到这一点的最佳方式是阅读关于 C++ 与金融的书籍（例如《C++ Design Patterns and Derivatives Pricing》），并自己实现一些模型。文献 [6] 末尾有一系列计算机项目可供练习。如果你能在面试中说你用 C++ 做过这些项目并能讨论它们，这会很有分量。要准备好回答诸如以下问题：<br/>\r\n    <br/>\r\n    你觉得什么难？<br/>\r\n    你觉得什么容易？<br/>\r\n    项目 X 你的类设计是怎样的？<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 241<br/>\r\n    <br/>\r\n    项目 Y 你的结果是什么？<br/>\r\n    做这些项目如何影响了你对 C++ 的理解？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 319,
+    "title": "什么是虚析构函数，什么时候需要它？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>什么是虚析构函数，什么时候需要它？<br/><br/>\r\n    <strong>参考解答：</strong>如果有一个通过动态分配（即用 new 创建）的派生类对象，当它通过指向基类对象的指针被删除时，就会遇到需要调用正确析构函数的问题。如果基类的析构函数是虚的，那么会直接调用派生类的析构函数，不会有问题。<br/>\r\n    <br/>\r\n    如果它不是虚的，那么会调用基类的析构函数，对象可能没有被正确删除。这通常会导致内存泄漏，并可能引起更严重的后果。<br/>\r\n    <br/>\r\n    作为一般规则，只要任何方法是纯抽象的（即在基类中没有定义），就应把析构函数声明为虚的。有些编译器（如 g++）在这种情况下如果你不把析构函数声明为虚的，会给出警告。通常，只要有任何方法是虚的，就把它们声明为虚的。如果没有方法是虚的，可能就没有必要。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    把析构函数声明为虚的有什么缺点（如果有的话）？<br/>\r\n    你认为 C++ 是不是应该默认把所有析构函数都设为虚的？<br/>\r\n    <br/>\r\n    a)"
+  },
+  {
+    "id": 320,
+    "title": "如果类 B 派生自类 A 并且包含一个类 C 的对象，对于类型 B 的对象，构造函数/析构函数的调用顺序是怎样的？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>如果类 B 派生自类 A 并且包含一个类 C 的对象，对于类型 B 的对象，构造函数/析构函数按什么顺序调用？<br/><br/>\r\n    <strong>参考解答：</strong>基本规则是：某物越基础，它就越早被构造、越晚被销毁。原因在于：派生类可能在构造或析构期间要使用基类，但反过来绝不会成立。注意：如果你在基类构造期间通过虚函数试图使用派生类，你会遇到麻烦。如果该函数是纯虚的，你会得到运行时错误，说你调用了一个纯虚函数；如果不是，则会调用基类的版本。<br/>\r\n    <br/>\r\n    因此在这个具体情形下，构造顺序是 A、然后 C、然后 B；析构顺序是 B、然后 C、然后 A。注意这意味着 B 的构造函数和析构函数中可以使用类的数据成员。<br/>\r\n    <br/>\r\n    <br/>\r\n    244 7. CODING IN C++<br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    在一个有多个数据成员的类中，它们按什么顺序构造？<br/>\r\n    在一个有多个数据成员的类中，它们按什么顺序销毁？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 321,
+    "title": "每个类都自带哪些（编译器提供的）成员？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>每个类都自带哪些成员？<br/><br/>\r\n    <strong>参考解答：</strong>编译器总是会提供一个拷贝构造函数、一个赋值运算符和一个析构函数。重要的是要认识到它们是“平凡”的，即它们做最简单的事。<br/>\r\n    <br/>\r\n    因此拷贝构造函数会调用每个数据成员的拷贝构造函数来制作副本。这称为制作浅拷贝（shallow copy）。赋值运算符调用每个数据成员的赋值运算符。<br/>\r\n    <br/>\r\n    如果每个数据成员的拷贝构造函数都能做正确的事，那么使用浅拷贝是可以的。当数据成员是指针时通常并非如此，因为新旧对象会指向同一份数据。当被指向的对象被删除两次时，这可能导致崩溃。赋值运算符也存在同样的问题。<br/>\r\n    <br/>\r\n    当且仅当类需要在对象消亡时释放资源（通常是释放已分配的内存）时，才需要一个非平凡的析构函数。一个平凡的析构函数，如果该对象可能通过指向基类的指针被删除，就应该声明为虚的。<br/>\r\n    <br/>\r\n    避免声明非平凡的拷贝构造函数、析构函数和赋值运算符的最佳方法是使用智能指针，它们在默认行为下就能做所有正确的事。这被 Mark Joshi 称为“几乎为零的规则”（the rule of almost zero）。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    什么是“三法则”（the rule of three）？<br/>\r\n    <br/>\r\n    你用过哪些智能指针？<br/>\r\n    <br/>\r\n    如果你希望一个类的对象不可被拷贝，你会怎么做？<br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 245"
+  },
+  {
+    "id": 322,
+    "title": "在 C++ 中，类型 A 的对象可以通过哪两种方式被自动转换为类型 B 的对象？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>在 C++ 中，类型 A 的对象可以通过哪两种方式被自动转换为类型 B 的对象？<br/><br/>\r\n    <strong>参考解答：</strong>第一种也是最知名的方法依赖于：如果一个类有一个单参数的构造函数，编译器会把它当作一个转换运算符。因此类 B 的声明中包含一行<br/>\r\n    <br/>\r\n    B(const A& myObject);<br/>\r\n    <br/>\r\n    或<br/>\r\n    <br/>\r\n    B(myObject);<br/>\r\n    <br/>\r\n    任一种都足以实现自动转换。<br/>\r\n    <br/>\r\n    如果类的声明不可访问（例如我们希望转换到类型 B，但无法为它写新的构造函数，比如 B 是 double 类型），就需要另一种方法。这可以通过在类 A 中定义一个名为 B 的运算符来实现，即在 A 的声明中包含一行<br/>\r\n    <br/>\r\n    operator B() const;<br/>\r\n    <br/>\r\n    定义该运算符时，我们写成<br/>\r\n    <br/>\r\n    A::operator B() const<br/>\r\n    {<br/>\r\n    // 创建类型 B 的对象并返回它<br/>\r\n    }<br/>\r\n    <br/>\r\n    在这两种情况下，我们都不在该行开头指定运算符的返回类型。更多讨论见文献 [18] 第 11.4 节。<br/>\r\n    <br/>\r\n    <br/>\r\n    246 7. CODING IN C++<br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    explicit 关键字是做什么的？<br/>\r\n    <br/>\r\n    你认为构造函数是否应该默认就是 explicit 的？为什么标准采用现在的做法？<br/>\r\n    <br/>\r\n    你能给出一个第二种方法有用的非平凡例子吗？<br/>\r\n    <br/>\r\n    im)"
+  },
+  {
+    "id": 323,
+    "title": "为什么使用内存分配的类需要正确编写的拷贝构造函数和赋值运算符？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>为什么使用内存分配的类需要正确编写的拷贝构造函数和赋值运算符？<br/><br/>\r\n    <strong>参考解答：</strong>如果一个类使用内存分配，它就会使用 new 命令。这会返回一个指向一块动态分配内存的指针。如果我们把这个指针作为类的数据成员，那么如果我们使用编译器默认的运算符，拷贝和赋值操作就会出问题。<br/>\r\n    <br/>\r\n    29<br/>\r\n    <br/>\r\n    特别是，编译器提供的拷贝构造函数会是“浅拷贝构造函数”，即它只是简单地拷贝指针。其效果是原对象和副本会指向同一块已分配的内存。这会导致许多问题。例如，一个正确编写的对象应当在析构函数中（或在此之前）删除被指向的内存；浅拷贝会导致删除发生两次，从而引发崩溃。<br/>\r\n    <br/>\r\n    更一般地说，即便删除以其他方式被正确处理，两个对象也会紧密绑定在一起，其行为也不像普通对象的拷贝。赋值的问题与此类似，另外还有一个复杂之处：被覆盖的对象会丢失它之前分配的指针，这意味着那块内存永远不会被释放，从而导致内存泄漏。<br/>\r\n    <br/>\r\n    关于这个问题还要注意几点：该类也需要一个正确编写的析构函数，并且许多问题可以通过使用智能指针来避免。此时也值得提到“三法则”（the rule of three）：如果一个类需要自定义析构函数、拷贝构造函数或赋值运算符中的任意一个，那么它通常三个都需要。"
+  },
+  {
+    "id": 324,
+    "title": "写一个排序算法的代码。讨论程序的速度和内存占用。如何改进它？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>写一个排序算法的代码。讨论程序的速度和内存占用。如何改进它？<br/>\r\n    <br/>\r\n    <br/>\r\n    7.2. QUESTIONS 227<br/><br/>\r\n    <strong>参考解答：</strong>对数组排序的最优解是使用标准库：<br/>\r\n    <br/>\r\n    #include <algorithm><br/>\r\n    <br/>\r\n    // 使用 STL sort 算法对输入排序<br/>\r\n    MyArray STLSort(const MyArray& input) // 要排序的数组<br/>\r\n    {<br/>\r\n    MyArray tmp(input);<br/>\r\n    std::sort(tmp.begin(), tmp.end());<br/>\r\n    return tmp;<br/>\r\n    }<br/>\r\n    <br/>\r\n    这不会就地排序。如果你不想拷贝数组，就不要拷贝数组，把输入改为非 const，并把返回类型改为 void。<br/>\r\n    <br/>\r\n    不过面试官不太可能满足于这个回答，因为他们很可能是想测试你的算法能力。同样值得知道的是，STL 的 sort 算法不保证是稳定排序，即它可能改变等价元素的顺序（既不满足 a < b 也不满足 b > a）。如果他们要求稳定算法，就用 stable_sort。<br/>\r\n    <br/>\r\n    <br/>\r\n    248 7. CODING IN C++<br/>\r\n    <br/>\r\n    下面是一个插入排序算法的简单实现：<br/>\r\n    <br/>\r\n    template<class T><br/>\r\n    void InsertSort(T start, T end)<br/>\r\n    {<br/>\r\n    for (T i = start; i < end; ++i)<br/>\r\n    {<br/>\r\n    T::value_type value = *i;<br/>\r\n    T dec = i;<br/>\r\n    while (dec > start && *(dec-1) >= value)<br/>\r\n    {<br/>\r\n    *dec = *(dec-1);<br/>\r\n    --dec;<br/>\r\n    }<br/>\r\n    *dec = value;<br/>\r\n    }<br/>\r\n    }<br/>\r\n    <br/>\r\n    类型 T 是一个迭代器（或指针）。插入排序在最坏情况下的时间复杂度是 O(n^2)，平均也是 O(n^2)，最好情况（已排序）是 O(n)；它是稳定的，并且是原地排序，只需要 O(1) 的额外空间。可以通过改用更优的算法（如快速排序、归并排序或堆排序）将时间复杂度改进到 O(n log n)，STL 的 introsort 就是混合方案。使用插入排序在小规模或近乎有序的数据上表现良好，但对大数据集应改用 O(n log n) 算法。"
+  },
+  {
+    "id": 325,
+    "title": "计算机题：如果 x 是 int 类型，不断增大 x 并绘图，图像是怎样的？如果 x 是 float 类型呢？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>计算机题：如果 x 是 int 类型，不断增大 x 并绘图，图像是怎样的？如果 x 是 float 类型呢？<br/><br/>\r\n    <strong>参考解答：</strong>在 C++ 中，int 的最大值通常是 2^31 − 1。如果再加 1，就会得到最大的负数：−2^31。因此重复这个过程会得到一个锯齿波（saw-tooth）状的波形。<br/>\r\n    <br/>\r\n    如果我们用 float 或 double，那么最终加 1 不会有任何效果，因为作为数值一部分的 1 相对于该数来说太小，无法体现在所存储的有效数字中。<br/>\r\n    <br/>\r\n    <br/>\r\n    250 7. CODING IN C++<br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    C++ 中 double 能表示的最大值是多少？<br/>\r\n    <br/>\r\n    C++ 中 double 能表示的最小值是多少？<br/>\r\n    <br/>\r\n    在 C++ 中你会用什么策略来最小化浮点舍入误差？<br/>\r\n    <br/>\r\n    你如何访问 C++ 中最大数对应的常量？<br/>\r\n    <br/>\r\n    0"
+  },
+  {
+    "id": 326,
+    "title": "“static”变量存储在哪里？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>“static”变量存储在哪里？<br/><br/>\r\n    <strong>参考解答：</strong>C++ 中变量主要有三个存储区域：<br/>\r\n    <br/>\r\n    堆（heap）；<br/>\r\n    栈（stack）；<br/>\r\n    数据段（data segment）。<br/>\r\n    <br/>\r\n    static 变量存储在数据段中，每个变量的全部内存和位置都在程序启动之前分配好。不过，它们直到代码执行到其声明处才会被初始化。<br/>\r\n    <br/>\r\n    堆用于动态分配的内存，例如用 new 或 malloc 分配的任何东西。栈用于普通的（自动）变量。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    static 变量何时被销毁？<br/>\r\n    举一个 static 变量有用的例子。<br/>\r\n    <br/>\r\n    a)"
+  },
+  {
+    "id": 327,
+    "title": "C++ 中的虚函数机制是如何实现的？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>C++ 中的虚函数机制是如何实现的？<br/><br/>\r\n    <strong>参考解答：</strong>这可以说是一个陷阱题，因为 C++ 标准根本没有规定虚函数如何实现。所以正确的答案是：“编译器作者想怎么做就怎么做。”<br/>\r\n    <br/>\r\n    尽管如此，绝大多数（如果不是全部）编译器都采用一种标准方法。那就是维护一张叫做“虚函数表”（virtual function table）的表，其中存放了所有虚函数的指针。每个类会有一份这样的表。<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 251<br/>\r\n    <br/>\r\n    每个带有虚函数的类的对象都会包含一个指向其类对应的表的指针。<br/>\r\n    <br/>\r\n    注意，只要声明了虚方法，每个对象都会稍大一些。还有一个问题涉及一些编译器会生成多少份虚函数表副本。一些较旧编译器采用的方案是把表放在与析构函数定义相同的翻译单元中。这意味着如果你在类的头文件中声明<br/>\r\n    <br/>\r\n    virtual ~MyClass() {}<br/>\r\n    <br/>\r\n    那么直接或者间接包含该头文件的每个源文件的目标文件中都会放一份虚函数表的副本。因此有时建议总是在源文件中定义析构函数。不过大多数现代编译器应该比这更聪明。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    C++ 中可能有静态虚函数吗？应该有吗？<br/>\r\n    有可能调用一个纯虚函数吗？<br/>\r\n    <br/>\r\n    i"
+  },
+  {
+    "id": 328,
+    "title": "从优化的角度看，虚函数机制有什么问题？当函数不是虚函数时，编译器能做些什么？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>从优化的角度看，虚函数机制有什么问题？当函数不是虚函数时，编译器能做些什么？<br/><br/>\r\n    <strong>参考解答：</strong>虚函数和优化之间存在若干问题。第一点是它们通常是通过指针间接调用，也就是说处理器必须跳到指针中包含的地址，而不是一个预先确定的地址。这会带来几条额外的指令。<br/>\r\n    <br/>\r\n    第二点更严重：如果编译器和链接器不知道函数调用里包含什么，它们就无法基于其内容做任何优化。特别是，虚函数不能被内联。<br/>\r\n    <br/>\r\n    此外，会为该类创建一个虚函数表，而该类的每个对象都需要包含一个指向它的指针。对于大量小对象，这可能是一个真正的问题。<br/>\r\n    <br/>\r\n    <br/>\r\n    252 7. CODING IN C++<br/>\r\n    <br/>\r\n    应当认识到，除非函数内部的代码很短，否则这些问题都不大。因此，当一个方法很复杂时把它设为虚的是合理的；但对于访问器（accessor）函数，则可能带来真实的性能损失。<br/>\r\n    <br/>\r\n    另一个可能的问题是，不同类的虚函数表可能位于内存中相当不同的位置，这会导致处理器缓存的内存需要更换，从而造成进一步的减速。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    如果我们用函数指针替换虚函数，会有助于优化吗？<br/>\r\n    <br/>\r\n    如果我们改用模板，会如何？<br/>\r\n    <br/>\r\n    <br/>\r\n    252 7. CODING IN C++"
+  },
+  {
+    "id": 329,
+    "title": "delete 和 delete[] 有什么区别？如果在该用另一个的地方误用了其中一个会怎样？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>delete 和 delete[] 有什么区别？如果在该用另一个的地方误用了其中一个会怎样？<br/>\r\n    <br/>\r\n    <strong>参考解答：</strong>delete 用于释放单个对象，delete[] 用于释放对象数组。编译器为数组分配内存时会在前面存储元素个数等簿记信息，delete[] 会据此对数组中每个元素调用析构函数并释放整块内存；而 delete 只调用一次析构函数并释放一块内存。如果对该用 delete[] 的地方误用了 delete，则只销毁第一个元素，其余元素的析构函数不会被调用，并且内存释放方式不匹配，通常导致未定义行为（崩溃或内存泄漏）；反之，对单个对象误用 delete[] 同样会导致未定义行为。因此必须严格配对使用：new 配 delete，new[] 配 delete[]。（答案见原书 / see original book）"
+  },
+  {
+    "id": 330,
+    "title": "一个学生声称 C++ 中的 ?: 结构是多余的，因为它可以用其他语言特性实现。他建议用如下函数替换它：int condif(bool condition, int i, int j) { if (condition) return i; else return j; } 你同意该学生对于整数没有区别的说法吗？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>一个学生声称 C++ 中的 ?: 结构（三元运算符）是多余的，因为它可以用其他语言特性实现。他建议用如下函数替换它：<br/>\r\n    <br/>\r\n    int condif(bool condition, int i, int j)<br/>\r\n    {<br/>\r\n    if (condition)<br/>\r\n    return i;<br/>\r\n    else<br/>\r\n    return j;<br/>\r\n    }<br/>\r\n    <br/>\r\n    你同意该学生所说的对于整数没有区别吗？<br/><br/>\r\n    <strong>参考解答：</strong>C++ 标准规定，对于 ?: 运算符，两个最终表达式只有一个会被求值。如果使用函数 condif，则两个都会被求值。这有两个后果：速度和副作用。<br/>\r\n    <br/>\r\n    特别是，如果表达式求值代价很高，那么同时计算两者会拖慢代码。同样重要的是要认识到，在 C++ 中表达式和操作之间几乎没有区别，所以这些表达式除了返回值之外还可以做其他事情。使用 condif 会导致这些操作引起的任何改变对两者都发生，而不是只发生一次。<br/>\r\n    <br/>\r\n    一个次要的速度问题是，函数调用比调用内建运算符花的时间更多。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    你会如何编写正确模拟 ?: 对整数行为的代码？<br/>\r\n    把这个代码扩展到能用于一般类型。<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 331,
+    "title": "我们给出一段 C++ 代码，用于从均值 0、标准差 1 的标准高斯分布中抽取随机数。估计每次抽取一个高斯随机数需要几次均匀抽样。…",
+    "answer": "<br/>\r\n    <strong>原题：</strong>我们给出一段 C++ 代码，用于从均值 0、标准差 1 的标准高斯分布中抽取随机数。估计每次抽取一个高斯随机数需要几次均匀抽样。<br/>\r\n    <br/>\r\n    #include <cmath><br/>\r\n    <br/>\r\n    // 该函数给出一个均匀随机数并更新种子<br/>\r\n    double drawUniform(long& seed);<br/>\r\n    <br/>\r\n    <br/>\r\n    228 7. CODING IN C++<br/>\r\n    <br/>\r\n    // 抽取一个标准高斯随机数<br/>\r\n    double drawGaussian(long& seed)<br/>\r\n    {<br/>\r\n    static bool drawNotDone = true;<br/>\r\n    static double otherDraw;<br/>\r\n    double factor, rSquared, x, y;<br/>\r\n    if (drawNotDone)<br/>\r\n    {<br/>\r\n    do<br/>\r\n    {<br/>\r\n    x = 2.0 * drawUniform(seed) - 1.0;<br/>\r\n    y = 2.0 * drawUniform(seed) - 1.0;<br/>\r\n    rSquared = x * x + y * y;<br/>\r\n    }<br/>\r\n    while (rSquared >= 1.0 || rSquared == 0.0);<br/>\r\n    factor = sqrt(-2.0 * log(rSquared) / rSquared);<br/>\r\n    otherDraw = x * factor;<br/>\r\n    drawNotDone = false;<br/>\r\n    return y * factor;<br/>\r\n    }<br/>\r\n    else<br/>\r\n    {<br/>\r\n    drawNotDone = true;<br/>\r\n    return otherDraw;<br/>\r\n    }<br/>\r\n    }<br/><br/>\r\n    <strong>参考解答：</strong>这段代码描述了一种算法，把成对的独立均匀随机数转换为两对独立的高斯 N(0,1) 随机数。关键在于使用了接受—拒绝（acceptance-rejection）方法：如果这对均匀抽样点落在以 (0,0) 为中心、半径为 1 的单位圆之外，它们就被丢弃，再抽另一对。<br/>\r\n    <br/>\r\n    因此一对被使用的概率是那个单位圆的面积，因为均匀点取自的面积为 1 的正方形。单位圆的面积是<br/>\r\n    π。<br/>\r\n    所以每次“成功”需要使用一对均匀点（两次均匀抽样）。由于被接受的概率是 π/4，平均每产生一个高斯随机数（每次成功产出两个）需要 4/π ≈ 1.27 次成功循环，而每次循环用 2 次均匀抽样，因此平均每次高斯抽样的均匀抽样次数约为 (4/π) / 2 × 2 = 4/π ≈ 1.27... 实际上平均每抽一个高斯随机数需要 4/π 次均匀抽样（因为每对均匀点产出一个高斯数，接受概率 π/4，故期望均匀抽样次数 = 2 / (π/4) = 8/π，每次产出两个高斯数，所以每个高斯数约 4/π ≈ 1.27 次均匀抽样）。关键在于期望均匀抽样次数约为 4/π。"
+  },
+  {
+    "id": 332,
+    "title": "写一个 C++ 函数，输入一个字符串，返回其反转后的新字符串。再写一个原地反转、不进行任何内存分配的变体。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>写一个 C++ 函数，输入一个字符串，返回其反转后的新字符串。再写一个原地反转、不进行任何内存分配的变体。<br/><br/>\r\n    <strong>参考解答：</strong>我们首先给出使用反向迭代器的解法：<br/>\r\n    <br/>\r\n    <br/>\r\n    std::string reverse_string(const std::string& input)<br/>\r\n    {<br/>\r\n    std::string output;<br/>\r\n    output.reserve(input.size());<br/>\r\n    for (std::string::const_reverse_iterator<br/>\r\n    it = input.rbegin(); it != input.rend(); ++it)<br/>\r\n    output.push_back(*it);<br/>\r\n    return output;<br/>\r\n    }<br/>\r\n    <br/>\r\n    使用反向迭代器使我们可以从末尾倒数，而无需做任何减法。还要注意我们预先 reserve 了输出字符串的大小，以避免多次内存分配。<br/>\r\n    <br/>\r\n    原地反转稍微棘手一些，因为我们必须交换成对的字符。我们给出一个直白、简单编码的算法：<br/>\r\n    <br/>\r\n    void reverse_string_inplace(std::string& input)<br/>\r\n    {<br/>\r\n    char c;<br/>\r\n    for (size_t i = 0; 2*i < input.size(); ++i)<br/>\r\n    {<br/>\r\n    c = input[i];<br/>\r\n    input[i] = input[input.size()-1-i];<br/>\r\n    input[input.size()-1-i] = c;<br/>\r\n    }<br/>\r\n    }<br/>\r\n    <br/>\r\n    注意关键的 −1，因为最后一个元素是字符串大小减一。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    如果你处理的是 C 风格数组，代码会有什么不同？<br/>\r\n    <br/>\r\n    这两个例程中哪一个更……<br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 255"
+  },
+  {
+    "id": 333,
+    "title": "按值传递、按引用传递和按指针传递参数有什么区别？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>按值传递、按引用传递和按指针传递参数有什么区别？<br/>\r\n    <br/>\r\n    <br/>\r\n    7.2. QUESTIONS<br/><br/>\r\n    <strong>参考解答：</strong>按值传递（by value）会制作实参的一份副本，函数内对形参的修改不影响原对象，且会有一次拷贝开销；按引用传递（by reference）把形参绑定到原对象，没有拷贝，函数内的修改会影响原对象，且引用本身不能为空；按指针传递（by pointer）传递的是对象的地址，同样没有对象拷贝，函数内通过解引用访问原对象，可以修改原对象，但指针可以为空，需要检查。三者的核心区别在于是否产生副本、是否能修改原对象、以及语法与空值安全性。（答案见原书 / see original book）"
+  },
+  {
+    "id": 334,
+    "title": "考虑以下代码： #include #include using namespace std; class Alpha { public:…",
+    "answer": "<strong>原题：</strong> 考虑以下代码： #include <iostream> #include <memory> using namespace std; class Alpha { public: Alpha() : ptrAlpha(new int) { } ~Alpha() { delete ptrAlpha; } virtual void MyFunction() { cout << \"In Alpha\" << endl; } private: int* ptrAlpha; }; class Beta : public Alpha { public: Beta() : ptrBeta(new int) {} ~Beta() { delete ptrBeta; } void MyFunction() { cout << \"In Beta\" << endl; } private: int *ptrBeta; }; class Gamma : public Alpha { public: Gamma() : ptrGamma(new int) { } ~Gamma() { delete ptrGamma; } void MyFunction() { cout << \"In Gamma\" << endl; } private: int *ptrGamma; }; int main() { auto_ptr<Alpha> alpha(new Beta()); Gamma gamma; Alpha& alpha2 = gamma; alpha->MyFunction(); alpha2.MyFunction(); char d; std::cin >> d; }<br/><br/><div style=\"margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px\"><strong>📖 参考解答（英文原文）</strong><br/><br/>This is a question about virtual functions and<br/>\r<br/>    <br/>\r<br/>    virtual destruction. The first part to note is that the method MyFunction is<br/>\r<br/>    declared virtual in the base class. Once a method is virtual it is always virtual<br/>\r<br/>    so it will be virtual in the inherited classes too. The pointer alpha1 is a pointer<br/>\r<br/>    to an object of type Beta so the invocation of the method will yield “In Beta.”<br/>\r<br/>    Similarly with the reference alpha2, the object pointed to is of type Gamma so<br/>\r<br/>    we get “In Gamma.”<br/>\r<br/>    <br/>\r<br/>    The correctness of the program is more subtle. A important rule to follow<br/>\r<br/>    is that a function containing virtual functions should always have a virtual<br/>\r<br/>    destructor, and this program does not. We should therefore be suspicious.<br/>\r<br/>    <br/>\r<br/>    In fact, there is a memory leak caused by this omission. When the auto_ptr<br/>\r<br/>    goes out of scope, the pointed to-object is deleted but the destructor of the base<br/>\r<br/>    class is called, not that of the inherited class. This can be fixed simply by putting<br/>\r<br/>    virtual in front of the base class destructor.<br/>\r<br/>    <br/>\r<br/>    Here are some possible related questions:<br/>\r<br/>    <br/>\r<br/>    e Why do you think destructors are not always virtual in C++?<br/>\r<br/>    <br/>\r<br/>    <br/>\r<br/>    7.3. SOLUTIONS 257<br/>\r<br/>    <br/>\r<br/>    e What are the pros and cons of using auto_ptrs?<br/>\r<br/>    e What is your favourite smart pointer?<br/>\r<br/>    <br/>\r<br/>    O</div>"
+  },
+  {
+    "id": 335,
+    "title": "考虑以下代码。 #include using namespace std; class Alpha { public: Alpha() {…",
+    "answer": "<br/>\r\n    <strong>原题：</strong>考虑以下代码。<br/>\r\n    <br/>\r\n    <br/>\r\n    #include <iostream><br/>\r\n    using namespace std;<br/>\r\n    <br/>\r\n    class Alpha<br/>\r\n    {<br/>\r\n    public:<br/>\r\n    Alpha()<br/>\r\n    {<br/>\r\n    cout << \"Creating Alpha\" << endl;<br/>\r\n    }<br/>\r\n    ~Alpha()<br/>\r\n    {<br/>\r\n    cout << \"Destroying Alpha\" << endl;<br/>\r\n    }<br/>\r\n    };<br/>\r\n    <br/>\r\n    class Beta<br/>\r\n    {<br/>\r\n    public:<br/>\r\n    Beta()<br/>\r\n    {<br/>\r\n    cout << \"Creating Beta\" << endl;<br/>\r\n    }<br/>\r\n    ~Beta()<br/>\r\n    {<br/>\r\n    cout << \"Destroying Beta\" << endl;<br/>\r\n    }<br/>\r\n    };<br/>\r\n    <br/>\r\n    class Gamma : public Alpha<br/>\r\n    {<br/>\r\n    public:<br/>\r\n    Gamma()<br/>\r\n    {<br/>\r\n    cout << \"Creating Gamma\" << endl;<br/>\r\n    }<br/>\r\n    ~Gamma()<br/>\r\n    {<br/>\r\n    cout << \"Destroying Gamma\" << endl;<br/>\r\n    }<br/>\r\n    private:<br/>\r\n    Beta b;<br/>\r\n    };<br/>\r\n    <br/>\r\n    int main()<br/>\r\n    {<br/>\r\n    Gamma c;<br/>\r\n    char d;<br/>\r\n    cin >> d;<br/>\r\n    return 0;<br/>\r\n    }<br/>\r\n    <br/>\r\n    它的输出是什么？<br/><br/>\r\n    <strong>参考解答：</strong>这是一个关于创建与销毁顺序的问题：如果有一个类 Gamma 继承自 Alpha 并包含一个 Beta 类型的数据成员，它们的创建和销毁顺序是什么？<br/>\r\n    <br/>\r\n    一般规则是：构造时最基础的先构造、销毁时最后销毁。基类比从它派生的类更基础，数据成员比包含它们的类更基础。因此构造顺序是：先创建基类 Alpha，然后创建数据成员 b（Beta），最后创建派生类 Gamma 自身，输出为：<br/>\r\n    Creating Alpha<br/>\r\n    Creating Beta<br/>\r\n    Creating Gamma<br/>\r\n    <br/>\r\n    销毁顺序相反：先销毁 Gamma（输出 Destroying Gamma），然后销毁数据成员 b（输出 Destroying Beta），最后销毁基类 Alpha（输出 Destroying Alpha）。所以完整输出为：<br/>\r\n    Creating Alpha / Creating Beta / Creating Gamma / Destroying Gamma / Destroying Beta / Destroying Alpha。"
+  },
+  {
+    "id": 336,
+    "title": "写一个 C++ 函数，不使用标准库计算平方根。把你的函数包装进一个主程序，使其可以从命令行调用。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>写一个 C++ 函数，不使用标准库计算平方根。把你的函数包装进一个主程序，使其可以从命令行调用。<br/><br/>\r\n    <strong>参考解答：</strong>我们首先需要一个计算平方根的算法。我们用一个简单的方法，据信巴比伦人曾使用过：<br/>\r\n    <br/>\r\n    它基于这样一个观察：要求 √a，可以从一个猜测值 y 出发，迭代到 y 和 a/y 的平均值。因此我们有序列<br/>\r\n    y_{n+1} = (y_n + a / y_n) / 2。<br/>\r\n    <br/>\r\n    极限 y 将满足 y = (y + a/y)/2，从而 y^2 = a，即 y = √a。严格地说，我们需要证明序列收敛。定义 f(y) = (y + a/y)/2，则 f'(y) = 1 − a/(2 y^2)。对于 x, y > 0，该导数介于 0 和 1 之间，只要 y 落在一个区间内，其绝对值就被某个 M < 1 所界。这意味着应用 f 是一个压缩映射（contraction mapping）。特别地，如果前两个点位于长度为 L 的区间内，则第二和第三个点会落在长度为 M·L 的区间内。每应用一次 f 就把区间长度乘以 M，于是长度趋于零，序列收敛。或者，该结论也可由压缩映射定理（Contraction Mapping Theorem）得出，它几乎可以在任何分析教材中找到，例如文献 [15]。<br/>\r\n    <br/>\r\n    <br/>\r\n    258 7. CODING IN C++<br/>\r\n    <br/>\r\n    实现时，从一个正的初始猜测（例如 y = a 或 y = 1）开始，重复迭代直到相邻两次迭代之差小于某个容差（如 1e-10）。下面是一个示例：<br/>\r\n    <br/>\r\n    #include <iostream><br/>\r\n    double sqrt_babylon(double a)<br/>\r\n    {<br/>\r\n    if (a < 0) return -1; // 错误处理<br/>\r\n    double y = a > 1 ? a : 1.0;<br/>\r\n    double prev;<br/>\r\n    do { prev = y; y = 0.5 * (y + a / y); } while (y < prev - 1e-10 || y > prev + 1e-10);<br/>\r\n    return y;<br/>\r\n    }<br/>\r\n    int main(int argc, char** argv)<br/>\r\n    {<br/>\r\n    double a = atof(argv[1]);<br/>\r\n    cout << sqrt_babylon(a) << endl;<br/>\r\n    return 0;<br/>\r\n    }<br/>\r\n    <br/>\r\n    该方法以二次速度收敛，通常几次迭代即可达到双精度要求。"
+  },
+  {
+    "id": 337,
+    "title": "用 C++ 实现一个表示二叉树的数据结构，每个节点包含一个整数。讨论空树。写一个函数，输入一棵树，返回树的深度，空树深度为 0。写一个函数，返回非空树中的最大元素。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>用 C++ 实现一个表示二叉树的数据结构，每个节点包含一个整数。讨论空树。写一个函数，输入一棵树，返回树的深度，空树深度为 0。写一个函数，返回非空树中的最大元素。<br/><br/>\r\n    <strong>参考解答：</strong>二叉树是一种由一组节点组成的数据结构。每个节点包含一段数据，并有零个、一个或两个位于其下的节点。除头节点外，每个节点必须恰好位于另一个节点的下面。不允许有环，因此每个节点到树顶都有明确的距离，其女儿节点离顶部更远一层。<br/>\r\n    <br/>\r\n    在 C++ 中有很多表示树的方式。一种标准方式是让每个节点由一段数据和指向两个女儿节点的指针组成。如果女儿节点不存在，指针就为空。这种方式给出的树易于使用，但添加数据、拷贝、赋值、销毁以及创建树都涉及大量繁琐的内存管理。还会发现节点零散地分布在内存中。<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 261<br/>\r\n    <br/>\r\n    因此我们介绍一种用向量存储所有节点的方法。节点之间的关系由向量中的下标表示。我们还包含一个辅助的迭代器类用于遍历树。<br/>\r\n    <br/>\r\n    #ifndef BINARY_TREE_H<br/>\r\n    #define BINARY_TREE_H<br/>\r\n    #include <vector><br/>\r\n    <br/>\r\n    class BinaryTree<br/>\r\n    {<br/>\r\n    public:<br/>\r\n    BinaryTree();<br/>\r\n    class Iterator<br/>\r\n    {<br/>\r\n    // ... 遍历迭代器<br/>\r\n    };<br/>\r\n    int depth() const;      // 空树返回 0<br/>\r\n    int maxElement() const; // 假设树非空<br/>\r\n    private:<br/>\r\n    std::vector<int> nodes_;<br/>\r\n    std::vector<int> left_;  // 左女儿下标，-1 表示无<br/>\r\n    std::vector<int> right_; // 右女儿下标，-1 表示无<br/>\r\n    };<br/>\r\n    <br/>\r\n    depth 可通过递归实现：空树（无节点）返回 0；否则返回 1 + max(depth(left), depth(right))。maxElement 对非空树递归地返回根、左子树最大值、右子树最大值三者中的最大者。空树作为一种特殊情况，可以用“不含任何节点的树”来表示，其深度为 0，maxElement 在空树上应抛出异常或做特殊处理。"
+  },
+  {
+    "id": 338,
+    "title": "列举所有可以使用 static 关键字的地方。",
+    "answer": "<br/>\r\n    <strong>原题：</strong>列举所有可以使用 static 关键字的地方。<br/><br/>\r\n    <strong>参考解答：</strong>static 关键字在 C++ 中有很多用途。第一个也是最常见的，是函数中的 static 变量。<br/>\r\n    <br/>\r\n    这样的变量在第一次遇到时被初始化，但在函数退出时并不离开作用域，而是其值一直保持到下一次调用该函数时再被复用。这有模拟 C 中类行为的优点，但在 C++ 中用处较小。它可以在 C++ 中用来减少创建对象所花的时间。不过要注意，这种用法与多线程编程不兼容，因为函数可能被两个不同线程同时进入，二者都想访问同一份数据。它在单例（singleton）模式中被用来让类的一个实例存在，即作为静态成员函数内的一个静态变量成员。<br/>\r\n    <br/>\r\n    <br/>\r\n    272 7. CODING IN C++<br/>\r\n    <br/>\r\n    这就引出了静态成员函数：这样的函数是类的方法，但不与类的某个对象关联。因此它通过<br/>\r\n    <br/>\r\n    MyClass::MyMethod();<br/>\r\n    <br/>\r\n    调用，而不是<br/>\r\n    <br/>\r\n    MyObject.MyMethod();<br/>\r\n    <br/>\r\n    static 的第三种用途是指定一个在翻译单元外没有链接的函数。换句话说，如果我们把一个函数声明为 static，就不能从另一个文件调用它。这种用法已经过时，因为它已被匿名命名空间（anonymous namespace）的概念取代，现在已被正式弃用。<br/>\r\n    <br/>\r\n    static 的第四种用途是表示只有一个副本的类数据成员，即静态数据成员，为类的所有对象所共享，存储在数据段中。"
+  },
+  {
+    "id": 339,
+    "title": "定义以下术语：什么是多态？什么是抽象类？什么是指针？什么是引用？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>定义以下术语<br/>\r\n    <br/>\r\n    <br/>\r\n    什么是多态？<br/>\r\n    什么是抽象类？<br/>\r\n    什么是指针？<br/>\r\n    <br/>\r\n    什么是引用？<br/><br/>\r\n    <strong>参考解答：</strong>多态（polymorphism）字面意思是“多种形态”。在 C++ 中它用来描述这样一个过程：有一个带有虚函数的基类，这些虚函数在派生类中被定义。于是客户端代码把对象当作基类对象来对待，但它的某些行为会根据对象来自哪个派生类而变化。<br/>\r\n    <br/>\r\n    一个很好的例子是 Payoff 类，其主要收益只在派生类中定义。这样，看涨或看跌的收益都可以传入一个把所有收益同等对待的例程。更多讨论见文献 [7]。其他标准例子包括“汽车是一种交通工具”（带有 drive 方法）和“圆是一种形状”（带有 draw 方法）。<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. SOLUTIONS 273<br/>\r\n    <br/>\r\n    抽象类（abstract class）是包含一个纯虚方法（pure virtual method）的类。一个方法如果既是虚函数又在末尾有 = 0 说明符，就是纯虚的。如果一个类从纯虚类继承但没有用非纯虚函数重写该纯虚函数，它也是纯虚的。抽象类不能被实例化。这意味着这样的类只能通过具体（即非纯虚的）派生类来使用。注意纯虚方法不必在任何地方定义，但如果需要也可以定义。<br/>\r\n    <br/>\r\n    指针（pointer）是包含另一个对象地址的变量。引用（reference）也是这样的变量。二者的主要区别在于：指针可以不指向任何对象（可以为空）并可以在运行时重新指向别处，而引用必须在定义时绑定到一个对象且之后不能更改绑定；对引用的操作直接作用于被绑定的对象。"
+  },
+  {
+    "id": 340,
+    "title": "如何编写代码来捕获一段代码中抛出的所有异常？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>如何编写代码来捕获一段代码中抛出的所有异常？<br/><br/>\r\n    <strong>参考解答：</strong>我们把希望捕获异常的代码放在带 try 开头的大括号内。在末尾我们写 catch(...)。这样就会捕获所有类型的异常。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    什么是异常安全（exception safety）？<br/>\r\n    你如何重新抛出一个对象？<br/>\r\n    <br/>\r\n    <br/>\r\n    274 7. CODING IN C++<br/>\r\n    <br/>\r\n    如果我捕获一个类型 X 的对象并在其下抛出一个类型 Y 的对象，在什么情况下 Y 会被 catch 捕获？<br/>\r\n    <br/>\r\n    <br/>\r\n    答案：使用 catch(...) 可以捕获任意类型的异常，包括重新抛出的 Y；但如果使用带类型的 catch(X)，则只有 X 及其派生类能被捕获，Y 不会被它捕获，除非有后续的 catch(...) 或 catch(Y)。"
+  },
+  {
+    "id": 341,
+    "title": "让一个 C++ 函数具有 C 链接（C linkage）的语法是什么？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>让一个 C++ 函数具有 C 链接（C linkage）的语法是什么？<br/>\r\n    <br/>\r\n    <br/>\r\n    7.3. Solutions<br/><br/>\r\n    <strong>参考解答：</strong>我们这样写<br/>\r\n    <br/>\r\n    extern \"C\"<br/>\r\n    {<br/>\r\n    // 需要具有该链接的函数<br/>\r\n    }<br/>\r\n    <br/>\r\n    这样声明后，这些函数就不会进行 C++ 的名字改写（name mangling），从而可以被 C 代码按原名字调用。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    extern 关键字还能用于什么？<br/>\r\n    为什么需要 extern \"C\"？<br/>\r\n    <br/>\r\n    <br/>\r\n    CHAPTER 8<br/>\r\n    <br/>\r\n    Logic/Brainteasers（逻辑/脑筋急转弯）<br/>\r\n    <br/>\r\n    8.1. 引言<br/>\r\n    <br/>\r\n    本章涵盖一系列巧妙、棘手且狡猾的问题。解答这些问题几乎（如果有的话）不涉及数学，而是通常要求你从正确的视角看待问题。成功的关键在于坚持和练习：脑筋急转弯的种类有限，对问题进行分类很有帮助。<br/>\r\n    <br/>\r\n    大多数这类问题一旦你知道了窍门就很容易解决，所以特别重要的是你在查看解答之前先尝试。<br/>\r\n    <br/>\r\n    由于问题性质多样，我们无法给出一条适用于所有的“规则”。不过这里有一些一般性提示：<br/>\r\n    <br/>\r\n    (1) 避开废话。很多这类问题以讲故事的方式呈现。透过围绕重要细节的所有浮华表述，专注于主要问题。<br/>\r\n    <br/>\r\n    (2) 把问题化简为一个简单情形，看看会发生什么。如果问的是一组对象如何求解，那一个对象会怎样？两个？三个？你能看出某种规律在形成吗？<br/>\r\n    <br/>\r\n    <br/>\r\n    8. LOGIC/BRAINTEASERS"
+  },
+  {
+    "id": 342,
+    "title": "在下午 3:15，时钟的时针和分针之间相隔多少度？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>在下午 3:15，时钟的时针和分针之间相隔多少度？<br/><br/>\r\n    <strong>参考解答：</strong>时钟上有 12 个小时，因此相邻小时之间相隔 30 度。显然时针从 3 走到 4 需要一小时。由于是 3 点过 1 刻（即分针正好指向 3），时针与分针之间会有 30/4 = 7.5 度的夹角。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    在 4 点差 1 刻时是多少度？<br/>\r\n    <br/>\r\n    在 3 点 1 刻之前，两针首次重合是什么时候？<br/>\r\n    <br/>\r\n    在 3 点 1 刻之后，两针首次重合是什么时候？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 343,
+    "title": "一个 4×4×4 的立方体由 1×1×1 的小立方体组成。如果我给立方体的外表面上漆，有多少个小立方体被涂到了漆？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>一个 4×4×4 的立方体由 1×1×1 的小立方体组成。如果我给立方体的外表面上漆，有多少个小立方体被涂到了漆？<br/><br/>\r\n    <strong>参考解答：</strong>像往常一样，有两种思路：一种繁琐且容易出错，另一种简单。不好的方法是数每个面上有多少个小立方体然后再减去重复的。<br/>\r\n    <br/>\r\n    简单的方法是数没有被涂漆的小立方体个数。它们恰好构成一个 2×2×2 的立方体。所以有 8 个没有被涂漆。因此我们有<br/>\r\n    <br/>\r\n    64 − 8 = 56<br/>\r\n    <br/>\r\n    个被涂了漆。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    如果是 5×5×5 的立方体呢？<br/>\r\n    <br/>\r\n    会有多少个小立方体被涂在多于一个面上？<br/>\r\n    <br/>\r\n    会有多少个小立方体被涂在多于两个面上？<br/>\r\n    <br/>\r\n    当小立方体的数量趋于无穷时，被涂漆的比例会怎样？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 344,
+    "title": "一只蚂蚁想从一个体积为 1 立方米的立方体的一个角到达对角的那个角。如果它走最短距离，将旅行多远？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>一只蚂蚁想从一个体积为 1 立方米的立方体的一个角到达对角的那个角。如果它走最短距离，将旅行多远？<br/><br/>\r\n    <strong>参考解答：</strong>立方体边长为 1（因为体积为 1 立方米）。蚂蚁只能沿表面爬行，最短路径是把两个相邻面展开成一个平面矩形，此时两端点之间为直线。展开后矩形的两边分别为 1 和 2，因此最短距离为 √(1^2 + 2^2) = √5 ≈ 2.236 米。（答案见原书 / see original book）"
+  },
+  {
+    "id": 345,
+    "title": "一片睡莲叶的面积每秒翻倍。一分钟后，它盖满了池塘。那么它需要多久能盖满池塘的四分之一？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>一片睡莲叶的面积每秒翻倍。一分钟后，它盖满了池塘。那么它需要多久能盖满池塘的四分之一？<br/><br/>\r\n    <strong>参考解答：</strong>这类问题的关键是以发现窍门，而不是去解方程。如果它每秒面积翻倍，那么它需要两秒时间变成四倍大。<br/>\r\n    <br/>\r\n    所以答案是<br/>\r\n    <br/>\r\n    60 − 2 = 58<br/>\r\n    <br/>\r\n    秒。以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    两列火车相距 60 英里，在同一条轨道上以 30 英里/小时的速度相向而行。一只苍蝇从一列火车前面出发，以 45 英里/小时的速度飞行，直到遇到另一列火车，然后掉头。它这样反复进行，直到被压扁。苍蝇一共飞了多远？<br/>\r\n    <br/>\r\n    等比数列前 N 项和的公式是什么？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 346,
+    "title": "赛车道一圈长一英里。一辆汽车绕场一圈，平均速度为 30 英里/小时。第二圈它必须以多快的速度行驶，才能使两圈的平均速度达到 60 英里/小时？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>赛车道一圈长一英里。一辆汽车绕场一圈，平均速度为 30 英里/小时。第二圈它必须以多快的速度行驶，才能使两圈的平均速度达到 60 英里/小时？<br/><br/>\r\n    <strong>参考解答：</strong>这是一个陷阱题。把速度平均起来的明显答案是错误的。<br/>\r\n    <br/>\r\n    相反，我们计算所需的时间。两圈意味着 2 英里。以 60 英里/小时走 2 英里需要 2 分钟。<br/>\r\n    <br/>\r\n    以 30 英里/小时走 1 英里也需要 2 分钟。因此我们没有任何剩余时间去跑第二圈。这辆车必须以无限快的速度行驶才行。<br/>\r\n    <br/>\r\n    <br/>\r\n    282 8. LOGIC/BRAINTEASERS<br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    如果这辆车的最高速度是 120 英里/小时，那么能达到的最快平均速度是多少？<br/>\r\n    为什么把速度平均起来不奏效？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 347,
+    "title": "我们有一杯白葡萄酒和一杯红葡萄酒。每杯最初各有 100 毫升。我们从红葡萄酒杯中取出 S 毫升倒入白葡萄酒杯，并使其混合均匀。然后再从白葡萄酒杯中取出 S 毫升倒回红葡萄酒杯。是红杯中的白葡萄酒多，还是白杯中的红葡萄酒多？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>我们有一杯白葡萄酒和一杯红葡萄酒。每杯最初各有 100 毫升。我们从红葡萄酒杯中取出 S 毫升放入白葡萄酒杯，并使其混合均匀。然后再从白葡萄酒杯中取出 S 毫升放入红葡萄酒杯。是红杯中的白葡萄酒多，还是白杯中的红葡萄酒多？<br/><br/>\r\n    <strong>参考解答：</strong>这是一个很老的问题，但似乎仍会出现。主要有两种思路：<br/>\r\n    <br/>\r\n    计算第一次倒之后的情形，然后再计算第二次之后的情形；<br/>\r\n    利用质量守恒。<br/>\r\n    <br/>\r\n    我们采用第二种，因为它更简单，而你是否看得出这一点考验了你的聪明程度（或者经验……）。<br/>\r\n    <br/>\r\n    关键点在于：最后每杯中都有 100 毫升葡萄酒。这只可能在两种量相等时成立。<br/>\r\n    <br/>\r\n    不信？下面用方程证明。假设白杯中有 x 毫升红葡萄酒，红杯中有 y 毫升白葡萄酒。<br/>\r\n    <br/>\r\n    那么红葡萄酒杯中含有 100 − y 毫升红葡萄酒（因为另外的 y 是白葡萄酒）。但红杯总共只有 100 毫升，所以<br/>\r\n    100 − y + x = 100，<br/>\r\n    即 x = y。所以两者相等。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    假设第二次倒的是 6 毫升，会怎样？<br/>\r\n    假设第一次倒的是 6 毫升，会怎样？<br/>\r\n    经过这个过程后，白葡萄酒杯里的酒是什么颜色？<br/>\r\n    <br/>\r\n    O<br/>\r\n    <br/>\r\n    <br/>\r\n    8.3. SOLUTIONS 283"
+  },
+  {
+    "id": 348,
+    "title": "想象一块由 n 个小方块组成的巧克力棒。要把它掰成 n 个独立的小方块，需要掰多少次？结果是否取决于巧克力棒的形状？证明你的结论。附加题：假设你可以把几块叠在一起，从而一次掰断多块，需要掰多少次？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>想象一块由 n 个小方块组成的巧克力棒。要把它掰成 n 个独立的小方块，需要掰多少次？结果是否取决于巧克力棒的形状？证明你的结论。<br/>\r\n    <br/>\r\n    附加题：假设你可以把几块叠在一起，从而一次掰断多块，需要掰多少次？<br/><br/>\r\n    <strong>参考解答：</strong>第一部分的关键在于注意到：如果你有 k 块，掰断其中一块，你就会得到 k + 1 块。这意味着从 1 块到 n 块需要 n − 1 次掰断。这显然不依赖于巧克力棒的形状。<br/>\r\n    <br/>\r\n    对于第二部分，如果我们一次掰断所有手头的块，那么一次就能让块数翻倍，而且我们不可能做得更好。这意味着我们至少需要 k 次掰断，其中 k 是满足 2^k ≥ n 的最小整数。<br/>\r\n    <br/>\r\n    在这种情况下，对形状的依赖更微妙：如果我们的任何一块只有一个方块，那么显然不能再掰它。<br/>\r\n    <br/>\r\n    例如，一个 2×2 的正方形可以用两次掰断完成。但如果取 3 个方块排成一排、并在中间那个下方多一个方块的形状，那么任何一次初始掰断都恰好拆下一块，总共至少需要 3 次掰断。<br/>\r\n    <br/>\r\n    以下是一些可能的相关问题：<br/>\r\n    <br/>\r\n    小块的形状有关系吗？<br/>\r\n    讨论这两个问题的三维类比。<br/>\r\n    什么是 Toblerone（三角巧克力）？<br/>\r\n    <br/>\r\n    O"
+  },
+  {
+    "id": 349,
+    "title": "假设我们俩走进一家酒吧，点了一品脱啤酒。我喝了半品脱。你喝了剩下的一半。我又喝了剩下的一半，依此类推。我喝了多少品脱，你喝了多少品脱？",
+    "answer": "<br/>\r\n    <strong>原题：</strong>假设我们俩走进一家酒吧，点了一品脱啤酒。我喝了半品脱。你喝了剩下的一半。我又喝了剩下的一半，依此类推。我喝了多少品脱，你喝了多少品脱？<br/>\r\n    <br/>\r\n    问题 8.10。一只兔子要爬 N 级台阶。它每次可以跳一级或两级。到达顶部有多少种不同的跳法？<br/>\r\n    <br/>\r\n    问题 8.11。雪在某个时刻于中午前开始下。一辆清雪车在中午开始工作，车的速度与雪开始下以来的时间成反比。清雪车从中午到下午 1 点覆盖的距离是下午 1 点到 2 点的两倍。雪是何时开始下的？<br/><br/>\r\n    <strong>参考解答：</strong>要解决这个问题，我们只需要识别出描述每个人喝了多少的无穷级数。这些级数本身不需要计算，我们很快就会看到。<br/>\r\n    <br/>\r\n    起初我喝了 1/2，杯中剩下 1/2。你喝了这的一半，即 1/4，杯中剩下 1/4。于是我下一次喝的是 1/8 品脱，然后是 1/32，依此类推；而你喝的是序列 1/4, 1/16, … 换句话说，<br/>\r\n    <br/>\r\n    我喝的总量 = Σ_{k=0}^{∞} (1/2)^{2k+1} = 1/2 + 1/8 + 1/32 + …，<br/>\r\n    你喝的总量 = Σ_{k=0}^{∞} (1/2)^{2k+2} = 1/4 + 1/16 + …。<br/>\r\n    <br/>\r\n    <br/>\r\n    284 8. LOGIC/BRAINTEASERS<br/>\r\n    <br/>\r\n    这表明，如果我喝的总量记为 x，那么你喝的总量就是 x/2：我喝的是你的两倍。为完整起见，我们应检查整品脱都被喝完了。把上面两个级数相加，得到 x + x/2 = 1，所以 x = 2/3。因此我喝了 2/3 品脱，你喝了 1/3 品脱。<br/>\r\n    <br/>\r\n    问题 8.10 的答案是斐波那契数：到达第 N 级的方法数为 F_{N+1}（其中 F_1 = F_2 = 1）。问题 8.11：设雪在中午前 t 小时开始下，则速度与 1/(t + T) 成正比，由距离关系可解得雪是在中午前约 (√2 − 1) 小时左右（即约 25 分钟前）开始下的。"
+  }
+]
