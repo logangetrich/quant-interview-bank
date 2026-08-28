@@ -332,6 +332,10 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 <label class="flt-item" data-book="red"><span class="flt-book-red">红宝书</span><span class="flt-cnt">224</span></label>
 <label class="flt-item" data-book="yellow"><span class="flt-book-yellow">黄皮书</span><span class="flt-cnt">53</span></label>
 <label class="flt-item" data-book="hots"><span class="flt-book-hots">Heard on the Street</span><span class="flt-cnt">261</span></label>
+    <div class="sb-title">公司</div>
+    <div id="company-filter-list">
+      <label class="flt-item active" data-company="all"><span class="flt-dot" style="background:var(--muted)"></span><span>全部公司</span></label>
+    </div>
 
   </aside>
 
@@ -368,7 +372,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="mini-stat"><span class="ms-dot" style="background:var(--accent)"></span>已看<span class="ms-cnt" id="ms-seen">0</span></div>
       <div class="mini-stat"><span class="ms-dot" style="background:var(--muted)"></span>未做<span class="ms-cnt" id="ms-todo">0</span></div>
     </div>
-    <button class="retry-btn" id="retry-btn" onclick="startQuiz('dont')">📕 重练错题</button>
+    <button class="retry-btn" id="wrong-book-btn" onclick="openWrongBook()">📕 错题本</button>
+    <button class="retry-btn" id="retry-btn" onclick="startQuiz('dont')">🎯 重练错题</button>
   </aside>
 </div>
 
@@ -396,6 +401,18 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 </div>
 
 <!-- 早鸟弹层 -->
+<div class="quiz-overlay" id="wrongbook-overlay">
+  <div class="quiz-panel" style="max-width:760px">
+    <div class="qp-head">
+      <div class="qp-title"><span style="font-size:18px">📕</span> 错题本</div>
+      <div class="qp-stats" id="wb-stat" style="font-size:12px;color:var(--muted)"></div>
+      <button class="qp-close" id="wb-close">✕</button>
+    </div>
+    <div class="qp-content" style="padding-top:14px" id="wb-content"></div>
+    <div class="qp-foot" id="wb-foot"></div>
+  </div>
+</div>
+
 <div class="quiz-overlay" id="ai-overlay">
   <div class="quiz-panel" style="max-width:760px">
     <div class="qp-head">
@@ -465,7 +482,8 @@ function bumpStats(){
 function yesterday(d){const t=new Date(d+'T00:00:00');t.setDate(t.getDate()-1);return t.toISOString().slice(0,10);}
 
 /* ===== 过滤状态 ===== */
-let filters={cat:'all',diff:'all',book:'all',st:'all',q:''}, viewMode='card';
+let filters={cat:'all',diff:'all',book:'all',st:'all',company:'all',q:''}, viewMode='card';
+const CO_NAMES={citadel:'Citadel','two-sigma':'Two Sigma','jane-street':'Jane Street',optiver:'Optiver',sig:'SIG',hrt:'HRT',squarepoint:'Squarepoint','tower-research':'Tower Research','jump-trading':'Jump Trading',jpmorgan:'JPMorgan','old-mission':'Old Mission','five-rings':'Five Rings',worldquant:'WorldQuant',drw:'DRW','akuna-capital':'Akuna Capital',imc:'IMC','de-shaw':'D.E. Shaw',virtu:'Virtu',headlands:'Headlands','bank-of-america':'Bank of America'};
 function stOf(q){return mastery[q.id]||'todo';}
 
 function getFiltered(){
@@ -474,6 +492,7 @@ function getFiltered(){
     if(filters.diff!=='all'&&q.diff!==Number(filters.diff))return false;
     if(filters.book!=='all'&&q.book!==filters.book)return false;
     if(filters.st!=='all'&&stOf(q)!==filters.st)return false;
+    if(filters.company!=='all'&&!(q.companies||[]).includes(filters.company))return false;
     if(filters.q){
       const hay=(q.title+' '+q.answer+' '+(CAT_NAMES[q.cat]||'')+' '+(BOOK_NAMES[q.book]||'')).toLowerCase();
       if(!hay.includes(filters.q.toLowerCase()))return false;
@@ -691,6 +710,28 @@ function renderSidebar(){
   QUESTIONS.forEach(q=>{});
 }
 function renderMath(){if(window.renderMathInElement){try{window.renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'\\[',right:'\\]',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false}],throwOnError:false});}catch(e){}}}
+
+/* ===== 公司筛选列表 ===== */
+function renderCompanyFilter(){
+  var el = document.getElementById('company-filter-list');
+  if(!el) return;
+  var cnt = {};
+  QUESTIONS.forEach(function(q){ (q.companies||[]).forEach(function(c){ cnt[c]=(cnt[c]||0)+1; }); });
+  var top = Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a];}).slice(0,10);
+  var html2 = '<label class="flt-item '+(filters.company==='all'?'active':'')+'" data-company="all"><span class="flt-dot" style="background:var(--muted)"></span><span>全部公司</span><span class="flt-cnt">'+QUESTIONS.length+'</span></label>';
+  top.forEach(function(c){
+    html2 += '<label class="flt-item '+(filters.company===c?'active':'')+'" data-company="'+c+'"><span class="flt-dot" style="background:var(--accent)"></span><span>'+(CO_NAMES[c]||c)+'</span><span class="flt-cnt">'+cnt[c]+'</span></label>';
+  });
+  el.innerHTML = html2;
+  el.querySelectorAll('.flt-item[data-company]').forEach(function(x){
+    x.onclick = function(){
+      filters.company = x.dataset.company;
+      el.querySelectorAll('.flt-item[data-company]').forEach(function(y){ y.classList.remove('active'); });
+      x.classList.add('active');
+      renderList();
+    };
+  });
+}
 
 /* ===== 筛选事件 ===== */
 document.querySelectorAll('.flt-item[data-cat]').forEach(el=>el.addEventListener('click',()=>{
@@ -1003,6 +1044,56 @@ document.addEventListener('keydown', function(e){
 
 /* ===== 早鸟弹层 ===== */
 document.getElementById('offer-bar').onclick=()=>document.getElementById('offer-modal').classList.add('show');
+/* ===== 错题本 ===== */
+function openWrongBook(){
+  document.getElementById('wrongbook-overlay').classList.add('show');
+  renderWrongBook();
+}
+function closeWrongBook(){ document.getElementById('wrongbook-overlay').classList.remove('show'); }
+function renderWrongBook(){
+  var list = QUESTIONS.filter(function(q){ return mastery[q.id]==='dont'; });
+  var content = document.getElementById('wb-content');
+  var stat = document.getElementById('wb-stat');
+  var foot = document.getElementById('wb-foot');
+  stat.textContent = '共 ' + list.length + ' 道不会的题';
+  if(!list.length){
+    content.innerHTML = '<div style="text-align:center;padding:40px 0;color:var(--muted)">🎉 太棒了，当前没有错题！</div>';
+    foot.innerHTML = '<button class="qbtn qbtn-ghost" onclick="closeWrongBook()">关闭</button>';
+    return;
+  }
+  content.innerHTML = list.map(function(q, i){
+    return '<div class="pcard" id="wb-card-'+q.id+'">' +
+      '<div class="pcard__head" onclick="toggleWbCard('+q.id+')">' +
+        '<span class="pcard__num">#'+String(q.id).padStart(3,'0')+'</span>' +
+        '<span class="pcard__title">'+q.title+'</span>' +
+        '<span class="tag tag-cat">'+(CAT_ICONS[q.cat]||'')+' '+(CAT_NAMES[q.cat]||q.cat)+'</span>' +
+        '<span class="tag tag-'+DIFF_CLASS[q.diff]+'">'+DIFF_NAMES[q.diff]+'</span>' +
+        '<svg class="pcard__chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>' +
+      '</div>' +
+      '<div class="pcard__body">' + (q.status==='complete' ? (q.parts&&q.parts.sol?'':renderFullSol(q)) : (q.status==='ai' ? aiSolBlock(q) : renderAnswer(q,2))) + '</div>' +
+      '<div style="display:flex;gap:8px;padding:0 20px 14px 70px">' +
+        '<button class="qbtn qbtn-know" style="padding:6px 14px;font-size:12px" onclick="event.stopPropagation();removeWrong('+q.id+')">😎 我掌握了</button>' +
+        '<button class="qbtn qbtn-soft" style="padding:6px 14px;font-size:12px" onclick="event.stopPropagation();toggleWbCard('+q.id+')">🤔 再看答案</button>' +
+      '</div></div>';
+  }).join('');
+  foot.innerHTML = '<button class="qbtn qbtn-dont" onclick="startQuiz(\'dont\')">🎯 重练全部错题</button>' +
+    '<button class="qbtn qbtn-ghost" onclick="closeWrongBook()">关闭</button>';
+}
+function toggleWbCard(id){
+  var c = document.getElementById('wb-card-'+id);
+  if(c) c.classList.toggle('open');
+}
+function removeWrong(id){
+  mastery[id] = 'know'; saveM(mastery); updateCounts(); renderWrongBook(); renderList();
+}
+function aiSolBlock(q){
+  return '<button class="sol-btn" style="display:inline-block" onclick="aiSolve('+q.id+')">✨ AI 生成解答</button>' +
+    '<div id="ai-sol-'+q.id+'" style="margin-top:12px;font-size:13px;color:var(--dim);line-height:1.8"></div>' +
+    '<div id="ai-loading-'+q.id+'" style="display:none;margin-top:12px;color:var(--teal);font-size:13px">⏳ AI 思考中…</div>';
+}
+document.getElementById('wb-close').onclick = closeWrongBook;
+document.getElementById('wrongbook-overlay').addEventListener('click', function(e){ if(e.target===e.currentTarget) closeWrongBook(); });
+
 /* ===== AI 无限模式 ===== */
 var aiCacheKey='qib-ai-sol-v1';
 function aiLoadCache(){try{return JSON.parse(localStorage.getItem(aiCacheKey))||{}}catch(e){return{}}}
@@ -1102,6 +1193,7 @@ setTimeout(function(){
 document.getElementById('offer-modal').addEventListener('click',e=>{if(e.target===e.currentTarget)document.getElementById('offer-modal').classList.remove('show');});
 
 /* ===== 初始化 ===== */
+renderCompanyFilter();
 (function(){
   // 检查从 explore.html 来的 playlist 预填
   try {
