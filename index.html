@@ -400,7 +400,14 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   <div class="quiz-panel" style="max-width:760px">
     <div class="qp-head">
       <div class="qp-title"><span style="font-size:18px">✨</span> AI 无限模式</div>
-      <div class="qp-stats" style="font-size:12px;color:var(--muted)" id="ai-model-tag">模型：DeepSeek-V4-flash · llmx.tqx.ai</div>
+      <div class="qp-stats" style="font-size:12px;color:var(--muted)">
+        <select id="ai-model-select" style="padding:4px 8px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--dim);font-size:11.5px" onchange="AI_MODEL=this.value;document.getElementById('ai-model-tag').textContent='模型：'+this.value">
+          <option value="g5.2">⚡ g5.2（快速）</option>
+          <option value="claude-sonnet-5">🧠 claude-sonnet-5（深度）</option>
+          <option value="DeepSeek-V4-flash">🤔 DeepSeek-V4-flash（推理）</option>
+        </select>
+      </div>
+      <span style="font-size:12px;color:var(--muted)" id="ai-model-tag">模型：g5.2</span>
       <button class="qp-close" id="ai-close">✕</button>
     </div>
     <div class="qp-content" style="padding-top:14px">
@@ -1002,8 +1009,9 @@ function aiLoadCache(){try{return JSON.parse(localStorage.getItem(aiCacheKey))||
 function aiSaveCache(c){try{localStorage.setItem(aiCacheKey,JSON.stringify(c))}catch(e){}}
 var aiCache=aiLoadCache();
 
-function aiAsk(prompt,system){
-  return fetch(LLM_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:prompt,system:system||'你是资深量化面试出题官，回复用简体中文，格式用 Markdown。',maxTokens:3000})}).then(function(r){return r.json()}).then(function(j){if(j.error)throw new Error(j.error);return j.content;});
+var AI_MODEL = 'g5.2'; // 默认快速模型；可切换：g5.2(快) / claude-sonnet-5(深) / DeepSeek-V4-flash(推理)
+function aiAsk(prompt,system,model){
+  return fetch(LLM_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:prompt,system:system||'你是资深量化面试出题官，回复用简体中文，格式用 Markdown。',model:model||AI_MODEL,maxTokens:3000})}).then(function(r){return r.json()}).then(function(j){if(j.error)throw new Error(j.error);return j.content;});
 }
 
 function aiSolve(id){
