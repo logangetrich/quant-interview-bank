@@ -39,3 +39,4 @@ ocr_all.log
 .idea/
 .DS_Store
 Thumbs.db
+.llmx_key
