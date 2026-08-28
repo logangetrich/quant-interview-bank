@@ -1,202 +1,202 @@
 [
-  {
-    "id": 35,
-    "title": "e^π 与 π^e 哪个大",
-    "answer": "<strong>答案：e^π > π^e</strong><br/><br/>\r\n    取对数比较：e^π > π^e ⟺ π ln e > e ln π ⟺ ln e / e > ln π / π<br/><br/>\r\n    考虑 f(x) = ln x / x，求导：<br/>\r\n    f'(x) = (1 - ln x) / x²<br/><br/>\r\n    当 x > e 时 f'(x) < 0（递减）。由于 e < π，所以 f(e) > f(π)，即 ln e / e > ln π / π。<br/><br/>\r\n    <div class=\"answer-hint\">💡 另解：Taylor展开 e^x = 1+x+x²/2+... > 1+x，令x=π/e-1可得 e^(π/e) > π/e，即 e^π > π^e。</div>"
-  },
-  {
-    "id": 36,
-    "title": "ln(x)的积分",
-    "answer": "∫ln(x)dx = ?<br/><br/>\r\n    用<strong>分部积分</strong>：设u=ln x, v=x<br/>\r\n    <div class=\"formula\">∫ln(x)dx = x·ln(x) - ∫x·(1/x)dx = x·ln(x) - x + C</div>"
-  },
-  {
-    "id": 37,
-    "title": "标准正态的条件期望 E[X|X>0]",
-    "answer": "X ~ N(0,1)，求 E[X | X>0]。<br/><br/>\r\n    <div class=\"formula\">E[X|X>0] = ∫₀^∞ x · f(x) dx / P(X>0)</div><br/>\r\n    其中 f(x) = (1/√2π) e^(-x²/2)<br/><br/>\r\n    用换元 u = -x²/2, du = -x dx：<br/>\r\n    <div class=\"formula\">∫₀^∞ x e^(-x²/2) dx = ∫₀^(-∞) -e^u du = [e^u]₋∞⁰ = 1</div><br/>\r\n    E[X|X>0] = (1/√2π × 1) / (1/2) = <strong>√(2/π) ≈ 0.798</strong>"
-  },
-  {
-    "id": 38,
-    "title": "高斯积分 ∫e^(-x²/2)dx",
-    "answer": "计算 ∫₋∞^∞ e^(-x²/2) dx<br/><br/>\r\n    设 I = ∫₋∞^∞ e^(-x²/2) dx，则：<br/>\r\n    I² = ∫∫ e^(-(x²+y²)/2) dx dy<br/><br/>\r\n    转换为极坐标 (x = r cosθ, y = r sinθ)：<br/>\r\n    I² = ∫₀^(2π) ∫₀^∞ e^(-r²/2) r dr dθ<br/>\r\n    = 2π × [e^(-r²/2)]₋... = 2π × 1 = 2π<br/><br/>\r\n    <strong>I = √(2π)</strong><br/>\r\n    <div class=\"answer-hint\">💡 这就是正态分布归一化常数的由来。</div>"
-  },
-  {
-    "id": 39,
-    "title": "L'Hôpital法则应用",
-    "answer": "求 lim(x→∞) eˣ/x² 和 lim(x→0⁺) x²ln(x)<br/><br/>\r\n    <strong>第一个：</strong>∞/∞型，用L'Hôpital两次<br/>\r\n    lim eˣ/x² = lim eˣ/(2x) = lim eˣ/2 = <strong>∞</strong><br/><br/>\r\n    <strong>第二个：</strong>改写为 ln(x) / (1/x²)，即 -∞/∞ 型<br/>\r\n    lim [ln(x) / x⁻²] = lim [1/x / (-2x⁻³)] = lim [-x²/2] = <strong>0</strong>"
-  },
-  {
-    "id": 40,
-    "title": "相关系数的范围（正定矩阵约束）",
-    "answer": "x与y相关0.8，x与z相关0.8。y与z相关系数范围？<br/><br/>\r\n    <strong>方法一（向量夹角）：</strong><br/>\r\n    cos θ = 0.8, 最小夹角2θ → ρ_min = cos(2θ) = 2cos²θ - 1 = 2(0.64) - 1 = <strong>0.28</strong><br/>\r\n    最大相关 = <strong>1</strong>（同方向）<br/><br/>\r\n    <strong>方法二（正定约束）：</strong><br/>\r\n    相关矩阵的行列式 ≥ 0：<br/>\r\n    det = 1 - 0.64 - 0.64 - ρ² + 2(0.64)ρ ≥ 0<br/>\r\n    → -0.28 + 1.28ρ - ρ² ≥ 0 → ρ ∈ [0.28, 1]"
-  },
-  {
-    "id": 41,
-    "title": "Cholesky分解生成相关正态变量",
-    "answer": "如何用独立N(0,1)生成相关系数ρ的两个标准正态变量？<br/><br/>\r\n    <div class=\"formula\">X₁ = Z₁<br/>X₂ = ρZ₁ + √(1-ρ²) Z₂</div><br/><br/>\r\n    验证：<br/>\r\n    • Var(X₁) = Var(Z₁) = 1 ✓<br/>\r\n    • Var(X₂) = ρ² + (1-ρ²) = 1 ✓<br/>\r\n    • Cov(X₁,X₂) = Cov(Z₁, ρZ₁) = ρ ✓<br/><br/>\r\n    <div class=\"answer-hint\">💡 这是Cholesky分解的最简形式。对于n维，分解协方差矩阵Σ = RᵀR，然后X = μ + RᵀZ。</div>"
-  },
-  {
-    "id": 42,
-    "title": "最小二乘回归的矩阵推导",
-    "answer": "如何用矩阵方法推导线性回归的OLS估计量？<br/><br/>\r\n    模型：Y = Xβ + ε<br/>\r\n    目标：min ||Y - Xβ||²<br/><br/>\r\n    对β求导：<br/>\r\n    <div class=\"formula\">∂/∂β [(Y-Xβ)ᵀ(Y-Xβ)] = -2Xᵀ(Y-Xβ) = 0</div><br/>\r\n    → XᵀXβ = XᵀY → <strong>β̂ = (XᵀX)⁻¹XᵀY</strong><br/><br/>\r\n    实际计算中可用QR分解：X = QR → β̂ = R⁻¹QᵀY，避免直接求逆的数值不稳定。<br/>\r\n    <div class=\"answer-hint\">💡 OLS的5个假设：线性、零均值、同方差/不相关、无完全共线性、外生性。</div>"
-  },
-  {
-    "id": 43,
-    "title": "Lagrange乘数法：点到平面距离",
-    "answer": "求原点到平面 2x+3y+4z=12 的距离。<br/><br/>\r\n    min f = x²+y²+z², s.t. g = 2x+3y+4z-12 = 0<br/><br/>\r\n    ∇f = λ∇g:<br/>\r\n    2x = 2λ, 2y = 3λ, 2z = 4λ<br/>\r\n    → x = λ, y = 3λ/2, z = 2λ<br/><br/>\r\n    代入约束：2λ + 9λ/2 + 8λ = 12 → λ = 24/29<br/>\r\n    D = √(x²+y²+z²) = √[(24/29)² + (36/29)² + (48/29)²] = <strong>12/√29</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 一般公式：点(a₀,b₀,c₀)到平面 ax+by+cz=d 的距离 = |d-aa₀-bb₀-cc₀| / √(a²+b²+c²)</div>"
-  },
-  {
-    "id": 44,
-    "title": "醉汉走桥（鞅论）",
-    "answer": "醉汉在100米桥的17米处，每步等概率前进/后退1米。到100米先于0米的概率？到达任一端的期望步数？<br/><br/>\r\n    设当前位置为0，对称随机游走停在a=83或-β=-17。<br/><br/>\r\n    <strong>Sₙ和Sₙ²-n都是鞅，停止时刻的鞅仍为鞅。</strong><br/><br/>\r\n    E[S_N] = pₐ × 83 + (1-pₐ) × (-17) = 0 → <strong>pₐ = 17/100 = 0.17</strong><br/><br/>\r\n    E[Sₙ² - N] = 0 → E[N] = pₐ × 83² + (1-pₐ) × 17² = <strong>1441步</strong><br/>\r\n    <div class=\"answer-hint\">💡 一般公式：停在a或-β的概率分别为β/(α+β)和α/(α+β)，期望步数αβ。</div>"
-  },
-  {
-    "id": 45,
-    "title": "售票问题（反射原理）",
-    "answer": "2n人排队买票，n人持$5、n人持$10，票价$5，售票员无零钱。所有人都能顺利买票的概率？<br/><br/>\r\n    <strong>答案：1/(n+1)</strong><br/><br/>\r\n    <strong>思路：</strong>将持$5的人映射为+1，持$10的人映射为-1，问题变为：从(0,0)到(2n,0)的随机游走中，不触及y=-1的概率。<br/><br/>\r\n    用<strong>反射原理</strong>：触及y=-1的路径数 = 从(0,-2)到(2n,0)的路径数 = C(2n, n-1)<br/><br/>\r\n    不触及的路径数 = C(2n,n) - C(2n,n-1) = C(2n,n)/(n+1)<br/><br/>\r\n    P = [C(2n,n)/(n+1)] / C(2n,n) = <strong>1/(n+1)</strong>（卡特兰数相关）"
-  },
-  {
-    "id": 46,
-    "title": "硬币三连（Penney's Game）",
-    "answer": "公平硬币，玩家A先选3连序列，B后选。谁的序列先出现谁赢。<br/><br/>\r\n    <strong>关键：B总能选到胜率>50%的序列！</strong><br/><br/>\r\n    策略：取A序列的后两位的<strong>反序列</strong>作为B序列的前两位。<br/><br/>\r\n    例如A选HHH → B选THH，B胜率7/8<br/>\r\n    A选HTH → B选HHT，B胜率2/3<br/><br/>\r\n    <div class=\"answer-hint\">💡 这说明三连序列的胜负关系是非传递的（类似石头剪刀布）。B的最优策略保证至少2/3胜率。</div>"
-  },
-  {
-    "id": 47,
-    "title": "Brown运动定义与性质",
-    "answer": "<strong>定义：</strong>连续随机过程W(t), t≥0满足：<br/>\r\n    1. W(0) = 0<br/>\r\n    2. 增量独立：W(t₂)-W(t₁), W(t₃)-W(t₂), ... 相互独立<br/>\r\n    3. W(t+s)-W(t) ~ N(0, s)<br/><br/>\r\n    <strong>重要性质：</strong><br/>\r\n    • 连续（无跳跃）<br/>\r\n    • E[W(t)] = 0, E[W(t)²] = t<br/>\r\n    • 鞅性：E[W(t+s)|W(t)] = W(t)<br/>\r\n    • Cov(W(s), W(t)) = min(s,t)<br/>\r\n    • Markov性（连续空间）<br/><br/>\r\n    <strong>两个重要鞅：</strong><br/>\r\n    • W(t)² - t 是鞅<br/>\r\n    • exp{λW(t) - λ²t/2} 是鞅（指数鞅）"
-  },
-  {
-    "id": 48,
-    "title": "Brown运动停时的期望",
-    "answer": "B(t)首次到达±1的平均时间？<br/><br/>\r\n    <strong>用鞅论：B(t)²-t是鞅</strong><br/><br/>\r\n    设T = min{t : B(t)=1或B(t)=-1}<br/><br/>\r\n    由Ito引理：d(B²-t) = 2B dB，无drift项 → 鞅<br/><br/>\r\n    E[B(T)²-T] = E[B(0)²-0] = 0<br/>\r\n    E[B(T)²] = 1（停在±1）<br/><br/>\r\n    → E[T] = <strong>1</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 一般情况：停在a或-β的期望时间 = αβ（与离散情况一致！）</div>"
-  },
-  {
-    "id": 49,
-    "title": "B(t)>0且B(2)<0的概率",
-    "answer": "标准Brown运动 B₁>0 且 B₂<0 的概率？<br/><br/>\r\n    <strong>答案：1/8</strong><br/><br/>\r\n    B₁ ~ N(0,1), B₂-B₁ ~ N(0,1) 独立<br/><br/>\r\n    B₁>0, B₂<0 ⟺ B₁>0, B₂-B₁ < -B₁<br/><br/>\r\n    用对称性：将(B₁, B₂-B₁)的密度函数空间分成8个等概率区域（由x=0, y=0, y=x, y=-x分割），目标区域占1/8。"
-  },
-  {
-    "id": 50,
-    "title": "动态骰子游戏",
-    "answer": "掷骰子：1-5各得对应金额，6则失去所有累积奖金。每次掷后可选停或继续。最多愿付多少？<br/><br/>\r\n    <strong>用动态规划求解：</strong><br/><br/>\r\n    当累积n元时，继续掷的期望：<br/>\r\n    (n+1)/6 + (n+2)/6 + ... + (n+5)/6 + 0/6 = 5n/6 + 2.5<br/><br/>\r\n    当 5n/6 + 2.5 > n 时继续，即 n ≤ 14<br/><br/>\r\n    递推计算 f(15)=15, f(14)=14.17, ..., f(0) = <strong>6.15</strong><br/>\r\n    <div class=\"answer-hint\">💡 愿意为游戏最多支付 $6.15。</div>"
-  },
-  {
-    "id": 51,
-    "title": "动态纸牌游戏（最优停时）",
-    "answer": "52张牌(26红26黑)，逐张翻开，红+1黑-1。可随时叫停，求最优策略和期望收益。<br/><br/>\r\n    <strong>动态规划方程：</strong><br/>\r\n    f(b,r) = max(b-r, b/(b+r)×f(b-1,r) + r/(b+r)×f(b,r-1))<br/><br/>\r\n    边界条件：f(0,r)=0, f(b,0)=b<br/><br/>\r\n    <strong>答案：f(26,26) = $2.62</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 这个方程本质上就是美式期权的定价方程——在最优时间行权。</div>"
-  },
-  {
-    "id": 52,
-    "title": "期权价格的影响因素",
-    "answer": "欧式/美式期权价格随各变量变化方向：<br/><br/>\r\n    <table style=\"width:100%; font-size:13px; border-collapse:collapse;\">\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><th style=\"text-align:left; padding:6px;\">变量</th><th>欧式Call</th><th>美式Call</th><th>欧式Put</th><th>美式Put</th></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">股价S↑</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">行权价K↑</td><td>↓</td><td>↓</td><td>↑</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">到期时间τ↑</td><td>?</td><td>↑</td><td>?</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">波动率σ↑</td><td>↑</td><td>↑</td><td>↑</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">无风险利率r↑</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>\r\n    <tr><td style=\"padding:6px;\">股息D↑</td><td>↓</td><td>↓</td><td>↑</td><td>↑</td></tr>\r\n    </table><br/>\r\n    <div class=\"answer-hint\">💡 欧式期权的到期时间影响不确定，因为中间可能有股息发放。</div>"
-  },
-  {
-    "id": 53,
-    "title": "Put-Call Parity（看涨看跌平价）",
-    "answer": "<strong>欧式期权看涨看跌平价：</strong><br/>\r\n    <div class=\"formula\">c + Ke^(-rτ) = p + S - D</div><br/>\r\n    <strong>证明（无套利）：</strong><br/><br/>\r\n    组合A：1份Call + 面值K的零息债券 → 到期T收益 = max(S_T, K)<br/>\r\n    组合B：1份Put + 1股股票 → 到期T收益 = max(S_T, K)<br/><br/>\r\n    两组合到期收益相同 → 当前价值必须相同 → c + Ke^(-rτ) = p + S - D<br/><br/>\r\n    <div class=\"answer-hint\">💡 由此可得：S-D-Ke^(-rτ) ≤ c ≤ S（无套利边界）。美式期权则是不等式关系。</div>"
-  },
-  {
-    "id": 54,
-    "title": "为什么不在到期前行使美式看涨期权（无股息）",
-    "answer": "<strong>无股息股票的美式Call = 欧式Call，提前行使永远不是最优的。</strong><br/><br/>\r\n    <strong>论据1（时间价值）：</strong>c = (S-K) + (K-Ke^(-rτ)) + p > S-K = 内含价值。出售期权比行使更划算。<br/><br/>\r\n    <strong>论据2（替代策略）：</strong>不行使，而是卖空股票+借出K。到期时无论S_T如何，都有正收益：<br/>\r\n    <div class=\"formula\">T时刻收益 = Ke^(rτ) - S_T > 0 （当S_T>K时）</div><br/><br/>\r\n    <strong>论据3（Jensen不等式）：</strong>Call收益是凸函数，E[e^(-rτ)C(S_T)] ≥ C(E^Q[S_T]) = C(Se^(rτ)) → 等待更优。<br/><br/>\r\n    <div class=\"answer-hint\">💡 但美式Put不同！P(0)=K≠0，所以 Jensen 论据不成立，提前行使可能最优。</div>"
-  },
-  {
-    "id": 55,
-    "title": "Black-Scholes-Merton微分方程",
-    "answer": "基于无套利和Δ对冲推导BSM方程：<br/><br/>\r\n    构建组合Π = -f + (∂f/∂S)×S（卖空1份衍生品+买入Δ股股票）<br/><br/>\r\n    由Ito引理：<br/>\r\n    <div class=\"formula\">df = (∂f/∂t + ½σ²S²∂²f/∂S²)dt + ∂f/∂S × dS</div><br/><br/>\r\n    对冲后dΠ = (∂f/∂t + ½σ²S²∂²f/∂S²)dt（消除dS项）<br/><br/>\r\n    无套利 → dΠ = rΠdt → <strong>BSM方程：</strong><br/>\r\n    <div class=\"formula\">∂f/∂t + rS∂f/∂S + ½σ²S²∂²f/∂S² = rf</div>"
-  },
-  {
-    "id": 56,
-    "title": "Black-Scholes公式",
-    "answer": "欧式Call和Put的BS定价公式：<br/><br/>\r\n    <div class=\"formula\">c = S₀e^(-yτ) N(d₁) - Ke^(-rτ) N(d₂)<br/>p = Ke^(-rτ) N(-d₂) - S₀e^(-yτ) N(-d₁)</div><br/><br/>\r\n    其中：<br/>\r\n    <div class=\"formula\">d₁ = [ln(S₀/K) + (r-y+σ²/2)τ] / (σ√τ)<br/>d₂ = d₁ - σ√τ</div><br/><br/>\r\n    <strong>各参数含义：</strong><br/>\r\n    • N(d₂) = 风险中性下Call被行使的概率<br/>\r\n    • N(d₁) = Delta（对冲比率）<br/>\r\n    • S₀e^(-yτ)N(d₁) = 风险中性期望的股票部分<br/>\r\n    • Ke^(-rτ)N(d₂) = 行权价的贴现期望"
-  },
-  {
-    "id": 57,
-    "title": "Delta的对冲含义",
-    "answer": "Delta = ∂c/∂S = e^(-yτ)N(d₁)<br/><br/>\r\n    <strong>Delta的性质：</strong><br/>\r\n    • Call的Delta ∈ (0, 1)：股价涨，Call涨<br/>\r\n    • Put的Delta ∈ (-1, 0)：股价涨，Put跌<br/>\r\n    • ATM附近 Delta ≈ 0.5（Call）<br/>\r\n    • 深度实值Call → Delta → 1<br/>\r\n    • 深度虚值Call → Delta → 0<br/><br/>\r\n    <strong>Delta中性对冲：</strong>持有Δ份股票对冲1份空头Call，使组合在小区间内对股价不敏感。"
-  },
-  {
-    "id": 58,
-    "title": "Bull Spread（牛市价差）",
-    "answer": "买入低行权价K₁的Call + 卖出高行权价K₂的Call（K₂>K₁）。<br/><br/>\r\n    <strong>收益结构：</strong><br/>\r\n    • S_T ≤ K₁：收益 = 0<br/>\r\n    • K₁ < S_T < K₂：收益 = S_T - K₁<br/>\r\n    • S_T ≥ K₂：收益 = K₂ - K₁（封顶）<br/><br/>\r\n    <strong>特点：</strong>降低权利金成本，但牺牲了大涨的收益。看涨但认为涨幅有限时使用。"
-  },
-  {
-    "id": 59,
-    "title": "Straddle（跨式）",
-    "answer": "买入同行权价同到期日的Call + Put。<br/><br/>\r\n    <strong>收益结构：</strong>收益 = |S_T - K| - 权利金<br/><br/>\r\n    <strong>适用场景：</strong>预期价格大幅波动但不确定方向（如财报前、重大事件前）。<br/><br/>\r\n    <strong>盈亏平衡点：</strong> K ± (Call+Put权利金)<br/>\r\n    <div class=\"answer-hint\">💡 反向操作（卖出Straddle）则赌价格不动，风险无限。</div>"
-  },
-  {
-    "id": 60,
-    "title": "二值期权（Binary Option）",
-    "answer": "到期时S_T > K 则支付$1，否则$0。<br/><br/>\r\n    <strong>定价（风险中性）：</strong><br/>\r\n    <div class=\"formula\">价格 = e^(-rτ) × P^Q(S_T > K) = e^(-rτ) × N(d₂)</div><br/><br/>\r\n    其中 d₂ = [ln(S₀/K) + (r-y-σ²/2)τ] / (σ√τ)<br/><br/>\r\n    <div class=\"answer-hint\">💡 二值期权的Delta在接近到期且接近平值时会变得极大（接近无穷），风险很高。</div>"
-  },
-  {
-    "id": 61,
-    "title": "VaR（Value at Risk）",
-    "answer": "在置信度α下，投资组合在持有期Δt内的最大可能损失。<br/><br/>\r\n    <strong>参数法（正态假设）：</strong><br/>\r\n    <div class=\"formula\">VaR_α = μ + z_α × σ</div><br/>\r\n    z_α为标准正态的α分位数（如95%置信度z=1.645）<br/><br/>\r\n    <strong>历史模拟法：</strong>用历史收益分布直接取分位数<br/>\r\n    <strong>蒙特卡洛法：</strong>模拟未来收益路径取分位数<br/><br/>\r\n    <div class=\"answer-hint\">💡 VaR的缺陷：不度量尾部厚度，不满足次可加性。ES (Expected Shortfall) 更优。</div>"
-  },
-  {
-    "id": 62,
-    "title": "久期与凸性",
-    "answer": "<strong>久期（Duration）：</strong>债券价格对利率的一阶敏感度<br/>\r\n    <div class=\"formula\">D = -(1/P) × dP/dy ≈ 价格变动/利率变动</div><br/><br/>\r\n    <strong>修正久期：</strong>D_mod = D / (1+y/m)<br/><br/>\r\n    <strong>凸性（Convexity）：</strong>二阶敏感度<br/>\r\n    <div class=\"formula\">C = (1/P) × d²P/dy²</div><br/><br/>\r\n    <strong>价格近似：</strong>ΔP/P ≈ -D_mod × Δy + ½C × (Δy)²<br/><br/>\r\n    <div class=\"answer-hint\">💡 久期衡量线性风险，凸性修正非线性部分。凸性越大，利率变化时获益/损失越不对称（利好）。</div>"
-  },
-  {
-    "id": 63,
-    "title": "利率模型概述",
-    "answer": "常见短期利率模型：<br/><br/>\r\n    <strong>1. Vasicek模型：</strong>dr = a(b-r)dt + σdW<br/>\r\n    均值回归，但利率可能为负<br/><br/>\r\n    <strong>2. CIR模型：</strong>dr = a(b-r)dt + σ√r dW<br/>\r\n    均值回归且利率≥0（当r→0时波动率→0）<br/><br/>\r\n    <strong>3. Ho-Lee模型：</strong>dr = θ(t)dt + σdW<br/>\r\n    无套利模型，θ(t)匹配初始期限结构<br/><br/>\r\n    <strong>4. Hull-White模型：</strong>dr = a(b(t)-r)dt + σdW<br/>\r\n    Vasicek的时变参数版本"
-  },
-  {
-    "id": 64,
-    "title": "不用临时变量交换两个数",
-    "answer": "<strong>方法1（加减法）：</strong><br/>\r\n    <code>a = a + b; b = a - b; a = a - b;</code><br/><br/>\r\n    <strong>方法2（异或）：</strong><br/>\r\n    <code>a = a ^ b; b = a ^ b; a = a ^ b;</code><br/><br/>\r\n    <div class=\"answer-hint\">💡 异或法更安全（不会溢出），但可读性差。</div>"
-  },
-  {
-    "id": 65,
-    "title": "Horner算法求多项式",
-    "answer": "计算 p(x) = aₙxⁿ + ... + a₁x + a₀。<br/><br/>\r\n<strong>朴素方法：</strong>逐项算 xᵏ 再乘系数，O(n²) 次乘法。<br/>\r\n<strong>Horner 算法（秦九韶）：</strong>嵌套形式 p(x) = ((...(aₙx + aₙ₋₁)x + ...)x + a₁)x + a₀，只需 O(n) 次乘法与加法。<br/><br/>\r\n<code>result = a[n];<br/>for (i = n-1; i >= 0; i--)<br/>    result = result * x + a[i];</code><br/><br/>\r\n本质：从最高次系数开始，每一步\"乘 x 加下一项系数\"。"
-  },
-  {
-    "id": 86,
-    "title": "100个储物柜开关",
-    "answer": "100个储物柜初始关闭，第i轮翻转所有编号为i倍数个柜门（i=1..100）。最后哪些开着？<br/><br/>编号为n的柜门被翻转的次数 = n的约数个数。<br/>只有<strong>完全平方数</strong>有奇数个约数（约数成对，平方数有一个重复）。<br/><br/><strong>答案：编号为1,4,9,16,...,100（共10个完全平方数）的柜门最后开着。</strong>"
-  },
-  {
-    "id": 87,
-    "title": "木棍上的蚂蚁",
-    "answer": "一根长1米的木棍上有N只蚂蚁，各以1cm/s随机向左或向右爬，相遇则掉头。问所有蚂蚁掉下木棍的最长时间？<br/><br/><strong>关键技巧：相遇掉头 ≡ 互相穿过</strong>（蚂蚁不可区分）。<br/>因此最长时间 = 最远的蚂蚁到端点的最大距离 = <strong>1米（100秒）</strong>。<br/><div class='answer-hint'>💡 把'掉头'替换为'穿过'，问题立刻简化。</div>"
-  },
-  {
-    "id": 88,
-    "title": "天平找假币（9球1重）",
-    "answer": "9个外观相同的球，其中1个略重，用无砝码天平2次找出。怎么称？<br/><br/>分3组(1-3)(4-6)(7-9)。<br/>第1次称(1-3) vs (4-6)：<br/>• 平衡→坏球在7-9，第2次称7 vs 8即可定位<br/>• 偏重→坏球在偏重那组，第2次称组内两个即可<br/><br/><strong>3次称量最多可从3ⁿ个球中找出已知方向的坏球；n=2覆盖9个。</strong>"
-  },
-  {
-    "id": 89,
-    "title": "狼、羊、白菜过河",
-    "answer": "人带狼、羊、白菜过河，船每次只能载人和一样东西。狼吃羊、羊吃菜（人不在时）。如何全过河？<br/><br/>1. 带羊过去，空船回<br/>2. 带狼过去，带羊回<br/>3. 带菜过去，空船回<br/>4. 带羊过去<br/><br/><strong>共7趟。</strong>（关键：绝不单独留狼+羊或羊+菜）"
-  },
-  {
-    "id": 90,
-    "title": "蒙提霍尔三门问题",
-    "answer": "三扇门后一车两羊。你选1号，主持人（知情）打开一扇有羊的门（如3号）。问：换选2号是否更有利？<br/><br/><strong>换选胜率2/3，不换1/3。</strong><br/>你初选对的概率1/3；若对则换输，若错(2/3)则换赢。主持人揭示信息后，换选把'初选错'的2/3概率收归己有。"
-  },
-  {
-    "id": 91,
-    "title": "水壶问题（3升和5升得4升）",
-    "answer": "只用3升和5升无刻度水壶，如何恰好得到4升水？<br/><br/>法一：5满→倒满3（剩2）→倒空3→把2倒入3→5满→倒满3（需1）→5中剩<strong>4</strong>。<br/>法二：3满×2倒入5（5中有6? 不行）。用法一即可。"
-  },
-  {
-    "id": 92,
-    "title": "变色龙问题",
-    "answer": "13只红、15只绿、17只蓝变色龙。相遇时若颜色不同则都变成第三种颜色。能否最终全同色？<br/><br/>考虑数量模3：<br/>红-绿 ≡ 13-15 ≡ -2 ≡ 1 (mod3)；绿-蓝 ≡ 15-17 ≡ -2 ≡1；蓝-红≡17-13≡1。<br/>每次相遇使两种颜色±1、第三种颜色±2，任意两色之差 mod3 不变。<br/>全同色要求某两色差为0 mod3，但初始差均≡1 mod3 → <strong>不可能</strong>。"
-  },
-  {
-    "id": 93,
-    "title": "两列火车与飞鸟",
-    "answer": "A、B两城相距100km，两车各以50km/h相向开。一只鸟以75km/h在两车间来回飞，直到相撞。鸟飞了多远？<br/><br/>两车相遇时间 = 100/100 = 1小时。<br/>鸟一直飞：距离 = 75 × 1 = <strong>75km</strong>。<br/><div class='answer-hint'>💡 别算无穷级数，算'总时间×速度'。</div>"
-  },
-  {
-    "id": 94,
-    "title": "骆驼运香蕉",
-    "answer": "沙漠3000根香蕉，骆驼每次最多驮1000根，每走1km吃1根。最远能运多少到1000km外的市场？<br/><br/>分段驮运：<br/>• 前200km需往返3趟→耗5根/km，到200km处剩2000根<br/>• 再333.3km需往返2趟→耗3根/km，到533.3km处剩1000根<br/>• 最后466.7km单趟→耗1根/km<br/>剩余 = 1000 - 466.7 = <strong>约533根</strong>。"
-  }
+ {
+  "id": 35,
+  "title": "e^π 与 π^e 哪个大",
+  "answer": "<strong>答案：e^π > π^e</strong><br/><br/>\r\n    取对数比较：e^π > π^e ⟺ π ln e > e ln π ⟺ ln e / e > ln π / π<br/><br/>\r\n    考虑 f(x) = ln x / x，求导：<br/>\r\n    f'(x) = (1 - ln x) / x²<br/><br/>\r\n    当 x > e 时 f'(x) < 0（递减）。由于 e < π，所以 f(e) > f(π)，即 ln e / e > ln π / π。<br/><br/>\r\n    <div class=\"answer-hint\">💡 另解：Taylor展开 e^x = 1+x+x²/2+... > 1+x，令x=π/e-1可得 e^(π/e) > π/e，即 e^π > π^e。</div>"
+ },
+ {
+  "id": 36,
+  "title": "ln(x)的积分",
+  "answer": "<strong>原题：</strong>∫ln(x)dx = ?<br/><br/>\r\n    用<br/><br/><strong>分部积分</strong>：设u=ln x, v=x<br/>\r\n    <div class=\"formula\">∫ln(x)dx = x·ln(x) - ∫x·(1/x)dx = x·ln(x) - x + C</div>"
+ },
+ {
+  "id": 37,
+  "title": "标准正态的条件期望 E[X|X>0]",
+  "answer": "<strong>原题：</strong>X ~ N(0,1)，求 E[X | X>0]。<br/><br/>\r\n    <div class=\"formula\">E[X|X>0] = ∫₀^∞ x · f(x) dx / P(X>0)</div><br/>\r\n    其中 f(x) = (1/√2π) e^(-x²/2)<br/><br/>\r\n    用换元 u = -x²/2, du = -x dx：<br/>\r\n    <div class=\"formula\">∫₀^∞ x e^(-x²/2) dx = ∫₀^(-∞) -e^u du = [e^u]₋∞⁰ = 1</div><br/>\r\n    E[X|X>0] = (1/√2π × 1) / (1/2) =<br/><br/><strong>√(2/π) ≈ 0.798</strong>"
+ },
+ {
+  "id": 38,
+  "title": "高斯积分 ∫e^(-x²/2)dx",
+  "answer": "<strong>原题：</strong>计算 ∫₋∞^∞ e^(-x²/2) dx<br/><br/>\r\n    设 I = ∫₋∞^∞ e^(-x²/2) dx，则：<br/>\r\n    I² = ∫∫ e^(-(x²+y²)/2) dx dy<br/><br/>\r\n    转换为极坐标 (x = r cosθ, y = r sinθ)：<br/>\r\n    I² = ∫₀^(2π) ∫₀^∞ e^(-r²/2) r dr dθ<br/>\r\n    = 2π × [e^(-r²/2)]₋... = 2π × 1 = 2π<br/><br/><strong>I = √(2π)</strong><br/>\r\n    <div class=\"answer-hint\">💡 这就是正态分布归一化常数的由来。</div>"
+ },
+ {
+  "id": 39,
+  "title": "L'Hôpital法则应用",
+  "answer": "<strong>原题：</strong>求 lim(x→∞) eˣ/x² 和 lim(x→0⁺) x²ln(x)<br/><br/><strong>第一个：</strong>∞/∞型，用L'Hôpital两次<br/>\r\n    lim eˣ/x² = lim eˣ/(2x) = lim eˣ/2 = <strong>∞</strong><br/><br/>\r\n    <strong>第二个：</strong>改写为 ln(x) / (1/x²)，即 -∞/∞ 型<br/>\r\n    lim [ln(x) / x⁻²] = lim [1/x / (-2x⁻³)] = lim [-x²/2] = <strong>0</strong>"
+ },
+ {
+  "id": 40,
+  "title": "相关系数的范围（正定矩阵约束）",
+  "answer": "<strong>原题：</strong>x与y相关0.8，x与z相关0.8。y与z相关系数范围？<br/><br/><strong>方法一（向量夹角）：</strong><br/>\r\n    cos θ = 0.8, 最小夹角2θ → ρ_min = cos(2θ) = 2cos²θ - 1 = 2(0.64) - 1 = <strong>0.28</strong><br/>\r\n    最大相关 = <strong>1</strong>（同方向）<br/><br/>\r\n    <strong>方法二（正定约束）：</strong><br/>\r\n    相关矩阵的行列式 ≥ 0：<br/>\r\n    det = 1 - 0.64 - 0.64 - ρ² + 2(0.64)ρ ≥ 0<br/>\r\n    → -0.28 + 1.28ρ - ρ² ≥ 0 → ρ ∈ [0.28, 1]"
+ },
+ {
+  "id": 41,
+  "title": "Cholesky分解生成相关正态变量",
+  "answer": "如何用独立N(0,1)生成相关系数ρ的两个标准正态变量？<br/><br/>\r\n    <div class=\"formula\">X₁ = Z₁<br/>X₂ = ρZ₁ + √(1-ρ²) Z₂</div><br/><br/>\r\n    验证：<br/>\r\n    • Var(X₁) = Var(Z₁) = 1 ✓<br/>\r\n    • Var(X₂) = ρ² + (1-ρ²) = 1 ✓<br/>\r\n    • Cov(X₁,X₂) = Cov(Z₁, ρZ₁) = ρ ✓<br/><br/>\r\n    <div class=\"answer-hint\">💡 这是Cholesky分解的最简形式。对于n维，分解协方差矩阵Σ = RᵀR，然后X = μ + RᵀZ。</div>"
+ },
+ {
+  "id": 42,
+  "title": "最小二乘回归的矩阵推导",
+  "answer": "<strong>原题：</strong>如何用矩阵方法推导线性回归的OLS估计量？<br/><br/>\r\n    模型：Y = Xβ + ε<br/>\r\n    目标：min ||Y - Xβ||²<br/><br/>\r\n    对β求导：<br/>\r\n    <div class=\"formula\">∂/∂β [(Y-Xβ)ᵀ(Y-Xβ)] = -2Xᵀ(Y-Xβ) = 0</div><br/>\r\n    → XᵀXβ = XᵀY →<br/><br/><strong>β̂ = (XᵀX)⁻¹XᵀY</strong><br/><br/>\r\n    实际计算中可用QR分解：X = QR → β̂ = R⁻¹QᵀY，避免直接求逆的数值不稳定。<br/>\r\n    <div class=\"answer-hint\">💡 OLS的5个假设：线性、零均值、同方差/不相关、无完全共线性、外生性。</div>"
+ },
+ {
+  "id": 43,
+  "title": "Lagrange乘数法：点到平面距离",
+  "answer": "<strong>原题：</strong>求原点到平面 2x+3y+4z=12 的距离。<br/><br/>\r\n    min f = x²+y²+z², s.t. g = 2x+3y+4z-12 = 0<br/><br/>\r\n    ∇f = λ∇g:<br/>\r\n    2x = 2λ, 2y = 3λ, 2z = 4λ<br/>\r\n    → x = λ, y = 3λ/2, z = 2λ<br/><br/>\r\n    代入约束：2λ + 9λ/2 + 8λ = 12 → λ = 24/29<br/>\r\n    D = √(x²+y²+z²) = √[(24/29)² + (36/29)² + (48/29)²] =<br/><br/><strong>12/√29</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 一般公式：点(a₀,b₀,c₀)到平面 ax+by+cz=d 的距离 = |d-aa₀-bb₀-cc₀| / √(a²+b²+c²)</div>"
+ },
+ {
+  "id": 44,
+  "title": "醉汉走桥（鞅论）",
+  "answer": "<strong>原题：</strong>醉汉在100米桥的17米处，每步等概率前进/后退1米。到100米先于0米的概率？到达任一端的期望步数？<br/><br/>\r\n    设当前位置为0，对称随机游走停在a=83或-β=-17。<br/><br/><strong>Sₙ和Sₙ²-n都是鞅，停止时刻的鞅仍为鞅。</strong><br/><br/>\r\n    E[S_N] = pₐ × 83 + (1-pₐ) × (-17) = 0 → <strong>pₐ = 17/100 = 0.17</strong><br/><br/>\r\n    E[Sₙ² - N] = 0 → E[N] = pₐ × 83² + (1-pₐ) × 17² = <strong>1441步</strong><br/>\r\n    <div class=\"answer-hint\">💡 一般公式：停在a或-β的概率分别为β/(α+β)和α/(α+β)，期望步数αβ。</div>"
+ },
+ {
+  "id": 45,
+  "title": "售票问题（反射原理）",
+  "answer": "<strong>原题：</strong>2n人排队买票，n人持$5、n人持$10，票价$5，售票员无零钱。所有人都能顺利买票的概率？<br/><br/><strong>答案：1/(n+1)</strong><br/><br/>\r\n    <strong>思路：</strong>将持$5的人映射为+1，持$10的人映射为-1，问题变为：从(0,0)到(2n,0)的随机游走中，不触及y=-1的概率。<br/><br/>\r\n    用<strong>反射原理</strong>：触及y=-1的路径数 = 从(0,-2)到(2n,0)的路径数 = C(2n, n-1)<br/><br/>\r\n    不触及的路径数 = C(2n,n) - C(2n,n-1) = C(2n,n)/(n+1)<br/><br/>\r\n    P = [C(2n,n)/(n+1)] / C(2n,n) = <strong>1/(n+1)</strong>（卡特兰数相关）"
+ },
+ {
+  "id": 46,
+  "title": "硬币三连（Penney's Game）",
+  "answer": "<strong>原题：</strong>公平硬币，玩家A先选3连序列，B后选。谁的序列先出现谁赢。<br/><br/><strong>关键：B总能选到胜率>50%的序列！</strong><br/><br/>\r\n    策略：取A序列的后两位的<strong>反序列</strong>作为B序列的前两位。<br/><br/>\r\n    例如A选HHH → B选THH，B胜率7/8<br/>\r\n    A选HTH → B选HHT，B胜率2/3<br/><br/>\r\n    <div class=\"answer-hint\">💡 这说明三连序列的胜负关系是非传递的（类似石头剪刀布）。B的最优策略保证至少2/3胜率。</div>"
+ },
+ {
+  "id": 47,
+  "title": "Brown运动定义与性质",
+  "answer": "<strong>定义：</strong>连续随机过程W(t), t≥0满足：<br/>\r\n    1. W(0) = 0<br/>\r\n    2. 增量独立：W(t₂)-W(t₁), W(t₃)-W(t₂), ... 相互独立<br/>\r\n    3. W(t+s)-W(t) ~ N(0, s)<br/><br/>\r\n    <strong>重要性质：</strong><br/>\r\n    • 连续（无跳跃）<br/>\r\n    • E[W(t)] = 0, E[W(t)²] = t<br/>\r\n    • 鞅性：E[W(t+s)|W(t)] = W(t)<br/>\r\n    • Cov(W(s), W(t)) = min(s,t)<br/>\r\n    • Markov性（连续空间）<br/><br/>\r\n    <strong>两个重要鞅：</strong><br/>\r\n    • W(t)² - t 是鞅<br/>\r\n    • exp{λW(t) - λ²t/2} 是鞅（指数鞅）"
+ },
+ {
+  "id": 48,
+  "title": "Brown运动停时的期望",
+  "answer": "<strong>原题：</strong>B(t)首次到达±1的平均时间？<br/><br/><strong>用鞅论：B(t)²-t是鞅</strong><br/><br/>\r\n    设T = min{t : B(t)=1或B(t)=-1}<br/><br/>\r\n    由Ito引理：d(B²-t) = 2B dB，无drift项 → 鞅<br/><br/>\r\n    E[B(T)²-T] = E[B(0)²-0] = 0<br/>\r\n    E[B(T)²] = 1（停在±1）<br/><br/>\r\n    → E[T] = <strong>1</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 一般情况：停在a或-β的期望时间 = αβ（与离散情况一致！）</div>"
+ },
+ {
+  "id": 49,
+  "title": "B(t)>0且B(2)<0的概率",
+  "answer": "<strong>原题：</strong>标准Brown运动 B₁>0 且 B₂<0 的概率？<br/><br/><strong>答案：1/8</strong><br/><br/>\r\n    B₁ ~ N(0,1), B₂-B₁ ~ N(0,1) 独立<br/><br/>\r\n    B₁>0, B₂<0 ⟺ B₁>0, B₂-B₁ < -B₁<br/><br/>\r\n    用对称性：将(B₁, B₂-B₁)的密度函数空间分成8个等概率区域（由x=0, y=0, y=x, y=-x分割），目标区域占1/8。"
+ },
+ {
+  "id": 50,
+  "title": "动态骰子游戏",
+  "answer": "<strong>原题：</strong>掷骰子：1-5各得对应金额，6则失去所有累积奖金。每次掷后可选停或继续。最多愿付多少？<br/><br/><strong>用动态规划求解：</strong><br/><br/>\r\n    当累积n元时，继续掷的期望：<br/>\r\n    (n+1)/6 + (n+2)/6 + ... + (n+5)/6 + 0/6 = 5n/6 + 2.5<br/><br/>\r\n    当 5n/6 + 2.5 > n 时继续，即 n ≤ 14<br/><br/>\r\n    递推计算 f(15)=15, f(14)=14.17, ..., f(0) = <strong>6.15</strong><br/>\r\n    <div class=\"answer-hint\">💡 愿意为游戏最多支付 $6.15。</div>"
+ },
+ {
+  "id": 51,
+  "title": "动态纸牌游戏（最优停时）",
+  "answer": "<strong>原题：</strong>52张牌(26红26黑)，逐张翻开，红+1黑-1。可随时叫停，求最优策略和期望收益。<br/><br/><strong>动态规划方程：</strong><br/>\r\n    f(b,r) = max(b-r, b/(b+r)×f(b-1,r) + r/(b+r)×f(b,r-1))<br/><br/>\r\n    边界条件：f(0,r)=0, f(b,0)=b<br/><br/>\r\n    <strong>答案：f(26,26) = $2.62</strong><br/><br/>\r\n    <div class=\"answer-hint\">💡 这个方程本质上就是美式期权的定价方程——在最优时间行权。</div>"
+ },
+ {
+  "id": 52,
+  "title": "期权价格的影响因素",
+  "answer": "欧式/美式期权价格随各变量变化方向：<br/><br/>\r\n    <table style=\"width:100%; font-size:13px; border-collapse:collapse;\">\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><th style=\"text-align:left; padding:6px;\">变量</th><th>欧式Call</th><th>美式Call</th><th>欧式Put</th><th>美式Put</th></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">股价S↑</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">行权价K↑</td><td>↓</td><td>↓</td><td>↑</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">到期时间τ↑</td><td>?</td><td>↑</td><td>?</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">波动率σ↑</td><td>↑</td><td>↑</td><td>↑</td><td>↑</td></tr>\r\n    <tr style=\"border-bottom:1px solid var(--border)\"><td style=\"padding:6px;\">无风险利率r↑</td><td>↑</td><td>↑</td><td>↓</td><td>↓</td></tr>\r\n    <tr><td style=\"padding:6px;\">股息D↑</td><td>↓</td><td>↓</td><td>↑</td><td>↑</td></tr>\r\n    </table><br/>\r\n    <div class=\"answer-hint\">💡 欧式期权的到期时间影响不确定，因为中间可能有股息发放。</div>"
+ },
+ {
+  "id": 53,
+  "title": "Put-Call Parity（看涨看跌平价）",
+  "answer": "<strong>欧式期权看涨看跌平价：</strong><br/>\r\n    <div class=\"formula\">c + Ke^(-rτ) = p + S - D</div><br/>\r\n    <strong>证明（无套利）：</strong><br/><br/>\r\n    组合A：1份Call + 面值K的零息债券 → 到期T收益 = max(S_T, K)<br/>\r\n    组合B：1份Put + 1股股票 → 到期T收益 = max(S_T, K)<br/><br/>\r\n    两组合到期收益相同 → 当前价值必须相同 → c + Ke^(-rτ) = p + S - D<br/><br/>\r\n    <div class=\"answer-hint\">💡 由此可得：S-D-Ke^(-rτ) ≤ c ≤ S（无套利边界）。美式期权则是不等式关系。</div>"
+ },
+ {
+  "id": 54,
+  "title": "为什么不在到期前行使美式看涨期权（无股息）",
+  "answer": "<strong>无股息股票的美式Call = 欧式Call，提前行使永远不是最优的。</strong><br/><br/>\r\n    <strong>论据1（时间价值）：</strong>c = (S-K) + (K-Ke^(-rτ)) + p > S-K = 内含价值。出售期权比行使更划算。<br/><br/>\r\n    <strong>论据2（替代策略）：</strong>不行使，而是卖空股票+借出K。到期时无论S_T如何，都有正收益：<br/>\r\n    <div class=\"formula\">T时刻收益 = Ke^(rτ) - S_T > 0 （当S_T>K时）</div><br/><br/>\r\n    <strong>论据3（Jensen不等式）：</strong>Call收益是凸函数，E[e^(-rτ)C(S_T)] ≥ C(E^Q[S_T]) = C(Se^(rτ)) → 等待更优。<br/><br/>\r\n    <div class=\"answer-hint\">💡 但美式Put不同！P(0)=K≠0，所以 Jensen 论据不成立，提前行使可能最优。</div>"
+ },
+ {
+  "id": 55,
+  "title": "Black-Scholes-Merton微分方程",
+  "answer": "<strong>原题：</strong>基于无套利和Δ对冲推导BSM方程：<br/><br/>\r\n    构建组合Π = -f + (∂f/∂S)×S（卖空1份衍生品+买入Δ股股票）<br/><br/>\r\n    由Ito引理：<br/>\r\n    <div class=\"formula\">df = (∂f/∂t + ½σ²S²∂²f/∂S²)dt + ∂f/∂S × dS</div><br/><br/>\r\n    对冲后dΠ = (∂f/∂t + ½σ²S²∂²f/∂S²)dt（消除dS项）<br/><br/>\r\n    无套利 → dΠ = rΠdt →<br/><br/><strong>BSM方程：</strong><br/>\r\n    <div class=\"formula\">∂f/∂t + rS∂f/∂S + ½σ²S²∂²f/∂S² = rf</div>"
+ },
+ {
+  "id": 56,
+  "title": "Black-Scholes公式",
+  "answer": "<strong>原题：</strong>欧式Call和Put的BS定价公式：<br/><br/>\r\n    <div class=\"formula\">c = S₀e^(-yτ) N(d₁) - Ke^(-rτ) N(d₂)<br/>p = Ke^(-rτ) N(-d₂) - S₀e^(-yτ) N(-d₁)</div><br/><br/>\r\n    其中：<br/>\r\n    <div class=\"formula\">d₁ = [ln(S₀/K) + (r-y+σ²/2)τ] / (σ√τ)<br/>d₂ = d₁ - σ√τ</div><br/><br/><strong>各参数含义：</strong><br/>\r\n    • N(d₂) = 风险中性下Call被行使的概率<br/>\r\n    • N(d₁) = Delta（对冲比率）<br/>\r\n    • S₀e^(-yτ)N(d₁) = 风险中性期望的股票部分<br/>\r\n    • Ke^(-rτ)N(d₂) = 行权价的贴现期望"
+ },
+ {
+  "id": 57,
+  "title": "Delta的对冲含义",
+  "answer": "<strong>原题：</strong>Delta = ∂c/∂S = e^(-yτ)N(d₁)<br/><br/><strong>Delta的性质：</strong><br/>\r\n    • Call的Delta ∈ (0, 1)：股价涨，Call涨<br/>\r\n    • Put的Delta ∈ (-1, 0)：股价涨，Put跌<br/>\r\n    • ATM附近 Delta ≈ 0.5（Call）<br/>\r\n    • 深度实值Call → Delta → 1<br/>\r\n    • 深度虚值Call → Delta → 0<br/><br/>\r\n    <strong>Delta中性对冲：</strong>持有Δ份股票对冲1份空头Call，使组合在小区间内对股价不敏感。"
+ },
+ {
+  "id": 58,
+  "title": "Bull Spread（牛市价差）",
+  "answer": "<strong>原题：</strong>买入低行权价K₁的Call + 卖出高行权价K₂的Call（K₂>K₁）。<br/><br/><strong>收益结构：</strong><br/>\r\n    • S_T ≤ K₁：收益 = 0<br/>\r\n    • K₁ < S_T < K₂：收益 = S_T - K₁<br/>\r\n    • S_T ≥ K₂：收益 = K₂ - K₁（封顶）<br/><br/>\r\n    <strong>特点：</strong>降低权利金成本，但牺牲了大涨的收益。看涨但认为涨幅有限时使用。"
+ },
+ {
+  "id": 59,
+  "title": "Straddle（跨式）",
+  "answer": "<strong>原题：</strong>买入同行权价同到期日的Call + Put。<br/><br/><strong>收益结构：</strong>收益 = |S_T - K| - 权利金<br/><br/>\r\n    <strong>适用场景：</strong>预期价格大幅波动但不确定方向（如财报前、重大事件前）。<br/><br/>\r\n    <strong>盈亏平衡点：</strong> K ± (Call+Put权利金)<br/>\r\n    <div class=\"answer-hint\">💡 反向操作（卖出Straddle）则赌价格不动，风险无限。</div>"
+ },
+ {
+  "id": 60,
+  "title": "二值期权（Binary Option）",
+  "answer": "<strong>原题：</strong>到期时S_T > K 则支付$1，否则$0。<br/><br/><strong>定价（风险中性）：</strong><br/>\r\n    <div class=\"formula\">价格 = e^(-rτ) × P^Q(S_T > K) = e^(-rτ) × N(d₂)</div><br/><br/>\r\n    其中 d₂ = [ln(S₀/K) + (r-y-σ²/2)τ] / (σ√τ)<br/><br/>\r\n    <div class=\"answer-hint\">💡 二值期权的Delta在接近到期且接近平值时会变得极大（接近无穷），风险很高。</div>"
+ },
+ {
+  "id": 61,
+  "title": "VaR（Value at Risk）",
+  "answer": "<strong>原题：</strong>在置信度α下，投资组合在持有期Δt内的最大可能损失。<br/><br/><strong>参数法（正态假设）：</strong><br/>\r\n    <div class=\"formula\">VaR_α = μ + z_α × σ</div><br/>\r\n    z_α为标准正态的α分位数（如95%置信度z=1.645）<br/><br/>\r\n    <strong>历史模拟法：</strong>用历史收益分布直接取分位数<br/>\r\n    <strong>蒙特卡洛法：</strong>模拟未来收益路径取分位数<br/><br/>\r\n    <div class=\"answer-hint\">💡 VaR的缺陷：不度量尾部厚度，不满足次可加性。ES (Expected Shortfall) 更优。</div>"
+ },
+ {
+  "id": 62,
+  "title": "久期与凸性",
+  "answer": "<strong>久期（Duration）：</strong>债券价格对利率的一阶敏感度<br/>\r\n    <div class=\"formula\">D = -(1/P) × dP/dy ≈ 价格变动/利率变动</div><br/><br/>\r\n    <strong>修正久期：</strong>D_mod = D / (1+y/m)<br/><br/>\r\n    <strong>凸性（Convexity）：</strong>二阶敏感度<br/>\r\n    <div class=\"formula\">C = (1/P) × d²P/dy²</div><br/><br/>\r\n    <strong>价格近似：</strong>ΔP/P ≈ -D_mod × Δy + ½C × (Δy)²<br/><br/>\r\n    <div class=\"answer-hint\">💡 久期衡量线性风险，凸性修正非线性部分。凸性越大，利率变化时获益/损失越不对称（利好）。</div>"
+ },
+ {
+  "id": 63,
+  "title": "利率模型概述",
+  "answer": "<strong>原题：</strong>常见短期利率模型：<br/><br/><strong>1. Vasicek模型：</strong>dr = a(b-r)dt + σdW<br/>\r\n    均值回归，但利率可能为负<br/><br/>\r\n    <strong>2. CIR模型：</strong>dr = a(b-r)dt + σ√r dW<br/>\r\n    均值回归且利率≥0（当r→0时波动率→0）<br/><br/>\r\n    <strong>3. Ho-Lee模型：</strong>dr = θ(t)dt + σdW<br/>\r\n    无套利模型，θ(t)匹配初始期限结构<br/><br/>\r\n    <strong>4. Hull-White模型：</strong>dr = a(b(t)-r)dt + σdW<br/>\r\n    Vasicek的时变参数版本"
+ },
+ {
+  "id": 64,
+  "title": "不用临时变量交换两个数",
+  "answer": "<strong>方法1（加减法）：</strong><br/>\r\n    <code>a = a + b; b = a - b; a = a - b;</code><br/><br/>\r\n    <strong>方法2（异或）：</strong><br/>\r\n    <code>a = a ^ b; b = a ^ b; a = a ^ b;</code><br/><br/>\r\n    <div class=\"answer-hint\">💡 异或法更安全（不会溢出），但可读性差。</div>"
+ },
+ {
+  "id": 65,
+  "title": "Horner算法求多项式",
+  "answer": "<strong>原题：</strong>计算 p(x) = aₙxⁿ + ... + a₁x + a₀。<br/><br/><strong>朴素方法：</strong>逐项算 xᵏ 再乘系数，O(n²) 次乘法。<br/>\r\n<strong>Horner 算法（秦九韶）：</strong>嵌套形式 p(x) = ((...(aₙx + aₙ₋₁)x + ...)x + a₁)x + a₀，只需 O(n) 次乘法与加法。<br/><br/>\r\n<code>result = a[n];<br/>for (i = n-1; i >= 0; i--)<br/>    result = result * x + a[i];</code><br/><br/>\r\n本质：从最高次系数开始，每一步\"乘 x 加下一项系数\"。"
+ },
+ {
+  "id": 86,
+  "title": "100个储物柜开关",
+  "answer": "<strong>原题：</strong>100个储物柜初始关闭，第i轮翻转所有编号为i倍数个柜门（i=1..100）。最后哪些开着？<br/><br/>编号为n的柜门被翻转的次数 = n的约数个数。<br/>只有<br/><br/><strong>完全平方数</strong>有奇数个约数（约数成对，平方数有一个重复）。<br/><br/><strong>答案：编号为1,4,9,16,...,100（共10个完全平方数）的柜门最后开着。</strong>"
+ },
+ {
+  "id": 87,
+  "title": "木棍上的蚂蚁",
+  "answer": "<strong>原题：</strong>一根长1米的木棍上有N只蚂蚁，各以1cm/s随机向左或向右爬，相遇则掉头。问所有蚂蚁掉下木棍的最长时间？<br/><br/><strong>关键技巧：相遇掉头 ≡ 互相穿过</strong>（蚂蚁不可区分）。<br/>因此最长时间 = 最远的蚂蚁到端点的最大距离 = <strong>1米（100秒）</strong>。<br/><div class='answer-hint'>💡 把'掉头'替换为'穿过'，问题立刻简化。</div>"
+ },
+ {
+  "id": 88,
+  "title": "天平找假币（9球1重）",
+  "answer": "<strong>原题：</strong>9个外观相同的球，其中1个略重，用无砝码天平2次找出。怎么称？<br/><br/>分3组(1-3)(4-6)(7-9)。<br/>第1次称(1-3) vs (4-6)：<br/>• 平衡→坏球在7-9，第2次称7 vs 8即可定位<br/>• 偏重→坏球在偏重那组，第2次称组内两个即可<br/><br/><strong>3次称量最多可从3ⁿ个球中找出已知方向的坏球；n=2覆盖9个。</strong>"
+ },
+ {
+  "id": 89,
+  "title": "狼、羊、白菜过河",
+  "answer": "<strong>原题：</strong>人带狼、羊、白菜过河，船每次只能载人和一样东西。狼吃羊、羊吃菜（人不在时）。如何全过河？<br/><br/>1. 带羊过去，空船回<br/>2. 带狼过去，带羊回<br/>3. 带菜过去，空船回<br/>4. 带羊过去<br/><br/><strong>共7趟。</strong>（关键：绝不单独留狼+羊或羊+菜）"
+ },
+ {
+  "id": 90,
+  "title": "蒙提霍尔三门问题",
+  "answer": "<strong>原题：</strong>三扇门后一车两羊。你选1号，主持人（知情）打开一扇有羊的门（如3号）。问：换选2号是否更有利？<br/><br/><strong>换选胜率2/3，不换1/3。</strong><br/>你初选对的概率1/3；若对则换输，若错(2/3)则换赢。主持人揭示信息后，换选把'初选错'的2/3概率收归己有。"
+ },
+ {
+  "id": 91,
+  "title": "水壶问题（3升和5升得4升）",
+  "answer": "<strong>原题：</strong>只用3升和5升无刻度水壶，如何恰好得到4升水？<br/><br/>法一：5满→倒满3（剩2）→倒空3→把2倒入3→5满→倒满3（需1）→5中剩<br/><br/><strong>4</strong>。<br/>法二：3满×2倒入5（5中有6? 不行）。用法一即可。"
+ },
+ {
+  "id": 92,
+  "title": "变色龙问题",
+  "answer": "<strong>原题：</strong>13只红、15只绿、17只蓝变色龙。相遇时若颜色不同则都变成第三种颜色。能否最终全同色？<br/><br/>考虑数量模3：<br/>红-绿 ≡ 13-15 ≡ -2 ≡ 1 (mod3)；绿-蓝 ≡ 15-17 ≡ -2 ≡1；蓝-红≡17-13≡1。<br/>每次相遇使两种颜色±1、第三种颜色±2，任意两色之差 mod3 不变。<br/>全同色要求某两色差为0 mod3，但初始差均≡1 mod3 →<br/><br/><strong>不可能</strong>。"
+ },
+ {
+  "id": 93,
+  "title": "两列火车与飞鸟",
+  "answer": "<strong>原题：</strong>A、B两城相距100km，两车各以50km/h相向开。一只鸟以75km/h在两车间来回飞，直到相撞。鸟飞了多远？<br/><br/>两车相遇时间 = 100/100 = 1小时。<br/>鸟一直飞：距离 = 75 × 1 =<br/><br/><strong>75km</strong>。<br/><div class='answer-hint'>💡 别算无穷级数，算'总时间×速度'。</div>"
+ },
+ {
+  "id": 94,
+  "title": "骆驼运香蕉",
+  "answer": "<strong>原题：</strong>沙漠3000根香蕉，骆驼每次最多驮1000根，每走1km吃1根。最远能运多少到1000km外的市场？<br/><br/>分段驮运：<br/>• 前200km需往返3趟→耗5根/km，到200km处剩2000根<br/>• 再333.3km需往返2趟→耗3根/km，到533.3km处剩1000根<br/>• 最后466.7km单趟→耗1根/km<br/>剩余 = 1000 - 466.7 =<br/><br/><strong>约533根</strong>。"
+ }
 ]

@@ -468,8 +468,7 @@ const questions = [
   {
     id: 1, cat: "brain", diff: 2, book: "green",
     title: "五个海盗分金币",
-    answer: `海盗按资历从高到低编号5→1。最年长的海盗提出分配方案，所有海盗投票，≥50%同意则通过，否则扔下船由下一个提议。<br/><br/>
-    <strong>关键思路：从小规模开始递推</strong><br/>
+    answer: `<strong>原题：</strong>海盗按资历从高到低编号5→1。最年长的海盗提出分配方案，所有海盗投票，≥50%同意则通过，否则扔下船由下一个提议。 最终金币会如何分配？<br/><br/><strong>关键思路：从小规模开始递推</strong><br/>
     • 2人：P2拿全部，P1得0<br/>
     • 3人：P3给P1一枚（P1知道如果P3死自己得0），P3拿99枚<br/>
     • 4人：P4给P2一枚，P4拿99枚<br/>
@@ -480,8 +479,7 @@ const questions = [
   {
     id: 2, cat: "brain", diff: 2, book: "green",
     title: "老虎与羊",
-    answer: `100只老虎和1只羊在岛上。老虎可以吃羊，但吃后自己变成羊。所有老虎都聪明且理性，想存活。<br/><br/>
-    <strong>递推分析：</strong><br/>
+    answer: `<strong>原题：</strong>100只老虎和1只羊在岛上。老虎可以吃羊，但吃后自己变成羊。所有老虎都聪明且理性，想存活。 羊最终会不会被吃掉？<br/><br/><strong>递推分析：</strong><br/>
     • n=1：老虎会吃羊（无后顾之忧）<br/>
     • n=2：不吃（吃了变羊，会被另一只老虎吃）<br/>
     • n=3：吃（变羊后，剩下2只老虎不会吃）<br/>
@@ -492,8 +490,7 @@ const questions = [
   {
     id: 3, cat: "brain", diff: 1, book: "green",
     title: "四人过桥",
-    answer: `A(10分钟)、B(5分钟)、C(2分钟)、D(1分钟)需过桥，桥最多2人，黑夜需手电筒，按慢者速度走。<br/><br/>
-    <strong>最优方案（17分钟）：</strong><br/>
+    answer: `<strong>原题：</strong>A(10分钟)、B(5分钟)、C(2分钟)、D(1分钟)需过桥，桥最多2人，黑夜需手电筒，按慢者速度走。 四人全部过桥最短需要多少时间？<br/><br/><strong>最优方案（17分钟）：</strong><br/>
     1. C和D先过桥 → 2分钟<br/>
     2. D拿手电筒回来 → 1分钟<br/>
     3. A和B过桥 → 10分钟<br/>
@@ -504,26 +501,23 @@ const questions = [
   {
     id: 4, cat: "brain", diff: 2, book: "green",
     title: "生日问题（逻辑推理版）",
-    answer: `10个可能日期：3月4/5/8日、6月4/7日、9月1/5日、12月1/2/8日。<br/>
+    answer: `<strong>原题：</strong>10个可能日期：3月4/5/8日、6月4/7日、9月1/5日、12月1/2/8日。<br/>
     A知道月份，C知道日期。<br/>
     A："我不知道生日，C也不知道。" → 月份不是6月或12月（因为6月7日和12月2日的日期唯一）<br/>
     C："我原来不知道，现在知道了。" → 在3月和9月中，日期必须唯一 → 不是3月5日或9月5日<br/>
-    A："现在我也知道了。" → 如果是3月仍有两种可能(3月4/8)，所以必须是9月<br/><br/>
-    <strong>答案：9月1日</strong>`,
+    A："现在我也知道了。" → 如果是3月仍有两种可能(3月4/8)，所以必须是9月 Albert 与 Bernard 经过上述对话后，能推断出 Cheryl 的生日究竟是哪一天？<br/><br/><strong>答案：9月1日</strong>`,
   },
   {
     id: 5, cat: "brain", diff: 2, book: "green",
     title: "纸牌游戏（对称性应用）",
-    answer: `每次翻两张牌：两张黑→庄家，两张红→你，一红一黑→丢弃。你比庄家牌多则赢$100。<br/><br/>
-    <strong>答案：不应付钱玩这个游戏。</strong><br/><br/>
+    answer: `<strong>原题：</strong>每次翻两张牌：两张黑→庄家，两张红→你，一红一黑→丢弃。你比庄家牌多则赢\$100。 你应不应该下注？<br/><br/><strong>答案：不应付钱玩这个游戏。</strong><br/><br/>
     每次丢弃的牌对中有一红一黑，所以丢弃的红牌和黑牌数量相等。剩余的红牌（你的牌）和黑牌（庄家的牌）数量<strong>始终相等</strong>。你永远不可能赢。<br/>
     <div class="answer-hint">💡 核心技巧：对称性分析 —— 丢弃的每对牌都包含一红一黑，因此你与庄家的牌堆永远等大。</div>`,
   },
   {
     id: 6, cat: "brain", diff: 1, book: "green",
     title: "烧绳子计时45分钟",
-    answer: `两根绳子各需1小时烧完，但密度不均匀。<br/><br/>
-    <strong>方案：</strong><br/>
+    answer: `<strong>原题：</strong>两根绳子各需1小时烧完，但密度不均匀。 如何用这两根不均匀的绳子量出正好 45 分钟？<br/><br/><strong>方案：</strong><br/>
     1. 同时点燃第一根绳的两端 + 第二根绳的一端<br/>
     2. 30分钟后第一根绳烧完，第二根还剩30分钟的量<br/>
     3. 此时点燃第二根绳的另一端<br/>
@@ -533,8 +527,7 @@ const questions = [
   {
     id: 7, cat: "brain", diff: 3, book: "green",
     title: "12球称量问题",
-    answer: `12个相同球中有一个偏重或偏轻，用天平3次称量找出。<br/><br/>
-    <strong>关键：分3组而非2组</strong><br/>
+    answer: `<strong>原题：</strong>12个相同球中有一个偏重或偏轻，用天平3次称量找出。 如何用天平 3 次找出那个异常球，并判断它是偏重还是偏轻？<br/><br/><strong>关键：分3组而非2组</strong><br/>
     将12球分为3组(1-4)、(5-8)、(9-12)<br/><br/>
     <strong>第1次：</strong>称(1-4) vs (5-8)<br/>
     • 若平衡：坏球在9-12中，用已知正常球辅助，2次可定位<br/>
@@ -545,16 +538,14 @@ const questions = [
   {
     id: 8, cat: "brain", diff: 1, book: "green",
     title: "100!末尾有多少个零",
-    answer: `末尾零的数量取决于因子对(2×5)的数量。2的数量远多于5，所以数5的因子个数。<br/><br/>
+    answer: `<strong>原题：</strong>末尾零的数量取决于因子对(2×5)的数量。2的数量远多于5，所以数5的因子个数。<br/><br/>
     • 1-100中5的倍数：100/5 = 20个<br/>
-    • 其中25的倍数（额外贡献一个5）：100/25 = 4个<br/><br/>
-    <strong>末尾零 = 20 + 4 = 24个</strong>`,
+    • 其中25的倍数（额外贡献一个5）：100/25 = 4个 100! 的十进制表示末尾有多少个连续的零？<br/><br/><strong>末尾零 = 20 + 4 = 24个</strong>`,
   },
   {
     id: 9, cat: "brain", diff: 2, book: "green",
     title: "25匹马赛马问题",
-    answer: `25匹马，5条赛道，找前3名最快马。<br/><br/>
-    <strong>需要7场比赛：</strong><br/>
+    answer: `<strong>原题：</strong>25匹马，5条赛道，找前3名最快马。 最少需要几场比赛才能找出跑得最快的 3 匹马？<br/><br/><strong>需要7场比赛：</strong><br/>
     1. 分5组各跑1场（共5场），记录组内排名<br/>
     2. 5个组的第1名跑第6场，确定全场第1<br/>
     3. 第6场的第2、3名所在组可能有马进入前3<br/>
@@ -564,16 +555,14 @@ const questions = [
   {
     id: 10, cat: "brain", diff: 2, book: "green",
     title: "盲人分硬币（对称性）",
-    answer: `1000枚硬币中980枚反面朝上、20枚正面朝上。蒙眼分成两堆使正面数相等。<br/><br/>
-    <strong>答案：随机取20枚为一堆，将其全部翻转。</strong><br/><br/>
+    answer: `<strong>原题：</strong>1000枚硬币中980枚反面朝上、20枚正面朝上。蒙眼分成两堆使正面数相等。 如何分成两堆，使两堆中正面朝上的硬币数量相等？<br/><br/><strong>答案：随机取20枚为一堆，将其全部翻转。</strong><br/><br/>
     设取出的20枚中有m枚正面，则另一堆有(20-m)枚正面。翻转后第一堆的正面数变为(20-m)，与第二堆相等。<br/>
     <div class="answer-hint">💡 翻转使正面↔反面，所以翻转后第一堆的正面数 = 翻转前的反面数 = 20-m = 另一堆的正面数。</div>`,
   },
   {
     id: 11, cat: "brain", diff: 2, book: "green",
     title: "贴错标签的水果袋",
-    answer: `三袋水果（苹果/橘子/混合），所有标签都贴错了。最少取几个水果才能确定？<br/><br/>
-    <strong>答案：只需从"混合"标签的袋中取1个水果。</strong><br/><br/>
+    answer: `<strong>原题：</strong>三袋水果（苹果/橘子/混合），所有标签都贴错了。最少取几个水果才能确定？<br/><br/><strong>答案：只需从"混合"标签的袋中取1个水果。</strong><br/><br/>
     因为"混合"标签是错的，所以这袋要么全是苹果要么全是橘子。<br/>
     • 若取出苹果 → "混合"袋是苹果 → "苹果"标签袋不能是苹果只能是混合 → "橘子"标签袋是橘子<br/>
     • 若取出橘子 → 对称推理<br/><br/>
@@ -582,19 +571,17 @@ const questions = [
   {
     id: 12, cat: "brain", diff: 2, book: "green",
     title: "玻璃球坠楼（动态规划）",
-    answer: `100层楼，2个玻璃球。球从≥X层扔会碎，<X层不碎。求最坏情况下最少扔几次确定X。<br/><br/>
+    answer: `<strong>原题：</strong>100层楼，2个玻璃球。球从≥X层扔会碎，<X层不碎。求最坏情况下最少扔几次确定X。<br/><br/>
     设最多扔N次。第一次从第N层扔：<br/>
     • 碎了 → 用第2个球从1层逐层试，最多N-1次，总共N次<br/>
     • 没碎 → 还有N-1次机会，从N+(N-1)层扔第二次<br/><br/>
-    覆盖楼层数：N + (N-1) + ... + 1 = N(N+1)/2 ≥ 100<br/>
-    <strong>N = 14</strong>（14×15/2 = 105 ≥ 100）<br/><br/>
+    覆盖楼层数：N + (N-1) + ... + 1 = N(N+1)/2 ≥ 100 最坏情况下最少要扔几次，才能确定临界楼层 X？<br/><br/><strong>N = 14</strong>（14×15/2 = 105 ≥ 100）<br/><br/>
     策略：14 → 27 → 39 → 50 → 60 → 69 → 77 → 84 → 90 → 95 → 99 → 100`,
   },
   {
     id: 13, cat: "brain", diff: 3, book: "green",
     title: "囚徒帽子问题（模运算）",
-    answer: `100个囚徒，每人戴红或蓝帽，能看到其他人的帽子但看不到自己的。按随机顺序猜测自己帽子颜色，猜错则死。<br/><br/>
-    <strong>策略：至少救99人。</strong><br/><br/>
+    answer: `<strong>原题：</strong>100个囚徒，每人戴红或蓝帽，能看到其他人的帽子但看不到自己的。按随机顺序猜测自己帽子颜色，猜错则死。 他们应采用什么策略，使至少一人猜对自己帽子颜色，从而所有人获释的概率最大？<br/><br/><strong>策略：至少救99人。</strong><br/><br/>
     第一个囚徒数其他99人中红帽子的数量：<br/>
     • 奇数 → 猜"红"<br/>
     • 偶数 → 猜"蓝"<br/><br/>
@@ -604,8 +591,7 @@ const questions = [
   {
     id: 14, cat: "brain", diff: 2, book: "green",
     title: "彩球配色（马尔可夫链）",
-    answer: `袋中20蓝球14红球。每次取两球：同色加蓝球，异色加红球。最后剩什么颜色？<br/><br/>
-    <strong>分析红球数量的变化：</strong><br/>
+    answer: `<strong>原题：</strong>袋中20蓝球14红球。每次取两球：同色加蓝球，异色加红球。最后剩什么颜色？<br/><br/><strong>分析红球数量的变化：</strong><br/>
     • 两蓝 → (B-1, R) → 红球不变<br/>
     • 两红 → (B+1, R-2) → 红球-2<br/>
     • 一红一蓝 → (B-1, R) → 红球不变<br/><br/>
@@ -615,15 +601,13 @@ const questions = [
   {
     id: 15, cat: "brain", diff: 1, book: "green",
     title: "配袜子（鸽巢原理）",
-    answer: `抽屉有2红、20黄、31蓝袜子。随机抓几只保证有同色的一对？<br/><br/>
-    3种颜色 = 3个鸽巢。由鸽巢原理，4只袜子（4只鸽子入3个洞）必有至少2只同色。<br/>
-    <strong>答案：4只</strong>`,
+    answer: `<strong>原题：</strong>抽屉有2红、20黄、31蓝袜子。随机抓几只保证有同色的一对？<br/><br/>
+    3种颜色 = 3个鸽巢。由鸽巢原理，4只袜子（4只鸽子入3个洞）必有至少2只同色。<br/><br/><strong>答案：4只</strong>`,
   },
   {
     id: 16, cat: "brain", diff: 3, book: "green",
     title: "假币称量II（三进制编码）",
-    answer: `5袋硬币各100枚，每袋的币重为9g/10g/11g之一。用电子秤最少称几次确定每袋类型？<br/><br/>
-    <strong>答案：只需1次。</strong><br/><br/>
+    answer: `<strong>原题：</strong>5袋硬币各100枚，每袋的币重为9g/10g/11g之一。用电子秤最少称几次确定每袋类型？<br/><br/><strong>答案：只需1次。</strong><br/><br/>
     从第i袋取 3^(i-1) 枚硬币一起称（即1, 3, 9, 27, 81枚）。<br/><br/>
     设标准重550g（55枚×10g），实际偏差为 ±(c₁×1 + c₂×3 + c₃×9 + c₄×27 + c₅×81)，其中cᵢ ∈ {-1, 0, 1}。<br/><br/>
     <strong>三进制表示的唯一性</strong>保证了不同的袋组合产生不同的总偏差，因此一次称量即可确定所有袋的类型。`,
@@ -631,8 +615,7 @@ const questions = [
   {
     id: 17, cat: "brain", diff: 2, book: "hots",
     title: "三个开关一个灯泡",
-    answer: `房间外4个开关，房间内1个灯泡，只有1个开关控制灯泡。只能进房间1次，如何确定？<br/><br/>
-    <strong>利用"热"这个额外信息：</strong><br/>
+    answer: `<strong>原题：</strong>房间外4个开关，房间内1个灯泡，只有1个开关控制灯泡。只能进房间1次，如何确定？<br/><br/><strong>利用"热"这个额外信息：</strong><br/>
     1. 打开开关1和2，等待几分钟<br/>
     2. 关闭开关2，打开开关3<br/>
     3. 立即进入房间<br/><br/>
@@ -644,16 +627,14 @@ const questions = [
   {
     id: 18, cat: "prob", diff: 2, book: "green",
     title: "醉汉乘客（条件概率/对称性）",
-    answer: `100人登机，第1人随机坐任何位置，其余人找自己座位被占则随机选。你是第100人，坐到自己座位的概率？<br/><br/>
-    <strong>答案：50%</strong><br/><br/>
+    answer: `<strong>原题：</strong>100人登机，第1人随机坐任何位置，其余人找自己座位被占则随机选。你是第100人，坐到自己座位的概率？<br/><br/><strong>答案：50%</strong><br/><br/>
     关键观察：最终只有两种可能——要么有人占了1号座（你能坐100号），要么有人占了100号座（你坐不了）。<br/><br/>
     在任何时候，下一个"随机选座"的人面对1号和100号座位的概率是<strong>对称的</strong>（相等）。所以最终1号和100号被占的概率各为1/2。`,
   },
   {
     id: 19, cat: "prob", diff: 3, book: "green",
     title: "N个点在圆周上（连续概率）",
-    answer: `在圆周上随机取N个点，它们全部落在某个半圆内的概率？<br/><br/>
-    <strong>答案：N / 2^(N-1)</strong><br/><br/>
+    answer: `<strong>原题：</strong>在圆周上随机取N个点，它们全部落在某个半圆内的概率？<br/><br/><strong>答案：N / 2^(N-1)</strong><br/><br/>
     <strong>证明思路：</strong><br/>
     设事件Eᵢ = "从第i个点开始顺时针走半圈包含所有其他点"<br/>
     • P(Eᵢ) = 1/2^(N-1)（每个其他点在半圆内的概率为1/2，相互独立）<br/>
@@ -663,8 +644,7 @@ const questions = [
   {
     id: 20, cat: "prob", diff: 2, book: "green",
     title: "扑克牌概率",
-    answer: `52张牌5张手牌（共2,598,960种）。<br/><br/>
-    <strong>四条：</strong>选面值13种 × 选第5张48张 = 624<br/>
+    answer: `<strong>原题：</strong>52张牌5张手牌（共2,598,960种）。<br/><br/><strong>四条：</strong>选面值13种 × 选第5张48张 = 624<br/>
     P = 624/2,598,960 ≈ 0.024%<br/><br/>
     <strong>葫芦：</strong>三条面值13 × 花色C(4,3)=4 × 对子面值12 × 花色C(4,2)=6 = 3,744<br/>
     P = 3,744/2,598,960 ≈ 0.144%<br/><br/>
@@ -674,8 +654,7 @@ const questions = [
   {
     id: 21, cat: "prob", diff: 2, book: "green",
     title: "兔子跳台阶（斐波那契）",
-    answer: `兔子在n级台阶底端，每次跳1或2级。到顶有多少种方式？<br/><br/>
-    <strong>递推关系：f(n) = f(n-1) + f(n-2)</strong><br/><br/>
+    answer: `<strong>原题：</strong>兔子在n级台阶底端，每次跳1或2级。到顶有多少种方式？<br/><br/><strong>递推关系：f(n) = f(n-1) + f(n-2)</strong><br/><br/>
     • f(1) = 1<br/>
     • f(2) = 2（1+1 或 2）<br/>
     • f(3) = 3, f(4) = 5, f(5) = 8...<br/><br/>
@@ -685,8 +664,8 @@ const questions = [
   {
     id: 22, cat: "prob", diff: 3, book: "green",
     title: "信封全错（容斥原理）",
-    answer: `5封信随机放入5个信封，所有信都装错的概率？<br/><br/>
-    用<strong>容斥原理</strong>：<br/>
+    answer: `<strong>原题：</strong>5封信随机放入5个信封，所有信都装错的概率？<br/><br/>
+    用<br/><br/><strong>容斥原理</strong>：<br/>
     P(至少1封正确) = ΣP(Eᵢ) - ΣP(EᵢEⱼ) + ΣP(EᵢEⱼEₖ) - ...<br/><br/>
     = C(5,1)×1/5 - C(5,2)×1/(5×4) + C(5,3)×1/(5×4×3) - ...<br/>
     = 1 - 1/2! + 1/3! - 1/4! + 1/5!<br/><br/>
@@ -696,8 +675,7 @@ const questions = [
   {
     id: 23, cat: "prob", diff: 2, book: "green",
     title: "蒙提霍尔问题（三门问题）",
-    answer: `3扇门后1辆汽车2只羊。你选一扇门，主持人打开另一扇有羊的门，问你是否换门？<br/><br/>
-    <strong>答案：应该换。换门后赢车概率2/3，不换1/3。</strong><br/><br/>
+    answer: `<strong>原题：</strong>3扇门后1辆汽车2只羊。你选一扇门，主持人打开另一扇有羊的门，问你是否换门？<br/><br/><strong>答案：应该换。换门后赢车概率2/3，不换1/3。</strong><br/><br/>
     <strong>分析：</strong><br/>
     • 不换：你初始选对的概率 = 1/3<br/>
     • 换：你初始选错的概率 = 2/3（主持人帮你排除了一个错误选项）`,
@@ -705,8 +683,7 @@ const questions = [
   {
     id: 24, cat: "prob", diff: 2, book: "green",
     title: "男女比例问题",
-    answer: `国家规定每家生到男孩就停，女孩继续生。最终男女比例？<br/><br/>
-    <strong>答案：1:1</strong><br/><br/>
+    answer: `<strong>原题：</strong>国家规定每家生到男孩就停，女孩继续生。最终男女比例？<br/><br/><strong>答案：1:1</strong><br/><br/>
     每次生育男孩和女孩概率各1/2，无论什么策略，<strong>总期望比例不变</strong>。<br/><br/>
     数学验证：n个家庭，期望男孩n个，期望女孩 = n×(1/2 + 1/4 + 1/8 + ...) = n个。<br/>
     <div class="answer-hint">💡 停止策略不影响每次生育的性别概率。</div>`,
@@ -714,8 +691,7 @@ const questions = [
   {
     id: 25, cat: "prob", diff: 3, book: "green",
     title: "赌徒破产问题",
-    answer: `赌徒有i元，每次以概率p赢1元或(1-p)输1元。目标到N元或0元停止。到达N的概率？<br/><br/>
-    <strong>p = 1/2 时：</strong> P(到达N) = i/N<br/><br/>
+    answer: `<strong>原题：</strong>赌徒有i元，每次以概率p赢1元或(1-p)输1元。目标到N元或0元停止。到达N的概率？<br/><br/><strong>p = 1/2 时：</strong> P(到达N) = i/N<br/><br/>
     <strong>p ≠ 1/2 时：</strong><br/>
     <div class="formula">P = [1 - (q/p)^i] / [1 - (q/p)^N], 其中 q = 1-p</div><br/>
     <div class="answer-hint">💡 这是最经典的随机游走问题，用差分方程求解。</div>`,
@@ -723,8 +699,7 @@ const questions = [
   {
     id: 26, cat: "prob", diff: 3, book: "green",
     title: "收集优惠券问题",
-    answer: `N种优惠券，每次随机获得一种（等概率）。收集齐全套平均需要多少张？<br/><br/>
-    <strong>答案：N × H_N = N × (1 + 1/2 + 1/3 + ... + 1/N)</strong><br/><br/>
+    answer: `<strong>原题：</strong>N种优惠券，每次随机获得一种（等概率）。收集齐全套平均需要多少张？<br/><br/><strong>答案：N × H_N = N × (1 + 1/2 + 1/3 + ... + 1/N)</strong><br/><br/>
     <strong>分析：</strong><br/>
     • 已有0种时，获得新种类概率1，期望1张<br/>
     • 已有k种时，获得新种类概率(N-k)/N，期望N/(N-k)张<br/><br/>
@@ -734,8 +709,7 @@ const questions = [
   {
     id: 27, cat: "prob", diff: 3, book: "green",
     title: "骰子游戏期望值",
-    answer: `掷骰子：得4/5/6可以继续掷，得1/2/3停止。期望收益？<br/><br/>
-    <strong>用全期望公式：</strong><br/><br/>
+    answer: `<strong>原题：</strong>掷骰子：得4/5/6可以继续掷，得1/2/3停止。期望收益？<br/><br/><strong>用全期望公式：</strong><br/><br/>
     E[X] = P(Y∈{1,2,3}) × E[X|Y∈{1,2,3}] + P(Y∈{4,5,6}) × E[X|Y∈{4,5,6}]<br/><br/>
     = (1/2) × 2 + (1/2) × (5 + E[X])<br/><br/>
     E[X] = 1 + (5+E[X])/2 → E[X]/2 = 3.5 → <strong>E[X] = 7</strong><br/>
@@ -744,8 +718,7 @@ const questions = [
   {
     id: 28, cat: "prob", diff: 3, book: "green",
     title: "随机变量之和 < 1",
-    answer: `X₁,...,Xₙ 独立同分布于U(0,1)。P(S=X₁+...+Xₙ < 1) = ?<br/><br/>
-    <strong>答案：1/n!</strong><br/><br/>
+    answer: `<strong>原题：</strong>X₁,...,Xₙ 独立同分布于U(0,1)。P(S=X₁+...+Xₙ < 1) = ?<br/><br/><strong>答案：1/n!</strong><br/><br/>
     <strong>归纳证明：</strong><br/>
     • n=1: P = 1 ✓<br/>
     • n=2: 积分区域是三角形，面积1/2 ✓<br/>
@@ -756,8 +729,7 @@ const questions = [
   {
     id: 29, cat: "prob", diff: 3, book: "green",
     title: "债券联合违约概率",
-    answer: `债券A违约概率50%，B违约概率30%。至少一个违约的概率范围？相关系数范围？<br/><br/>
-    <strong>至少一个违约的范围：[50%, 80%]</strong><br/>
+    answer: `<strong>原题：</strong>债券A违约概率50%，B违约概率30%。至少一个违约的概率范围？相关系数范围？<br/><br/><strong>至少一个违约的范围：[50%, 80%]</strong><br/>
     • 最小：B违约 ⊆ A违约 → 50%<br/>
     • 最大：A∪B互斥 → 50%+30%=80%<br/><br/>
     <strong>相关系数范围：[-√(3/7), √(3/7)] ≈ [-0.655, 0.655]</strong><br/><br/>
@@ -767,8 +739,7 @@ const questions = [
   {
     id: 30, cat: "prob", diff: 3, book: "green",
     title: "500只蚂蚁（对称性/序统计量）",
-    answer: `500只蚂蚁随机分布在1英尺绳上，各以1英尺/分钟匀速向随机方向移动。碰撞后掉头。所有蚂蚁落下的期望时间？<br/><br/>
-    <strong>关键洞察：碰撞 = 标签交换</strong><br/>
+    answer: `<strong>原题：</strong>500只蚂蚁随机分布在1英尺绳上，各以1英尺/分钟匀速向随机方向移动。碰撞后掉头。所有蚂蚁落下的期望时间？<br/><br/><strong>关键洞察：碰撞 = 标签交换</strong><br/>
     两蚂蚁碰撞掉头 = 它们穿过彼此继续走（标签交换）。所以忽略碰撞，每只蚂蚁独立。<br/><br/>
     期望时间 = max(500个U(0,1)随机变量的期望)<br/>
     <div class="formula">E[max] = n/(n+1) = 500/501 分钟</div><br/>
@@ -777,8 +748,7 @@ const questions = [
   {
     id: 31, cat: "prob", diff: 2, book: "green",
     title: "看到第一张A的期望",
-    answer: `52张牌中4张A。翻多少张牌平均能看到第一张A？<br/><br/>
-    <strong>答案：10.6张</strong><br/><br/>
+    answer: `<strong>原题：</strong>52张牌中4张A。翻多少张牌平均能看到第一张A？<br/><br/><strong>答案：10.6张</strong><br/><br/>
     用<strong>指示变量</strong>法：<br/>
     48张非A牌中，第i张在第一张A之前的概率 = 1/5（4张A将牌分成5个区域）<br/><br/>
     E[翻牌数] = 1 + Σ E[Xᵢ] = 1 + 48/5 = 10.6<br/><br/>
@@ -787,8 +757,7 @@ const questions = [
   {
     id: 32, cat: "prob", diff: 2, book: "yellow",
     title: "生日悖论",
-    answer: `一个房间里至少多少人，有两个人生日相同的概率 > 50%？<br/><br/>
-    <strong>答案：23人</strong><br/><br/>
+    answer: `<strong>原题：</strong>一个房间里至少多少人，有两个人生日相同的概率 > 50%？<br/><br/><strong>答案：23人</strong><br/><br/>
     P(全不同) = 365/365 × 364/365 × ... × (365-n+1)/365<br/>
     当 n=23 时 P(至少1对相同) > 50%<br/>
     当 n=50 时 P > 97%<br/>
@@ -798,8 +767,7 @@ const questions = [
   {
     id: 33, cat: "prob", diff: 2, book: "yellow",
     title: "正面朝上概率（不公平硬币）",
-    answer: `用一枚不公平硬币（P(正)=p未知）产生公平的二选一结果。<br/><br/>
-    <strong>Von Neumann方法：</strong>每次掷两次<br/>
+    answer: `<strong>原题：</strong>用一枚不公平硬币（P(正)=p未知）产生公平的二选一结果。<br/><br/><strong>Von Neumann方法：</strong>每次掷两次<br/>
     • 正反 → 选择1<br/>
     • 反正 → 选择2<br/>
     • 正正或反反 → 丢弃，重来<br/><br/>
@@ -809,8 +777,7 @@ const questions = [
   {
     id: 34, cat: "prob", diff: 2, book: "hots",
     title: "连续掷出n个正面",
-    answer: `公平硬币，期望掷多少次得到n个连续正面？<br/><br/>
-    <strong>答案：2^(n+1) - 2</strong><br/><br/>
+    answer: `<strong>原题：</strong>公平硬币，期望掷多少次得到n个连续正面？<br/><br/><strong>答案：2^(n+1) - 2</strong><br/><br/>
     <strong>归纳法：</strong><br/>
     • n=1: E=2 ✓<br/>
     • n=2: E=6 ✓<br/>
@@ -831,37 +798,35 @@ const questions = [
   {
     id: 36, cat: "calc", diff: 2, book: "green",
     title: "ln(x)的积分",
-    answer: `∫ln(x)dx = ?<br/><br/>
-    用<strong>分部积分</strong>：设u=ln x, v=x<br/>
+    answer: `<strong>原题：</strong>∫ln(x)dx = ?<br/><br/>
+    用<br/><br/><strong>分部积分</strong>：设u=ln x, v=x<br/>
     <div class="formula">∫ln(x)dx = x·ln(x) - ∫x·(1/x)dx = x·ln(x) - x + C</div>`,
   },
   {
     id: 37, cat: "calc", diff: 3, book: "green",
     title: "标准正态的条件期望 E[X|X>0]",
-    answer: `X ~ N(0,1)，求 E[X | X>0]。<br/><br/>
+    answer: `<strong>原题：</strong>X ~ N(0,1)，求 E[X | X>0]。<br/><br/>
     <div class="formula">E[X|X>0] = ∫₀^∞ x · f(x) dx / P(X>0)</div><br/>
     其中 f(x) = (1/√2π) e^(-x²/2)<br/><br/>
     用换元 u = -x²/2, du = -x dx：<br/>
     <div class="formula">∫₀^∞ x e^(-x²/2) dx = ∫₀^(-∞) -e^u du = [e^u]₋∞⁰ = 1</div><br/>
-    E[X|X>0] = (1/√2π × 1) / (1/2) = <strong>√(2/π) ≈ 0.798</strong>`,
+    E[X|X>0] = (1/√2π × 1) / (1/2) =<br/><br/><strong>√(2/π) ≈ 0.798</strong>`,
   },
   {
     id: 38, cat: "calc", diff: 3, book: "green",
     title: "高斯积分 ∫e^(-x²/2)dx",
-    answer: `计算 ∫₋∞^∞ e^(-x²/2) dx<br/><br/>
+    answer: `<strong>原题：</strong>计算 ∫₋∞^∞ e^(-x²/2) dx<br/><br/>
     设 I = ∫₋∞^∞ e^(-x²/2) dx，则：<br/>
     I² = ∫∫ e^(-(x²+y²)/2) dx dy<br/><br/>
     转换为极坐标 (x = r cosθ, y = r sinθ)：<br/>
     I² = ∫₀^(2π) ∫₀^∞ e^(-r²/2) r dr dθ<br/>
-    = 2π × [e^(-r²/2)]₋... = 2π × 1 = 2π<br/><br/>
-    <strong>I = √(2π)</strong><br/>
+    = 2π × [e^(-r²/2)]₋... = 2π × 1 = 2π<br/><br/><strong>I = √(2π)</strong><br/>
     <div class="answer-hint">💡 这就是正态分布归一化常数的由来。</div>`,
   },
   {
     id: 39, cat: "calc", diff: 2, book: "green",
     title: "L'Hôpital法则应用",
-    answer: `求 lim(x→∞) eˣ/x² 和 lim(x→0⁺) x²ln(x)<br/><br/>
-    <strong>第一个：</strong>∞/∞型，用L'Hôpital两次<br/>
+    answer: `<strong>原题：</strong>求 lim(x→∞) eˣ/x² 和 lim(x→0⁺) x²ln(x)<br/><br/><strong>第一个：</strong>∞/∞型，用L'Hôpital两次<br/>
     lim eˣ/x² = lim eˣ/(2x) = lim eˣ/2 = <strong>∞</strong><br/><br/>
     <strong>第二个：</strong>改写为 ln(x) / (1/x²)，即 -∞/∞ 型<br/>
     lim [ln(x) / x⁻²] = lim [1/x / (-2x⁻³)] = lim [-x²/2] = <strong>0</strong>`,
@@ -869,8 +834,7 @@ const questions = [
   {
     id: 40, cat: "calc", diff: 3, book: "green",
     title: "相关系数的范围（正定矩阵约束）",
-    answer: `x与y相关0.8，x与z相关0.8。y与z相关系数范围？<br/><br/>
-    <strong>方法一（向量夹角）：</strong><br/>
+    answer: `<strong>原题：</strong>x与y相关0.8，x与z相关0.8。y与z相关系数范围？<br/><br/><strong>方法一（向量夹角）：</strong><br/>
     cos θ = 0.8, 最小夹角2θ → ρ_min = cos(2θ) = 2cos²θ - 1 = 2(0.64) - 1 = <strong>0.28</strong><br/>
     最大相关 = <strong>1</strong>（同方向）<br/><br/>
     <strong>方法二（正定约束）：</strong><br/>
@@ -892,33 +856,32 @@ const questions = [
   {
     id: 42, cat: "calc", diff: 2, book: "green",
     title: "最小二乘回归的矩阵推导",
-    answer: `如何用矩阵方法推导线性回归的OLS估计量？<br/><br/>
+    answer: `<strong>原题：</strong>如何用矩阵方法推导线性回归的OLS估计量？<br/><br/>
     模型：Y = Xβ + ε<br/>
     目标：min ||Y - Xβ||²<br/><br/>
     对β求导：<br/>
     <div class="formula">∂/∂β [(Y-Xβ)ᵀ(Y-Xβ)] = -2Xᵀ(Y-Xβ) = 0</div><br/>
-    → XᵀXβ = XᵀY → <strong>β̂ = (XᵀX)⁻¹XᵀY</strong><br/><br/>
+    → XᵀXβ = XᵀY →<br/><br/><strong>β̂ = (XᵀX)⁻¹XᵀY</strong><br/><br/>
     实际计算中可用QR分解：X = QR → β̂ = R⁻¹QᵀY，避免直接求逆的数值不稳定。<br/>
     <div class="answer-hint">💡 OLS的5个假设：线性、零均值、同方差/不相关、无完全共线性、外生性。</div>`,
   },
   {
     id: 43, cat: "calc", diff: 3, book: "green",
     title: "Lagrange乘数法：点到平面距离",
-    answer: `求原点到平面 2x+3y+4z=12 的距离。<br/><br/>
+    answer: `<strong>原题：</strong>求原点到平面 2x+3y+4z=12 的距离。<br/><br/>
     min f = x²+y²+z², s.t. g = 2x+3y+4z-12 = 0<br/><br/>
     ∇f = λ∇g:<br/>
     2x = 2λ, 2y = 3λ, 2z = 4λ<br/>
     → x = λ, y = 3λ/2, z = 2λ<br/><br/>
     代入约束：2λ + 9λ/2 + 8λ = 12 → λ = 24/29<br/>
-    D = √(x²+y²+z²) = √[(24/29)² + (36/29)² + (48/29)²] = <strong>12/√29</strong><br/><br/>
+    D = √(x²+y²+z²) = √[(24/29)² + (36/29)² + (48/29)²] =<br/><br/><strong>12/√29</strong><br/><br/>
     <div class="answer-hint">💡 一般公式：点(a₀,b₀,c₀)到平面 ax+by+cz=d 的距离 = |d-aa₀-bb₀-cc₀| / √(a²+b²+c²)</div>`,
   },
   {
     id: 44, cat: "stoch", diff: 3, book: "green",
     title: "醉汉走桥（鞅论）",
-    answer: `醉汉在100米桥的17米处，每步等概率前进/后退1米。到100米先于0米的概率？到达任一端的期望步数？<br/><br/>
-    设当前位置为0，对称随机游走停在a=83或-β=-17。<br/><br/>
-    <strong>Sₙ和Sₙ²-n都是鞅，停止时刻的鞅仍为鞅。</strong><br/><br/>
+    answer: `<strong>原题：</strong>醉汉在100米桥的17米处，每步等概率前进/后退1米。到100米先于0米的概率？到达任一端的期望步数？<br/><br/>
+    设当前位置为0，对称随机游走停在a=83或-β=-17。<br/><br/><strong>Sₙ和Sₙ²-n都是鞅，停止时刻的鞅仍为鞅。</strong><br/><br/>
     E[S_N] = pₐ × 83 + (1-pₐ) × (-17) = 0 → <strong>pₐ = 17/100 = 0.17</strong><br/><br/>
     E[Sₙ² - N] = 0 → E[N] = pₐ × 83² + (1-pₐ) × 17² = <strong>1441步</strong><br/>
     <div class="answer-hint">💡 一般公式：停在a或-β的概率分别为β/(α+β)和α/(α+β)，期望步数αβ。</div>`,
@@ -926,9 +889,8 @@ const questions = [
   {
     id: 45, cat: "stoch", diff: 3, book: "green",
     title: "售票问题（反射原理）",
-    answer: `2n人排队买票，n人持$5、n人持$10，票价$5，售票员无零钱。所有人都能顺利买票的概率？<br/><br/>
-    <strong>答案：1/(n+1)</strong><br/><br/>
-    <strong>思路：</strong>将持$5的人映射为+1，持$10的人映射为-1，问题变为：从(0,0)到(2n,0)的随机游走中，不触及y=-1的概率。<br/><br/>
+    answer: `<strong>原题：</strong>2n人排队买票，n人持\$5、n人持\$10，票价\$5，售票员无零钱。所有人都能顺利买票的概率？<br/><br/><strong>答案：1/(n+1)</strong><br/><br/>
+    <strong>思路：</strong>将持\$5的人映射为+1，持\$10的人映射为-1，问题变为：从(0,0)到(2n,0)的随机游走中，不触及y=-1的概率。<br/><br/>
     用<strong>反射原理</strong>：触及y=-1的路径数 = 从(0,-2)到(2n,0)的路径数 = C(2n, n-1)<br/><br/>
     不触及的路径数 = C(2n,n) - C(2n,n-1) = C(2n,n)/(n+1)<br/><br/>
     P = [C(2n,n)/(n+1)] / C(2n,n) = <strong>1/(n+1)</strong>（卡特兰数相关）`,
@@ -936,8 +898,7 @@ const questions = [
   {
     id: 46, cat: "stoch", diff: 3, book: "green",
     title: "硬币三连（Penney's Game）",
-    answer: `公平硬币，玩家A先选3连序列，B后选。谁的序列先出现谁赢。<br/><br/>
-    <strong>关键：B总能选到胜率>50%的序列！</strong><br/><br/>
+    answer: `<strong>原题：</strong>公平硬币，玩家A先选3连序列，B后选。谁的序列先出现谁赢。<br/><br/><strong>关键：B总能选到胜率>50%的序列！</strong><br/><br/>
     策略：取A序列的后两位的<strong>反序列</strong>作为B序列的前两位。<br/><br/>
     例如A选HHH → B选THH，B胜率7/8<br/>
     A选HTH → B选HHT，B胜率2/3<br/><br/>
@@ -963,8 +924,7 @@ const questions = [
   {
     id: 48, cat: "stoch", diff: 3, book: "green",
     title: "Brown运动停时的期望",
-    answer: `B(t)首次到达±1的平均时间？<br/><br/>
-    <strong>用鞅论：B(t)²-t是鞅</strong><br/><br/>
+    answer: `<strong>原题：</strong>B(t)首次到达±1的平均时间？<br/><br/><strong>用鞅论：B(t)²-t是鞅</strong><br/><br/>
     设T = min{t : B(t)=1或B(t)=-1}<br/><br/>
     由Ito引理：d(B²-t) = 2B dB，无drift项 → 鞅<br/><br/>
     E[B(T)²-T] = E[B(0)²-0] = 0<br/>
@@ -975,8 +935,7 @@ const questions = [
   {
     id: 49, cat: "stoch", diff: 3, book: "green",
     title: "B(t)>0且B(2)<0的概率",
-    answer: `标准Brown运动 B₁>0 且 B₂<0 的概率？<br/><br/>
-    <strong>答案：1/8</strong><br/><br/>
+    answer: `<strong>原题：</strong>标准Brown运动 B₁>0 且 B₂<0 的概率？<br/><br/><strong>答案：1/8</strong><br/><br/>
     B₁ ~ N(0,1), B₂-B₁ ~ N(0,1) 独立<br/><br/>
     B₁>0, B₂<0 ⟺ B₁>0, B₂-B₁ < -B₁<br/><br/>
     用对称性：将(B₁, B₂-B₁)的密度函数空间分成8个等概率区域（由x=0, y=0, y=x, y=-x分割），目标区域占1/8。`,
@@ -984,22 +943,20 @@ const questions = [
   {
     id: 50, cat: "stoch", diff: 3, book: "green",
     title: "动态骰子游戏",
-    answer: `掷骰子：1-5各得对应金额，6则失去所有累积奖金。每次掷后可选停或继续。最多愿付多少？<br/><br/>
-    <strong>用动态规划求解：</strong><br/><br/>
+    answer: `<strong>原题：</strong>掷骰子：1-5各得对应金额，6则失去所有累积奖金。每次掷后可选停或继续。最多愿付多少？<br/><br/><strong>用动态规划求解：</strong><br/><br/>
     当累积n元时，继续掷的期望：<br/>
     (n+1)/6 + (n+2)/6 + ... + (n+5)/6 + 0/6 = 5n/6 + 2.5<br/><br/>
     当 5n/6 + 2.5 > n 时继续，即 n ≤ 14<br/><br/>
     递推计算 f(15)=15, f(14)=14.17, ..., f(0) = <strong>6.15</strong><br/>
-    <div class="answer-hint">💡 愿意为游戏最多支付 $6.15。</div>`,
+    <div class="answer-hint">💡 愿意为游戏最多支付 \$6.15。</div>`,
   },
   {
     id: 51, cat: "stoch", diff: 3, book: "green",
     title: "动态纸牌游戏（最优停时）",
-    answer: `52张牌(26红26黑)，逐张翻开，红+1黑-1。可随时叫停，求最优策略和期望收益。<br/><br/>
-    <strong>动态规划方程：</strong><br/>
+    answer: `<strong>原题：</strong>52张牌(26红26黑)，逐张翻开，红+1黑-1。可随时叫停，求最优策略和期望收益。<br/><br/><strong>动态规划方程：</strong><br/>
     f(b,r) = max(b-r, b/(b+r)×f(b-1,r) + r/(b+r)×f(b,r-1))<br/><br/>
     边界条件：f(0,r)=0, f(b,0)=b<br/><br/>
-    <strong>答案：f(26,26) = $2.62</strong><br/><br/>
+    <strong>答案：f(26,26) = \$2.62</strong><br/><br/>
     <div class="answer-hint">💡 这个方程本质上就是美式期权的定价方程——在最优时间行权。</div>`,
   },
   {
@@ -1041,22 +998,21 @@ const questions = [
   {
     id: 55, cat: "finance", diff: 3, book: "green",
     title: "Black-Scholes-Merton微分方程",
-    answer: `基于无套利和Δ对冲推导BSM方程：<br/><br/>
+    answer: `<strong>原题：</strong>基于无套利和Δ对冲推导BSM方程：<br/><br/>
     构建组合Π = -f + (∂f/∂S)×S（卖空1份衍生品+买入Δ股股票）<br/><br/>
     由Ito引理：<br/>
     <div class="formula">df = (∂f/∂t + ½σ²S²∂²f/∂S²)dt + ∂f/∂S × dS</div><br/><br/>
     对冲后dΠ = (∂f/∂t + ½σ²S²∂²f/∂S²)dt（消除dS项）<br/><br/>
-    无套利 → dΠ = rΠdt → <strong>BSM方程：</strong><br/>
+    无套利 → dΠ = rΠdt →<br/><br/><strong>BSM方程：</strong><br/>
     <div class="formula">∂f/∂t + rS∂f/∂S + ½σ²S²∂²f/∂S² = rf</div>`,
   },
   {
     id: 56, cat: "finance", diff: 3, book: "green",
     title: "Black-Scholes公式",
-    answer: `欧式Call和Put的BS定价公式：<br/><br/>
+    answer: `<strong>原题：</strong>欧式Call和Put的BS定价公式：<br/><br/>
     <div class="formula">c = S₀e^(-yτ) N(d₁) - Ke^(-rτ) N(d₂)<br/>p = Ke^(-rτ) N(-d₂) - S₀e^(-yτ) N(-d₁)</div><br/><br/>
     其中：<br/>
-    <div class="formula">d₁ = [ln(S₀/K) + (r-y+σ²/2)τ] / (σ√τ)<br/>d₂ = d₁ - σ√τ</div><br/><br/>
-    <strong>各参数含义：</strong><br/>
+    <div class="formula">d₁ = [ln(S₀/K) + (r-y+σ²/2)τ] / (σ√τ)<br/>d₂ = d₁ - σ√τ</div><br/><br/><strong>各参数含义：</strong><br/>
     • N(d₂) = 风险中性下Call被行使的概率<br/>
     • N(d₁) = Delta（对冲比率）<br/>
     • S₀e^(-yτ)N(d₁) = 风险中性期望的股票部分<br/>
@@ -1065,8 +1021,7 @@ const questions = [
   {
     id: 57, cat: "finance", diff: 2, book: "green",
     title: "Delta的对冲含义",
-    answer: `Delta = ∂c/∂S = e^(-yτ)N(d₁)<br/><br/>
-    <strong>Delta的性质：</strong><br/>
+    answer: `<strong>原题：</strong>Delta = ∂c/∂S = e^(-yτ)N(d₁)<br/><br/><strong>Delta的性质：</strong><br/>
     • Call的Delta ∈ (0, 1)：股价涨，Call涨<br/>
     • Put的Delta ∈ (-1, 0)：股价涨，Put跌<br/>
     • ATM附近 Delta ≈ 0.5（Call）<br/>
@@ -1077,8 +1032,7 @@ const questions = [
   {
     id: 58, cat: "finance", diff: 2, book: "green",
     title: "Bull Spread（牛市价差）",
-    answer: `买入低行权价K₁的Call + 卖出高行权价K₂的Call（K₂>K₁）。<br/><br/>
-    <strong>收益结构：</strong><br/>
+    answer: `<strong>原题：</strong>买入低行权价K₁的Call + 卖出高行权价K₂的Call（K₂>K₁）。<br/><br/><strong>收益结构：</strong><br/>
     • S_T ≤ K₁：收益 = 0<br/>
     • K₁ < S_T < K₂：收益 = S_T - K₁<br/>
     • S_T ≥ K₂：收益 = K₂ - K₁（封顶）<br/><br/>
@@ -1087,8 +1041,7 @@ const questions = [
   {
     id: 59, cat: "finance", diff: 2, book: "green",
     title: "Straddle（跨式）",
-    answer: `买入同行权价同到期日的Call + Put。<br/><br/>
-    <strong>收益结构：</strong>收益 = |S_T - K| - 权利金<br/><br/>
+    answer: `<strong>原题：</strong>买入同行权价同到期日的Call + Put。<br/><br/><strong>收益结构：</strong>收益 = |S_T - K| - 权利金<br/><br/>
     <strong>适用场景：</strong>预期价格大幅波动但不确定方向（如财报前、重大事件前）。<br/><br/>
     <strong>盈亏平衡点：</strong> K ± (Call+Put权利金)<br/>
     <div class="answer-hint">💡 反向操作（卖出Straddle）则赌价格不动，风险无限。</div>`,
@@ -1096,8 +1049,7 @@ const questions = [
   {
     id: 60, cat: "finance", diff: 2, book: "green",
     title: "二值期权（Binary Option）",
-    answer: `到期时S_T > K 则支付$1，否则$0。<br/><br/>
-    <strong>定价（风险中性）：</strong><br/>
+    answer: `<strong>原题：</strong>到期时S_T > K 则支付\$1，否则\$0。<br/><br/><strong>定价（风险中性）：</strong><br/>
     <div class="formula">价格 = e^(-rτ) × P^Q(S_T > K) = e^(-rτ) × N(d₂)</div><br/><br/>
     其中 d₂ = [ln(S₀/K) + (r-y-σ²/2)τ] / (σ√τ)<br/><br/>
     <div class="answer-hint">💡 二值期权的Delta在接近到期且接近平值时会变得极大（接近无穷），风险很高。</div>`,
@@ -1105,8 +1057,7 @@ const questions = [
   {
     id: 61, cat: "finance", diff: 2, book: "green",
     title: "VaR（Value at Risk）",
-    answer: `在置信度α下，投资组合在持有期Δt内的最大可能损失。<br/><br/>
-    <strong>参数法（正态假设）：</strong><br/>
+    answer: `<strong>原题：</strong>在置信度α下，投资组合在持有期Δt内的最大可能损失。<br/><br/><strong>参数法（正态假设）：</strong><br/>
     <div class="formula">VaR_α = μ + z_α × σ</div><br/>
     z_α为标准正态的α分位数（如95%置信度z=1.645）<br/><br/>
     <strong>历史模拟法：</strong>用历史收益分布直接取分位数<br/>
@@ -1127,8 +1078,7 @@ const questions = [
   {
     id: 63, cat: "finance", diff: 2, book: "red",
     title: "利率模型概述",
-    answer: `常见短期利率模型：<br/><br/>
-    <strong>1. Vasicek模型：</strong>dr = a(b-r)dt + σdW<br/>
+    answer: `<strong>原题：</strong>常见短期利率模型：<br/><br/><strong>1. Vasicek模型：</strong>dr = a(b-r)dt + σdW<br/>
     均值回归，但利率可能为负<br/><br/>
     <strong>2. CIR模型：</strong>dr = a(b-r)dt + σ√r dW<br/>
     均值回归且利率≥0（当r→0时波动率→0）<br/><br/>
@@ -1149,8 +1099,7 @@ const questions = [
   {
     id: 65, cat: "algo", diff: 1, book: "green",
     title: "Horner算法求多项式",
-    answer: `计算 p(x) = aₙxⁿ + ... + a₁x + a₀。<br/><br/>
-<strong>朴素方法：</strong>逐项算 xᵏ 再乘系数，O(n²) 次乘法。<br/>
+    answer: `<strong>原题：</strong>计算 p(x) = aₙxⁿ + ... + a₁x + a₀。<br/><br/><strong>朴素方法：</strong>逐项算 xᵏ 再乘系数，O(n²) 次乘法。<br/>
 <strong>Horner 算法（秦九韶）：</strong>嵌套形式 p(x) = ((...(aₙx + aₙ₋₁)x + ...)x + a₁)x + a₀，只需 O(n) 次乘法与加法。<br/><br/>
 <code>result = a[n];<br/>for (i = n-1; i >= 0; i--)<br/>    result = result * x + a[i];</code><br/><br/>
 本质：从最高次系数开始，每一步"乘 x 加下一项系数"。`,
@@ -1158,37 +1107,37 @@ const questions = [
   {
     id: 66, cat: "algo", diff: 2, book: "green",
     title: "移动平均的高效计算",
-    answer: `计算大小为k的滑动窗口平均值。<br/><br/> <strong>朴素方法：</strong>O(n×k)<br/> <strong>高效方法：</strong>O(n)<br/><br/> <code>sum = sum(arr[0:k]);<br/>for (i = k; i < n; i++) {<br/>    sum += arr[i] - arr[i-k];<br/>    avg = sum / k;<br/>}</code><br/><br/> <div class="answer-hint">💡 每次只加上新元素减去旧元素，避免重复求和。</div>`,
+    answer: `<strong>原题：</strong>计算大小为k的滑动窗口平均值。<br/><br/><strong>朴素方法：</strong>O(n×k)<br/> <strong>高效方法：</strong>O(n)<br/><br/> <code>sum = sum(arr[0:k]);<br/>for (i = k; i < n; i++) {<br/>    sum += arr[i] - arr[i-k];<br/>    avg = sum / k;<br/>}</code><br/><br/> <div class="answer-hint">💡 每次只加上新元素减去旧元素，避免重复求和。</div>`,
   },
   {
     id: 67, cat: "algo", diff: 2, book: "green",
     title: "随机排列（Fisher-Yates）",
-    answer: `生成1到n的随机排列。<br/><br/> <strong>Fisher-Yates洗牌算法（O(n)）：</strong><br/> <code>for (i = n-1; i > 0; i--) {<br/>    j = rand(0, i);<br/>    swap(arr[i], arr[j]);<br/>}</code><br/><br/> <strong>正确性：</strong>每个位置等概率地被分配到剩余位置中的任意一个，保证所有n!种排列等概率出现。`,
+    answer: `<strong>原题：</strong>生成1到n的随机排列。<br/><br/><strong>Fisher-Yates洗牌算法（O(n)）：</strong><br/> <code>for (i = n-1; i > 0; i--) {<br/>    j = rand(0, i);<br/>    swap(arr[i], arr[j]);<br/>}</code><br/><br/> <strong>正确性：</strong>每个位置等概率地被分配到剩余位置中的任意一个，保证所有n!种排列等概率出现。`,
   },
   {
     id: 68, cat: "algo", diff: 2, book: "green",
     title: "斐波那契数列",
-    answer: `F(n) = F(n-1) + F(n-2), F(0)=0, F(1)=1<br/><br/> <strong>递归：</strong> O(2ⁿ) —— 太慢<br/> <strong>动态规划：</strong> O(n) —— 空间O(n)或O(1)<br/> <strong>矩阵快速幂：</strong> O(log n)<br/><br/> <code>// 矩阵快速幂<br/>[[F(n)], [F(n-1)]] = [[1,1],[1,0]]^(n-1) × [[1],[0]]</code><br/><br/> <div class="answer-hint">💡 通项公式：F(n) = (φⁿ - ψⁿ)/√5，其中φ=(1+√5)/2（黄金比）。</div>`,
+    answer: `<strong>原题：</strong>F(n) = F(n-1) + F(n-2), F(0)=0, F(1)=1<br/><br/><strong>递归：</strong> O(2ⁿ) —— 太慢<br/> <strong>动态规划：</strong> O(n) —— 空间O(n)或O(1)<br/> <strong>矩阵快速幂：</strong> O(log n)<br/><br/> <code>// 矩阵快速幂<br/>[[F(n)], [F(n-1)]] = [[1,1],[1,0]]^(n-1) × [[1],[0]]</code><br/><br/> <div class="answer-hint">💡 通项公式：F(n) = (φⁿ - ψⁿ)/√5，其中φ=(1+√5)/2（黄金比）。</div>`,
   },
   {
     id: 69, cat: "algo", diff: 2, book: "green",
     title: "最大连续子数组和（Kadane算法）",
-    answer: `求数组中连续子数组的最大和。<br/><br/> <strong>Kadane算法 O(n)：</strong><br/> <code>max_ending = arr[0]; max_so_far = arr[0];<br/>for (i = 1; i < n; i++) {<br/>    max_ending = max(arr[i], max_ending + arr[i]);<br/>    max_so_far = max(max_so_far, max_ending);<br/>}<br/>return max_so_far;</code><br/><br/> <strong>关键思想：</strong>到位置i的最大和，要么包含i-1的最大和+arr[i]，要么只有arr[i]本身。<br/> <div class="answer-hint">💡 变体：二维最大子矩阵、不允许全负的变种、返回子数组本身等。</div>`,
+    answer: `<strong>原题：</strong>求数组中连续子数组的最大和。<br/><br/><strong>Kadane算法 O(n)：</strong><br/> <code>max_ending = arr[0]; max_so_far = arr[0];<br/>for (i = 1; i < n; i++) {<br/>    max_ending = max(arr[i], max_ending + arr[i]);<br/>    max_so_far = max(max_so_far, max_ending);<br/>}<br/>return max_so_far;</code><br/><br/> <strong>关键思想：</strong>到位置i的最大和，要么包含i-1的最大和+arr[i]，要么只有arr[i]本身。<br/> <div class="answer-hint">💡 变体：二维最大子矩阵、不允许全负的变种、返回子数组本身等。</div>`,
   },
   {
     id: 70, cat: "algo", diff: 3, book: "green",
     title: "毒酒问题（信息论/二进制）",
-    answer: `1000瓶酒中1瓶有毒，毒药24小时后发作。用最少老鼠在24小时内找出毒酒。<br/><br/> <strong>答案：10只老鼠。</strong><br/><br/> <strong>方法：</strong>将1000瓶酒编号为1-1000(二进制最多10位)。<br/> 第j只老鼠喝所有第j位为1的酒。<br/><br/> 24小时后，哪些老鼠死了构成一个10位二进制数，直接对应毒酒的编号。<br/><br/> <div class="formula">⌈log₂(1000)⌉ = 10</div><br/> <div class="answer-hint">💡 本质是信息论：1000种可能需要log₂1000 ≈ 10 bits信息，每只老鼠提供1 bit。</div>`,
+    answer: `<strong>原题：</strong>1000瓶酒中1瓶有毒，毒药24小时后发作。用最少老鼠在24小时内找出毒酒。<br/><br/><strong>答案：10只老鼠。</strong><br/><br/> <strong>方法：</strong>将1000瓶酒编号为1-1000(二进制最多10位)。<br/> 第j只老鼠喝所有第j位为1的酒。<br/><br/> 24小时后，哪些老鼠死了构成一个10位二进制数，直接对应毒酒的编号。<br/><br/> <div class="formula">⌈log₂(1000)⌉ = 10</div><br/> <div class="answer-hint">💡 本质是信息论：1000种可能需要log₂1000 ≈ 10 bits信息，每只老鼠提供1 bit。</div>`,
   },
   {
     id: 71, cat: "algo", diff: 3, book: "green",
     title: "蒙特卡洛模拟",
-    answer: `用随机数模拟解决确定性问题。<br/><br/> <strong>基本步骤：</strong><br/> 1. 定义输入变量的概率分布<br/> 2. 随机采样生成场景<br/> 3. 对每个场景计算输出<br/> 4. 统计输出分布<br/><br/> <strong>误差估计：</strong><br/> <div class="formula">标准误差 = σ/√N</div><br/> 要将误差减半，需要4倍的样本量。<br/><br/> <strong>方差缩减技术：</strong><br/> • 对偶变量法（Antithetic variates）<br/> • 控制变量法（Control variates）<br/> • 重要性采样（Importance sampling）<br/> • 分层采样（Stratified sampling）`,
+    answer: `<strong>原题：</strong>用随机数模拟解决确定性问题。<br/><br/><strong>基本步骤：</strong><br/> 1. 定义输入变量的概率分布<br/> 2. 随机采样生成场景<br/> 3. 对每个场景计算输出<br/> 4. 统计输出分布<br/><br/> <strong>误差估计：</strong><br/> <div class="formula">标准误差 = σ/√N</div><br/> 要将误差减半，需要4倍的样本量。<br/><br/> <strong>方差缩减技术：</strong><br/> • 对偶变量法（Antithetic variates）<br/> • 控制变量法（Control variates）<br/> • 重要性采样（Importance sampling）<br/> • 分层采样（Stratified sampling）`,
   },
   {
     id: 72, cat: "algo", diff: 2, book: "green",
     title: "有限差分法",
-    answer: `用差分近似微分方程，将PDE转化为线性方程组。<br/><br/> <strong>三种差分格式：</strong><br/> • 前向差分：f'(x) ≈ [f(x+h) - f(x)] / h （显式，有条件稳定）<br/> • 后向差分：f'(x) ≈ [f(x) - f(x-h)] / h （隐式，无条件稳定）<br/> • 中心差分：f'(x) ≈ [f(x+h) - f(x-h)] / (2h) （二阶精度）<br/><br/> <strong>Crank-Nicolson格式：</strong><br/> 平均前向和后向差分 → 二阶精度且无条件稳定<br/><br/> <div class="answer-hint">💡 用于期权定价时，显式格式有稳定性条件 Δt ≤ Δx²/(2σ²)，隐式和CN无此限制。</div>`,
+    answer: `<strong>原题：</strong>用差分近似微分方程，将PDE转化为线性方程组。<br/><br/><strong>三种差分格式：</strong><br/> • 前向差分：f'(x) ≈ [f(x+h) - f(x)] / h （显式，有条件稳定）<br/> • 后向差分：f'(x) ≈ [f(x) - f(x-h)] / h （隐式，无条件稳定）<br/> • 中心差分：f'(x) ≈ [f(x+h) - f(x-h)] / (2h) （二阶精度）<br/><br/> <strong>Crank-Nicolson格式：</strong><br/> 平均前向和后向差分 → 二阶精度且无条件稳定<br/><br/> <div class="answer-hint">💡 用于期权定价时，显式格式有稳定性条件 Δt ≤ Δx²/(2σ²)，隐式和CN无此限制。</div>`,
   },
   {
     id: 73, cat: "algo", diff: 2, book: "red",
@@ -1203,32 +1152,32 @@ const questions = [
   {
     id: 75, cat: "logic", diff: 2, book: "green",
     title: "两扇门与两个守卫",
-    answer: `两扇门：一扇通向offer，一扇通向出口。两个守卫：一个总说真话，一个总说假话。只能问一个是非问题。<br/><br/> <strong>问："另一个守卫会说你守卫的是通向offer的门吗？"</strong><br/><br/> • 回答"是" → 选另一扇门<br/> • 回答"否" → 选这扇门<br/><br/> <strong>分析：</strong><br/> 情景1：真话守卫在offer门前 → 假话守卫会说"否" → 真话守卫如实转述"否"<br/> 情景2：假话守卫在offer门前 → 真话守卫会说"是" → 假话守卫谎称"否"<br/><br/> 两种情景下回答都是"否"，所以"否"→选此门，"是"→选另一扇。`,
+    answer: `<strong>原题：</strong>两扇门：一扇通向offer，一扇通向出口。两个守卫：一个总说真话，一个总说假话。只能问一个是非问题。<br/><br/><strong>问："另一个守卫会说你守卫的是通向offer的门吗？"</strong><br/><br/> • 回答"是" → 选另一扇门<br/> • 回答"否" → 选这扇门<br/><br/> <strong>分析：</strong><br/> 情景1：真话守卫在offer门前 → 假话守卫会说"否" → 真话守卫如实转述"否"<br/> 情景2：假话守卫在offer门前 → 真话守卫会说"是" → 假话守卫谎称"否"<br/><br/> 两种情景下回答都是"否"，所以"否"→选此门，"是"→选另一扇。`,
   },
   {
     id: 76, cat: "logic", diff: 2, book: "green",
     title: "安全传递文件（密码学思维）",
-    answer: `你需要通过不可靠快递向同事发送机密文件。你们各有自己的锁和唯一钥匙，但快递过程中未锁箱内的东西会丢失。如何安全传递？<br/><br/> <strong>三步协议：</strong><br/> 1. 你将文件放入箱中，用你的锁锁上 → 寄给同事<br/> 2. 同事收到后，用自己的锁再锁一道（现在箱上有两把锁）→ 寄回给你<br/> 3. 你收到后，用你的钥匙打开你的锁 → 寄回给同事<br/> 4. 同事用自己的钥匙打开，取出文件<br/><br/> <div class="answer-hint">💡 这本质上是Diffie-Hellman密钥交换的物理类比——无需共享密钥即可安全通信。</div>`,
+    answer: `<strong>原题：</strong>你需要通过不可靠快递向同事发送机密文件。你们各有自己的锁和唯一钥匙，但快递过程中未锁箱内的东西会丢失。如何安全传递？<br/><br/><strong>三步协议：</strong><br/> 1. 你将文件放入箱中，用你的锁锁上 → 寄给同事<br/> 2. 同事收到后，用自己的锁再锁一道（现在箱上有两把锁）→ 寄回给你<br/> 3. 你收到后，用你的钥匙打开你的锁 → 寄回给同事<br/> 4. 同事用自己的钥匙打开，取出文件<br/><br/> <div class="answer-hint">💡 这本质上是Diffie-Hellman密钥交换的物理类比——无需共享密钥即可安全通信。</div>`,
   },
   {
     id: 77, cat: "logic", diff: 2, book: "green",
     title: "日历骰子",
-    answer: `两个骰子，每面放一个数字（0-9），通过排列两骰子表示01-31的日期。如何放置？<br/><br/> <strong>关键洞察：6可以当9用！</strong><br/><br/> 必须有的数字：0,0,1,1,2,2（日期11和22需要两个1和两个2，01-09需要两个0）<br/><br/> 剩余4个面放3,4,5,6,7,8中的4个 → 但有7个数字！<br/><br/> <strong>解决：6和9共用一个面</strong><br/><br/> <strong>最终方案：</strong><br/> 骰子A：0, 1, 2, 3, 4, 5<br/> 骰子B：0, 1, 2, 6(=9), 7, 8`,
+    answer: `<strong>原题：</strong>两个骰子，每面放一个数字（0-9），通过排列两骰子表示01-31的日期。如何放置？<br/><br/><strong>关键洞察：6可以当9用！</strong><br/><br/> 必须有的数字：0,0,1,1,2,2（日期11和22需要两个1和两个2，01-09需要两个0）<br/><br/> 剩余4个面放3,4,5,6,7,8中的4个 → 但有7个数字！<br/><br/> <strong>解决：6和9共用一个面</strong><br/><br/> <strong>最终方案：</strong><br/> 骰子A：0, 1, 2, 3, 4, 5<br/> 骰子B：0, 1, 2, 6(=9), 7, 8`,
   },
   {
     id: 78, cat: "logic", diff: 2, book: "green",
     title: "量化的平均工资",
-    answer: `8个量化分析师想知道团队平均工资，但都不想透露自己的工资。如何实现？<br/><br/> <strong>方案：</strong><br/> 1. 第一个人选一个随机数R，加上自己的工资S₁，传给第二人<br/> 2. 第二人加上S₂，传给第三人<br/> 3. ...第八人加上S₈，传回第一个人<br/> 4. 第一人减去R，除以8得到平均工资<br/><br/> <div class="answer-hint">💡 实际应用：基金持仓数据匿名化——给每个持仓的基金ID加随机数再分发，防止反推策略。</div>`,
+    answer: `<strong>原题：</strong>8个量化分析师想知道团队平均工资，但都不想透露自己的工资。如何实现？<br/><br/><strong>方案：</strong><br/> 1. 第一个人选一个随机数R，加上自己的工资S₁，传给第二人<br/> 2. 第二人加上S₂，传给第三人<br/> 3. ...第八人加上S₈，传回第一个人<br/> 4. 第一人减去R，除以8得到平均工资<br/><br/> <div class="answer-hint">💡 实际应用：基金持仓数据匿名化——给每个持仓的基金ID加随机数再分发，防止反推策略。</div>`,
   },
   {
     id: 79, cat: "logic", diff: 3, book: "green",
     title: "50个智者与玻璃杯",
-    answer: `50个智者被关在各自房间。有一个玻璃杯（初始口朝下）。每分钟苏丹随机叫一人，此人可选择翻转或不翻。当有人正确声明"所有人至少被叫过一次"时全部释放，错误则全部处死。事先可商量策略。<br/><br/> <strong>策略：</strong><br/> 选1人为"发言人"，其余49人为"计数者"<br/><br/> • 计数者：第一次看到口朝下→翻转为口朝上，之后不再翻<br/> • 发言人：每次看到口朝上→翻为口朝下并计数+1<br/> • 发言人计到49 → 声明所有人被叫过<br/><br/> <div class="answer-hint">💡 49人各自翻1次，发言人翻49次收回，计数=49即所有人到过。</div>`,
+    answer: `<strong>原题：</strong>50个智者被关在各自房间。有一个玻璃杯（初始口朝下）。每分钟苏丹随机叫一人，此人可选择翻转或不翻。当有人正确声明"所有人至少被叫过一次"时全部释放，错误则全部处死。事先可商量策略。<br/><br/><strong>策略：</strong><br/> 选1人为"发言人"，其余49人为"计数者"<br/><br/> • 计数者：第一次看到口朝下→翻转为口朝上，之后不再翻<br/> • 发言人：每次看到口朝上→翻为口朝下并计数+1<br/> • 发言人计到49 → 声明所有人被叫过<br/><br/> <div class="answer-hint">💡 49人各自翻1次，发言人翻49次收回，计数=49即所有人到过。</div>`,
   },
   {
     id: 80, cat: "logic", diff: 3, book: "green",
     title: "七彩帽子（模运算证明）",
-    answer: `7个囚徒，每人戴彩虹七色之一的帽子（颜色可重复），能看到其他6人但看不到自己。各写一个猜测，至少1人猜对则全释放。如何保证？<br/><br/> <strong>策略：用模7运算</strong><br/><br/> 给颜色编号0-6，设囚徒也编号0-6。<br/> 囚徒i的猜测gᵢ满足： (gᵢ + Σ_{k≠i} x_k) mod 7 = i<br/><br/> <strong>证明至少1人对：</strong><br/> 设真实颜色和为 S = Σ x_k，则 S mod 7 ∈ {0,1,...,6}<br/> 当 S mod 7 = i 时，囚徒i猜对（因为gᵢ = i - Σ_{k≠i} x_k mod 7 = x_i mod 7）<br/><br/> S mod 7必等于某个i，所以至少1人猜对。`,
+    answer: `<strong>原题：</strong>7个囚徒，每人戴彩虹七色之一的帽子（颜色可重复），能看到其他6人但看不到自己。各写一个猜测，至少1人猜对则全释放。如何保证？<br/><br/><strong>策略：用模7运算</strong><br/><br/> 给颜色编号0-6，设囚徒也编号0-6。<br/> 囚徒i的猜测gᵢ满足： (gᵢ + Σ_{k≠i} x_k) mod 7 = i<br/><br/> <strong>证明至少1人对：</strong><br/> 设真实颜色和为 S = Σ x_k，则 S mod 7 ∈ {0,1,...,6}<br/> 当 S mod 7 = i 时，囚徒i猜对（因为gᵢ = i - Σ_{k≠i} x_k mod 7 = x_i mod 7）<br/><br/> S mod 7必等于某个i，所以至少1人猜对。`,
   },
   {
     id: 81, cat: "logic", diff: 2, book: "green",
@@ -1238,137 +1187,137 @@ const questions = [
   {
     id: 82, cat: "logic", diff: 2, book: "green",
     title: "缺失的整数",
-    answer: `1到100中随机去掉2个数，如何高效找出？<br/><br/> <strong>方法（O(n)时间O(1)空间）：</strong><br/><br/> 设缺失的数为x和y：<br/> <div class="formula">x + y = (1+2+...+100) - Σ(已知数) = 5050 - S₁</div><br/> <div class="formula">x² + y² = (1²+2²+...+100²) - Σ(已知数²) = 338350 - S₂</div><br/><br/> 两个方程两个未知数，解出x和y。<br/> <div class="answer-hint">💡 推广：去掉k个数可用前k个幂和方程组，但空间O(k)。</div>`,
+    answer: `<strong>原题：</strong>1到100中随机去掉2个数，如何高效找出？<br/><br/><strong>方法（O(n)时间O(1)空间）：</strong><br/><br/> 设缺失的数为x和y：<br/> <div class="formula">x + y = (1+2+...+100) - Σ(已知数) = 5050 - S₁</div><br/> <div class="formula">x² + y² = (1²+2²+...+100²) - Σ(已知数²) = 338350 - S₂</div><br/><br/> 两个方程两个未知数，解出x和y。<br/> <div class="answer-hint">💡 推广：去掉k个数可用前k个幂和方程组，但空间O(k)。</div>`,
   },
   {
     id: 83, cat: "logic", diff: 1, book: "green",
     title: "时钟碎成三块",
-    answer: `时钟(1-12)摔成三块，每块数字之和相等。各块上有哪些数字？<br/><br/> Σ(1到12) = 78，每块和 = 26。<br/><br/> <strong>注意12和1在钟面上是相邻的！</strong><br/><br/> • 第一块：5, 6, 7, 8 → 和26 ✓<br/> • 第二块：11, 12, 1, 2 → 和26 ✓（12+1=13, 11+2=13）<br/> • 第三块：3, 4, 9, 10 → 和26 ✓`,
+    answer: `<strong>原题：</strong>时钟(1-12)摔成三块，每块数字之和相等。各块上有哪些数字？<br/><br/> Σ(1到12) = 78，每块和 = 26。<br/><br/><strong>注意12和1在钟面上是相邻的！</strong><br/><br/> • 第一块：5, 6, 7, 8 → 和26 ✓<br/> • 第二块：11, 12, 1, 2 → 和26 ✓（12+1=13, 11+2=13）<br/> • 第三块：3, 4, 9, 10 → 和26 ✓`,
   },
   {
     id: 84, cat: "logic", diff: 2, book: "hots",
     title: "100层楼的鸡蛋",
-    answer: `100层楼，2个鸡蛋。鸡蛋从≥N层扔会碎。最坏情况下最少扔几次确定N？<br/><br/> <strong>答案：14次</strong><br/><br/> 设最多扔k次，覆盖的楼层数为：<br/> k + (k-1) + (k-2) + ... + 1 = k(k+1)/2 ≥ 100<br/><br/> k=14: 14×15/2 = 105 ≥ 100 ✓<br/> k=13: 13×14/2 = 91 < 100 ✗<br/><br/> <strong>策略：</strong>14→27→39→50→60→69→77→84→90→95→99→100<br/> 碎了则用第2个鸡蛋从上次位置+1逐层试。`,
+    answer: `<strong>原题：</strong>100层楼，2个鸡蛋。鸡蛋从≥N层扔会碎。最坏情况下最少扔几次确定N？<br/><br/><strong>答案：14次</strong><br/><br/> 设最多扔k次，覆盖的楼层数为：<br/> k + (k-1) + (k-2) + ... + 1 = k(k+1)/2 ≥ 100<br/><br/> k=14: 14×15/2 = 105 ≥ 100 ✓<br/> k=13: 13×14/2 = 91 < 100 ✗<br/><br/> <strong>策略：</strong>14→27→39→50→60→69→77→84→90→95→99→100<br/> 碎了则用第2个鸡蛋从上次位置+1逐层试。`,
   },
   {
     id: 85, cat: "logic", diff: 2, book: "yellow",
     title: "25匹马找前3名",
-    answer: `（同前文马赛问题，此处补充说明）<br/><br/> <strong>7场比赛：</strong><br/> 1-5. 分5组各跑1场（5场）<br/> 6. 5个第一名跑第6场<br/> 7. 候选马（第6场第1名所在组的2-3名 + 第2名所在组的1-2名 + 第3名所在组的第1名）跑最后一场<br/><br/> <div class="answer-hint">💡 核心推理：第6场后可知各组之间的整体快慢关系，排除大量不可能的马。</div>`,
+    answer: `<strong>原题：</strong>（同前文马赛问题，此处补充说明）<br/><br/><strong>7场比赛：</strong><br/> 1-5. 分5组各跑1场（5场）<br/> 6. 5个第一名跑第6场<br/> 7. 候选马（第6场第1名所在组的2-3名 + 第2名所在组的1-2名 + 第3名所在组的第1名）跑最后一场<br/><br/> <div class="answer-hint">💡 核心推理：第6场后可知各组之间的整体快慢关系，排除大量不可能的马。</div>`,
   },
   {
     id: 86, cat: "brain", diff: 2, book: "hots",
     title: "100个储物柜开关",
-    answer: `100个储物柜初始关闭，第i轮翻转所有编号为i倍数个柜门（i=1..100）。最后哪些开着？<br/><br/>编号为n的柜门被翻转的次数 = n的约数个数。<br/>只有<strong>完全平方数</strong>有奇数个约数（约数成对，平方数有一个重复）。<br/><br/><strong>答案：编号为1,4,9,16,...,100（共10个完全平方数）的柜门最后开着。</strong>`,
+    answer: `<strong>原题：</strong>100个储物柜初始关闭，第i轮翻转所有编号为i倍数个柜门（i=1..100）。最后哪些开着？<br/><br/>编号为n的柜门被翻转的次数 = n的约数个数。<br/>只有<br/><br/><strong>完全平方数</strong>有奇数个约数（约数成对，平方数有一个重复）。<br/><br/><strong>答案：编号为1,4,9,16,...,100（共10个完全平方数）的柜门最后开着。</strong>`,
   },
   {
     id: 87, cat: "brain", diff: 2, book: "green",
     title: "木棍上的蚂蚁",
-    answer: `一根长1米的木棍上有N只蚂蚁，各以1cm/s随机向左或向右爬，相遇则掉头。问所有蚂蚁掉下木棍的最长时间？<br/><br/><strong>关键技巧：相遇掉头 ≡ 互相穿过</strong>（蚂蚁不可区分）。<br/>因此最长时间 = 最远的蚂蚁到端点的最大距离 = <strong>1米（100秒）</strong>。<br/><div class='answer-hint'>💡 把'掉头'替换为'穿过'，问题立刻简化。</div>`,
+    answer: `<strong>原题：</strong>一根长1米的木棍上有N只蚂蚁，各以1cm/s随机向左或向右爬，相遇则掉头。问所有蚂蚁掉下木棍的最长时间？<br/><br/><strong>关键技巧：相遇掉头 ≡ 互相穿过</strong>（蚂蚁不可区分）。<br/>因此最长时间 = 最远的蚂蚁到端点的最大距离 = <strong>1米（100秒）</strong>。<br/><div class='answer-hint'>💡 把'掉头'替换为'穿过'，问题立刻简化。</div>`,
   },
   {
     id: 88, cat: "brain", diff: 2, book: "yellow",
     title: "天平找假币（9球1重）",
-    answer: `9个外观相同的球，其中1个略重，用无砝码天平2次找出。怎么称？<br/><br/>分3组(1-3)(4-6)(7-9)。<br/>第1次称(1-3) vs (4-6)：<br/>• 平衡→坏球在7-9，第2次称7 vs 8即可定位<br/>• 偏重→坏球在偏重那组，第2次称组内两个即可<br/><br/><strong>3次称量最多可从3ⁿ个球中找出已知方向的坏球；n=2覆盖9个。</strong>`,
+    answer: `<strong>原题：</strong>9个外观相同的球，其中1个略重，用无砝码天平2次找出。怎么称？<br/><br/>分3组(1-3)(4-6)(7-9)。<br/>第1次称(1-3) vs (4-6)：<br/>• 平衡→坏球在7-9，第2次称7 vs 8即可定位<br/>• 偏重→坏球在偏重那组，第2次称组内两个即可<br/><br/><strong>3次称量最多可从3ⁿ个球中找出已知方向的坏球；n=2覆盖9个。</strong>`,
   },
   {
     id: 89, cat: "brain", diff: 2, book: "green",
     title: "狼、羊、白菜过河",
-    answer: `人带狼、羊、白菜过河，船每次只能载人和一样东西。狼吃羊、羊吃菜（人不在时）。如何全过河？<br/><br/>1. 带羊过去，空船回<br/>2. 带狼过去，带羊回<br/>3. 带菜过去，空船回<br/>4. 带羊过去<br/><br/><strong>共7趟。</strong>（关键：绝不单独留狼+羊或羊+菜）`,
+    answer: `<strong>原题：</strong>人带狼、羊、白菜过河，船每次只能载人和一样东西。狼吃羊、羊吃菜（人不在时）。如何全过河？<br/><br/>1. 带羊过去，空船回<br/>2. 带狼过去，带羊回<br/>3. 带菜过去，空船回<br/>4. 带羊过去<br/><br/><strong>共7趟。</strong>（关键：绝不单独留狼+羊或羊+菜）`,
   },
   {
     id: 90, cat: "brain", diff: 2, book: "hots",
     title: "蒙提霍尔三门问题",
-    answer: `三扇门后一车两羊。你选1号，主持人（知情）打开一扇有羊的门（如3号）。问：换选2号是否更有利？<br/><br/><strong>换选胜率2/3，不换1/3。</strong><br/>你初选对的概率1/3；若对则换输，若错(2/3)则换赢。主持人揭示信息后，换选把'初选错'的2/3概率收归己有。`,
+    answer: `<strong>原题：</strong>三扇门后一车两羊。你选1号，主持人（知情）打开一扇有羊的门（如3号）。问：换选2号是否更有利？<br/><br/><strong>换选胜率2/3，不换1/3。</strong><br/>你初选对的概率1/3；若对则换输，若错(2/3)则换赢。主持人揭示信息后，换选把'初选错'的2/3概率收归己有。`,
   },
   {
     id: 91, cat: "brain", diff: 2, book: "yellow",
     title: "水壶问题（3升和5升得4升）",
-    answer: `只用3升和5升无刻度水壶，如何恰好得到4升水？<br/><br/>法一：5满→倒满3（剩2）→倒空3→把2倒入3→5满→倒满3（需1）→5中剩<strong>4</strong>。<br/>法二：3满×2倒入5（5中有6? 不行）。用法一即可。`,
+    answer: `<strong>原题：</strong>只用3升和5升无刻度水壶，如何恰好得到4升水？<br/><br/>法一：5满→倒满3（剩2）→倒空3→把2倒入3→5满→倒满3（需1）→5中剩<br/><br/><strong>4</strong>。<br/>法二：3满×2倒入5（5中有6? 不行）。用法一即可。`,
   },
   {
     id: 92, cat: "brain", diff: 3, book: "red",
     title: "变色龙问题",
-    answer: `13只红、15只绿、17只蓝变色龙。相遇时若颜色不同则都变成第三种颜色。能否最终全同色？<br/><br/>考虑数量模3：<br/>红-绿 ≡ 13-15 ≡ -2 ≡ 1 (mod3)；绿-蓝 ≡ 15-17 ≡ -2 ≡1；蓝-红≡17-13≡1。<br/>每次相遇使两种颜色±1、第三种颜色±2，任意两色之差 mod3 不变。<br/>全同色要求某两色差为0 mod3，但初始差均≡1 mod3 → <strong>不可能</strong>。`,
+    answer: `<strong>原题：</strong>13只红、15只绿、17只蓝变色龙。相遇时若颜色不同则都变成第三种颜色。能否最终全同色？<br/><br/>考虑数量模3：<br/>红-绿 ≡ 13-15 ≡ -2 ≡ 1 (mod3)；绿-蓝 ≡ 15-17 ≡ -2 ≡1；蓝-红≡17-13≡1。<br/>每次相遇使两种颜色±1、第三种颜色±2，任意两色之差 mod3 不变。<br/>全同色要求某两色差为0 mod3，但初始差均≡1 mod3 →<br/><br/><strong>不可能</strong>。`,
   },
   {
     id: 93, cat: "brain", diff: 2, book: "green",
     title: "两列火车与飞鸟",
-    answer: `A、B两城相距100km，两车各以50km/h相向开。一只鸟以75km/h在两车间来回飞，直到相撞。鸟飞了多远？<br/><br/>两车相遇时间 = 100/100 = 1小时。<br/>鸟一直飞：距离 = 75 × 1 = <strong>75km</strong>。<br/><div class='answer-hint'>💡 别算无穷级数，算'总时间×速度'。</div>`,
+    answer: `<strong>原题：</strong>A、B两城相距100km，两车各以50km/h相向开。一只鸟以75km/h在两车间来回飞，直到相撞。鸟飞了多远？<br/><br/>两车相遇时间 = 100/100 = 1小时。<br/>鸟一直飞：距离 = 75 × 1 =<br/><br/><strong>75km</strong>。<br/><div class='answer-hint'>💡 别算无穷级数，算'总时间×速度'。</div>`,
   },
   {
     id: 94, cat: "brain", diff: 3, book: "yellow",
     title: "骆驼运香蕉",
-    answer: `沙漠3000根香蕉，骆驼每次最多驮1000根，每走1km吃1根。最远能运多少到1000km外的市场？<br/><br/>分段驮运：<br/>• 前200km需往返3趟→耗5根/km，到200km处剩2000根<br/>• 再333.3km需往返2趟→耗3根/km，到533.3km处剩1000根<br/>• 最后466.7km单趟→耗1根/km<br/>剩余 = 1000 - 466.7 = <strong>约533根</strong>。`,
+    answer: `<strong>原题：</strong>沙漠3000根香蕉，骆驼每次最多驮1000根，每走1km吃1根。最远能运多少到1000km外的市场？<br/><br/>分段驮运：<br/>• 前200km需往返3趟→耗5根/km，到200km处剩2000根<br/>• 再333.3km需往返2趟→耗3根/km，到533.3km处剩1000根<br/>• 最后466.7km单趟→耗1根/km<br/>剩余 = 1000 - 466.7 =<br/><br/><strong>约533根</strong>。`,
   },
   {
     id: 95, cat: "brain", diff: 2, book: "hots",
     title: "烧香计时75分钟",
-    answer: `两根不均匀香各烧1小时。如何量出75分钟？<br/><br/>先点A两端+B一端（30min后A尽），同时点C？只有两根：<br/>30min时A尽，B剩30min量，立刻点B另一端→15min尽，合计45min（得45）。<br/>75分钟做法：A两端+B一端起；A尽(30)点B另端→B再15尽(45)；此时重新点第二根香？需第三根。<br/><strong>两根香最多得45/30分钟；75分钟需3根香。</strong>`,
+    answer: `<strong>原题：</strong>两根不均匀香各烧1小时。如何量出75分钟？<br/><br/>先点A两端+B一端（30min后A尽），同时点C？只有两根：<br/>30min时A尽，B剩30min量，立刻点B另一端→15min尽，合计45min（得45）。<br/>75分钟做法：A两端+B一端起；A尽(30)点B另端→B再15尽(45)；此时重新点第二根香？需第三根。<br/><br/><strong>两根香最多得45/30分钟；75分钟需3根香。</strong>`,
   },
   {
     id: 96, cat: "prob", diff: 2, book: "green",
     title: "连续抛硬币到HH的期望次数",
-    answer: `独立抛公平硬币，直到首次出现连续两个正面(HH)，求期望抛多少次？<br/><br/>设E为期望。状态：E0(无前导H)、E1(末尾一个H)。<br/>E0 = 1 + ½E0 + ½E1；E1 = 1 + ½·0 + ½E0（抛H成功结束，抛T回E0）。<br/>解得 E0 = <strong>6</strong>。对比HT期望=4（不对称）。`,
+    answer: `<strong>原题：</strong>独立抛公平硬币，直到首次出现连续两个正面(HH)，求期望抛多少次？<br/><br/>设E为期望。状态：E0(无前导H)、E1(末尾一个H)。<br/>E0 = 1 + ½E0 + ½E1；E1 = 1 + ½·0 + ½E0（抛H成功结束，抛T回E0）。<br/>解得 E0 =<br/><br/><strong>6</strong>。对比HT期望=4（不对称）。`,
   },
   {
     id: 97, cat: "prob", diff: 3, book: "red",
     title: "错排问题（帽子检查）",
-    answer: `n个人把帽子随机放回，求'没人拿到自己帽子'的概率（当n→∞）？<br/><br/>错排数 !n = n!·Σ_{k=0}^n (-1)^k/k!。<br/>概率 = !n/n! = Σ_{k=0}^n (-1)^k/k! → <strong>1/e ≈ 0.3679</strong>。`,
+    answer: `<strong>原题：</strong>n个人把帽子随机放回，求'没人拿到自己帽子'的概率（当n→∞）？<br/><br/>错排数 !n = n!·Σ_{k=0}^n (-1)^k/k!。<br/>概率 = !n/n! = Σ_{k=0}^n (-1)^k/k! →<br/><br/><strong>1/e ≈ 0.3679</strong>。`,
   },
   {
     id: 98, cat: "prob", diff: 2, book: "green",
     title: "两个骰子点数之和的期望最大值",
-    answer: `独立掷两个公平骰子，求 max(X,Y) 的期望？<br/><br/>P(max≤k)= (k/6)²。E[max]=Σ_{k=1}^6 P(max≥k)=Σ(1-(k-1)²/36)。<br/>= (36·6 - Σ(k-1)²)/36 = (216 - 55)/36 = 161/36 ≈ <strong>4.472</strong>。`,
+    answer: `<strong>原题：</strong>独立掷两个公平骰子，求 max(X,Y) 的期望？<br/><br/>P(max≤k)= (k/6)²。E[max]=Σ_{k=1}^6 P(max≥k)=Σ(1-(k-1)²/36)。<br/>= (36·6 - Σ(k-1)²)/36 = (216 - 55)/36 = 161/36 ≈<br/><br/><strong>4.472</strong>。`,
   },
   {
     id: 99, cat: "prob", diff: 2, book: "yellow",
     title: "生日悖论（23人）",
-    answer: `23人中至少两人生日相同的概率约多少？<br/><br/>P(全不同)=Π_{k=1}^{22}(1-k/365)≈ e^{-253/365}≈0.4927。<br/>P(相同)=1-0.4927≈<strong>50.7%</strong>。仅需23人即过半。`,
+    answer: `<strong>原题：</strong>23人中至少两人生日相同的概率约多少？<br/><br/>P(全不同)=Π_{k=1}^{22}(1-k/365)≈ e^{-253/365}≈0.4927。<br/>P(相同)=1-0.4927≈<br/><br/><strong>50.7%</strong>。仅需23人即过半。`,
   },
   {
     id: 100, cat: "prob", diff: 3, book: "hots",
     title: "赠券收集者（Coupon Collector）",
-    answer: `集齐n种优惠券，每次随机得一种，求集齐的期望次数？<br/><br/>第k种缺时，获得新券概率(n-k+1)/n，期望 n/(n-k+1)。<br/>总期望 = n·H_n = n(1+½+...+1/n) ≈ <strong>n ln n + γn</strong>。`,
+    answer: `<strong>原题：</strong>集齐n种优惠券，每次随机得一种，求集齐的期望次数？<br/><br/>第k种缺时，获得新券概率(n-k+1)/n，期望 n/(n-k+1)。<br/>总期望 = n·H_n = n(1+½+...+1/n) ≈<br/><br/><strong>n ln n + γn</strong>。`,
   },
   {
     id: 101, cat: "prob", diff: 2, book: "green",
     title: "三门之后：两个信封",
-    answer: `两信封各装一笔钱，一个正好是另一个的两倍。你随机选一个打开见$100，可否换得更多？<br/><br/>经典悖论：换的期望 = ½·50 + ½·200 = 125 > 100，似乎应换；但对称性说明'换总有利'矛盾。<br/><strong>破解：</strong>'另一封是50或200各½'的先验不成立——需知道金额分布；无分布时无法定优劣。`,
+    answer: `<strong>原题：</strong>两信封各装一笔钱，一个正好是另一个的两倍。你随机选一个打开见\$100，可否换得更多？<br/><br/>经典悖论：换的期望 = ½·50 + ½·200 = 125 > 100，似乎应换；但对称性说明'换总有利'矛盾。<br/><br/><strong>破解：</strong>'另一封是50或200各½'的先验不成立——需知道金额分布；无分布时无法定优劣。`,
   },
   {
     id: 102, cat: "prob", diff: 2, book: "yellow",
     title: "伯特兰盒子悖论",
-    answer: `三盒：MM、NN、MN各一枚（金/银币）。随机取盒再随机取一币，是金。另一枚也是金的概率？<br/><br/>金币共3枚：MM盒2枚、MN盒1枚。取到金币时，它来自MM盒的概率2/3。<br/><strong>答案：2/3</strong>（不是1/2——金币不等可能来自各盒）。`,
+    answer: `<strong>原题：</strong>三盒：MM、NN、MN各一枚（金/银币）。随机取盒再随机取一币，是金。另一枚也是金的概率？<br/><br/>金币共3枚：MM盒2枚、MN盒1枚。取到金币时，它来自MM盒的概率2/3。<br/><br/><strong>答案：2/3</strong>（不是1/2——金币不等可能来自各盒）。`,
   },
   {
     id: 103, cat: "prob", diff: 3, book: "red",
     title: "赌徒破产概率",
-    answer: `赌徒有$i，目标$N，每局赢1概率p输1概率q=1-p。求到达N（而非破产）的概率？<br/><br/>p≠q时：P_i = (1-(q/p)^i)/(1-(q/p)^N)。<br/>p=q=½时：P_i = <strong>i/N</strong>。`,
+    answer: `<strong>原题：</strong>赌徒有\$i，目标\$N，每局赢1概率p输1概率q=1-p。求到达N（而非破产）的概率？<br/><br/>p≠q时：P_i = (1-(q/p)^i)/(1-(q/p)^N)。<br/>p=q=½时：P_i =<br/><br/><strong>i/N</strong>。`,
   },
   {
     id: 104, cat: "prob", diff: 2, book: "green",
     title: "两随机整数乘积为偶的概率",
-    answer: `从1..n独立随机取两整数，乘积为偶数的概率？<br/><br/>乘积为奇 ⇔ 两数皆奇。P(奇)= (⌈n/2⌉/n)²。<br/>n为偶时 = (½)² = ¼，故P(偶)= <strong>3/4</strong>。`,
+    answer: `<strong>原题：</strong>从1..n独立随机取两整数，乘积为偶数的概率？<br/><br/>乘积为奇 ⇔ 两数皆奇。P(奇)= (⌈n/2⌉/n)²。<br/>n为偶时 = (½)² = ¼，故P(偶)=<br/><br/><strong>3/4</strong>。`,
   },
   {
     id: 105, cat: "prob", diff: 3, book: "hots",
     title: "圆周上随机两点",
-    answer: `在圆周上独立随机取两点，弦长超过半径的概率？<br/><br/>固定一点，另一点需落在距其弧长<60°的弧外（弦长>半径对应圆心角<60°）。<br/>P(弦长>半径)=1 - 60/180 = <strong>2/3</strong>。`,
+    answer: `<strong>原题：</strong>在圆周上独立随机取两点，弦长超过半径的概率？<br/><br/>固定一点，另一点需落在距其弧长<60°的弧外（弦长>半径对应圆心角<60°）。<br/>P(弦长>半径)=1 - 60/180 =<br/><br/><strong>2/3</strong>。`,
   },
   {
     id: 106, cat: "prob", diff: 2, book: "yellow",
     title: "疾病检测（贝叶斯）",
-    answer: `某病患病率1%，检测对病患95%阳性、对健康95%阴性（假阳5%）。检测阳性，真患病概率？<br/><br/>P(病|阳)= 0.01·0.95 / (0.01·0.95 + 0.99·0.05) ≈ 0.0095/0.058 = <strong>≈16.1%</strong>。<br/><div class='answer-hint'>💡 基础率很低时，阳性大概率假阳。</div>`,
+    answer: `<strong>原题：</strong>某病患病率1%，检测对病患95%阳性、对健康95%阴性（假阳5%）。检测阳性，真患病概率？<br/><br/>P(病|阳)= 0.01·0.95 / (0.01·0.95 + 0.99·0.05) ≈ 0.0095/0.058 =<br/><br/><strong>≈16.1%</strong>。<br/><div class='answer-hint'>💡 基础率很低时，阳性大概率假阳。</div>`,
   },
   {
     id: 107, cat: "calc", diff: 2, book: "green",
     title: "x^x 的导数",
-    answer: `求 f(x)=x^x (x>0) 的导数。<br/><br/>取对数：ln f = x ln x；两边求导 f'/f = ln x + 1。<br/>f' = <strong>x^x (ln x + 1)</strong>。`,
+    answer: `<strong>原题：</strong>求 f(x)=x^x (x>0) 的导数。<br/><br/>取对数：ln f = x ln x；两边求导 f'/f = ln x + 1。<br/>f' =<br/><br/><strong>x^x (ln x + 1)</strong>。`,
   },
   {
     id: 108, cat: "calc", diff: 3, book: "red",
     title: "高斯积分 ∫e^{-x²}dx",
-    answer: `求 ∫_{-∞}^{∞} e^{-x²} dx。<br/><br/>令 I² = ∫∫ e^{-(x²+y²)} dxdy，转极坐标：=∫_0^{2π}∫_0^∞ e^{-r²} r dr dθ = π。<br/>故 I = <strong>√π</strong>。`,
+    answer: `<strong>原题：</strong>求 ∫_{-∞}^{∞} e^{-x²} dx。<br/><br/>令 I² = ∫∫ e^{-(x²+y²)} dxdy，转极坐标：=∫_0^{2π}∫_0^∞ e^{-r²} r dr dθ = π。<br/>故 I =<br/><br/><strong>√π</strong>。`,
   },
   {
     id: 109, cat: "calc", diff: 2, book: "yellow",
@@ -1378,17 +1327,17 @@ const questions = [
   {
     id: 110, cat: "calc", diff: 3, book: "green",
     title: "矩阵 [[2,1],[1,2]] 的特征值",
-    answer: `求矩阵 A=[[2,1],[1,2]] 的特征值与特征向量。<br/><br/>det(A-λI)=(2-λ)²-1=λ²-4λ+3=0 → λ=<strong>1,3</strong>。<br/>λ=1: 特征向量(1,-1)ᵀ；λ=3: 特征向量(1,1)ᵀ。`,
+    answer: `<strong>原题：</strong>求矩阵 A=[[2,1],[1,2]] 的特征值与特征向量。<br/><br/>det(A-λI)=(2-λ)²-1=λ²-4λ+3=0 → λ=<br/><br/><strong>1,3</strong>。<br/>λ=1: 特征向量(1,-1)ᵀ；λ=3: 特征向量(1,1)ᵀ。`,
   },
   {
     id: 111, cat: "calc", diff: 2, book: "yellow",
     title: "∫ 1/(1+x²) dx 与 arctan",
-    answer: `求不定积分 ∫ 1/(1+x²) dx，并算 ∫_0^1。<br/><br/>∫ 1/(1+x²) dx = <strong>arctan x + C</strong>。<br/>∫_0^1 = arctan 1 - 0 = <strong>π/4</strong>。`,
+    answer: `<strong>原题：</strong>求不定积分 ∫ 1/(1+x²) dx，并算 ∫_0^1。<br/><br/>∫ 1/(1+x²) dx =<br/><br/><strong>arctan x + C</strong>。<br/>∫_0^1 = arctan 1 - 0 = <strong>π/4</strong>。`,
   },
   {
     id: 112, cat: "calc", diff: 2, book: "red",
     title: "函数 f=x²+y² 的梯度",
-    answer: `求 f(x,y)=x²+y² 的梯度，并说明其在(1,1)处的方向。<br/><br/>∇f = (2x, 2y)。在(1,1)为(2,2)，指向<strong>径向向外</strong>，是上升最快方向。`,
+    answer: `<strong>原题：</strong>求 f(x,y)=x²+y² 的梯度，并说明其在(1,1)处的方向。<br/><br/>∇f = (2x, 2y)。在(1,1)为(2,2)，指向<br/><br/><strong>径向向外</strong>，是上升最快方向。`,
   },
   {
     id: 113, cat: "calc", diff: 3, book: "green",
@@ -1398,7 +1347,7 @@ const questions = [
   {
     id: 114, cat: "calc", diff: 2, book: "yellow",
     title: "解常微分方程 dX/dt=aX",
-    answer: `解 dX/dt = aX，初值X(0)=X0。并推广到 dS/S = μdt+σdW（几何布朗）。<br/><br/>确定情形：X(t)=<strong>X0 e^{at}</strong>。<br/>随机情形（Itô）：S(t)=S0 exp((μ-σ²/2)t + σW_t)。`,
+    answer: `<strong>原题：</strong>解 dX/dt = aX，初值X(0)=X0。并推广到 dS/S = μdt+σdW（几何布朗）。<br/><br/>确定情形：X(t)=<br/><br/><strong>X0 e^{at}</strong>。<br/>随机情形（Itô）：S(t)=S0 exp((μ-σ²/2)t + σW_t)。`,
   },
   {
     id: 115, cat: "calc", diff: 3, book: "red",
@@ -1408,7 +1357,7 @@ const questions = [
   {
     id: 116, cat: "finance", diff: 2, book: "green",
     title: "看跌-看涨平价（Put-Call Parity）",
-    answer: `写出欧式期权看跌-看涨平价关系，并说明用途。<br/><br/><strong>C - P = S - K e^{-rT}</strong>（无分红）。<br/>用途：由任三者可推第四个；构造合成头寸（如合成多头 = 买C + 卖P + 借K e^{-rT}）。`,
+    answer: `<strong>原题：</strong>写出欧式期权看跌-看涨平价关系，并说明用途。<br/><br/><strong>C - P = S - K e^{-rT}</strong>（无分红）。<br/>用途：由任三者可推第四个；构造合成头寸（如合成多头 = 买C + 卖P + 借K e^{-rT}）。`,
   },
   {
     id: 117, cat: "finance", diff: 3, book: "red",
@@ -1423,7 +1372,7 @@ const questions = [
   {
     id: 119, cat: "finance", diff: 2, book: "green",
     title: "远期价格公式",
-    answer: `无分红资产远期价格F如何确定？若F≠理论值会怎样？<br/><br/><strong>F = S e^{rT}</strong>（无套利，借S买标的持有至T成本=S e^{rT}）。<br/>若市价>F则卖出远期+买入现货套利；若<F则反向。`,
+    answer: `<strong>原题：</strong>无分红资产远期价格F如何确定？若F≠理论值会怎样？<br/><br/><strong>F = S e^{rT}</strong>（无套利，借S买标的持有至T成本=S e^{rT}）。<br/>若市价>F则卖出远期+买入现货套利；若<F则反向。`,
   },
   {
     id: 120, cat: "finance", diff: 3, book: "hots",
@@ -1438,7 +1387,7 @@ const questions = [
   {
     id: 122, cat: "finance", diff: 2, book: "red",
     title: "美式 vs 欧式（分红影响）",
-    answer: `为何美式期权通常比欧式贵？分红股票的美式看涨可能提前行权吗？<br/><br/>美式可提前行权→更多权利→价格≥欧式。<br/>无分红时美式看涨=欧式（提前行权不优）；<strong>有分红时可能提前行权</strong>以 capture 分红。`,
+    answer: `<strong>原题：</strong>为何美式期权通常比欧式贵？分红股票的美式看涨可能提前行权吗？<br/><br/>美式可提前行权→更多权利→价格≥欧式。<br/>无分红时美式看涨=欧式（提前行权不优）；<br/><br/><strong>有分红时可能提前行权</strong>以 capture 分红。`,
   },
   {
     id: 123, cat: "finance", diff: 3, book: "green",
@@ -1448,7 +1397,7 @@ const questions = [
   {
     id: 124, cat: "finance", diff: 2, book: "yellow",
     title: "CAPM 期望收益",
-    answer: `写出CAPM公式并解释β。无风险利率3%、市场溢价5%、β=1.2，期望收益？<br/><br/>E[R_i]=R_f + β_i(E[R_m]-R_f)。<br/>β衡量系统性风险。代入：3%+1.2×5%=<strong>9%</strong>。`,
+    answer: `<strong>原题：</strong>写出CAPM公式并解释β。无风险利率3%、市场溢价5%、β=1.2，期望收益？<br/><br/>E[R_i]=R_f + β_i(E[R_m]-R_f)。<br/>β衡量系统性风险。代入：3%+1.2×5%=<br/><br/><strong>9%</strong>。`,
   },
   {
     id: 125, cat: "finance", diff: 3, book: "hots",
@@ -1463,7 +1412,7 @@ const questions = [
   {
     id: 127, cat: "stoch", diff: 3, book: "red",
     title: "Itô 引理",
-    answer: `陈述 Itô 引理（对 f(t, W_t)）。<br/><br/>df = (∂f/∂t + ½ σ² ∂²f/∂x²) dt + (∂f/∂x) dW（设dx=μdt+σdW）。<br/><strong>比普通链式法则多½σ²f''项</strong>（二阶项不能忽略）。`,
+    answer: `<strong>原题：</strong>陈述 Itô 引理（对 f(t, W_t)）。<br/><br/>df = (∂f/∂t + ½ σ² ∂²f/∂x²) dt + (∂f/∂x) dW（设dx=μdt+σdW）。<br/><br/><strong>比普通链式法则多½σ²f''项</strong>（二阶项不能忽略）。`,
   },
   {
     id: 128, cat: "stoch", diff: 2, book: "yellow",
@@ -1478,7 +1427,7 @@ const questions = [
   {
     id: 130, cat: "stoch", diff: 3, book: "red",
     title: "布朗运动的二次变差",
-    answer: `Brownian motion 的二次变差 [W,W]_t = ? 含义？<br/><br/>对划分 Σ(W_{t_i}-W_{t_{i-1}})² → <strong>t</strong>（依概率）。<br/>对比光滑函数二次变差为0——这是布朗'粗糙'的体现，也是Itô积分与黎曼积分的根本区别。`,
+    answer: `<strong>原题：</strong>Brownian motion 的二次变差 [W,W]_t = ? 含义？<br/><br/>对划分 Σ(W_{t_i}-W_{t_{i-1}})² →<br/><br/><strong>t</strong>（依概率）。<br/>对比光滑函数二次变差为0——这是布朗'粗糙'的体现，也是Itô积分与黎曼积分的根本区别。`,
   },
   {
     id: 131, cat: "stoch", diff: 2, book: "yellow",
@@ -1498,32 +1447,32 @@ const questions = [
   {
     id: 134, cat: "algo", diff: 2, book: "green",
     title: "二分查找的复杂度",
-    answer: `对已排序数组二分查找，时间/空间复杂度？前提？<br/><br/>时间 <strong>O(log n)</strong>，空间O(1)（迭代）。<br/>前提：数组有序；每次折半区间。`,
+    answer: `<strong>原题：</strong>对已排序数组二分查找，时间/空间复杂度？前提？<br/><br/>时间<br/><br/><strong>O(log n)</strong>，空间O(1)（迭代）。<br/>前提：数组有序；每次折半区间。`,
   },
   {
     id: 135, cat: "algo", diff: 2, book: "yellow",
     title: "归并排序复杂度",
-    answer: `归并排序的时间与空间复杂度？稳定吗？<br/><br/>时间始终 <strong>O(n log n)</strong>（最好/最坏）；空间O(n)（辅助数组）。<br/>稳定。分治典型。`,
+    answer: `<strong>原题：</strong>归并排序的时间与空间复杂度？稳定吗？<br/><br/>时间始终<br/><br/><strong>O(n log n)</strong>（最好/最坏）；空间O(n)（辅助数组）。<br/>稳定。分治典型。`,
   },
   {
     id: 136, cat: "algo", diff: 3, book: "red",
     title: "快速排序复杂度",
-    answer: `快排平均与最坏时间？如何避免最坏？<br/><br/>平均 <strong>O(n log n)</strong>；最坏（已排序且选端）O(n²)。<br/>随机化选 pivot 或三数取中→几乎总O(n log n)。最坏空间O(log n)。`,
+    answer: `<strong>原题：</strong>快排平均与最坏时间？如何避免最坏？<br/><br/>平均<br/><br/><strong>O(n log n)</strong>；最坏（已排序且选端）O(n²)。<br/>随机化选 pivot 或三数取中→几乎总O(n log n)。最坏空间O(log n)。`,
   },
   {
     id: 137, cat: "algo", diff: 2, book: "green",
     title: "检测链表环（Floyd）",
-    answer: `如何判断单链表有环？复杂度？<br/><br/>快慢指针：快走2步、慢走1步，相遇则有环。<br/>时间O(n)，空间<strong>O(1)</strong>。相遇点再定位可求环入口。`,
+    answer: `<strong>原题：</strong>如何判断单链表有环？复杂度？<br/><br/>快慢指针：快走2步、慢走1步，相遇则有环。<br/>时间O(n)，空间<br/><br/><strong>O(1)</strong>。相遇点再定位可求环入口。`,
   },
   {
     id: 138, cat: "algo", diff: 2, book: "yellow",
     title: "Two Sum",
-    answer: `给定数组与target，找两数和为target的下标。最优做法？<br/><br/>哈希表存'值→下标'，遍历时查 target-x 是否已在表中。<br/>时间<strong>O(n)</strong>，空间O(n)。`,
+    answer: `<strong>原题：</strong>给定数组与target，找两数和为target的下标。最优做法？<br/><br/>哈希表存'值→下标'，遍历时查 target-x 是否已在表中。<br/>时间<br/><br/><strong>O(n)</strong>，空间O(n)。`,
   },
   {
     id: 139, cat: "algo", diff: 3, book: "hots",
     title: "Kadane 最大子数组",
-    answer: `求数组最大连续子数组和，时间O(n)做法？<br/><br/>维护 cur=max(x, cur+x)，ans=max(ans,cur)。<br/>一次遍历：<strong>O(n)</strong>。负全时返回最大（最小负）元素。`,
+    answer: `<strong>原题：</strong>求数组最大连续子数组和，时间O(n)做法？<br/><br/>维护 cur=max(x, cur+x)，ans=max(ans,cur)。<br/>一次遍历：<br/><br/><strong>O(n)</strong>。负全时返回最大（最小负）元素。`,
   },
   {
     id: 140, cat: "algo", diff: 3, book: "red",
@@ -1538,7 +1487,7 @@ const questions = [
   {
     id: 142, cat: "algo", diff: 3, book: "yellow",
     title: "汉诺塔递推",
-    answer: `n盘汉诺塔最少移动次数？递归思路？<br/><br/>T(n)=2T(n-1)+1 → T(n)=<strong>2ⁿ-1</strong>。<br/>把n-1盘移到辅助柱，移最大盘，再移回。`,
+    answer: `<strong>原题：</strong>n盘汉诺塔最少移动次数？递归思路？<br/><br/>T(n)=2T(n-1)+1 → T(n)=<br/><br/><strong>2ⁿ-1</strong>。<br/>把n-1盘移到辅助柱，移最大盘，再移回。`,
   },
   {
     id: 143, cat: "algo", diff: 2, book: "hots",
@@ -1548,17 +1497,17 @@ const questions = [
   {
     id: 144, cat: "logic", diff: 2, book: "green",
     title: "骑士与无赖（Knights & Knaves）",
-    answer: `岛上骑士只说真话、无赖只说假话。A说'我们俩都是无赖'。A、B各是谁？<br/><br/>假设A是骑士→其话为真→两人都是无赖，与'A是骑士'矛盾，故A不可能是骑士。<br/>所以A是无赖→其话为假→'并非两人都是无赖'→至少有一人是骑士→<strong>B是骑士</strong>。<br/><strong>答案：A是无赖，B是骑士。</strong>`,
+    answer: `<strong>原题：</strong>岛上骑士只说真话、无赖只说假话。A说'我们俩都是无赖'。A、B各是谁？<br/><br/>假设A是骑士→其话为真→两人都是无赖，与'A是骑士'矛盾，故A不可能是骑士。<br/>所以A是无赖→其话为假→'并非两人都是无赖'→至少有一人是骑士→<br/><br/><strong>B是骑士</strong>。<br/><strong>答案：A是无赖，B是骑士。</strong>`,
   },
   {
     id: 145, cat: "logic", diff: 2, book: "yellow",
     title: "两守卫两门",
-    answer: `两门一宝一虎，两守卫一总真一总假，只能问一句。怎么问知宝门？<br/><br/>问任一守卫：'<strong>另一个守卫会说哪扇是宝门？</strong>'然后选相反的。<br/>真守卫会转述假的（指向虎门），假守卫也会指向虎门→总得虎门，取反即宝门。`,
+    answer: `<strong>原题：</strong>两门一宝一虎，两守卫一总真一总假，只能问一句。怎么问知宝门？<br/><br/>问任一守卫：'<br/><br/><strong>另一个守卫会说哪扇是宝门？</strong>'然后选相反的。<br/>真守卫会转述假的（指向虎门），假守卫也会指向虎门→总得虎门，取反即宝门。`,
   },
   {
     id: 146, cat: "logic", diff: 3, book: "red",
     title: "称球逻辑（信息论下界）",
-    answer: `12球1异（不知轻重），天平3次能找出，信息论下界为何是3次？<br/><br/>可能状态 12×2=24 种。每次称量3结果→3次覆盖3³=27≥24。<br/>2次仅9<24不够→<strong>至少3次</strong>。`,
+    answer: `<strong>原题：</strong>12球1异（不知轻重），天平3次能找出，信息论下界为何是3次？<br/><br/>可能状态 12×2=24 种。每次称量3结果→3次覆盖3³=27≥24。<br/>2次仅9<24不够→<br/><br/><strong>至少3次</strong>。`,
   },
   {
     id: 147, cat: "logic", diff: 2, book: "green",
@@ -1573,7 +1522,7 @@ const questions = [
   {
     id: 149, cat: "logic", diff: 3, book: "hots",
     title: "毒酒问题（信息论）",
-    answer: `1000桶酒1桶毒，用最少的老鼠（喝后次日死）找出毒桶，要几只？<br/><br/>每只老鼠 binary：喝/不喝。n只老鼠可区分2ⁿ桶。<br/>2¹⁰=1024≥1000 → <strong>10只</strong>（按二进制编码每桶对应老鼠组合）。`,
+    answer: `<strong>原题：</strong>1000桶酒1桶毒，用最少的老鼠（喝后次日死）找出毒桶，要几只？<br/><br/>每只老鼠 binary：喝/不喝。n只老鼠可区分2ⁿ桶。<br/>2¹⁰=1024≥1000 →<br/><br/><strong>10只</strong>（按二进制编码每桶对应老鼠组合）。`,
   },
   {
     id: 150, cat: "calc", diff: 2, book: "yellow",
@@ -2432,7 +2381,7 @@ const questions = [
   {
     id: 200, cat: "finance", diff: 2, book: "red",
     title: "一个期权在到期时支付 1, if S; >So, te otherwise, 在时刻 7’。如果 S 的波动率上升…",
-    answer: `<strong>原题：</strong> 一个期权在到期时支付 1, if S; >So, te otherwise, 在时刻 7’。如果 S 的波动率上升，该期权的价值会发生什么变化？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This option is similar to a Margrabe option, but<br/><br/>    <br/><br/>    with a digital payment. A Margrabe option pays max($j(t) — S2(t),0), for more<br/><br/>    details see Section 11.6 of [6].<br/><br/>    <br/><br/>    To answer this question we will make a few simplifying assumptions: the<br/><br/>    volatility of Sz does not change and the correlation between 5; and Sq is zero.<br/><br/>    We have two situations to consider, 5) (¢) > S(t) and S1(t) < So(¢), that is we<br/><br/>    are currently either in or out-of-the-money.<br/><br/>    <br/><br/>    If we are in-the-money then an increase in the volatility of S; will create a<br/><br/>    higher probability in the risk-neutral world of finishing below So, so the option<br/><br/>    price will decrease. If we are out-of-the-money, then the extra volatility is good<br/><br/>    for those long the option as it means 5 is more likely to finish above S2 so the<br/><br/>    option value will increase.<br/><br/>    <br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e We now take the correlation between S$ and S2 to be non-zero. What af-<br/><br/>    fect will correlation have on the price of the option, assuming everything<br/><br/>    else remains constant?<br/><br/>    <br/><br/>    e How sensitive will the value of this option be to interest rates?<br/><br/>    <br/><br/>    O</div>`,
+    answer: `<strong>原题：</strong> 一个期权在到期时支付 1, if S; >So, te otherwise, 在时刻 7’。如果 S 的波动率上升，该期权的价值会发生什么变化？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This option is similar to a Margrabe option, but<br/><br/>    <br/><br/>    with a digital payment. A Margrabe option pays max(\$j(t) — S2(t),0), for more<br/><br/>    details see Section 11.6 of [6].<br/><br/>    <br/><br/>    To answer this question we will make a few simplifying assumptions: the<br/><br/>    volatility of Sz does not change and the correlation between 5; and Sq is zero.<br/><br/>    We have two situations to consider, 5) (¢) > S(t) and S1(t) < So(¢), that is we<br/><br/>    are currently either in or out-of-the-money.<br/><br/>    <br/><br/>    If we are in-the-money then an increase in the volatility of S; will create a<br/><br/>    higher probability in the risk-neutral world of finishing below So, so the option<br/><br/>    price will decrease. If we are out-of-the-money, then the extra volatility is good<br/><br/>    for those long the option as it means 5 is more likely to finish above S2 so the<br/><br/>    option value will increase.<br/><br/>    <br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e We now take the correlation between S\$ and S2 to be non-zero. What af-<br/><br/>    fect will correlation have on the price of the option, assuming everything<br/><br/>    else remains constant?<br/><br/>    <br/><br/>    e How sensitive will the value of this option be to interest rates?<br/><br/>    <br/><br/>    O</div>`,
   },
   {
     id: 201, cat: "finance", diff: 2, book: "red",
@@ -3171,12 +3120,12 @@ const questions = [
   {
     id: 231, cat: "prob", diff: 2, book: "red",
     title: "考虑如下游戏。玩家只掷一次骰子 只有一次。收益为朝上那一面每个点 1 美元。假设是公平骰子，你应将门票价格定为多少？",
-    answer: `<strong>原题：</strong> 考虑如下游戏。玩家只掷一次骰子 只有一次。收益为朝上那一面每个点 1 美元。假设是公平骰子，你应将门票价格定为多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This is a simple question asking us to calculate<br/><br/>    <br/><br/>    the expected number of dots on the upturned face of a fair die. Evaluating this<br/><br/>    in the standard way gives<br/><br/>    <br/><br/>    , 1 1 1<br/><br/>    E(number of dots) = 1x @ +2x E+: +6 & =3.5.<br/><br/>    <br/><br/>    <br/><br/>    86 3. PROBABILITY<br/><br/>    <br/><br/>    The ticket level is slightly more interesting, after all we want to make a profit. To<br/><br/>    avoid going broke we need to charge at least $3.5, however perhaps we can play<br/><br/>    on people’s enjoyment of gambling and charge slightly more than this fair price.<br/><br/>    <br/><br/>    Here are some possible related questions:<br/><br/>    e Evaluate the expectation for an n—sided die, with n a positive integer.<br/><br/>    <br/><br/>    e@ What is the expectation of the sum of two rolls?<br/><br/>    e@ What is the probability of getting seven with two rolls?<br/><br/>    <br/><br/>    O</div>`,
+    answer: `<strong>原题：</strong> 考虑如下游戏。玩家只掷一次骰子 只有一次。收益为朝上那一面每个点 1 美元。假设是公平骰子，你应将门票价格定为多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This is a simple question asking us to calculate<br/><br/>    <br/><br/>    the expected number of dots on the upturned face of a fair die. Evaluating this<br/><br/>    in the standard way gives<br/><br/>    <br/><br/>    , 1 1 1<br/><br/>    E(number of dots) = 1x @ +2x E+: +6 & =3.5.<br/><br/>    <br/><br/>    <br/><br/>    86 3. PROBABILITY<br/><br/>    <br/><br/>    The ticket level is slightly more interesting, after all we want to make a profit. To<br/><br/>    avoid going broke we need to charge at least \$3.5, however perhaps we can play<br/><br/>    on people’s enjoyment of gambling and charge slightly more than this fair price.<br/><br/>    <br/><br/>    Here are some possible related questions:<br/><br/>    e Evaluate the expectation for an n—sided die, with n a positive integer.<br/><br/>    <br/><br/>    e@ What is the expectation of the sum of two rolls?<br/><br/>    e@ What is the probability of getting seven with two rolls?<br/><br/>    <br/><br/>    O</div>`,
   },
   {
     id: 232, cat: "algo", diff: 2, book: "red",
     title: "假设我们玩一个游戏。我最多掷三次骰子。每次 掷骰后，你可以拿走朝上的点数作为美元，或者继续掷。你的期望收益是多少？ 见第 86 页。",
-    answer: `<strong>原题：</strong> 假设我们玩一个游戏。我最多掷三次骰子。每次 掷骰后，你可以拿走朝上的点数作为美元，或者继续掷。你的期望收益是多少？ 见第 86 页。<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This problem should be approached from the<br/><br/>    <br/><br/>    end. If instead I only offered you one roll of the dice, what are your expected<br/><br/>    winnings? Clearly the answer here is<br/><br/>    <br/><br/>    (1 die) = 4 = 3.5.<br/><br/>    <br/><br/>    Now if I offer you two dice, you can either take the result of the first roll, or<br/><br/>    proceed onto the second die. The optimal strategy is to take the first roll if it is<br/><br/>    better than your expected winnings from the second roll, or continue otherwise.<br/><br/>    Thus we take the first roll if it is 4 or greater, otherwise we continue, giving<br/><br/>    <br/><br/>    E(2 dice) = E(max({first roll, expected winnings from 1 die})<br/><br/>    <br/><br/>    1 1 1 1<br/><br/>    — 4 |<br/><br/>    gx EtG x5t Gx 4t 5 x35 = 4.25.<br/><br/>    <br/><br/>    Repeating the same idea for the third die gives<br/><br/>    <br/><br/>    E(3 dice) = E(max{first roll, expected winnings from 2 dice})<br/><br/>    <br/><br/>    1 1 2 2<br/><br/>    — 5 5 = 4~<br/><br/>    g St Exot sx 425 45<br/><br/>    <br/><br/>    Note that this is essentially the problem of pricing an option on a multinomial<br/><br/>    tree, and this is why the problem is very popular with interviewers.<br/><br/>    <br/><br/>    <br/><br/>    3.3. SOLUTIONS 87<br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e How many rolls would I need to offer you before you will only accept<br/><br/>    a 6 on the first roll?<br/><br/>    <br/><br/>    e What sort of option does this problem relate to?<br/><br/>    <br/><br/>    e How does your answer change if the payment is the square of the<br/><br/>    number showing?<br/><br/>    <br/><br/>    e What effect will it have if I charge you $1 for each additional roll?<br/><br/>    <br/><br/>    Oo</div>`,
+    answer: `<strong>原题：</strong> 假设我们玩一个游戏。我最多掷三次骰子。每次 掷骰后，你可以拿走朝上的点数作为美元，或者继续掷。你的期望收益是多少？ 见第 86 页。<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>This problem should be approached from the<br/><br/>    <br/><br/>    end. If instead I only offered you one roll of the dice, what are your expected<br/><br/>    winnings? Clearly the answer here is<br/><br/>    <br/><br/>    (1 die) = 4 = 3.5.<br/><br/>    <br/><br/>    Now if I offer you two dice, you can either take the result of the first roll, or<br/><br/>    proceed onto the second die. The optimal strategy is to take the first roll if it is<br/><br/>    better than your expected winnings from the second roll, or continue otherwise.<br/><br/>    Thus we take the first roll if it is 4 or greater, otherwise we continue, giving<br/><br/>    <br/><br/>    E(2 dice) = E(max({first roll, expected winnings from 1 die})<br/><br/>    <br/><br/>    1 1 1 1<br/><br/>    — 4 |<br/><br/>    gx EtG x5t Gx 4t 5 x35 = 4.25.<br/><br/>    <br/><br/>    Repeating the same idea for the third die gives<br/><br/>    <br/><br/>    E(3 dice) = E(max{first roll, expected winnings from 2 dice})<br/><br/>    <br/><br/>    1 1 2 2<br/><br/>    — 5 5 = 4~<br/><br/>    g St Exot sx 425 45<br/><br/>    <br/><br/>    Note that this is essentially the problem of pricing an option on a multinomial<br/><br/>    tree, and this is why the problem is very popular with interviewers.<br/><br/>    <br/><br/>    <br/><br/>    3.3. SOLUTIONS 87<br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e How many rolls would I need to offer you before you will only accept<br/><br/>    a 6 on the first roll?<br/><br/>    <br/><br/>    e What sort of option does this problem relate to?<br/><br/>    <br/><br/>    e How does your answer change if the payment is the square of the<br/><br/>    number showing?<br/><br/>    <br/><br/>    e What effect will it have if I charge you \$1 for each additional roll?<br/><br/>    <br/><br/>    Oo</div>`,
   },
   {
     id: 233, cat: "calc", diff: 2, book: "red",
@@ -3196,7 +3145,7 @@ const questions = [
   {
     id: 236, cat: "finance", diff: 3, book: "red",
     title: "假设我们掷一枚公平硬币，令 N 表示 直到出现正面（包含最后一次掷出）所需的掷币次数。E(N) 和 Var(N) 各是多少？",
-    answer: `<strong>原题：</strong> 假设我们掷一枚公平硬币，令 N 表示 直到出现正面（包含最后一次掷出）所需的掷币次数。E(N) 和 Var(N) 各是多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>The random variable N has a geometric distribution.<br/><br/>    <br/><br/>    Some care should be taken to avoid ambiguities arising from the inclusion of the<br/><br/>    <br/><br/>    <br/><br/>    90 3. PROBABILITY<br/><br/>    <br/><br/>    final toss — some definitions include it, giving a state space {1,2,3,...}, while<br/><br/>    others do not, giving a state space {0,1,2,...}. Here we use the former, although<br/><br/>    this is not simply a question asking you to recite expectations and variances of<br/><br/>    common distributions so the definition is not important as long as we are clear.<br/><br/>    You may well already know the answer, but odds on if you’re being asked this in<br/><br/>    an interview they want to see if you can derive it, so keep the answer to yourself<br/><br/>    and just use it to check what you arrive at from first principles.<br/><br/>    <br/><br/>    Given our definition of N, it is clear that if N = k, then we had k — 1<br/><br/>    consecutive tails followed by 1 head. From this we conclude<br/><br/>    <br/><br/>    P(N = k) = 0.54105 = 0.5%,<br/><br/>    <br/><br/>    for k = 1,2,... Using the standard calculation for E(X) we have<br/><br/>    <br/><br/>    CO<br/><br/>    E(X) = 5° 0.5\\".<br/><br/>    k=1<br/><br/>    <br/><br/>    If you remember the formula for this series then you are done. If you don’t,<br/><br/>    or forget it under the pressure of the interview, here’s a nice trick for quickly<br/><br/>    calculating it (which is easily extended to similar problems):<br/><br/>    <br/><br/>    E(X) = 0.514 2 x 0.57 +3 x 0.53 +---<br/><br/>    = 0.5E(X) = 0.57 +2 x 0.5°4+3 x 0.54+---<br/><br/>    = 0.5E(X) = 0.5!4 0.574 0.59 +---,<br/><br/>    <br/><br/>    the final line being the difference of the first two. This is also just the sum of<br/><br/>    the probabilities P(V = k) and hence adds to 1, thus E(X) = 2.<br/><br/>    <br/><br/>    Applying the same technique (twice) gives<br/><br/>    <br/><br/>    E(X?) = ~ = 6,<br/><br/>    <br/><br/>    and so Var(X) = 2.<br/><br/>    <br/><br/>    <br/><br/>    3.3. SOLUTIONS 91<br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e I pay you $1 at the end of this year, $2 at the end of next year and so<br/><br/>    on. The effective annual interest rate is 7. Derive, from first principles,<br/><br/>    the value of this payment stream.<br/><br/>    <br/><br/>    e Derive the expectation and variance of a random variable with a Poisson<br/><br/>    distribution.<br/><br/>    <br/><br/>    e What is the mean and expectation if we redefine N to be the number<br/><br/>    of tails before we toss a head?<br/><br/>    <br/><br/>    O</div>`,
+    answer: `<strong>原题：</strong> 假设我们掷一枚公平硬币，令 N 表示 直到出现正面（包含最后一次掷出）所需的掷币次数。E(N) 和 Var(N) 各是多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>The random variable N has a geometric distribution.<br/><br/>    <br/><br/>    Some care should be taken to avoid ambiguities arising from the inclusion of the<br/><br/>    <br/><br/>    <br/><br/>    90 3. PROBABILITY<br/><br/>    <br/><br/>    final toss — some definitions include it, giving a state space {1,2,3,...}, while<br/><br/>    others do not, giving a state space {0,1,2,...}. Here we use the former, although<br/><br/>    this is not simply a question asking you to recite expectations and variances of<br/><br/>    common distributions so the definition is not important as long as we are clear.<br/><br/>    You may well already know the answer, but odds on if you’re being asked this in<br/><br/>    an interview they want to see if you can derive it, so keep the answer to yourself<br/><br/>    and just use it to check what you arrive at from first principles.<br/><br/>    <br/><br/>    Given our definition of N, it is clear that if N = k, then we had k — 1<br/><br/>    consecutive tails followed by 1 head. From this we conclude<br/><br/>    <br/><br/>    P(N = k) = 0.54105 = 0.5%,<br/><br/>    <br/><br/>    for k = 1,2,... Using the standard calculation for E(X) we have<br/><br/>    <br/><br/>    CO<br/><br/>    E(X) = 5° 0.5\\".<br/><br/>    k=1<br/><br/>    <br/><br/>    If you remember the formula for this series then you are done. If you don’t,<br/><br/>    or forget it under the pressure of the interview, here’s a nice trick for quickly<br/><br/>    calculating it (which is easily extended to similar problems):<br/><br/>    <br/><br/>    E(X) = 0.514 2 x 0.57 +3 x 0.53 +---<br/><br/>    = 0.5E(X) = 0.57 +2 x 0.5°4+3 x 0.54+---<br/><br/>    = 0.5E(X) = 0.5!4 0.574 0.59 +---,<br/><br/>    <br/><br/>    the final line being the difference of the first two. This is also just the sum of<br/><br/>    the probabilities P(V = k) and hence adds to 1, thus E(X) = 2.<br/><br/>    <br/><br/>    Applying the same technique (twice) gives<br/><br/>    <br/><br/>    E(X?) = ~ = 6,<br/><br/>    <br/><br/>    and so Var(X) = 2.<br/><br/>    <br/><br/>    <br/><br/>    3.3. SOLUTIONS 91<br/><br/>    Here are some possible related questions:<br/><br/>    <br/><br/>    e I pay you \$1 at the end of this year, \$2 at the end of next year and so<br/><br/>    on. The effective annual interest rate is 7. Derive, from first principles,<br/><br/>    the value of this payment stream.<br/><br/>    <br/><br/>    e Derive the expectation and variance of a random variable with a Poisson<br/><br/>    distribution.<br/><br/>    <br/><br/>    e What is the mean and expectation if we redefine N to be the number<br/><br/>    of tails before we toss a head?<br/><br/>    <br/><br/>    O</div>`,
   },
   {
     id: 237, cat: "calc", diff: 2, book: "red",
@@ -3322,7 +3271,7 @@ const questions = [
   {
     id: 253, cat: "prob", diff: 2, book: "red",
     title: "设 x,y 在 [0, 1] 上均匀分布，并将 单位区间 [0,1] 分成 3 段，这 3 段能拼成一个三角形的概率是多少？",
-    answer: `<strong>原题：</strong> 设 x,y 在 [0, 1] 上均匀分布，并将 单位区间 [0,1] 分成 3 段，这 3 段能拼成一个三角形的概率是多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>First, we need to transform the condition into<br/><br/>    <br/><br/>    something less opaque. The three pieces will form a triangle if the longest piece<br/><br/>    is smaller in size than the sum of the other two. This will happen if and only if<br/><br/>    the biggest piece is of size less than a half. Unfortunately, we do not know at<br/><br/>    the start which piece will be longest. However, this happens if precisely one of<br/><br/>    x and y is less than $, and |x — y|  3. What’s the probability of forming<br/><br/>    an n-gon?<br/><br/>    <br/><br/>    O</div>`,
+    answer: `<strong>原题：</strong> 设 x,y 在 [0, 1] 上均匀分布，并将 单位区间 [0,1] 分成 3 段，这 3 段能拼成一个三角形的概率是多少？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>First, we need to transform the condition into<br/><br/>    <br/><br/>    something less opaque. The three pieces will form a triangle if the longest piece<br/><br/>    is smaller in size than the sum of the other two. This will happen if and only if<br/><br/>    the biggest piece is of size less than a half. Unfortunately, we do not know at<br/><br/>    the start which piece will be longest. However, this happens if precisely one of<br/><br/>    x and y is less than \$, and |x — y|  3. What’s the probability of forming<br/><br/>    an n-gon?<br/><br/>    <br/><br/>    O</div>`,
   },
   {
     id: 254, cat: "algo", diff: 2, book: "red",
@@ -3417,7 +3366,7 @@ const questions = [
     以这种形式写出，显然大多数项会相消。剩下<br/>
     n!<br/>
     <br/>
-    PX $2) = Gage @P@) 0 - Fey.<br/>
+    PX \$2) = Gage @P@) 0 - Fey.<br/>
     <br/>
     以下是一些可能的延伸问题：<br/>
     <br/>
@@ -7041,7 +6990,7 @@ const questions = [
     <br/>
     故事：我的一名学生去纽约一家知名华尔街公司面试。他接连被五个量化的人面试。每次面试一小时，<br/>
     <br/>
-    中间完全没有休息。他得在他们的黑板上做多道量化题。他们没给他午饭。结束时他又累又饿。回来时他对那些“S@!#@$%”破口大骂。他说“那个俄国人”最差。<br/>
+    中间完全没有休息。他得在他们的黑板上做多道量化题。他们没给他午饭。结束时他又累又饿。回来时他对那些“S@!#@\$%”破口大骂。他说“那个俄国人”最差。<br/>
     <br/>
     ©2004 Timothy Falcon Crack 19 全球版权所有，保留所有权利<br/>
     <br/>
@@ -7851,12 +7800,12 @@ const questions = [
   {
     id: 511, cat: "prob", diff: 2, book: "hots",
     title: "(**) 分发两个密封的信封。你拿到其中一个 你的对手拿到另一个。你知道其中一个信封里有 m 美元，另一个里有 2m 美元（m…",
-    answer: `<strong>原题：</strong> (**) 分发两个密封的信封。你拿到其中一个 你的对手拿到另一个。你知道其中一个信封里有 m 美元，另一个里有 2m 美元（m 未说明）。？ 如果你来运行这个游戏，对于可重复进行的游戏，你会向玩家收取多少费用？假设改为玩一个修正版游戏：我连续掷一枚骰子三次（不中断），玩家的收益是三次掷出点数的最大值。玩家的期望收益是多少？你能事先判断原版游戏和修正版游戏中哪个期望收益更高吗？ ？这个问题已有 40 多年历史，被称为“交换悖论”。 ©2004 Timothy Falcon Crack 全球保留所有权利 第4章. 统计问题 1. 如果你偷看自己的信封，看到 $X。然而，你不知道对手拿到的是 $2X 还是 $5X。在不偷看的情况下，你交换信封的期望收益是多少？你对手交换信封的期望收益是多少（假设你对手看到 $Y）？你应该交换吗？如果交换了，你是否会出于同样的原因再次交换（假设你们两人都没有偷看）？ 2. 假设你们两人最初都偷看了自己的信封。交换的收益是多少？你应该交换吗？如果交换了，你是否会出于同样的原因再次交换？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>`,
+    answer: `<strong>原题：</strong> (**) 分发两个密封的信封。你拿到其中一个 你的对手拿到另一个。你知道其中一个信封里有 m 美元，另一个里有 2m 美元（m 未说明）。？ 如果你来运行这个游戏，对于可重复进行的游戏，你会向玩家收取多少费用？假设改为玩一个修正版游戏：我连续掷一枚骰子三次（不中断），玩家的收益是三次掷出点数的最大值。玩家的期望收益是多少？你能事先判断原版游戏和修正版游戏中哪个期望收益更高吗？ ？这个问题已有 40 多年历史，被称为“交换悖论”。 ©2004 Timothy Falcon Crack 全球保留所有权利 第4章. 统计问题 1. 如果你偷看自己的信封，看到 \$X。然而，你不知道对手拿到的是 \$2X 还是 \$5X。在不偷看的情况下，你交换信封的期望收益是多少？你对手交换信封的期望收益是多少（假设你对手看到 \$Y）？你应该交换吗？如果交换了，你是否会出于同样的原因再次交换（假设你们两人都没有偷看）？ 2. 假设你们两人最初都偷看了自己的信封。交换的收益是多少？你应该交换吗？如果交换了，你是否会出于同样的原因再次交换？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>`,
   },
   {
     id: 512, cat: "finance", diff: 2, book: "hots",
     title: "这被称为“世界大赛”问题。两支橄榄球队将相互比赛，直到其中一支取得四场胜利并被宣布为总冠军（因此他们最多比赛七场）。你要对谁将成为总冠军下注…",
-    answer: `<strong>原题：</strong> 这被称为“世界大赛”问题。两支橄榄球队将相互比赛，直到其中一支取得四场胜利并被宣布为总冠军（因此他们最多比赛七场）。你要对谁将成为总冠军下注。如果你在 A 队身上下注 $100，且他们被宣布为总冠军，你将拿回你的 $100 外加 $100 利润。A 队赢得任何一场比赛的概率为 70%；B 队为 30%。你可以在每场比赛进行时调整你的下注（押 A 队或 B 队），但总冠军要等到其中一队取得四场胜利后才会揭晓。你应如何下注，才能保证无论结果如何都恰好赢 $100 或输 $100（两种结果都可以）？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>`,
+    answer: `<strong>原题：</strong> 这被称为“世界大赛”问题。两支橄榄球队将相互比赛，直到其中一支取得四场胜利并被宣布为总冠军（因此他们最多比赛七场）。你要对谁将成为总冠军下注。如果你在 A 队身上下注 \$100，且他们被宣布为总冠军，你将拿回你的 \$100 外加 \$100 利润。A 队赢得任何一场比赛的概率为 70%；B 队为 30%。你可以在每场比赛进行时调整你的下注（押 A 队或 B 队），但总冠军要等到其中一队取得四场胜利后才会揭晓。你应如何下注，才能保证无论结果如何都恰好赢 \$100 或输 \$100（两种结果都可以）？<br/><br/><div style="margin-top:12px;padding:10px 14px;background:rgba(88,166,255,0.06);border-left:3px solid var(--accent-blue);border-radius:6px"><strong>📖 参考解答（英文原文）</strong><br/><br/>(答案见原书 / see original book)</div>`,
   },
   {
     id: 513, cat: "prob", diff: 2, book: "hots",
@@ -7891,7 +7840,7 @@ const questions = [
   {
     id: 519, cat: "prob", diff: 2, book: "hots",
     title: "我将旋转一个只有五个区的公平轮盘。其中四个区赔付 $1；第五个区赔付 $5。 1. 如果每转一次花费 $1.50，且你可以随意玩任意多次…",
-    answer: `<br/><strong>原题：</strong>我将旋转一个只有五个区的公平轮盘。其中四个区赔付 $1；第五个区赔付 $5。<br/><br/>1. 如果每转一次花费 $1.50，且你可以随意玩任意多次，你应该玩这个游戏吗？<br/><br/>2. 如果每转一次花费 $1.50，且你只能恰好玩一次，你应该玩这个游戏吗？<br/><br/>故事：那是很多年前的事了，但我知道有一位资历很好的 MIT 学生，从一家知名公司拿到了 $X 的录用邀约（在当时算是不错的报价）。他拒绝了，告诉他们误解了他。几天后他们回电，给了他 $X × 1.67 的报价！令人惊讶！他接受了这份工作。<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
+    answer: `<br/><strong>原题：</strong>我将旋转一个只有五个区的公平轮盘。其中四个区赔付 \$1；第五个区赔付 \$5。<br/><br/>1. 如果每转一次花费 \$1.50，且你可以随意玩任意多次，你应该玩这个游戏吗？<br/><br/>2. 如果每转一次花费 \$1.50，且你只能恰好玩一次，你应该玩这个游戏吗？<br/><br/>故事：那是很多年前的事了，但我知道有一位资历很好的 MIT 学生，从一家知名公司拿到了 \$X 的录用邀约（在当时算是不错的报价）。他拒绝了，告诉他们误解了他。几天后他们回电，给了他 \$X × 1.67 的报价！令人惊讶！他接受了这份工作。<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
   },
   {
     id: 520, cat: "prob", diff: 2, book: "hots",
@@ -7921,12 +7870,12 @@ const questions = [
   {
     id: 525, cat: "prob", diff: 2, book: "hots",
     title: "玩家 A 和 B 玩一个弹珠游戏。每位玩家都有一颗红色弹珠和一颗蓝色弹珠。他们各自向对方出示一颗弹珠。如果都出示红色，A 赢…",
-    answer: `<br/><strong>原题：</strong>玩家 A 和 B 玩一个弹珠游戏。每位玩家都有一颗红色弹珠和一颗蓝色弹珠。他们各自向对方出示一颗弹珠。如果都出示红色，A 赢 $3。如果都出示蓝色，A 赢 $1。如果颜色不匹配，B 赢 $2。<br/><br/>°如果赔率是 25 赔 1，你还应该接受这个赌注吗？<br/><br/>©2004 Timothy Falcon Crack A5 全球保留所有权利<br/><br/><br/>第4章. 统计问题<br/><br/>做 A 更好，还是做 B 更好，还是无所谓？<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
+    answer: `<br/><strong>原题：</strong>玩家 A 和 B 玩一个弹珠游戏。每位玩家都有一颗红色弹珠和一颗蓝色弹珠。他们各自向对方出示一颗弹珠。如果都出示红色，A 赢 \$3。如果都出示蓝色，A 赢 \$1。如果颜色不匹配，B 赢 \$2。<br/><br/>°如果赔率是 25 赔 1，你还应该接受这个赌注吗？<br/><br/>©2004 Timothy Falcon Crack A5 全球保留所有权利<br/><br/><br/>第4章. 统计问题<br/><br/>做 A 更好，还是做 B 更好，还是无所谓？<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
   },
   {
     id: 526, cat: "algo", diff: 2, book: "hots",
     title: "<一台造币机生产硬币。每枚硬币被制造为出现正面的概率为 P。然而，机器从 [0, 1] 上的均匀分布中随机抽取 P，因此每枚生产的硬币的…",
-    answer: `<br/><strong>原题：</strong><一台造币机生产硬币。每枚硬币被制造为出现正面的概率为 P。然而，机器从 [0, 1] 上的均匀分布中随机抽取 P，因此每枚生产的硬币的 P 可能不同。一枚硬币从机器中弹出。你抛了它一次，结果是正面。给定这个信息，该硬币出现正面的概率（以“H”表示在出现正面的条件下）的条件分布函数 F’pj7(p) 是什么？<br/><br/>如果你抛这枚硬币 1,000 次并得到 750 次正面，出现正面的概率的（条件）分布函数是什么？<br/><br/>故事：我的一位 MIT 学生资历格外优秀。他也是我见过最友善的人之一。他安静而说话柔和。他非常低调，是那种你可能不会注意到的人。他在一家知名华尔街公司的起薪是每年 $300,000（而且那是几年前的事了）。故事的寓意：我不在乎你自以为有多厉害——脑力才是赢家。<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
+    answer: `<br/><strong>原题：</strong><一台造币机生产硬币。每枚硬币被制造为出现正面的概率为 P。然而，机器从 [0, 1] 上的均匀分布中随机抽取 P，因此每枚生产的硬币的 P 可能不同。一枚硬币从机器中弹出。你抛了它一次，结果是正面。给定这个信息，该硬币出现正面的概率（以“H”表示在出现正面的条件下）的条件分布函数 F’pj7(p) 是什么？<br/><br/>如果你抛这枚硬币 1,000 次并得到 750 次正面，出现正面的概率的（条件）分布函数是什么？<br/><br/>故事：我的一位 MIT 学生资历格外优秀。他也是我见过最友善的人之一。他安静而说话柔和。他非常低调，是那种你可能不会注意到的人。他在一家知名华尔街公司的起薪是每年 \$300,000（而且那是几年前的事了）。故事的寓意：我不在乎你自以为有多厉害——脑力才是赢家。<br/><br/><strong>参考解答：</strong>(答案见原书 / see original book)`,
   },
   {
     id: 527, cat: "prob", diff: 2, book: "hots",
@@ -8789,8 +8738,9 @@ const questions = [
     answer: `<br/>
     <strong>原题：</strong>芝加哥有多少名理发师？<br/><br/>
     <strong>参考解答：</strong>(答案见原书 / 见原书)`,
-  }
-];;;;;;
+  },
+];
+;;;;;
 
 
 
@@ -8832,24 +8782,25 @@ function splitAnswer(rawAnswer) {
     let origSeg = origMatch[1];
     const stopIdx = origSeg.search(/<strong>/);
     if (stopIdx >= 0) origSeg = origSeg.substring(0, stopIdx);
-    // 在 <br/><br/> 处切分（避免吃到修复时追加的英文解答段）
-    const dblBr = origSeg.search(/<br\s*\/?>\s*<br\s*\/?>/);
-    if (dblBr >= 0) origSeg = origSeg.substring(0, dblBr);
+    // 保留完整原题段（不再按 <br/><br/> 截断，避免多段原题被砍掉后续句）
     origSeg = origSeg.replace(/(<br\s*\/?>\s*)+/g, "<br/>").trim();
     if (origSeg) original = origSeg;
     // 整段原题段落 + 前面的 <strong>...</strong> 删掉
     solutionBody = body.replace(/<strong>\s*原题[：:]\s*<\/strong>[\s\S]*?(?=<strong>|$)/, "").trim();
   } else {
-    // 没有"原题"标签：尝试用答案首段作为原题
-    // 切到第一个 <br/><br/>（之前当作原题）
-    const firstBr = body.search(/<br\s*\/?>\s*<br\s*\/?>/);
-    if (firstBr > 0) {
-      const first = body.substring(0, firstBr).trim();
-      // 只有首段不超过 250 字符且看起来像题干（不是空泛回答）才视作原题
-      if (first.length > 0 && first.length < 250) {
-        original = first;
-        solutionBody = body.substring(firstBr).replace(/^(<br\s*\/?>\s*)+/, "").trim();
+    // 没有"原题"标签（绿宝书 puzzle 类等）：取第一个 <strong>（关键思路/最终答案/参考解答等）
+    // 之前的全文作为原题，避免把多句描述误截成半句
+    const firstStrong = body.search(/<strong>/);
+    if (firstStrong > 0) {
+      const head = body.substring(0, firstStrong).trim();
+      if (head) {
+        original = head.replace(/(<br\s*\/?>\s*)+/g, "<br/>").trim();
+        solutionBody = body.substring(firstStrong);
       }
+    } else {
+      // 完全没有任何 <strong> 标签：整段作为原题
+      original = body.replace(/(<br\s*\/?>\s*)+/g, "<br/>").trim();
+      solutionBody = "";
     }
   }
 
