@@ -1,0 +1,5717 @@
+[
+ {
+  "id": 100000,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Suppose X is a p -dimensional variable and Y is a 1-dimensional variable, which are related to each other. We suppose the relationship between X and Y satisfiesY = XB + ε, ε~ N(0,I) . Now we have a sa",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100001,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Suppose the p.d.f.(probability density function) of a 2-dimensional random variable is a. Determine the value of k . b. Calculate the c.d.f.(cumulative distribution function) of (X, Y ), i.e. F (X, Y ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100002,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given 3 random variables , what is the minimum of corr(X,Y) + corr(X, Z) + corr(Y, Z) ? (Hint: You should prove your result is the minimum instead of a lower bound.)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100003,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Now you happen to obtain a magical coin One day when you wake up, you find that the shape of the coin becomes strange. You try to toss a lot of times and make sure the probability of getting a head af",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100004,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Tomorrow you find the coin becomes normal, which means the probabilities of getting a head or a tail after one toss are both 1/2. However, you decide to cheat in the game today, and you want the winni",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100005,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "The day after tomorrow, your coin is still a normal coin. You think of a new game that one should pay the other people X first and keep tossing the coin until there's a head, then the other people sho",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100006,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "In last question, you find the game too boring since the value of may be quite small, so you think of another more difficult game. That is, the game ends when 3 consecutive heads appear. Under this ci",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100007,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You still think the game too boring. The new rule is, one proposes an ending rule of the game, and the other one decides the value of X. The ending rule can be any sequence, such as HHHHTTTT , where H",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "丰盛"
+  ],
+  "kind": "笔试",
+  "src_file": "丰盛.docx"
+ },
+ {
+  "id": 100008,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "编程题，N*N的棋盘放奖杯，每个单元格有一个价值，放上奖杯就可以得到那个价值。要求： 每个单元格最多一个放一个奖杯 每2*2个单元格中最多有2个可以有奖杯 求能获得的最大价值",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "笔试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100009,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "掷骰子，连续掷出N个6的次数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100010,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "随机给一个1~n的排列，求从头开始的连续不减的数为1的概率 Follow-up:为k的概率又是多少",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100011,
+  "cat": "prob",
+  "diff": 1,
+  "book": "neiz",
+  "title": "如何用时针和分针将圆盘 1）12 等分 2）11 等分 能几等分 加上秒针呢",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100012,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "赌徒有一个装备，装备最高为15级，初始为0级。每次可以花一块钱抽一张卡，当装备不到10级的时候，每抽卡一次有1/2慨车概率维持原来的级别，1/2概率升1级。到达10级以后，每抽一次有1/2的概率升一级，1/2概率降一级。问想升到最高级所要花钱的期望（或者说抽卡次数的期望）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100013,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "两个专家A, B 分别预测A股指数下个月的涨跌方向（有涨和跌这两个预测值），A预测120次的准确率为80%。B 预则2500次。准确率为60%。请问你会愿意向哪个专家付费，为什么？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100014,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定k个分析师，每个分析师的平均收益和收益率的波动率（标准差）是ai和bi。假定每个分析师之间都是相互独立的，且我们有W的资金。从最大化平均收益/平均波动，即平均收益与平均波动的比值的角度，应该如何在这k个分析师中同分配资金？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100015,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定茅台的月销量数据，可以怎么设计交易策略？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100016,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "设计模型时，如果处理涨跌停和需要做空的情况？（A股在涨跌停无法买入，并且无法做空）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100017,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "如果想要嫌取股票第t+1日的收益，最晚需要在什么时候做出预测？ （九坤-OA）把一张100元面值的纸币换成1,2,5,10,20,50元面值的纸币，总共有多少种换法。如果限制换来的纸币总数不超过N张，又有多少种换法 （九坤-OA）要求构造一个函数，实现一下功能：输入一个列表list，返回一个计数列表count,count[i]表示list中第i个右边有多少个数小于list[i]。要求算法复杂度尽可",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤.docx"
+ },
+ {
+  "id": 100018,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定一千个特征来对第二日收益做预测，假设我们有过去十年的历史，你认为深度学习模型需要做哪些设计来提升多头的收益，为什么这些设计可能会有效。（可以是任何设计，包括对模型结构的，loss function的等）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤_3"
+  ],
+  "kind": "笔试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100019,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "假设我们有新闻舆情数据，可以告诉我们每个股票每天新闻的相关度和舆情打分，同时我们也有每个股票每天的行情数据（量价数据），我们用这个新闻舆情数据怎么样做一个信号？为什么能够产生收益？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤_3"
+  ],
+  "kind": "笔试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100020,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如果我们有一个每日做空量的数据（假设股票市场每个股票都可以做空，且做空没有成本比如做空的手续费等，只有因为做空产生的收益盈亏），假设这个数据可以告诉我们每个股票每天正在被做空的总量（比如有占流通股数2%的股票正在被做空），同时我们也有每个股票每天的行情数据（量价数据），我们利用这个做空量数据如何做一个信号？以及为什么这个信号能够有效？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤_3"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100021,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "拿到分析师研究报告数据以及企业的财务报告数据，我们可以做哪些对市场有预测力的因子（可以是长期也可以是短期），描述因子的逻辑，为什么这些因子会有效。（希望这个因子能够反映你对企业基本面的认知）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤_3"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100022,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定一个从公告中提取的事件数据库，其中有各种事件，包括人事变动，企业股东大会，等等。你觉得用哪些事件以及如何使用这些事件可以做出对价格的预测？为什么会有效？(上市公司大宗交易、股东回购、主营产品价格变动)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤_3"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100023,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一个策略夏普为10，加了10倍杠杆后波动率怎么变，夏普变成为多少？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100024,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "20个人，把20个人的名字的标签放进箱子里，然后每个人从里面选一个出来，每个人和他选到名字的人成为一组（即一个组是封闭的，同组的人一定选到同组的人，也一定被同组的人选到），问最终组数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100025,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "100个球投100个箱子，空箱子数量的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100026,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "俩正常硬币，一个两面都是H的硬币，投一次是H，问是非正常硬币的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100027,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "掷骰子连续两次都是6的期望步数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100028,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "随机数模拟pi，误差随着样本数量怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100029,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "X, Y服从U(0, 1)，问E(max(X, Y))",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100030,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "投三次骰子，每次都可以接受或者选择投下一次，问最优策略下收益的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100031,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "线性回归，样本复制M遍后beta, t, R2怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100032,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "线性回归，自变量和因变量都乘k，r2怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100033,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "多少个人，三个人同天生日的概率大于50%",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100034,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "八颗小球，一个偏重，有一个天平，最少秤几次可以",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "仲阳天王星"
+  ],
+  "kind": "面试",
+  "src_file": "仲阳天王星.docx"
+ },
+ {
+  "id": 100035,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何保持TCP长连接 如何查看IO占用率 如何杀死一个进程 kill的参数以及应用场景 mmap与共享内存 动态库和静态库的理解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "仲阳天王星"
+  ],
+  "kind": "面试",
+  "src_file": "仲阳天王星.docx"
+ },
+ {
+  "id": 100036,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "5L桶、7L桶 取水 4L",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "仲阳天王星"
+  ],
+  "kind": "面试",
+  "src_file": "仲阳天王星.docx"
+ },
+ {
+  "id": 100037,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Three basketball players A, B, and C are practicing shooting, though they only have one ball. At any moment during the training, there is a 30%/40%/20% chance that A/B/C is shooting, respectively. Als",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100038,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A, B, and C arrive between 9 a.m. and 10 a.m..When any of them arrives, he or she waits 10 minutes for the others. What is the probability that A,B, and C meet given their arrival time is uniformly di",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100039,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "There are N people arriving between 9 a.m. and 10 a.m.. Each waits for 10 minutes after arrival. What is the probability that they meet each other given their arrival time is uniformly distributed.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100040,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Write a simulation with Python OR pseudo code to verify your answer in (2). Please take the efficiency of your simulation into account as well.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100041,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given a long array in RAM, why is accessing it sequentially much faster than accessing it randomly?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100042,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Let’s consider normalized random variables X1, ..., Xn (with mean 0 and standard deviation 1). If all pairwise correlations are equal to r, then what is the range of r?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100043,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given that there exist n i.i.d normalized random variables Z1, ..., Zn, with mean 0 and standard deviation 1, please show that there exist random variables which have the same correlation coefficient ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100044,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given the Euclidean space Rn, how many vectors, at most, can have the same pairwise angle (excluding the trival case where all vectors have pairwise angle 0)?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100045,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "When your program tries to use more than the physical memory, does it crash? or does it just become slower? Why?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100046,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Do you think a quick-sort on 1e5 elements would finish in one second? what about 1e8 elements? what about 1e10 elements? Why?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100047,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "What is an environment variable? What happens when you export an env var? If you exported an env var on a server in ssh, and then logged out and relogged in, is the env var you exported still availabl",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.docx"
+ },
+ {
+  "id": 100048,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "简述一下各种损失函数的定义和优缺点。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "信弘天禾"
+  ],
+  "kind": "面试",
+  "src_file": "信弘天禾.docx"
+ },
+ {
+  "id": 100049,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "简述transform模型，它可以用于时序吗",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "信弘天禾"
+  ],
+  "kind": "面试",
+  "src_file": "信弘天禾.docx"
+ },
+ {
+  "id": 100050,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "日频因子和分频因子构造思路有何不同（谈自己的理解），高频数据特征。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "信弘天禾"
+  ],
+  "kind": "面试",
+  "src_file": "信弘天禾.docx"
+ },
+ {
+  "id": 100051,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "考虑某一股票的价格P，每过一段时间我们能获得一对数(t, Pt)，分别为当前的时间戳t和当前该股票的价格Pt，需要计算该股票在[t-W, t]时间段内的平均价格，其中W是事先给定的窗口大小，单位和t相同。 请编写程序来实现这个计算过程。接口参见以下Interface节。 算法需要满足以下要求： 1. 相邻数据点之间的间隔不固定，可能有较大变化，在计算的时候应考虑数据间隔变化极端的情况下的鲁棒性; ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "凯读"
+  ],
+  "kind": "笔试",
+  "src_file": "凯读.docx"
+ },
+ {
+  "id": 100052,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given the following function definition: (4min, score = 3) Define f(x): result = 1 For I from 1 to x (inclusively): result = result + i return result How many additions will take place while evaluatin",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100053,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A stock's price fluctuates every day by going up exactly5% or going down exactly 5%. Assume that each direction is equally likely. Assume zero trading cost, zero interest rate,and no dividends and spl",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100054,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Below is a list of asymptotic complexities of 8 functions ,each with length N input: A.O(N^3) B.O(Log(N) C.O(Sqrt(N)) D.O(N* log(N)) E.O(2^N) F.O(N^N) G.O(N!) H.O(Log(Log(N)) Please sort the functions",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100055,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "What is the maximum possible variance of a random variable taking values in the interval [0,10]?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100056,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "How many integers n such that n^n is a perfect square(元全平方数)are there in range [100:400]?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100057,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Assume there are three random variables X,Y, Z. All pairwise correlations are equal: corr(x,y)=corr(y,z)=corr(x,z) = r. What is the range of possible values of r? (list a range, like[-0.3:0.7], for ex",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100058,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Triangle ABC has sides of length 45,60 and 75.A point X is placed randomly and uniformly inside the triangle. What is the expected value of the sum of perpendicular distance from point X to this trian",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100059,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Please list one of your most \"strange\" or \"crazy\" idea to predict stock's return. You can assume you have all available public data and strong computing power. The answer shall be as \"strange\"as possi",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卓胜"
+  ],
+  "kind": "笔试",
+  "src_file": "卓胜.docx"
+ },
+ {
+  "id": 100060,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Design a model to understand the way that GDP gets influenced by CPI and stock return.   Provide an estimation procedure and describe how to evaluate the model.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "启林"
+  ],
+  "kind": "笔试",
+  "src_file": "启林.docx"
+ },
+ {
+  "id": 100061,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Answer the following problems about ML Models Describe the scenario where KNN works. Describe the scenario where neural net works. What is overfitting, how to deal with it",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "启林"
+  ],
+  "kind": "笔试",
+  "src_file": "启林.docx"
+ },
+ {
+  "id": 100062,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Compare the methods of principal component regression (extract the",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "启林"
+  ],
+  "kind": "笔试",
+  "src_file": "启林.docx"
+ },
+ {
+  "id": 100063,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Explain the reason why stochastic optimization methods work better than non-stochastic ones in fitting neural nets.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "启林"
+  ],
+  "kind": "笔试",
+  "src_file": "启林.docx"
+ },
+ {
+  "id": 100064,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "When estimating the covariance matrix ∑ = by their parts ,  and，one observes that some of 's eigenvalues are negative, while  and are positive definite. (a) Explain thy this problem occurs. (b) Provid",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "启林"
+  ],
+  "kind": "笔试",
+  "src_file": "启林.docx"
+ },
+ {
+  "id": 100065,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "谈谈对市场的理解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "因诺"
+  ],
+  "kind": "面试",
+  "src_file": "因诺.docx"
+ },
+ {
+  "id": 100066,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "## 交易结算练习",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "天演"
+  ],
+  "kind": "笔试",
+  "src_file": "天演.docx"
+ },
+ {
+  "id": 100067,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "X,Y服从二元正态分布，X,Y均~N(0,1)， 相关系数是1/，求P{X<0|Y<0}以及E(min(X,Y))",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100068,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "推导岭回归中损失函数L=||Ax-b||^2+||x||^2的dL/dX",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100069,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "是否有两个骰子，刻的数字和标准骰子不一样，但是和的分布和两个标准骰子的和一样",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100070,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A是方阵，对任意的n，A^n=A，A是否一定可对角化，求A的特征值",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100071,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "已知一只股票分别在A,H两地上市，已知两地存在一定的时差，请给出一种方法，可以用来分析两地股票收益率变化",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100072,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "编程题： 已知一个序列，求它所有满足如下条件的子序列， 1. 升序列 2. 序列不超过n个元素 3. 序列和小于给定阈值 4. 去重",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100073,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "实现一个python里的字典 1.要求 定义 SlashDict class，当key中包含斜杠(/)时，把相应的元素视作递归的字典把key按/分割后逐级查询 该 class 需至少支持 dict的get，pop方法以及插入操作。(如用python作答，该class 行为需要尽可能接近系统内置dict) dict插入key时若包含/，则逐级创建字典并插入相应的key/value ·定义deep k",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "安贤"
+  ],
+  "kind": "笔试",
+  "src_file": "安贤.docx"
+ },
+ {
+  "id": 100074,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "5黑球3蓝球，取3个，至少两个蓝色的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "宽德"
+  ],
+  "kind": "笔试",
+  "src_file": "宽德.docx"
+ },
+ {
+  "id": 100075,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "200个数用冒泡排序要200ms，问多少个数用冒泡排序要800ms？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "宽德"
+  ],
+  "kind": "笔试",
+  "src_file": "宽德.docx"
+ },
+ {
+  "id": 100076,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "8 个 int 里找最大和第二大的数，需要多少次比较（适用任何情况）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "宽德"
+  ],
+  "kind": "笔试",
+  "src_file": "宽德.docx"
+ },
+ {
+  "id": 100077,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "约瑟夫环，从1开始报数，每2人删除1人，一共33人，最后剩下第3人",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "宽德"
+  ],
+  "kind": "笔试",
+  "src_file": "宽德.docx"
+ },
+ {
+  "id": 100078,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "已知2的29次方是9位数，且正好缺失了0-9之间的一个数字，求缺失的那个数字",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "幻方"
+  ],
+  "kind": "面试",
+  "src_file": "幻方.docx"
+ },
+ {
+  "id": 100079,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "4*4的棋盘，马从一个角落出发（走日字），问回到出发点的期望步数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "幻方"
+  ],
+  "kind": "面试",
+  "src_file": "幻方.docx"
+ },
+ {
+  "id": 100080,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Y对X1和X2做线性回归的R^2记作R1^2，Y先对X1做线性回归，然后用得到的残差对X2做线性回归的R^2记作R2^2，问R1^2和R2^2的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "幻方"
+  ],
+  "kind": "面试",
+  "src_file": "幻方.docx"
+ },
+ {
+  "id": 100081,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "赌徒开始有1块钱，每次获胜得1块，否则失去1块，获胜概率为2/3，问破产前获得5块的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "幻方"
+  ],
+  "kind": "面试",
+  "src_file": "幻方.docx"
+ },
+ {
+  "id": 100082,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "线性回归把数据复制一遍，问beta怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "幻方"
+  ],
+  "kind": "面试",
+  "src_file": "幻方.docx"
+ },
+ {
+  "id": 100083,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "盒子里有大小相同的3个红球，2个黄球。现在随机取球，每次取1个，若取到红球则放回，若取到黄球则不放回，总共取3次，请问取出黄球个数的期望为?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100084,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "1234567892022 请加入括号和加减乘除，使得等式成立",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100085,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "小明现在手上有三个模型 A，B，两个模型在历史上单独的回测表现都非营好，小明为了进一步探究，小明将这两个模型线性的组合起来。发现结果比两个模型单独的表现都要差。请问造成这种现象的原因可能有哪些呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100086,
+  "cat": "prob",
+  "diff": 1,
+  "book": "neiz",
+  "title": "小红现在手上有一个模型  ，模型  是两个子模型简单的线性组合 ，小红在读文献的时候发现了一种新的优化思路。于是把这种思路在Y1模型上进行了尝试得到了Y 2 ，发现迭代后的模型 Y 2 比 Y 1 表现好不少，千是现在小红把的 Y1 替换成了 Y2，得到了迭代后的模型 ，结果发现 的表現比 还差，请问造成这种现象的原因会有哪些呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100087,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "是否存在能被 11 整除的三位数，使商为各位数字平方和？若存在，请列举；若不存在请证明。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100088,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "假设有 100 个纸条从左到右排列可供抽奖，每次抽奖费用为2元，其中有一张纸条奖励X元，义为整数。它左边的纸条都是奖励05元，它右边的纸条都是奖励1元，那么X至少为多少元时，能保证最后收益为正?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "念空"
+  ],
+  "kind": "笔试",
+  "src_file": "念空.docx"
+ },
+ {
+  "id": 100089,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "市价委托和限价委托有什么区别",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "思晔"
+  ],
+  "kind": "面试",
+  "src_file": "思晔.docx"
+ },
+ {
+  "id": 100090,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "计算三个交易日中该股票的最高价、最低价、3 日累计涨幅、3 日累计成交金额、3 日平均振幅、3 日平均盘口变化次数(当前 tick 的 ap1 或 bp1 和上个 tick 不一样），结果需要打印出来",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100091,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "观察该股票日内相邻 tick 间成交金额的变化，分析可能的原因",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100092,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "理想情况下，tick 行情会 3s 推送一次，但实际中一些因素的影响，导致收到的行情是非均匀的甚至 tick 缺失，请设计合适的清洗方式，使得新数据以 09:30:00 起始、14:56:57结束，tick 频率 3s 一次，作为标准 tick 数据(每日行情 4741 行)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100093,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "定义：盘口中间价格 mp = 0.5 * (ap1 + bp1)、盘口价差比例 spdr = (ap1-bp1) / mp，观察spdr 数据分布变化，总结有意义的现象，如某些 tick spdr 突然变大的原因",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100094,
+  "cat": "finance",
+  "diff": 3,
+  "book": "neiz",
+  "title": "选择你认为最优的方案，对于任意时刻 t，定义过去 20 个 tick 的波动性，需考虑震荡上涨/下跌和快速上涨/下跌的区别，并分析该定义的优缺点",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100095,
+  "cat": "finance",
+  "diff": 1,
+  "book": "neiz",
+  "title": "在任意时间 t，定义：订单薄的买卖不均衡 imbalance = (bv1 - av1) / (bv1 + av1)，买方力量强时，因子值大；卖方力量强时，因子值小。我们认为: imbalance 与未来一段时间的价格走势相关。但该 imbalance 的定义过于简单，选择你认为更优的方案，重新定义imbalance，解释其背后的逻辑，并通过统计检验分析 imbalance 与未来价格走势的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100096,
+  "cat": "finance",
+  "diff": 3,
+  "book": "neiz",
+  "title": "定义：相邻 tick 间的 成交量 = 主动买量 + 主动卖量 主动买 act_buy: 价格 高于或等于 卖方一档价格的买单 主动卖 act_sell: 价格 低于或等于 买方一档价格的卖单 请选择你认为最优的方案，估计相邻 tick 间的主动买卖量，并列出可能存在的问题",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100097,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "根据主动买卖量，设计成交类型因子 trade_fc，统计检验分析 trade_fc 与未来价格走势的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100098,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "定义撤单：相邻 tick 间，订单薄 orderbook 上每一档撤消的挂单量。根据 10 挡 orderbook的挂单量以及估算的主动买卖量，估计相邻 tick 间每一档价格上对应的撤单量",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100099,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "结合对该股票的其他观察，统计和猜测，有什么可以盈利的策略？写出策略的思路、可以盈利的原因以及什么时候可能不盈利（提示：不计手续费；可以低买高卖/高卖低买）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率"
+  ],
+  "kind": "笔试",
+  "src_file": "概率.docx"
+ },
+ {
+  "id": 100100,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "一个骰子每投掷一次就把点数与之前的和相加，当点数之和为5的倍数时停下，问期望投掷次数。如果为6的倍数呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "正定"
+  ],
+  "kind": "面试",
+  "src_file": "正定.docx"
+ },
+ {
+  "id": 100101,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A有n+1个硬币，B有n个硬币，问A正面个数多于B 的概率 Follow-up：如果A有n+2个硬币呢",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "正定"
+  ],
+  "kind": "面试",
+  "src_file": "正定.docx"
+ },
+ {
+  "id": 100102,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一个1*1的正方形，有51个随机分布的点，求证：一定至少有3个点可以被一个半径为七分之一的圆覆盖；",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "正定"
+  ],
+  "kind": "面试",
+  "src_file": "正定.docx"
+ },
+ {
+  "id": 100103,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "投掷骰子，有三次机会，可以提前停止，把最后一次的点数记为分数，问这个游戏的点数期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "正定"
+  ],
+  "kind": "面试",
+  "src_file": "正定.docx"
+ },
+ {
+  "id": 100104,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "问bs模型，以及别的一些期权定价模型等理论层面的东西",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "洛书"
+  ],
+  "kind": "面试",
+  "src_file": "洛书.docx"
+ },
+ {
+  "id": 100105,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有25 匹马，速度都不同，但每匹马的速度都是定值。现在只有5 条赛道，无法计时，即每赛一场最多只能知道5 匹马的相对快慢。问最少赛几场可以找出25 匹马中速度最快的前3名？找出前5 名呢？需给出具体结果，以及详细的计算过程。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100106,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "假设你有一匹爱马A，它和另一匹马B 参加一个7 局4 胜的比赛(谁先赢满4 局就结束比赛)。每一次你都能够下注，如果当局马A 赢了，你能赢到你下注的数目，如果当局马A 输了，你下的注就输掉。一开始你有1000 块钱，求问你下注的strategy，使得整个比赛结束后，你要么赢到了2000 块，要么输光了所有的钱。需给出具体到赌注金额的下单strategy。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100107,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "甲乙两人玩掷硬币的游戏，甲有10 元，乙有20 元。规则：硬币掷正面甲赢1 元，反面乙赢1 元，直到一方输光，假设硬币是均匀的。 a. 甲获胜的概率\nb. 游戏结束时掷硬币的次数的期望值？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100108,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "机器学习里面分类问题和聚类问题的区别是什么？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100109,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "常见的分类和聚类模型有哪些？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100110,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "聚类问题评判聚类效果的准则是什么，给出具体的量化的指标",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100111,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "伪代码给出KNN 和Kmeans 算法的关键步骤",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100112,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "求解min f(x,y) = - (x+1)(y+2), s.t. x+2y<=50",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100113,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "f(x)是凸函数，简述梯度下降法求解min f(x) 的原理和步骤",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100114,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "使用牛顿法迭代求解sqrt(2)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "涵德"
+  ],
+  "kind": "笔试",
+  "src_file": "涵德.docx"
+ },
+ {
+  "id": 100115,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "某种疾病的医学检测准确率为 95%，在广泛人群中估计罹患该病的几率为 1%。如果小李的医学检测显示他患有该种疾病，小李实际患该病的概率为？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100116,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "X1,X2～U[0,1]i.i.d..Y=min(X1,X2), Z=max(X1,X2).求 Y,Z 协方差和相关系数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100117,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "不停地抛掷一枚均匀的硬币，期望抛掷多少次可以得到连续三次正面朝上这一事件？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100118,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有 100 张纸片摆一排抽奖，其中一张背面印有“奖励 X 元”，X 是正整数。该纸片左边的纸片背面印有“奖励 0.5 元”，右边纸片背面印有“奖励 1 元”，每次抽奖花费 2 元，请问 X 至少为多少，一直抽下去最后收益保证为正。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100119,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有一掷骰子游戏，最多可以投掷三轮骰子，你有权随时终止游戏。最后会获得以最后一次投出来的点数为钱数的奖励。请问进入这个游戏的公允价格是多少？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100120,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "两个股票 A,B，期望收益都是 12%，A 的标准差是 20%，B 的标准差是 30%，A 与 B的相关性是 50%。为了最小化组合的风险，如何分配 A 与 B 的仓位？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100121,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "编程判断一个整数是不是 palindrome。定义： 一个整数如果正着写和反着写完全一样，那它就是 palindrome。 Follow-up：解决这个问题的时候，能不把整数转化成 string 吗？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100122,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给一串价格序列，设计算法找出买点卖点，使收益最大",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100123,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "盒子里有3个红球2个黄球，随机取球，每次取一个，若红球则放回，黄球则不放回，取3次，求取出黄球个数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "灵均"
+  ],
+  "kind": "笔试",
+  "src_file": "灵均.docx"
+ },
+ {
+  "id": 100124,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "复现华泰人工智能系列的研报",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "燧石"
+  ],
+  "kind": "笔试",
+  "src_file": "燧石.docx"
+ },
+ {
+  "id": 100125,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "三个随机变量，x,y,z,相关系数ρ(x,y)= 0.8,ρ(x,z)= 0.8,求ρ(y，z)的最大最小值",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100126,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "α ∈ ，求1 + α的特征值",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100127,
+  "cat": "calc",
+  "diff": 3,
+  "book": "neiz",
+  "title": "给定nxn实数矩阵A，A的每一对角元大于同行其他元的绝对值的和。证明A 是半正定的",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100128,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给你一个质地均匀的骰子，描述一个关于这个子的概率为 1/7 的事件",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100129,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "赌博策略: 每次抛掷两枚硬币，一正一反时可以赢得 1元，当硬币同时正面和同时负面都发生至少一次后，输掉所有钱且停止游戏。问要以什么样的策略玩这个游戏。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100130,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "计算 1234321*4321234",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100131,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给你沪深300指数的300只成分股的过去300个交易日每日收益序列，考虑到部分股票部分时间数据缺失 (上市时间少于 300天，且有些股票有些天停牌)，问如何计算这 300 只股票收益序列的样本协方差矩阵使得它是正定的。 (尽可能接近真实协方差)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100132,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "实现单链表逆置算法，并分析时间复杂度",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100133,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "数字0,1,2...n-1这n个数字排成一个圆圈，从数字0 开始，每次从这个圆圈里删除第 m个数字。求出这个圆圈里剩下的最后一个数字是多少? 分析算法的时间复杂度。 例如，n=5，m=3 则删除的数字依次是 2,0,4,1。最后剩下的数字是 3.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "笔试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100134,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "合并相邻数组，例如[[1,3],[2,6],[8,10]]--->[1,6] [8,10]",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "面试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100135,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一个数，每个位相加，求出最后一位",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "玄信"
+  ],
+  "kind": "面试",
+  "src_file": "玄信.docx"
+ },
+ {
+  "id": 100136,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "************************\nGet Missing Letters                              \n************************\nThe sentence \"A quick brown fox jumps over the lazy dog\" contains every single letter in the alphabe",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "盛冠达"
+  ],
+  "kind": "笔试",
+  "src_file": "盛冠达.docx"
+ },
+ {
+  "id": 100137,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "************************\nBest Time to Buy and Sell Stock                             \n************************ Say you have an array for which the ith element is the price of a given stock on day i. I",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "盛冠达"
+  ],
+  "kind": "笔试",
+  "src_file": "盛冠达.docx"
+ },
+ {
+  "id": 100138,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "小数点后第200位是多少，并证明",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "稳博"
+  ],
+  "kind": "笔试",
+  "src_file": "稳博.docx"
+ },
+ {
+  "id": 100139,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "现有⼀大小为m*n的股票数据集，其包含了多⽀股票多天的特征数据, 前两列为时间和股票代码,后n-2列为特征, 现在想要对其作 1D-CNN 的回归训 练 (假设 kernel 个数为 1 , kernel size 为 3 ), 请简要描述该如何进⾏数据处理及模型训练, 并画出 CNN 流 程图 (每⼀层之间如何转化)。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "稳博"
+  ],
+  "kind": "笔试",
+  "src_file": "稳博.docx"
+ },
+ {
+  "id": 100140,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "你有无限多的 4 种类积木(长宽高): 1*1*1 2*1*1 3*1*1 4*1*1 你需要用它们拼出一面宽为m ,高为 n,厚度为 1的墙。满足以下条件: 1.墙上没有任何空洞。 2.积木必须横着使用(最长边与地面平行)。 3.为了墙的坚固,不能有一条上下贯穿整面墙的断面。(如下面第一个不满足条件的 示例: n=2 m=3 要求编写程序 (语⾔不限), 给定m,n, 计算满⾜条件的不相同的墙的",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "稳博"
+  ],
+  "kind": "笔试",
+  "src_file": "稳博.docx"
+ },
+ {
+  "id": 100141,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "有一个游戏，你和一个毫无智能的机器人共同进行。桌子上有7 颗糖，在你的回合你可以选择拿走一颗糖或者两颗糖（不可不拿）。机器人是纯随机地从1 到6 里选一个数（概率各1/6），并拿走对应数目的糖（如果剩下的糖小于这个数目则是全部拿走）。拿走最后一块糖的玩家获胜。你可以选择先走或后走，那么在最优决策的情况下你的获胜几率是多少？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100142,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "我们在一个8 × 8 的网格上，最左下角的坐标是(0, 0)，最右上角的坐标是(7, 7)。每个节点有一个分数，坐标为(x, y) 的节点的分值是(x-5)^2+(y-5)^2。我们要从左下角走到右上角，每一步都只能向右或向上走一格，走到每个节点上时扣掉对应的分值。找到一条路线让我们最大化达到终点时的总分数。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100143,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given a fair coin, we keep tossing the coin until we see a head followed by a tail, and record the number of tosses as N. For example, the sequence (T, H, H) is a invalid (the tossing should continue)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100144,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given a fair coin, we keep tossing until we see two consecutive head’s, and record the number of tosses as M. For example, (H, T, H, H) is valid with M = 4. Compute the expected value of M.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100145,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "众所周知，在十进制表示下，如果一个整数x1x2 . . . xn 的所有数位的加和x1 +x2 +· · ·+xn能被3 或9整除，那么原本的这个整数也能被3或9（对应的）整除，我们这里把3 和9 在十进制里满足的这个性质叫做P(10)。请找出在8 进制和16 进制情况下所有满足P(8) 和P(16)的自然数，答案用十进制表达即可。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100146,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一共有多少个不一样的4 × 4 矩阵满足以下性质：",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100147,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Evaluate the following Python expression by hand",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100148,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "考虑一个概率游戏，两个玩家把同样数额的钱放在桌子上，然后各自猜一个方向（正或反，两人选的不一样），然后翻一枚硬币，猜对的人拿走桌上所有的钱。在这场游戏里，两人赢的概率都是50%，各自的收益预期都是0，并且在决定参加的时候两人的净资产的不确定性都增加了。这种零和零预期有波动的行为在传统金融理论里被认为是理智人不会参与的，但现实里很多人乐此不疲地进行着类似性质的活动，你觉得他们的动机都有什么？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100149,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "很多客观存在的数据对资产未来的收益率有一定的预示性，一般这些数据被叫做“因子”。基本面类的因子逻辑比较清晰，比如净利润增速高代表公司的业务发展比较快，可以预期未来该公司会有更高的估值。同时也有很多通过股票交易信息算出的因子（又叫量价因子）也对未来收益有预示性，比如最常见的动量因子或低波动因子，你觉得这类因子实际有效的理由和逻辑都有哪些呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100150,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "在量化研究里我们经常通过历史数据的统计来总结规律，但历史的统计都有“看着后视镜开车”的嫌疑，其总结的规律也有在未来会失效的可能。你觉得在研究过程里，怎么能确保或者相信研究产出的模型和策略在未来不会失效呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "聚宽"
+  ],
+  "kind": "笔试",
+  "src_file": "聚宽.docx"
+ },
+ {
+  "id": 100151,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "在一个赌场中，n(非常大)个赌客参加一个赌局，赌局每次下注 1 元，50%赌客 赢，50%赌客输,赢的赚 1 元,输的亏 1 元。 所有赌客在第一轮持有现金 m 元，当赌客资金归 零时则赌客出局，赌场不会破产，初始资金记为 0，可以为负无穷。 到某个有限的第 k 轮(所 有赌客未全部输光)上，这 n 位赌客的资金随时间演化将是什么情况？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "致诚卓远"
+  ],
+  "kind": "面试",
+  "src_file": "致诚卓远.docx"
+ },
+ {
+  "id": 100152,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "计算20220704当周（从自然日7月1号国内夜盘开始，到7月8号国内日盘结束为止）布伦特原油和上海原油价差的时间序列，并作图",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "笔试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100153,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "设计一个布伦特原油和上海原油的配对交易策略，在1给定的时间区间内回测，计算每日和总体交易回合数，每日和总体回合胜率，每日和总体回合平均pnl，策略单日pnl，单日手续费，并且画出日频累计pnl曲线。（日期按内盘的交易日划分）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "笔试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100154,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "使用Python完成如下笔试题：",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "笔试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100155,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "PTA_data_day.7z包含PTA品种主力合约15天（20220822-20220909）的日盘tick data。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "笔试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100156,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "现给定10个商品期货品种在2022年1-6月的tick行情原始数据（数据下载链接：https://pan.baidu.com/s/1931SiOwFEaupYGnCY8HyWA 提取码：spqh，行情字段分别为int_time时间/last_px最新价/total_vol当日总成交量），以及主力合约表main_contract，请根据给定数据完成以下问题，并附上python代码。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "笔试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100157,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何用l2数据合成50档订单簿数据？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "面试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100158,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何构建模型输入特征？能否举一个例子？为什么有效？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "面试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100159,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何优化神经网络损失函数降低预测换手率？如何优化多头收益？如何降低预测多目标表标签的相关性？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "面试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100160,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何处理数据分布漂移的情况？为什么会有效？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "茂源"
+  ],
+  "kind": "面试",
+  "src_file": "茂源.docx"
+ },
+ {
+  "id": 100161,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "对CTA策略的了解。对多因子模型的了解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蒙玺"
+  ],
+  "kind": "面试",
+  "src_file": "蒙玺.docx"
+ },
+ {
+  "id": 100162,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A是一个相关系数矩阵，求A^-1的特征值的和的范围",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100163,
+  "cat": "calc",
+  "diff": 3,
+  "book": "neiz",
+  "title": "矩阵A和B是实对称矩阵，A的特征值位于区间[a,b]，B的特征值位于区间[c,d]，求A+B的特征值的范围并证明",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100164,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "线性回归，如果数据再复制一份，问p值，beta和t统计量怎么变化？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100165,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "怎么处理股票中的长、短期信号？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100166,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "n个球，其中m个是红球，不放回抽取，直到抽到红球为止，求抽的次数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100167,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "定义内积<a(x),b(x)>=，将1，x，x^2变成该内积下的标准正交基",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100168,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定3*3相关系数矩阵，问这个随机向量往任意方向投影的方差最大值",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100169,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "一个array，如果后一项比前一项大，叫遮挡对，问长度为n的array遮挡对的期望个数 Follow-up: 设计算法，计算长为n的array有多少种排列可以形成长为k的遮挡对",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100170,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "y对x1做回归的相关系数R1，对X2做回归的相关系数R2，同时对X1,X2做回归的相关系数R3。R3和R1，R2之间的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "面试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100171,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "在球面外部空间有 9 个点。假设球是不透明的。求证:在球面上可找到这样的点，从该点至多只能看到上述9个点中的3个点 Follow-up: 天空中有9颗星星，证明在地球上能找到一点至少能看见四颗星星",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "衍复"
+  ],
+  "kind": "笔试",
+  "src_file": "衍复.docx"
+ },
+ {
+  "id": 100172,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "三维空间中是否存在5个向量，两两夹角钝角",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100173,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "扔硬币，求在扔到第K个正面之前，出现过K+1个反面的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100174,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "8男7女被随机安排在一排 15 个位置上 问 男女相邻的对数 的期望是多少? Follow-up：如果是一圈呢？ 掷骰子，求扔出连续两次和为6的所需步数的期望 Follow-up：求在扔出6之前没有扔出5的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100175,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "连续生成服从U[0,1]分布的随机变量，若X_n >= X_{n-1}就停止。求生成值的个数的期望和最小值的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100176,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "n是奇数，求正n边形取3点构成锐角三角形的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100177,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "圆周上n个点位于同一半圆的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100178,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "y对x1，x2分别作回归，r^2都是0.1，求y对x1，x2一起做回归的r^2",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100179,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "N个随机变量的相关矩阵除了对角线上是1，其他的数都是ρ，求ρ的取值范围",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100180,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "X, Y 为独立的标准正态分布，求E(X|3X+4Y=A)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100181,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "长为1的线段随机分成n份，最长那段的长度的期望是多少",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100182,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "八个人围成一圈，从第一个人开始击鼓传花，每次传花要扔一个硬币，正面向左，反面向右，当最后还剩一个人没有被传到时，游戏结束，那个人获胜，问为了获胜概率最高，你应该坐到哪里？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100183,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "小数点后第100 位是什么数字?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇.docx"
+ },
+ {
+  "id": 100184,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "randomly sample 3 points on a 2D unit circle, what's the probability those 3 points form Acute triangle(锐角三角形)？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100185,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "If a person tosses a coin once per second and he tosses 100 years, ask whether the following statement is correct or not: the probability of tossing 100 consecutive heads is less than 0.00001.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100186,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Random walk at the four vertices of a tetrahedron:",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100187,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "100 passengers are boarding an airplane with 100 seats. Everyone has a ticket with his seat number. These 100 passengers aboard the airplane in order. However, the first passenger lost his ticket so h",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100188,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You have a sixty-sided dice and I have a fifty-sided one. Each round, we roll both and whoever gets the higher roll wins. If we roll the same number, I win. The loser pays the dollar amount of the win",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100189,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You are given N prices of a product from day 1 to N. You can trade this product at day i with price[i].",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100190,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A group of N people stand around a circle and start counting from 1 to K. the person who is counting K will quit the group. Follow-up: Do you have a better algorithm especially for K = 2 ?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100191,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Assume that we have a list A of length n，consist of positive integer. For any i, j belong to [1, n], we can calculate gcd(Ai, Aj) as Gij.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100192,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given a deck of 52 cards with values from 1,2,3 to 11(J),12(Q),13(K). Suppose you draw three cards randomly from the deck. You have two options of action:",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100193,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Given a pond with infinite number of fish (fish weight follows uniform distribution U(0,1)), we are supposed to catch fish following the rules:",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "赫富"
+  ],
+  "kind": "笔试",
+  "src_file": "赫富.docx"
+ },
+ {
+  "id": 100194,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "随机变量X服从[0,1]上的均匀分布。设a,b,c是X的三次观测值。求a+b+c<2.2的⼏率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100195,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "小明每天坐⽕车, 火车下午 5 整点到达火车站。他的⽼婆每天开车从家出发,也是 5 点整到达火车站, 接上小明回家。这⼀天, 小明 4 点整到达火车站, 然后 就向家的⽅向⾛路。小明的⽼婆按照平时的时间出门接小明, 结果半路上碰到小明, 把他接上回家, 发现比平时早 10 分钟到家。所有的⾛路和开车都是匀速运 动。问小明⾛路⾛了多长时间。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100196,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "哥哥和弟弟玩⽯头剪⼑布, 每次输的给赢的1块钱, 平局都不给钱。弟弟⼿笨, 不会出剪⼑, 只会出⽯头和布。哥哥可以正常出⽯头剪⼑布。哥哥和弟弟都互相 了解且⽆穷聪明。问哥哥每次玩需要给弟弟多少钱, 弟弟和哥哥玩这个游戏才正好都不吃亏?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100197,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "甲⼄丙三个⼈玩⼀个游戏。他们按照甲, ⼄, 丙的顺序依次选定⼀个 1 到100 之 中的整数 (共 100 种选择), 后选的⼈不能选择已经被选过的数字。三个⼈都选定之后, 计算机随机从这 100 个数字中选出⼀个数字。三⼈中, 谁选定的数字离计算机选 出的数字最近, 谁获得 1 块钱。如果最近的⼈不⽌⼀个, 则没⼈得到钱。甲⼄丙都希 望得到期望尽可能多的钱。甲第⼀个选择了 27。⼄和丙都是⽆限聪",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100198,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有30个相同的球放到2个红盒⼦和1个绿盒⼦⾥。这2个红盒是相同的。盒⼦可以空着, ⼀共有多少种放法?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100199,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "⼀个长为L的匀质细⽊棍, 你把⽊棍上的⼀点固定在空间⾥。这根⽊棍可以绕这个点做⽆摩擦转动。把这根⽊棍从⽔平状态从静⽌释放, 这根⽊棍就会在重力⽤下向下摆动。要想让这跟⽊棍⽤最短时间第⼀次下摆到坚直状态, 那么固定点应该距离⽊棍的中点多远?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100200,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "对于三个随机变量 , 我们通过观察得到了三组数据 ,x1,x2,y。我们通过观察得到了三组数据X1,X2,Y。接下来 对这些数据进⾏两种不同的 OLS 回归。⾸先, Y对X1进⾏回归, 再将所得到的残差对X2进⾏回归, 最终得到X2的回归系数 beta1=0.1。现在, 我们将Y对X1和X2同时进⾏回归, 得到X2所对应的回归系数 beta2。求 beta2 的取值范围。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登"
+  ],
+  "kind": "笔试",
+  "src_file": "通登.docx"
+ },
+ {
+  "id": 100201,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "在平面坐标系上，定义 $(x, y)$ 均为整数的点为＂网格点＂，而所有顶点都在网格上的三角形为＂网杨三角形＂，如图：图中展示了所有了种不全等的面积为 4 的锐角网格三角形，清问一共有多少种不全等的，面积为 8 的锐角网格三角形",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "高塔"
+  ],
+  "kind": "笔试",
+  "src_file": "高塔.docx"
+ },
+ {
+  "id": 100202,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "现有一根长度为 1 的针，随机投放在一个长度为1的正方形网格地面上，请问这根针和网格两况相交的概率多少",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "高塔"
+  ],
+  "kind": "笔试",
+  "src_file": "高塔.docx"
+ },
+ {
+  "id": 100203,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Let  be the set of integers, determine acc functions such that, for all integers  and",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "高塔"
+  ],
+  "kind": "笔试",
+  "src_file": "高塔.docx"
+ },
+ {
+  "id": 100204,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "两个正态分布随机变量相关系数为零是否说明他们独立，为什么",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100205,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "灯泡点亮服从参数λ的泊松分布，求点亮时间的期望； 两个独立的灯泡并联，求存在灯泡点亮的最长时间的期望；",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100206,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "你理解的因子IC值传导股票收益率的路径 为什么换手率高的股票IC高 只用因子IC值有什么缺陷 如何优化",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100207,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "Rm=10%，rf=4%， 有投资组合β=1/3，期望收益5% 是否存在套利机会，如何构建？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100208,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "资产组合相关系数多少的时候可以最小化风险    -1",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100209,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "英镑利率27%，美元9%，1年，问英镑对美元汇率增值/贬值 多少？ 贬值,（1＋9％）/(1+27%)=85.83%,所以贬值14％",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100210,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "你习惯的因子开发步骤，因子有效性怎么检验，发现有效性差怎么优化？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100211,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "dataframe处理 多重索引 print所有日期A股票的所有数据（group by） 求出每一行中位数 求出每一行大于0.5部分的std",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100212,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "不使用df.corr()计算相关系数 误差有限制",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100213,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Leetcode 股票买卖最佳时机④ 动态规划： ①补充 n天最多[n/2]向下取整笔交易，所以取k与[n/2]较小 ②状态转移方程 buy[i][j]手中持有股票，交易j次，获得的最大收益 sell[i][j]手中不持有股票，交易j次，获得的最大收益 对于prices[0-i] buy[i][j]=max(buy[i-1][j],sell[i-1][j]-prices[i]) sell[i][j",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "超量子"
+  ],
+  "kind": "面试",
+  "src_file": "超量子.docx"
+ },
+ {
+  "id": 100214,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Assume that one can flip a fair coin once every second and will do so for 100 years without stopping. True of false: one will not observe a sequence of 100 consecutive heads with 99.99% probability. A",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100215,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Two points are chosen, uniformly and independently distributed, on a line of length 60. What is the average expected distance between them? (3 min, score = 4)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100216,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "There are 4 green and 60 red apples in a basket. They are removed one by-one, without replacement, until all 4 green ones are all extracted. What is the expected number of apples that will be left in ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100217,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You go 1 mile south, 1 mile west, 1mile north and end up at exactly same place you started. At how many points could you have started? A. 0 B. 1 C. 2 D. 4 E. Infinity (5 min, score = 6)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100218,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Seven People are in an argument, and they may tell true of false. They give the following statements: Zhao: “No one lines.” Qian: “No one tells the truth.” Sun: “Qian is not a liar.” Li: “Sun and Zhou",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100219,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Let N be the length of an array of real numbers. Select all correct statements from below about quick sort algorithm. A. Worst-case time complexity is O(N^2) B. Worst-case time complexity is O(N*log(N",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30min"
+  ],
+  "kind": "面试",
+  "src_file": "诚奇-笔试30min.docx"
+ },
+ {
+  "id": 100220,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "树模型和神经网络模型各自有哪些优势？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蝶威"
+  ],
+  "kind": "面试",
+  "src_file": "蝶威.docx"
+ },
+ {
+  "id": 100221,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "是否了解Tabnet，为什么tabnet不work解释原因。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蝶威"
+  ],
+  "kind": "面试",
+  "src_file": "蝶威.docx"
+ },
+ {
+  "id": 100222,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "遗传算法挖因子过程中如何约束因子之间的相关性",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蝶威"
+  ],
+  "kind": "面试",
+  "src_file": "蝶威.docx"
+ },
+ {
+  "id": 100223,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "针对极端行情（例如今年九月底）如何对模型进行处理？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蝶威"
+  ],
+  "kind": "面试",
+  "src_file": "蝶威.docx"
+ },
+ {
+  "id": 100224,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "对于两个预测label（1d和2d），使用相同的特征预测哪个预测的ic高，哪个预测的回测结果好？为什么？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蝶威"
+  ],
+  "kind": "面试",
+  "src_file": "蝶威.docx"
+ },
+ {
+  "id": 100225,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（1，0）（0，1）（1，1）围成的三角形区域中的点做回归，结果是？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "明泓投资"
+  ],
+  "kind": "面试",
+  "src_file": "明泓投资.docx"
+ },
+ {
+  "id": 100226,
+  "cat": "algo",
+  "diff": 1,
+  "book": "neiz",
+  "title": "实现一个简单的计算器功能（加法和减法）；加入乘法和除法呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "明泓投资"
+  ],
+  "kind": "面试",
+  "src_file": "明泓投资.docx"
+ },
+ {
+  "id": 100227,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "骰子和为6的倍数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "明泓投资"
+  ],
+  "kind": "面试",
+  "src_file": "明泓投资.docx"
+ },
+ {
+  "id": 100228,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "囚犯有七名，给这七人随机戴上红橙黄绿青蓝紫颜色的帽子（每种颜色的帽子有无数顶而不是一顶），每名囚犯可以看到另外六人的帽子颜色，但看不到自己的，囚犯之间不允许有交流。但事前可以给这七人一次商量对策的机会，商量过后即被戴上帽子一个个叫出回答帽子颜色，若七人中有一人猜中则可全员释放。问囚犯应该怎样商量对策呢？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "明泓投资"
+  ],
+  "kind": "面试",
+  "src_file": "明泓投资.docx"
+ },
+ {
+  "id": 100229,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Python的多线程机制",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "明泓投资"
+  ],
+  "kind": "面试",
+  "src_file": "明泓投资.docx"
+ },
+ {
+  "id": 100230,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "提示：请用自己组织语言回答问题。如果不熟悉，请不要答题，因为后续面试的题目会复杂得多。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100231,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "你用过的多因子回测框架有哪些？是自己写的还是公共平台？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100232,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测一个因子，过去T 天，每天股票 universe 不尽相同。请问怎么计算 ic？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100233,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "请介绍一下多因子回测框架中的 universe 是什么，应怎么选取？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100234,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "请问多因子回测框架中分十组是拿来做什么的，你选取分十组的什么指标，可以怎样说明因子的质量？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100235,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "对于价量数据或者基本面数据，会出现怎样的异常值？你会怎么处理？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "绰瑞资产-股票多因子实习生-笔试题"
+  ],
+  "kind": "面试",
+  "src_file": "绰瑞资产-股票多因子实习生-笔试题.docx"
+ },
+ {
+  "id": 100236,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "空间中有一块 1*2*3 的长方体砖头，对于空间中的点 A，只要砖头中存在一点与A 距离小于1，我们就叫 A “近砖点”。注意砖头内部的点是近砖点。空间中所有近砖点组成的集合的体积是。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登 2"
+  ],
+  "kind": "面试",
+  "src_file": "通登 2.docx"
+ },
+ {
+  "id": 100237,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "小明扔三个等概率 1-6 六面色子，然后他观察结果，从这三个色子中挑出n 个色子(n∈[0,3]），把挑出的 n 个色子再扔一遍。此操作后，当且仅当三个色子的和为 7，小明胜利。小明无限聪明，那么n=2的概率是 。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登 2"
+  ],
+  "kind": "面试",
+  "src_file": "通登 2.docx"
+ },
+ {
+  "id": 100238,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如图，在四边形 ABC D 中，AB= 2，BC= 3，CD=1,∠ABC=75˚,∠BCD=120˚,则∠CDA=",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登 2"
+  ],
+  "kind": "面试",
+  "src_file": "通登 2.docx"
+ },
+ {
+  "id": 100239,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有一辆摩托车，沿半径为 R 的大圆作水平圆周运动，地面和摩托车的摩擦系数是μ，摩托车从静止开始作加速圆周运动。如果摩托车想要达到最快可能的圆周运动速度，需要的最小距离是多少？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登 2"
+  ],
+  "kind": "面试",
+  "src_file": "通登 2.docx"
+ },
+ {
+  "id": 100240,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "手机键盘，在 3*3 格子上有 8 个数字（下中的点没有数字），则在此键盘上的最长画线密码是什么？有多长？每个数字最多经过一次举例：8→1→5→6→4→7→3→2 是满足每个数字最多经过一次的，长度为",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "通登 2"
+  ],
+  "kind": "面试",
+  "src_file": "通登 2.docx"
+ },
+ {
+  "id": 100241,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "\\1. 投掷一个fair coin, 第一次出现连续两次正面的投掷次数期望值是多少？\n\nA:4 B:5 C:6 D:7\n\n\n\n\n\n\\2. 一个色子，每面有等概率是1-6中的一个数字，第一次投掷后最上面是1， 问下次投掷最上面仍然是1的概率是？\n\nA: 1/3 B: 1/4 C: 11/36 D:7/24\n\n\n\n\n\n\\3. 在以原点为圆心的单位圆内随机均匀分布着1000个点，另外在(100,100)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "锐天"
+  ],
+  "kind": "面试",
+  "src_file": "锐天.docx"
+ },
+ {
+  "id": 100242,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "的整数部分的个位数字是?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "靖奇投资"
+  ],
+  "kind": "面试",
+  "src_file": "靖奇投资.docx"
+ },
+ {
+  "id": 100243,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "深度学习的定义？循环神经网络是否是深度学习模型？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "靖奇投资"
+  ],
+  "kind": "面试",
+  "src_file": "靖奇投资.docx"
+ },
+ {
+  "id": 100244,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "简述Transformer在时序预测领域的应用。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "靖奇投资"
+  ],
+  "kind": "面试",
+  "src_file": "靖奇投资.docx"
+ },
+ {
+  "id": 100245,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "输入：输入包括多组数据, 每组数据第一行是两个整数N、M, N表示上海的大街上有几个路口，标号为1的路口是商店所在地, 标号为 N 的路口是公司所在地， M 则表示在上海有几条路。表示输入结束。接下来M行，每行包括3个整数A,B,C (1<=A, B<=N, 1<=C<=1000),表示在路口 A 与路口 B 之间有一条路，我们需要C分钟的时间走过这条路。输入保讯至少存在1条商店到公司的路线。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "靖奇投资"
+  ],
+  "kind": "面试",
+  "src_file": "靖奇投资.docx"
+ },
+ {
+  "id": 100246,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "输出：对于每组输入，输出一行，表示我们从商店到公司的最短时间。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "靖奇投资"
+  ],
+  "kind": "面试",
+  "src_file": "靖奇投资.docx"
+ },
+ {
+  "id": 100247,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "给定一组委托记录，每笔委托记录为(委托价格,委托量,委托方向)的三元组，按最大成交量原则进行模拟撮合其中委托方向=1表示买入，-1表示卖出，委托价格都是100的整数倍，如果最大成交量为0，则视为无撮合价，返回-1。如果有多个价格能达到最大成交量，则以其中最大值和最小值的算术平均数为撮合价，返回撮合价。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "孝庸基金"
+  ],
+  "kind": "面试",
+  "src_file": "孝庸基金.docx"
+ },
+ {
+  "id": 100248,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（思晔-面试）市价委托和限价委托有什么区别",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "思晔"
+  ],
+  "kind": "面试",
+  "src_file": "思晔.docx"
+ },
+ {
+  "id": 100249,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（洛书-面试）问bs模型，以及别的一些期权定价模型等理论层面的东西",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "洛书"
+  ],
+  "kind": "面试",
+  "src_file": "洛书.docx"
+ },
+ {
+  "id": 100250,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（燧石-笔试）复现华泰人工智能系列的研报",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "燧石"
+  ],
+  "kind": "面试",
+  "src_file": "燧石.docx"
+ },
+ {
+  "id": 100251,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（蒙玺-面试）对CTA策略的了解。对多因子模型的了解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "蒙玺"
+  ],
+  "kind": "面试",
+  "src_file": "蒙玺.docx"
+ },
+ {
+  "id": 100252,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（致诚卓远-面试）在一个赌场中，n(非常大)个赌客参加一个赌局，赌局每次下注 1 元，50%赌客 赢，50%赌客输,赢的赚 1 元,输的亏 1 元。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "致诚卓远"
+  ],
+  "kind": "面试",
+  "src_file": "致诚卓远.docx"
+ },
+ {
+  "id": 100253,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "所有赌客在第一轮持有现金 m 元，当赌客资金归 零时则赌客出局，赌场不会破产，初始资金记为 0，可以为负无穷。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "致诚卓远"
+  ],
+  "kind": "面试",
+  "src_file": "致诚卓远.docx"
+ },
+ {
+  "id": 100254,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "到某个有限的第 k 轮(所 有赌客未全部输光)上，这 n 位赌客的资金随时间演化将是什么情况？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "致诚卓远"
+  ],
+  "kind": "面试",
+  "src_file": "致诚卓远.docx"
+ },
+ {
+  "id": 100255,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-笔试）给定一千个特征来对第二日收益做预测，假设我们有过去十年的历史，你认为深度学习模型需要做哪些设计来提升多头的收益，为什么这些设计可能会有效。（可以是任何设计，包括对模型结构的，loss function的等）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100256,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-笔试）假设我们有新闻舆情数据，可以告诉我们每个股票每天新闻的相关度和舆情打分，同时我们也有每个股票每天的行情数据（量价数据），我们用这个新闻舆情数据怎么样做一个信号？为什么能够产生收益？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100257,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-面试）如果我们有一个每日做空量的数据（假设股票市场每个股票都可以做空，且做空没有成本比如做空的手续费等，只有因为做空产生的收益盈亏），假设这个数据可以告诉我们每个股票每天正在被做空的总量（比如有占流通股数2%的股票正在被做空），同时我们也有每个股票每天的行情数据（量价数据），我们利用这个做空量数据如何做一个信号？以及为什么这个信号能够有效？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100258,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-面试）拿到分析师研究报告数据以及企业的财务报告数据，我们可以做哪些对市场有预测力的因子（可以是长期也可以是短期），描述因子的逻辑，为什么这些因子会有效。（希望这个因子能够反映你对企业基本面的认知）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100259,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-面试）拿到分析师研究报告数据以及企业的财务报告数据，我们可以做哪些对市场有预测力的因子（可以是长期也可以是短期），描述因子的逻辑，为什么这些因子会有效。（希望这个因子能够反映你对企业基本面的认知）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100260,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（九坤-面试）给定一个从公告中提取的事件数据库，其中有各种事件，包括人事变动，企业股东大会，等等。你觉得用哪些事件以及如何使用这些事件可以做出对价格的预测？为什么会有效？(上市公司大宗交易、股东回购、主营产品价格变动)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "九坤"
+  ],
+  "kind": "面试",
+  "src_file": "九坤_3.docx"
+ },
+ {
+  "id": 100261,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）一个策略夏普为10，加了10倍杠杆后波动率怎么变，夏普变成为多少？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100262,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "（乾象-面试）20个人，把20个人的名字的标签放进箱子里，然后每个人从里面选一个出来，每个人和他选到名字的人成为一组（即一个组是封闭的，同组的人一定选到同组的人，也一定被同组的人选到），问最终组数的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100263,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "（乾象-面试）100个球投100个箱子，空箱子数量的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100264,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）俩正常硬币，一个两面都是H的硬币，投一次是H，问是非正常硬币的概率",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100265,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "（乾象-面试）掷骰子连续两次都是6的期望步数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100266,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）随机数模拟pi，误差随着样本数量怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100267,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）X, Y服从U(0, 1)，问E(max(X, Y))",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100268,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "（乾象-面试）投三次骰子，每次都可以接受或者选择投下一次，问最优策略下收益的期望",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100269,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）PCA原理",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100270,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）线性回归，样本复制M遍后beta, t, R2怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100271,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）线性回归，自变量和因变量都乘k，r2怎么变",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100272,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（乾象-面试）多少个人，三个人同天生日的概率大于50%",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "乾象"
+  ],
+  "kind": "面试",
+  "src_file": "乾象.docx"
+ },
+ {
+  "id": 100273,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（天演-笔试）## 交易结算练习\n\n交易结算是交易员每天最重要的例行公事之一，每天收盘后交易员都需要确保当日所有的交易都被“正确”地执行，并且当有交易核对失败时需要采用合理的方式进行处理。\n\n交易效验最常用的一种方式就是做多个备份，并在一天交易结束后，核对各个备份的记录，只有当所有的备份都完全一致时，才说明今天的交易已经全部被正确结算。\n\n下面这个练习，需要你将三份不同的持仓记录进行对比，如果持仓",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "天演"
+  ],
+  "kind": "面试",
+  "src_file": "天演.docx"
+ },
+ {
+  "id": 100274,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "有一枚公平的硬币，我们一直翻它直到得到两个连续的正面为止，并且记下在这过程里累计 出现的正面的数量。比如，HTTHH 里正面数量是 3，HTHTHH是 4。另比如 THHH 不是一个合 法序列，因为在出现第二个正面的时候就应当中止。请计算累计正面数量的期望值。 1",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100275,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "设两个 R2 里的圆S1 :={(x,y )∈ R2 :x2+y2 = 1}和S2 :={(x,y )∈ R2 :x2+(y−4)2 = 1}。 已知有四条线相切 S1和 S2各一个点，其中有两条分别是 x = 1 和 x =−1，请找到另外两 条。 2",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100276,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "手动计算下面的 Python 表达式 sum([x for x in range(10000) if ’00’ not in str(x)]) 展示你的计算过程。 3",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100277,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "你手里有一个资产，在接下来的三个时间点价格会发生变化，概率如下： • 在最开始的第一个时间点有 50% 上涨 2 元，有 50% 下跌 1 元； • 如果上一时间上涨，则下个时间有 25% 上涨 2 元，75% 下跌 1 元； • 相反如果上一时间下跌，则下个时间有 25% 下跌 1 元，75% 上涨 2 元。 你在每次价格变动之后都可以选择卖出，但一旦卖出就没有机会再买回。找到一个策略最大化 你",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100278,
+  "cat": "calc",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一共有多 多 多少 少 少个 个 个不一样的 4× 4矩阵满足以下性质： • 每个值都是 0 或者 1； • 每行和每列的 1 的数量都是奇数。 比如：   1 1 0 1 1 0 0 0 1 0 1 1 0 0 0 1   就是一个例子。 5",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100279,
+  "cat": "algo",
+  "diff": 1,
+  "book": "neiz",
+  "title": "我们有一个有限集合 S，分成 n 个不相交的子集 Ai，即 Ai∩Aj =∅ ∀i̸=j，且 n[ i=1 Ai =S. 定义哑变量 xi∈ RS 为 (xi)s = ( 1 if s∈Ai 0 if s /∈Ai ∀i = 1,...,n. 另有变量 y∈ RS。考虑以下简单线性回归模型 y =α +β1x1 +β2x2 +··· +βnxn +ε. 在进行回归拟合的时候，会发生什么问题？可以考",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100280,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（开放题）众所周知交易者的非理智性和信息不全都会造成市场的非有效性，在此之外，你 能想到哪些不可抗因素造成的非有效交易行为，即即使交易者拥有全部信息并且完全理智也会 做出的在市场整体看来偏离有效价格的交易？ 7",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100281,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "（开放题）描述一下你了解的中国量化私募过去五年里比较大的行业性超额回撤（指行大部 分量化基金的超额收益同时发生较大回撤，不考虑大盘波动）。当时发生了什么，是什么原 因，在你看来能否预警或者控制？ 8",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "投研面试题"
+  ],
+  "kind": "笔试",
+  "src_file": "投研面试题_v3.pdf"
+ },
+ {
+  "id": 100282,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "根据项目描述，使用 Python 完成下面的10 道问题，项目持续时间2 天",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100283,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "请在项目完成后，提交测试报告，格式: 策略_姓名.html（jupyter notebook 导出为 html）， 最终评价会从思路、代码、报告形式以及已有经验等多方面综合考虑",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100284,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "项目过程中遇到任何问题请与面试负责人沟通 数据说明 ./data/ 路径下有三份csv，分别：0.csv、1.csv、2.csv，表示某只股票连续三日的tick 级别交 易行情数据。以0.csv 为例，每一行表示一个tick 截面，共包含49 个字段，具体说明见\"字 段说明.png\" 为了简化分析，本项目中提供 09:30:00~11:30:00、13:00:00~14:56:57 两个连续竞价时",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100285,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "观察该股票日内相邻tick 间成交金额的变化，分析可能的原因",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100286,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "理想情况下，tick 行情会3s 推送一次，但实际中一些因素的影响，导致收到的行情是 非均匀的甚至tick 缺失，请设计合适的清洗方式，使得新数据以09:30:00 起始、14:56:57 结束，tick 频率3s 一次，作为标准tick 数据(每日行情4741 行) 提示：下面问题均使用清洗后的标准 tick 数据",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100287,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "定义：盘口中间价格mp=0.5*(ap1+bp1)、盘口价差比例spdr=(ap1-bp1)/mp，观察 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 保密 spdr 数据分布变化，总结有意义的现象，如某些tickspdr 突然变大的原因",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100288,
+  "cat": "finance",
+  "diff": 3,
+  "book": "neiz",
+  "title": "选择你认为最优的方案，对于任意时刻t，定义过去20 个tick 的波动性，需考虑震荡上 涨/下跌和快速上涨/下跌的区别，并分析该定义的优缺点",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100289,
+  "cat": "finance",
+  "diff": 1,
+  "book": "neiz",
+  "title": "在任意时间t，定义：订单薄的买卖不均衡imbalance=(bv1-av1)/(bv1+av1)，买方力 量强时，因子值大；卖方力量强时，因子值小。我们认为:imbalance 与未来一段时间的 价格走势相关。但该imbalance 的定义过于简单，选择你认为更优的方案，重新定义 imbalance，解释其背后的逻辑，并通过统计检验分析imbalance 与未来价格走势的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100290,
+  "cat": "finance",
+  "diff": 3,
+  "book": "neiz",
+  "title": "定义：相邻tick 间的 成交量 = 主动买量 + 主动卖量 主动买 act_buy: 价格 高于或等于 卖方一档价格的买单 主动卖 act_sell: 价格 低于或等于 买方一档价格的卖单 请选择你认为最优的方案，估计相邻tick 间的主动买卖量，并列出可能存在的问题",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100291,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "根据主动买卖量，设计成交类型因子trade_fc，统计检验分析trade_fc 与未来价格走势 的关系",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100292,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "定义撤单：相邻tick 间，订单薄orderbook 上每一档撤消的挂单量。根据10 挡orderbook 的挂单量以及估算的主动买卖量，估计相邻tick 间每一档价格上对应的撤单量",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100293,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "结合对该股票的其他观察，统计和猜测，有什么可以盈利的策略？写出策略的思路、可 以盈利的原因以及什么时候可能不盈利（提示：不计手续费；可以低买高卖/高卖低买） 最后结语 做到这里，想必你对高频交易已经有了一些了解：于细小处见甚微，于细小处见大势。我们 从微小的盘口，流动性出发，推测市场上博弈的变化，激流勇进，其乐无穷。我们希望你可 以从这个项目中得到不一样的启发，窥一斑而知豹；也希望你提出可行的优化",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "概率2"
+  ],
+  "kind": "笔试",
+  "src_file": "概率2.pdf"
+ },
+ {
+  "id": 100294,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有三个文本 abc ，a 和 b 的余弦相似度是 0.9 ，b 和 c 之间是 0.95 ，问 a 和 c 之间 余弦相似度的范围？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100295,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "比较 pi^e 和 e^pi 的大小",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100296,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "证明 sqrt(3)是无理数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100297,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "竖式计算 514139265358^2",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100298,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "One hundred tigers and one sheep are put on a magic island that only has grass. Tigers can eat grass, but the y would rather eat sheep. Assume: A. Each time only one tiger can eat one sheep, and that ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100299,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You and your colleagues know that your boss A's birthday is one of the following 10 dates: Mar 4, Mar 5, Mar 8 Jun 4, Jun 7 Sep 1, Sep 5 Dec 1, Dec 2, Dec 8 A told you only the month of his birthday, ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100300,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "推导岭回归 (最小化 ||𝐴𝑥 − 𝑏||2 2 + 𝛼||𝑥||2 2)的解析解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100301,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "论述使用岭回归与主成分分析求解线性方程的本质差异 。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100302,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "使用梯度下降法迭代求解 线性回归，请写出伪代码。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100303,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "N 个人每人准备一份礼物，将所有礼物汇总再随机分发给每个人，求拿到自己准 备的礼物期望人数。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100304,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "已知自变量 x 与因变量 y 之间的线性相关性样本点组成的集合 M1(1000 个样 本)，另有一个新的相关性样本集合 M2（100 个样本）,设 M1 为样本内，M2 为 样本外，如何判定样本外 x 与 y 的线性关系是否保持不变。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100305,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "公司特征库存在特征集合  ，假设你找到了一个新的特征 F，该特征对预测目 标为 y 有预测作用，如何判定新特征是否进入特征库，仅考虑线性关系？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100306,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "平均多少个(0, 1)均匀分布的随机数的和大于 1",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100307,
+  "cat": "calc",
+  "diff": 3,
+  "book": "neiz",
+  "title": "一元带截距项线性回归中, 样本内残差的和是否一定为 0，请证明",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100308,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "现有一桶钢珠， 每次从中随机挑选一粒， 但是只有放弃掉手中钢珠后才能再次挑选， 你 共拥有 N 次机会，制定一个策略让最终手中钢珠重量更大。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100309,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一个圆环上有 100 个灯泡，灯泡有亮和暗两种状态。按一个灯泡的开关可以改 变它和与它相邻两个灯泡的状态。 设计一种算法， 对于任意初始状态， 使所有灯 泡全亮。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100310,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "现有 A 股上市公司平安银行最近 D 天的每天收盘价， 设计算法 每天计算过去 N （N<<D ） 天收盘价的标准差 ，并找到标准差序列的最大值， 说明算法的时间复杂 度。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100311,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "机器学习 预测结果误差分解 ，其与 偏差与方差 之间的关系 ，与过拟合欠拟合之间 的关系 。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100312,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "机器学习中怎么增加预测结果中正例的正确率。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100313,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "分析全连接神经网络参数个数。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100314,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "简述 LSTM 工作原理，并分析 LSTM 参数个数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100315,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "c++各容器增删改查元素的复杂度，以及相应原理。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100316,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "论证 python 一切皆对象。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100317,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如何增加代码的可读性。 （下面两题任选其一）",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100318,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "设计一份科学的研究计划，如何做出一份好吃的红烧肉。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100319,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "设计一份科学的研究计划，在外卖平台上，商家怎么做出一份盈利性好的红烧 肉。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "千象笔试题"
+  ],
+  "kind": "笔试",
+  "src_file": "千象笔试题.pdf"
+ },
+ {
+  "id": 100320,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "有三个文本 abc ，a 和 b 的余弦相似度是 0.9 ，b 和 c 之间是 0.95 ，问 a 和 c 之间余弦 相似度的范围？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100321,
+  "cat": "algo",
+  "diff": 3,
+  "book": "neiz",
+  "title": "现有 A 股上市公司平安银行最近 D 天的每天 收盘价， 每天计算 过去 N（N<<D ）天 收盘价的标准差 。设计算法 找到 标准差序列 的最大值， 并说明算法的时间复杂度。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100322,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "推导岭回归 (最小化 ||𝐴𝑥 − 𝑏||2 2 + 𝛼||𝑥||2 2)的解析解",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100323,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "N 个人每人准备一份礼物，将所有礼物汇总再随机分发给每个人，求拿到自己准备 的礼物期望 人数 。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100324,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "现有一桶钢珠，黄豆的重量满足正态分布，每次从中随机挑选一粒，但是只有放弃掉手中 钢珠后才能再次挑选，你共拥有 N 次机会，制定一个策略让最终手中钢珠重量更大。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100325,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "比较 pi^e 和 e^pi 的大小",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100326,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "计算 314159265358^2 8． 已知自变量x 与因变量 y 之间的线性相关性样本点组成的集合 M1(1000 个样本)， 另有一个新的相关性样本集合 M2（100 个样本）,设 M1 为样本内，M2 为样本外， 如何判定样本外 x 与 y 的线性关系是否保持不变。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100327,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "One hundred tigers and one sheep are put on a magic island that only has grass. Tigers can eat grass, but they would rather eat sheep. Assume: A. Each time only one tiger can eat one sheep, and that t",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100328,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "You and your colleagues know that your boss A's birthday is one of the following 10 dates: Mar 4, Mar 5, Mar 8 Jun 4, Jun 7 Sep 1, Sep 5 Dec 1, Dec 2, Dec 8 A told you only the month of his birthday, ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100329,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "公司特征库存在特征集合  ，假设你找到了一个新的特征 F，该特征对预测目标 为 y 有预测作用，如何判定新特征是否进入特征库，仅考虑线性关系？",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100330,
+  "cat": "prob",
+  "diff": 3,
+  "book": "neiz",
+  "title": "证明 sqrt(3)是无理数",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100331,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "一个圆环上有 100 个灯泡，灯泡有亮和暗两种状态。按一个灯泡的开关可以改 变它和与它相邻两个灯泡的状态。设计一种算法，对于任意初始状态，使所有灯泡 全亮。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100332,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "平均多少个(0, 1)均匀分布的随机数的和大于 1",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100333,
+  "cat": "calc",
+  "diff": 3,
+  "book": "neiz",
+  "title": "带截距项线性回归中, 样本内残差的和是否一定为 0，请证明",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "卡方"
+  ],
+  "kind": "笔试",
+  "src_file": "卡方.pdf"
+ },
+ {
+  "id": 100334,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Maximum time gap time gap = Amount of time that passes between consecutive trades of a symbol, if only 1 trade is in the file then the gap is 0.",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "量派题目-CodingExercise"
+  ],
+  "kind": "笔试",
+  "src_file": "量派题目-CodingExercise.pdf"
+ },
+ {
+  "id": 100335,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Total V olume traded (Sum of the quantity for all trades in a symbol).",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "量派题目-CodingExercise"
+  ],
+  "kind": "笔试",
+  "src_file": "量派题目-CodingExercise.pdf"
+ },
+ {
+  "id": 100336,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Weighted Average Price.  Average price per unit traded not per trade. Result should be truncated to whole numbers. Example: the following trades 20 shares of aaa @ 18 5 shares of aaa @ 7 Weighted Aver",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "量派题目-CodingExercise"
+  ],
+  "kind": "笔试",
+  "src_file": "量派题目-CodingExercise.pdf"
+ },
+ {
+  "id": 100337,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Max Trade Price. Your design should allow extension to additional numerical variables computed for each symbol. Output: Your solution should produce a file called 'output.csv'. This file should be a c",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "量派题目-CodingExercise"
+  ],
+  "kind": "笔试",
+  "src_file": "量派题目-CodingExercise.pdf"
+ },
+ {
+  "id": 100338,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "Triangle ABC has sides of length 45, 60 and 75. A point X is placed randomly and uniformly inside the triangle. What is the expected value of the sum of perpendicular distance from point X to this tri",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "诚奇-笔试30分钟"
+  ],
+  "kind": "笔试",
+  "src_file": "诚奇-笔试30分钟.pdf"
+ },
+ {
+  "id": 100339,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如果行业暴露系数𝛽不随着时间变化， 且所有行业回报𝑟𝑖(t) 的全部为 iid， 所有股票个体回报∈𝐴(t)也全部为 iid。 生成伪 数据，并写出代码使得你可以根据已知量倒推出未知量行 业暴露𝛽。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "凯读2"
+  ],
+  "kind": "笔试",
+  "src_file": "凯读2.pdf"
+ },
+ {
+  "id": 100340,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如果行业回报𝑟𝑖(t)未知，行业暴露系数𝛽不随着时间变化 ， 且所有行业回报𝑟𝑖(t)的全部为 iid，所有股票个体回报∈𝐴(t) 也全部为 iid。 生成伪数据， 并写出代码使得你可以根据已 知量倒推出未知量行业暴露𝛽和行业回报𝑟𝑖(t)。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "凯读2"
+  ],
+  "kind": "笔试",
+  "src_file": "凯读2.pdf"
+ },
+ {
+  "id": 100341,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "What is the distribution of the degree of a vertex in G(n, m)? the degree of a vertex is the number of edges connected to that vertex. [3pts]",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100342,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "What is the expected number of triangles in G(n, m)? Define a triangle as a fully-connected subgraph of 3 vertices. [7pts] 2 2 Q2 [10pts]",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100343,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A man starts from 49. Each time he walks one unit to the left or to the right with equal probability. He stops once he has reached either 0 or 100. What is the probability that he stops at 0? [2pts]",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100344,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A man starts from 49. Each time he walks one unit to the left with probability p (p∈ (0.5, 1]) or to the right with probability 1− p. He still stops once he has reached either 0 or 100. Show that his ",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100345,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "A man is in a circle with integer labels from 0 to 100, clockwise (both included). Each time he walks one unit clockwise or counter- clockwise with equal probability. He stops if he has visited all la",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100346,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "1 Given a long array in RAM, why is accessing it se- quentially much faster than accessing it randomly?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100347,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "2 When your program tries to use more than the phys- ical memory, does it crash? or does it just become slower? Why?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100348,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "3 Do you think a quick-sort on 1e5 elements would finish in one second? what about 1e8 elements? what about 1e10 elements? Why?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100349,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "4 From a computer architecture/low level perspective, what happens when you do !++var;!, when the vari- able is NOT cached?",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100350,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "5 What is an environment variable? What happens when you export an env var? If you exported an env var on a server in ssh, and then logged out and re- logged in, is the env var you exported still avai",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100351,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "1 Statement Holiday season is coming and you’re preparing for a huge party. There are n dishes you’d like to order for the party, but they are all from different restau- rants. Therefore, for each dis",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100352,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "2 Sample Input and Output For example, if n = 5, p = [1 , 2, 3, 2, 1], and d = [4 , 8, 5, 6, 3], then you can choose to order deliveries for dish 2 and 3. This way, you’ll need max(2 + 2, max(4, 5, 3)",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "佳期"
+  ],
+  "kind": "笔试",
+  "src_file": "佳期.pdf"
+ },
+ {
+  "id": 100353,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "因子数据（`factor_data/{date}.csv`） - 包含N个股票在T个时间点的因子暴露值。字段示例： ticker,tradelabel, factor_1, factor_2, ..., factor_n",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100354,
+  "cat": "algo",
+  "diff": 1,
+  "book": "neiz",
+  "title": "基础数据（`base_data.parquet`） - 对应每个股票的基础数据，可用来构建训练的标签，字段示例： ticker(股票代码),timestamps(时间戳),twap(后复权twap),vwap(后复权vwap),high(后复权最高 价),low(后复权最低价),open(后复权开始价格),close(后复权结束价格),volume(成交 量),amount(成交额).",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100355,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测使用数据（`模拟信号/{date}.csv`） - 该数据为回测示例数据，tradelabel列中202401040945表示2024年1月4日9 时45分计算出的模型信号。 建模要求",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100356,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "数据预处理 - 处理缺失值、异常值、标准化等，需说明方法及逻辑。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100357,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "样本划分 - 样本内（In-sample）：选择2023年数据用于模型训练与交叉验证。 - 样本外 （Out-of-sample）：预 留2024年数据用于测试， 严禁在训练中泄露样本外信息。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100358,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "特征工程与模型选择 - 特征工程：你 可 以 选 择 基 于 基 础 数 据 或 者 提 供 的 因 子 数 据 ，自 己 做 不 能 超 过20个特征 （因子），也可以不做任何因子。因子不能包含任何未来数据。 - 你可选择部分特征组合进行训练，请给出选择理由或者算法 - 模型选择（候选模型包括：线性回归、随机森林、GBDT、神经网络），需说明选择 依据。  GBDT模型推荐使用LightGBM。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100359,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "模型验证 - 在样本内使用验证集或者交叉验证，评估模型稳定性与过拟合风险。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100360,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "信号生成 - 根据模型预测值生成信号 回测要求",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100361,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测框架使用附录提供的回测工具，严格按照参数说明调用函数。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100362,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "参数设置 - 可以使用回测系统中的默认参数 - 也可以适当自定义，设置持仓周期，换仓逻辑等，改动需在报告中解释参数合理性。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100363,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "绩效评估 - 输出样本外回测结果，包括但不限于： - 累计收益率、年化收益率、最大回撤 - 夏普比率、胜率、盈亏比 - 分年度/分市场状态的收益分析 输出要求",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100364,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "代码与模型 - 完整可复现的代码（Python），包含数据预处理、建模、回测全流程。 - 训练好的模型文件（如`.pkl`或`.h5`）。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100365,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测结果* - 样本内外收益曲线图（需标注关键时点）。 - 绩效指标表格。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100366,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "分析报告 - 简述建模逻辑、过拟合控制方法、样本内外表现差异分析。 - 对策略失效场景的讨论（如因子失效、市场风格切换）。 附录 回测须知 请使用文件夹内的wtpy-0.9.9-py3-none-any.whl安装wondertrader，目前只支持 linux系统，通过pip install 即可。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100367,
+  "cat": "finance",
+  "diff": 2,
+  "book": "neiz",
+  "title": "因子文件参见factor_data文件夹。 因子值分日存放， 用ticker，tradelabel进行标 记。例如：202401040945表示2024年1月4日9时45分计算出的因子。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100368,
+  "cat": "prob",
+  "diff": 1,
+  "book": "neiz",
+  "title": "基础数据的base_data.parquet中的timestamps， 例如2023-01-03 09:30:00,代表从2023-01-03 09:30:00开始到未来5min 2023-01-03 09:34:59内的基础数据信息。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100369,
+  "cat": "algo",
+  "diff": 2,
+  "book": "neiz",
+  "title": "因子数据 （factor_data）与 构 造 标 签 的 基 础 数 据（base_data.parquet）均 为5min频率数据， 而回测使用的信号要求为15min的频率。因此在建模阶段输出模型信号之后，需要将模型 信号的频率抽样到’模拟信号’文件夹中示例的15min频率。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100370,
+  "cat": "finance",
+  "diff": 1,
+  "book": "neiz",
+  "title": "采用公榜与私榜的形式: 样本内为：2023.01.01-2023.12.31。 公榜样本外为：2024.01.01-2024.06.30。 私榜样本外为：2024.07.01-2024.12.31。 所以第一阶段提供的数据（因子，构造标签的基础数据，回测依赖数据）区间为：",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100371,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "01.01-2024.06.30。 回测的区间为：2024.01.01-2024.06.30。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100372,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测 回测请运行runBT.py文件。回测参数见runBT文件，有详细注释。 回测规则如下：",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100373,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "交易只在10:00-14:30进行",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100374,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "第一个交易日，将在 10:00 - 10:15 , ... , 14:15 - 14:30 这12个时点分批买 入总计N支股票。 买入的规则是买入该时刻信号最强的股票。 每一批买入的数量是N/12的 整数值。通常这不是个整数，所以尾盘会多买股票以确保总共买入N支股票。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100375,
+  "cat": "logic",
+  "diff": 2,
+  "book": "neiz",
+  "title": "之后，每天有12次换仓机会（10:00 - 10:15 , ... , 14:15 - 14:30）。策略将 在这12个时点分批进行换仓。具体的，策略会先卖再买，买的数量由卖的数量决定，这样 确保了持仓股票数量一般情况下不变。同样的，买入卖出的规则是*买入该时刻信号最强的 股票、卖出该时刻信号最弱的股票。每一批卖出的数量是N * turnover_rate/12的整数 值。通常这不是个整数，所以尾",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100376,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测程序对涨跌停进行了近似处理。在回测中，系统会提前根据下一期的twap计算近 似的return以确定下一期是否涨停 （当然现实中投资者无法知道该信息， 不过这影响不大） ， 我们的标准是主板绝对值大于9.5即为涨跌停， 创业板和科创板大于19.5即为涨跌停。 涨 停/跌停的股票不会进行买入/卖出交易。对于ST股票，程序不会买入（但会卖出）。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100377,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "若股票因跌停无法被卖出，程序将在后续时点优先卖出该股票。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100378,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "持仓中的股票不会再被买入；当天卖出的股票也不会再被买入；当天买入的股票不会被 卖出（T+1)。",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100379,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "如果计划买入/卖出某只股票，但因为ST、涨跌停等无法交易，则依照信号强弱顺延至 下一支股票。 交易成本设置为，买入0.0012，卖出0.0010 例1： 信号强弱排名为A>B>C>D>E，计 划 买 入3支股票。A，B正常买入，C涨停无法买入， 顺延至D，D为ST股票无法买入，顺延至E，E可买入，于是最终买入A、B、E。 例2：信 号 强 弱 排 名 为A<B<C<D<E，D为上一期因为跌停无法卖",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ },
+ {
+  "id": 100380,
+  "cat": "prob",
+  "diff": 2,
+  "book": "neiz",
+  "title": "回测结果分析 回测结束会自动生成一个PnLAnalyzing的excel文件，可以观察一些统计指标。 运行analysis.ipynb，可以计算超额收益的统计指标和净值对比图。 outputs_bt里存放一些原始回测文件，其中： * closes：记录每一笔交易记录，但其并没有按顺序排列 * positions：记录每天收盘时的持仓 * signals：记录每个时间点发出的订单 * trades：",
+  "answer": "",
+  "status": "real",
+  "source": "neiz",
+  "companies": [
+   "笔试题2025"
+  ],
+  "kind": "笔试",
+  "src_file": "交叉科技/笔试题2025_v1.0.pdf"
+ }
+]
