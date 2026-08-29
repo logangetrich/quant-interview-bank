@@ -122,6 +122,21 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .st-node.dont{border-color:var(--red);background:var(--red);color:#fff}
 .st-node.seen{border-color:var(--accent);color:var(--accent);background:var(--accent-l)}
 .st-node:hover{transform:scale(1.15)}
+.fav-star{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;line-height:1;padding:2px 4px;transition:all var(--tr);flex-shrink:0}
+.fav-star:hover{color:var(--gold);transform:scale(1.25)}
+.fav-star.on{color:var(--gold)}
+/* 仪表盘 */
+.dash-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.dash-kpi{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center}
+.dash-kpi__n{font-size:22px;font-weight:800;color:var(--accent)}
+.dash-kpi__l{font-size:11px;color:var(--muted);margin-top:3px}
+.dash-sec{margin-top:18px}
+.dash-sec h4{font-size:12.5px;color:var(--muted);margin-bottom:10px;font-weight:600}
+.dash-chart{display:flex;align-items:flex-end;gap:5px;height:110px;padding:0 2px}
+.dash-bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.dash-bar__fill{width:100%;max-width:22px;background:linear-gradient(180deg,var(--accent),var(--accent-h));border-radius:3px 3px 0 0;min-height:2px;transition:height .4s}
+.dash-bar__fill.today{background:linear-gradient(180deg,var(--gold),#b45309)}
+.dash-bar__day{font-size:9px;color:var(--muted);margin-top:4px}
 .pcard__chev{color:var(--muted);transition:transform var(--tr);flex-shrink:0}
 .pcard.open .pcard__chev{transform:rotate(180deg);color:var(--accent)}
 .pcard__body{display:none;padding:2px 18px 18px 70px;border-top:1px dashed var(--border)}
@@ -385,6 +400,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     </div>
     <button class="retry-btn" id="wrong-book-btn" onclick="openWrongBook()">📕 错题本</button>
     <button class="retry-btn" id="retry-btn" onclick="startQuiz('dont')">🎯 重练错题</button>
+    <button class="retry-btn" id="dash-btn" onclick="openDashboard()" style="background:linear-gradient(135deg,var(--accent),var(--accent-h))">📊 我的进度 <span id="fav-cnt" style="opacity:.8;font-size:11px"></span></button>
   </aside>
 </div>
 
@@ -421,6 +437,17 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     </div>
     <div class="qp-content" style="padding-top:14px" id="wb-content"></div>
     <div class="qp-foot" id="wb-foot"></div>
+  </div>
+</div>
+
+<div class="quiz-overlay" id="dashboard-overlay">
+  <div class="quiz-panel" style="max-width:640px;max-height:86vh;overflow:auto">
+    <div class="qp-head">
+      <div class="qp-title"><span style="font-size:18px">📊</span> 我的学习进度</div>
+      <div class="qp-stats" id="dash-stat" style="font-size:12px;color:var(--muted)"></div>
+      <button class="qp-close" id="dash-close">✕</button>
+    </div>
+    <div class="qp-content" style="padding-top:14px" id="dash-content"></div>
   </div>
 </div>
 
@@ -488,7 +515,10 @@ function bumpStats(){
   if(stats.last===d){stats.today++;}
   else if(stats.last===yesterday(d)){stats.streak++;stats.today=1;}
   else{stats.streak=1;stats.today=1;}
-  stats.last=d; stats.total++; saveS(stats);
+  stats.last=d; stats.total++;
+  if(!stats.history) stats.history = {};
+  stats.history[d] = (stats.history[d]||0)+1;
+  saveS(stats);
 }
 function yesterday(d){const t=new Date(d+'T00:00:00');t.setDate(t.getDate()-1);return t.toISOString().slice(0,10);}
 
@@ -586,7 +616,7 @@ function cardHtml(q){
     <div class="pcard__head" onclick="toggleCard(${q.id})">
       <span class="pcard__num">#${String(q.id).padStart(3,'0')}</span>
       <span class="pcard__title">${q.title}</span>
-      ${stNodeHtml(q)}
+      ${favStarHtml(q)}${stNodeHtml(q)}
       <div class="pcard__tags">${tagsHtml(q)}</div>
       <svg class="pcard__chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
     </div>
@@ -604,7 +634,7 @@ function cardHtml(q){
 function tableHtml(q){
   const st=stOf(q);
   return `<tr onclick="toggleCard(${q.id})">
-    <td style="width:30px">${stNodeHtml(q)}</td>
+    <td style="width:30px">${favStarHtml(q)}${stNodeHtml(q)}</td>
     <td style="width:44px;font-family:var(--mono);color:var(--muted);font-size:12px">#${String(q.id).padStart(3,'0')}</td>
     <td class="td-t">${q.title}<small>${CAT_NAMES[q.cat]||q.cat} · ${DIFF_NAMES[q.diff]||q.diff} · ${BOOK_NAMES[q.book]||q.book} · ${q.status==='complete'?'已解析':q.status==='partial'?'部分':'待补全'}</small></td>
     <td style="width:110px"><span class="td-cat-pill" style="color:var(--accent);background:var(--accent-l)">${CAT_ICONS[q.cat]||''} ${CAT_NAMES[q.cat]||q.cat}</span></td>
@@ -1198,6 +1228,83 @@ document.addEventListener('keydown', function(e){
 
 /* ===== 早鸟弹层 ===== */
 document.getElementById('offer-bar').onclick=()=>document.getElementById('offer-modal').classList.add('show');
+/* ===== 收藏 ⭐ ===== */
+var favs = {};
+try{ favs = JSON.parse(localStorage.getItem('qib-favs-v1')||'{}'); }catch(e){}
+function saveFavs(){ try{ localStorage.setItem('qib-favs-v1', JSON.stringify(favs)); }catch(e){} }
+function isFav(id){ return !!favs[id]; }
+function toggleFav(id){
+  if(favs[id]){ delete favs[id]; } else { favs[id] = 1; }
+  saveFavs();
+  var star = document.getElementById('fav-'+id);
+  if(star){ star.innerHTML = favs[id] ? '★' : '☆'; star.classList.toggle('on', !!favs[id]); }
+  updateFavCnt();
+}
+function updateFavCnt(){
+  var n = Object.keys(favs).length;
+  var el = document.getElementById('fav-cnt');
+  if(el) el.textContent = n ? '· ★'+n : '';
+}
+function favStarHtml(q){
+  return '<button class="fav-star '+(isFav(q.id)?'on':'')+'" id="fav-'+q.id+'" title="收藏" onclick="event.stopPropagation();toggleFav('+q.id+')">'+(isFav(q.id)?'★':'☆')+'</button>';
+}
+
+/* ===== 仪表盘 📊 ===== */
+function openDashboard(){ document.getElementById('dashboard-overlay').classList.add('show'); renderDashboard(); }
+function closeDashboard(){ document.getElementById('dashboard-overlay').classList.remove('show'); }
+function renderDashboard(){
+  var content = document.getElementById('dash-content');
+  var stat = document.getElementById('dash-stat');
+  // KPI
+  var knowN = 0, dontN = 0, seenN = 0, todoN = 0;
+  var byCat = {};
+  QUESTIONS.forEach(function(q){
+    var st = mastery[q.id] || 'todo';
+    if(st==='know')knowN++; else if(st==='dont')dontN++; else if(st==='seen')seenN++; else todoN++;
+    if(!byCat[q.cat]) byCat[q.cat] = {t:0, s:0};
+    byCat[q.cat].t++;
+    if(st==='know') byCat[q.cat].s++;
+  });
+  var favN = Object.keys(favs).length;
+  // 学习曲线（近 14 天）
+  var hist = stats.history || {};
+  var days = [];
+  for(var i=13;i>=0;i--){
+    var d = new Date(); d.setDate(d.getDate()-i);
+    var key = d.toISOString().slice(0,10);
+    days.push({key:key, n:hist[key]||0});
+  }
+  var maxN = Math.max(5, Math.max.apply(null, days.map(function(x){return x.n;})));
+  var bars = days.map(function(x){
+    var h2 = Math.round(x.n/maxN*100);
+    var isToday = x.key === new Date().toISOString().slice(0,10);
+    return '<div class="dash-bar" title="'+x.key+' 刷了 '+x.n+' 题"><div class="dash-bar__fill '+(isToday?'today':'')+'" style="height:'+(x.n?h2:2)+'%"></div><div class="dash-bar__day">'+x.key.slice(8,10)+'</div></div>';
+  }).join('');
+  // 雷达图（≥3 分类）
+  var cats = Object.keys(byCat).filter(function(c){return CAT_NAMES[c];});
+  var radar = cats.length>=3 ? renderRadar(cats.map(function(c){return {name:CAT_NAMES[c], icon:CAT_ICONS[c], t:byCat[c].t, s:byCat[c].s};})) : '';
+  // 分类条
+  var catList = cats.sort(function(a,b){return (byCat[b].s/byCat[b].t)-(byCat[a].s/byCat[a].t);}).map(function(c){
+    var d = byCat[c], p = d.t?Math.round(d.s/d.t*100):0;
+    var color = p>=80?'var(--green)':p>=50?'var(--gold)':'var(--red)';
+    return '<div class="result__cat-item"><span style="color:var(--accent);min-width:80px">'+(CAT_ICONS[c]||'')+' '+(CAT_NAMES[c]||c)+'</span><div class="result__cat-bar"><span style="width:'+p+'%;background:'+color+'"></span></div><span class="result__cat-cnt">'+d.s+'/'+d.t+' · '+p+'%</span></div>';
+  }).join('');
+  stat.textContent = '掌握 '+knowN+' · 错题 '+dontN+' · 收藏 '+favN;
+  content.innerHTML =
+    '<div class="dash-kpis">'+
+      '<div class="dash-kpi"><div class="dash-kpi__n">'+stats.streak+'</div><div class="dash-kpi__l">🔥 连续天数</div></div>'+
+      '<div class="dash-kpi"><div class="dash-kpi__n">'+stats.today+'</div><div class="dash-kpi__l">📅 今日刷题</div></div>'+
+      '<div class="dash-kpi"><div class="dash-kpi__n">'+knowN+'</div><div class="dash-kpi__l">✅ 已掌握</div></div>'+
+      '<div class="dash-kpi"><div class="dash-kpi__n">'+dontN+'</div><div class="dash-kpi__l">📕 错题</div></div>'+
+    '</div>'+
+    '<div class="dash-sec"><h4>近 14 天学习曲线</h4><div class="dash-chart">'+bars+'</div></div>'+
+    (radar?'<div class="dash-sec"><h4>各分类掌握度</h4>'+radar+'</div>':'')+
+    (catList?'<div class="dash-sec"><h4>分类明细</h4><div class="result__cat-list">'+catList+'</div></div>':'');
+}
+document.getElementById('dash-close').onclick = closeDashboard;
+document.getElementById('dashboard-overlay').addEventListener('click', function(e){ if(e.target===e.currentTarget) closeDashboard(); });
+updateFavCnt();
+
 /* ===== 错题本 ===== */
 function openWrongBook(){
   document.getElementById('wrongbook-overlay').classList.add('show');
