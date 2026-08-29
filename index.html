@@ -849,7 +849,7 @@ function startQuiz(mode){
   if(!pool.length){alert(quiz.mode==='dont'?'当前没有错题，太棒了！':quiz.mode==='book'?'当前来源下没有题目':'当前筛选下没有支持选择题的题目（需能提取简洁答案）');return;}
   pool = pool.slice().sort(function(){return Math.random()-.5;}).slice(0, Math.min(20, pool.length));
   quiz.list = pool;
-  quiz.idx=0; quiz.score=0; quiz.wrong=0; quiz.skip=0;
+  quiz.idx=0; quiz.score=0; quiz.wrong=0; quiz.skip=0; quiz.done=false;
   quiz.total = quiz.list.length;
   quiz.answer = null; quiz.confidence = 0; quiz.log = [];
   quiz.startedAt = Date.now();
