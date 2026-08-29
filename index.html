@@ -997,7 +997,7 @@ function aiChoices(q){
 }
 function makeChoices(q){
   var correct=ansOf(q);
-  if(correct&&correct.length<=4)return Promise.resolve(progChoices(q,correct));
+  // v3.7.5: 彻底删除 prog 阈值——任何长度都走 LLM（prog 路径对短答案题如'9月1日'会抽到同分类别题答案，体验灾难）
   return aiChoices(q);
 }
 function preloadNext(){
