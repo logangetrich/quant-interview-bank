@@ -499,7 +499,8 @@ const DIFF_NAMES = {1:'基础',2:'中级',3:'进阶'};
 const DIFF_CLASS = {1:'easy',2:'medium',3:'hard'};
 const ST_NAMES = {know:'掌握',dont:'不会',seen:'已看'};
 /* LLM 代理地址（本地 llm_server.js） */
-const LLM_URL = 'http://localhost:8787/api/ask';
+const LLM_URL = location.protocol + '//' + location.hostname + ':8787/api/ask';
+// v3.8.7: LLM_URL 动态化——手机/平板通过局域网IP访问时，AI 调用同一 hostname 的 8787 端口
 const IS_LOCAL = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
 
 /* ===== 状态存储 ===== */
