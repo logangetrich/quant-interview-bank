@@ -199,6 +199,15 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .qcard__diff-easy{color:var(--green);background:var(--green-l)} .qcard__diff-medium{color:var(--gold);background:var(--gold-l)} .qcard__diff-hard{color:var(--red);background:var(--red-l)}
 .qcard__q{font-size:18px;font-weight:600;line-height:1.6;color:var(--bright);margin-bottom:14px}
 .qcard__hint{font-size:12px;color:var(--muted);line-height:1.6;border-left:2px solid var(--accent);padding-left:10px;margin-top:10px}
+/* ===== 选择题 v3.7 ===== */
+.choices{display:flex;flex-direction:column;gap:9px;margin-top:16px}
+.choice{display:flex;align-items:center;gap:12px;padding:11px 14px;background:var(--surf);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all var(--tr);text-align:left;font-family:var(--sans);font-size:13.5px;color:var(--text)}
+.choice:hover{border-color:var(--accent-b);background:var(--accent-l);transform:translateX(2px)}
+.choice__key{flex:0 0 26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:7px;background:var(--accent-l);color:var(--accent);font-weight:800;font-size:12.5px}
+.choice-correct{border-color:var(--green)!important;background:var(--green-l)!important;color:var(--green)!important}
+.choice-correct .choice__key{background:var(--green);color:#fff}
+.choice-wrong{border-color:var(--red)!important;background:var(--red-l)!important;color:var(--red)!important}
+.choice-wrong .choice__key{background:var(--red);color:#fff}
 .confidence{margin-top:18px;padding:14px 16px;background:var(--surf);border-radius:10px}
 .confidence__label{font-size:12px;color:var(--dim);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .confidence__label b{color:var(--bright);font-weight:500}
@@ -805,7 +814,8 @@ function startQuiz(mode){
   if(quiz.mode==='dont'){pool = QUESTIONS.filter(function(q){return mastery[q.id]==='dont';});}
   else if(quiz.mode==='book'){var b=document.querySelector('.flt-item[data-book].active');pool = b&&b.dataset.book!=='all' ? QUESTIONS.filter(function(q){return q.book===b.dataset.book;}) : getFiltered();}
   else{pool = getFiltered();}
-  if(!pool.length){alert(quiz.mode==='dont'?'当前没有错题，太棒了！':quiz.mode==='book'?'当前来源下没有题目':'当前筛选下没有题目');return;}
+  pool = pool.filter(function(q){return ansOf(q);});
+  if(!pool.length){alert(quiz.mode==='dont'?'当前没有错题，太棒了！':quiz.mode==='book'?'当前来源下没有题目':'当前筛选下没有支持选择题的题目（需能提取简洁答案）');return;}
   pool = pool.slice().sort(function(){return Math.random()-.5;}).slice(0, Math.min(20, pool.length));
   quiz.list = pool;
   quiz.idx=0; quiz.score=0; quiz.wrong=0; quiz.skip=0;
@@ -864,35 +874,25 @@ function renderQuiz(){
   }
   var q = quiz.list[quiz.idx];
   if(quiz.answer === null){
+    if(!quiz.choices || quiz.choicesQ !== q.id){ quiz.choices = makeChoices(q); quiz.choicesQ = q.id; }
+    var letters = ['A','B','C','D'];
+    var cHtml = quiz.choices.map(function(c,i){
+      return '<button class="choice" onclick="chooseAns('+i+')"><span class="choice__key">'+letters[i]+'</span><span class="choice__txt">'+c+'</span></button>';
+    }).join('');
     el.innerHTML = '<div class="qcard"><div class="qcard__meta">'+
       '<span class="qcard__id">#'+String(q.id).padStart(3,'0')+'</span>'+
       '<span class="tag tag-cat">'+(CAT_ICONS[q.cat]||'')+' '+(CAT_NAMES[q.cat]||q.cat)+'</span>'+
       '<span class="qcard__diff qcard__diff-'+(DIFF_CLASS[q.diff]||'medium')+'">● '+(DIFF_NAMES[q.diff]||q.diff)+'</span>'+
       '<span class="tag tag-book">'+(BOOK_NAMES[q.book]||q.book)+'</span>'+
-      '</div><div class="qcard__q">'+((q.parts && q.parts.orig) || q.title)+'</div>'+
-      ((q.parts && q.parts.key) ? '<div class="qcard__hint">💡 提示：先自己思考 30 秒，再看答案 / 评分</div>' : '')+
-      '</div><div class="confidence"><div class="confidence__label"><span>我对这道题的自信度</span><b id="conf-txt">未选择</b></div>'+
-      '<div class="confidence__stars" id="conf-stars">'+
-      [1,2,3,4,5].map(function(n){return '<button class="confidence__star" data-n="'+n+'" onclick="setConf('+n+')">★</button>';}).join('')+
-      '</div></div>';
-    foot.innerHTML = '<span class="qp-hint">按 <kbd>1</kbd>–<kbd>5</kbd> 选自信度 · <kbd>Enter</kbd> 显示答案 · <kbd>S</kbd> 跳过</span>'+
-      '<button class="qbtn qbtn-ghost" onclick="quizSkip()">⏭ 跳过</button>'+
-      '<button class="qbtn qbtn-show" onclick="quizReveal()">显示答案 →</button>';
+      '</div><div class="qcard__q">'+((q.parts && q.parts.orig) || q.title)+'</div></div>'+
+      '<div class="choices">'+cHtml+'</div>';
+    foot.innerHTML = '<span class="qp-hint">点选项或按 <kbd>1</kbd>–<kbd>4</kbd> 选答案 · <kbd>S</kbd> 跳过 · <kbd>Esc</kbd> 退出</span>'+
+      '<button class="qbtn qbtn-ghost" onclick="quizSkip()">⏭ 跳过</button>';
   }else{
     el.innerHTML = renderAnsweredView(q);
     var isCorrect = quiz.answer === 'know';
-    var diffN = q.diff;
-    var under = isCorrect && quiz.confidence < diffN;
-    var over = !isCorrect && quiz.confidence > diffN;
-    var evalTxt = '';
-    if(quiz.answer==='skip') evalTxt = '⏭ 跳过本题';
-    else if(under) evalTxt = '<b style="color:var(--green)">低估难度</b> · 你答对了但你低估了它（难度 '+(DIFF_NAMES[diffN]||'')+'）';
-    else if(over) evalTxt = '<b style="color:var(--gold)">高估自信度</b> · 实际比你想的难，建议复习';
-    else if(isCorrect) evalTxt = '<b style="color:var(--green)">判断准确</b> · 自信度与难度匹配';
-    else evalTxt = '<b style="color:var(--red)">确实不会</b> · 已自动加入错题本';
-    foot.innerHTML = '<span class="qp-hint">'+evalTxt+' · <kbd>1</kbd> 我会了 · <kbd>2</kbd> 还不会 · <kbd>Enter</kbd> 下一题</span>'+
-      '<button class="qbtn qbtn-know" onclick="quizAnswer(\'know\')">😎 我会了</button>'+
-      '<button class="qbtn qbtn-dont" onclick="quizAnswer(\'dont\')">🤔 还不会</button>'+
+    var evalTxt = isCorrect ? '<b style="color:var(--green)">✅ 答对了！</b> 已记入掌握 (+1)' : '<b style="color:var(--red)">❌ 答错了</b> · 已自动加入错题本';
+    foot.innerHTML = '<span class="qp-hint">'+evalTxt+' · <kbd>Enter</kbd> 下一题</span>'+
       '<button class="qbtn qbtn-next" onclick="quizNext()">下一题 →</button>';
   }
   renderDots();
@@ -906,18 +906,67 @@ function setConf(n){
   document.getElementById('conf-txt').textContent = n+'/5 · '+txts[n];
 }
 
+/* ===== 选择题模式 v3.7 ===== */
+var ANS_POOL = null;
+function ansOf(q){
+  if(q.parts && q.parts.final && q.parts.final.trim().length>2) return q.parts.final.trim().slice(0,60);
+  var m=(q.answer||'').match(/<strong>(?:最终答案|答案)[：:]\s*([^<]{3,80})/);
+  return m?m[1].trim().slice(0,60):null;
+}
+function buildAnsPool(){
+  var m={};
+  QUESTIONS.forEach(function(q){var a=ansOf(q);if(a)m[q.id]={id:q.id,cat:q.cat,ans:a};});
+  return m;
+}
+function shuffleArr(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function makeChoices(q){
+  if(!ANS_POOL)ANS_POOL=buildAnsPool();
+  var correct=ansOf(q);
+  var all=Object.keys(ANS_POOL).map(function(k){return ANS_POOL[k];});
+  var pool=all.filter(function(a){return a.id!==q.id&&a.cat===q.cat&&a.ans!==correct;});
+  var dist=shuffleArr(pool).slice(0,3).map(function(a){return a.ans;});
+  if(dist.length<3){
+    var rest=all.filter(function(a){return a.id!==q.id&&a.ans!==correct&&dist.indexOf(a.ans)<0;});
+    dist=dist.concat(shuffleArr(rest).slice(0,3-dist.length));
+  }
+  while(dist.length<3)dist.push('以上都不对');
+  return shuffleArr([correct].concat(dist));
+}
+function chooseAns(n){
+  if(quiz.answer!==null)return;
+  var q=quiz.list[quiz.idx];
+  var isCorrect=quiz.choices[n]===ansOf(q);
+  quiz.answer=isCorrect?'know':'dont';
+  quiz.picked=n;
+  quiz.log[quiz.idx]={id:q.id,ans:quiz.answer,picked:n,correct:isCorrect};
+  if(isCorrect){quiz.score++;mastery[q.id]='know';}
+  else{quiz.wrong++;mastery[q.id]='dont';}
+  saveM(mastery);bumpStats();updateCounts();
+  renderQuiz();
+  setTimeout(renderMath,50);
+}
 function renderAnsweredView(q){
   var parts = q.parts || {};
-  var html = '<div class="feedback '+(quiz.answer==='know'?'good':quiz.answer==='dont'?'bad':'skip')+'">'+
-    (quiz.answer==='know'?'✅ 你答对了 / 标记掌握':quiz.answer==='dont'?'❌ 标记为不会（已入错题本）':'⏭ 已跳过')+'</div>';
+  var isCorrect = quiz.answer === 'know';
+  var letters = ['A','B','C','D'];
+  var correctAns = ansOf(q);
+  var cHtml = quiz.choices.map(function(c,i){
+    var cls = 'choice';
+    var mark = '';
+    if(c === correctAns){ cls += ' choice-correct'; mark = ' ✓'; }
+    if(i === quiz.picked && !isCorrect){ cls += ' choice-wrong'; }
+    return '<div class="'+cls+'"><span class="choice__key">'+letters[i]+'</span><span class="choice__txt">'+c+mark+'</span></div>';
+  }).join('');
+  var html = '<div class="feedback '+(isCorrect?'good':'bad')+'">'+
+    (isCorrect?'✅ 答对了！ 已记入掌握 (+1)':'❌ 答错了 · 已自动加入错题本')+'</div>';
   html += '<div class="qcard"><div class="qcard__meta">'+
     '<span class="qcard__id">#'+String(q.id).padStart(3,'0')+'</span>'+
     '<span class="tag tag-cat">'+(CAT_ICONS[q.cat]||'')+' '+(CAT_NAMES[q.cat]||q.cat)+'</span>'+
     '<span class="qcard__diff qcard__diff-'+(DIFF_CLASS[q.diff]||'medium')+'">● '+(DIFF_NAMES[q.diff]||q.diff)+'</span>'+
     '<span class="tag tag-book">'+(BOOK_NAMES[q.book]||q.book)+'</span>'+
-    '<span class="tag" style="margin-left:auto;color:var(--gold);background:var(--gold-l)">自信 '+quiz.confidence+'/5</span>'+
     '</div>';
   if(parts.orig) html += '<div class="ans-sec" style="margin-top:10px"><span class="ans-title at-orig">📌 原题</span><div>'+parts.orig+'</div></div>';
+  html += '<div class="choices" style="margin:12px 0">'+cHtml+'</div>';
   if(parts.key) html += '<div class="ans-sec"><span class="ans-title at-key">💡 关键思路</span><div>'+parts.key+'</div></div>';
   if(parts.sol) html += '<div class="ans-sec"><span class="ans-title at-sol">📝 参考解答</span><div>'+parts.sol+'</div></div>';
   if(parts.final) html += '<div class="ans-sec"><span class="ans-title at-sol">✅ 最终答案</span><div>'+parts.final+'</div></div>';
@@ -1049,13 +1098,10 @@ document.addEventListener('keydown', function(e){
     return;
   }
   if(quiz.answer === null){
-    if(e.key>='1' && e.key<='5'){e.preventDefault();setConf(Number(e.key));}
-    if(e.key==='Enter'){e.preventDefault();quizReveal();}
+    if(e.key>='1' && e.key<='4'){e.preventDefault();chooseAns(Number(e.key)-1);}
     if(e.key==='s'||e.key==='S'){e.preventDefault();quizSkip();}
     if(e.key==='Escape'){e.preventDefault();closeQuiz();}
   }else{
-    if(e.key==='1'){e.preventDefault();quizAnswer('know');}
-    if(e.key==='2'){e.preventDefault();quizAnswer('dont');}
     if(e.key==='Enter'){e.preventDefault();quizNext();}
     if(e.key==='Escape'){e.preventDefault();closeQuiz();}
   }
