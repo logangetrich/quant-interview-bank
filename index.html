@@ -825,11 +825,14 @@ function startQuiz(mode){
   quiz.startedAt = Date.now();
   if(quiz._t)clearInterval(quiz._t);
   quiz._t = setInterval(updateTimer, 1000);
+  quiz.choicesReady = false;
+  delete quiz._nextChoices;
   document.getElementById('qp-mode-name').textContent = quiz.mode==='dont'?'错题重练':'自测模式';
   document.getElementById('qp-icon').textContent = quiz.mode==='dont'?'📕':'🎯';
   document.getElementById('quiz-overlay').classList.add('show');
   renderDots();
   renderQuiz();
+  preloadNext();
 }
 
 function updateTimer(){
@@ -887,12 +890,23 @@ function renderQuiz(){
       el.innerHTML = metaHtml + '<div class="choices"><div class="ai-genning">⏳ AI 正在生成选项…（长答案题，约 3-8 秒）</div></div>';
       foot.innerHTML = '<span class="qp-hint">⏳ 生成选项中…</span>'+
         '<button class="qbtn qbtn-ghost" onclick="quizSkip()">⏭ 跳过</button>';
+      // 优先用预生成结果
+      if(quiz._nextChoices && quiz._nextChoices.id===q.id && quiz._nextChoices.ready){
+        quiz.choices = quiz._nextChoices.choices;
+        quiz.correctIdx = quiz._nextChoices.correctIdx;
+        quiz.choicesReady = true;
+        delete quiz._nextChoices;
+        renderQuiz();
+        preloadNext();
+        return;
+      }
       makeChoices(q).then(function(res){
         var cur = quiz.list[quiz.idx];
         if(cur && cur.id === q.id){
           quiz.choices = res.choices; quiz.correctIdx = res.correctIdx;
           quiz.choicesReady = true;
           renderQuiz();
+          preloadNext();
         }
       }).catch(function(e){
         var cur = quiz.list[quiz.idx];
@@ -901,6 +915,7 @@ function renderQuiz(){
           quiz.choices = fb.choices; quiz.correctIdx = fb.correctIdx;
           quiz.choicesReady = true;
           renderQuiz();
+          preloadNext();
         }
       });
       renderDots();
@@ -980,8 +995,21 @@ function aiChoices(q){
 }
 function makeChoices(q){
   var correct=ansOf(q);
-  if(correct&&correct.length<=30)return Promise.resolve(progChoices(q,correct));
+  if(correct&&correct.length<=4)return Promise.resolve(progChoices(q,correct));
   return aiChoices(q);
+}
+function preloadNext(){
+  var nxt = quiz.list[quiz.idx+1];
+  if(!nxt) return;
+  if(quiz._nextChoices && quiz._nextChoices.id===nxt.id) return;
+  quiz._nextChoices = {id: nxt.id, ready: false};
+  makeChoices(nxt).then(function(res){
+    if(quiz._nextChoices && quiz._nextChoices.id===nxt.id){
+      quiz._nextChoices.ready = true;
+      quiz._nextChoices.choices = res.choices;
+      quiz._nextChoices.correctIdx = res.correctIdx;
+    }
+  }).catch(function(){});
 }
 function chooseAns(n){
   if(quiz.answer!==null)return;
@@ -1062,8 +1090,11 @@ function quizNext(){
   quiz.idx++;
   quiz.confidence = 0;
   quiz.answer = null;
-  if(quiz.idx >= quiz.total) quiz.done = true;
+  quiz.choicesReady = false;
+  delete quiz._nextChoices;
+  if(quiz.idx >= quiz.total){ quiz.done = true; renderQuiz(); return; }
   renderQuiz();
+  preloadNext();
 }
 
 function renderResult(){
