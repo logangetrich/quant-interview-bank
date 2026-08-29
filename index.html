@@ -869,7 +869,7 @@ function renderQuiz(){
       '<span class="tag tag-cat">'+(CAT_ICONS[q.cat]||'')+' '+(CAT_NAMES[q.cat]||q.cat)+'</span>'+
       '<span class="qcard__diff qcard__diff-'+(DIFF_CLASS[q.diff]||'medium')+'">● '+(DIFF_NAMES[q.diff]||q.diff)+'</span>'+
       '<span class="tag tag-book">'+(BOOK_NAMES[q.book]||q.book)+'</span>'+
-      '</div><div class="qcard__q">'+q.title+'</div>'+
+      '</div><div class="qcard__q">'+((q.parts && q.parts.orig) || q.title)+'</div>'+
       ((q.parts && q.parts.key) ? '<div class="qcard__hint">💡 提示：先自己思考 30 秒，再看答案 / 评分</div>' : '')+
       '</div><div class="confidence"><div class="confidence__label"><span>我对这道题的自信度</span><b id="conf-txt">未选择</b></div>'+
       '<div class="confidence__stars" id="conf-stars">'+
