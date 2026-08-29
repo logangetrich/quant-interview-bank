@@ -977,20 +977,23 @@ function aiChoices(q){
   // 兼容 v1：v1 缓存基于截断题干生成（v3.7 时代），v3.7.3 恢复完整原题后，v1 缓存的选项对不上，强制失效
   try{var v1=JSON.parse(localStorage.getItem('qib-ai-choices-v1')||'{}');if(v1&&Object.keys(v1).length){console.log('[quiz] 弃用 v1 旧缓存',Object.keys(v1).length,'道');localStorage.removeItem('qib-ai-choices-v1');}}catch(e){}
   var cache={};try{cache=JSON.parse(localStorage.getItem(cacheKey)||'{}');}catch(e){}
-  if(cache[q.id])return Promise.resolve(cache[q.id]);
+  // 兼容 v2 旧缓存（无 explanation 字段）——v3.7.6 加了解析字段，缺字段视为旧缓存，强制重生
+  if(cache[q.id] && cache[q.id].explanation !== undefined) return Promise.resolve(cache[q.id]);
+  if(cache[q.id]) { delete cache[q.id]; }
   var correct=ansOf(q);
   var orig=(q.parts&&q.parts.orig)||q.title||'';
-  var prompt='这是一道量化面试题：\n\n【题目】'+orig.slice(0,300)+'\n\n【正确答案】'+correct+'\n\n请为它设计一道选择题：1 个正确选项 + 3 个看似合理但错误的干扰选项。每个选项必须≤30字，简洁、像这道题的答案。\n严格按以下格式输出 4 行（不要其他文字）：\n【正确】...\n【干扰】...\n【干扰】...\n【干扰】...';
-  return aiAsk(prompt,'你是资深量化面试出题官。输出严格 4 行，每行以【正确】或【干扰】开头，选项≤30字，只输出这4行。').then(function(content){
-    var correctLine='',dist=[];
+  var prompt='这是一道量化面试题：\n\n【题目】'+orig.slice(0,300)+'\n\n【正确答案】'+correct+'\n\n请为它设计一道选择题：1 个正确选项 + 3 个看似合理但错误的干扰选项。每个选项必须≤30字，简洁、像这道题的答案。\n严格按以下格式输出 5 行（不要其他文字）：\n【正确】...\n【干扰】...\n【干扰】...\n【干扰】...\n【解析】...（≤120字，先简述正确答案的依据，再点出 1-2 个最常见干扰项错在哪）';
+  return aiAsk(prompt,'你是资深量化面试出题官。输出严格 5 行：前 4 行选项（每行以【正确】或【干扰】开头，选项≤30字），第 5 行以【解析】开头（≤120字，解释正确答案的依据+常见干扰项错因）。只输出这 5 行。').then(function(content){
+    var correctLine='',dist=[],explanation='';
     content.split(/\r?\n/).forEach(function(line){
       line=line.trim().replace(/^#{1,6}\s*/,'');
       if(line.indexOf('【正确】')===0)correctLine=line.replace('【正确】','').replace(/[：:]?\s*$/,'').trim();
       else if(line.indexOf('【干扰】')===0)dist.push(line.replace('【干扰】','').replace(/[：:]?\s*$/,'').trim());
+      else if(line.indexOf('【解析】')===0)explanation=line.replace('【解析】','').replace(/[：:]?\s*$/,'').trim();
     });
     if(!correctLine||dist.length<3)throw new Error('LLM 输出格式不符: '+content.slice(0,80));
     var choices=shuffleArr([correctLine].concat(dist.slice(0,3)));
-    var res={choices:choices,correctIdx:choices.indexOf(correctLine)};
+    var res={choices:choices,correctIdx:choices.indexOf(correctLine),explanation:explanation};
     cache[q.id]=res;try{localStorage.setItem(cacheKey,JSON.stringify(cache));}catch(e){}
     return res;
   });
@@ -1047,6 +1050,7 @@ function renderAnsweredView(q){
     '</div>';
   if(parts.orig) html += '<div class="ans-sec" style="margin-top:10px"><span class="ans-title at-orig">📌 原题</span><div>'+parts.orig+'</div></div>';
   html += '<div class="choices" style="margin:12px 0">'+cHtml+'</div>';
+  if(quiz.explanation){ html += '<div class="ans-sec" style="margin-top:14px;background:var(--teal-l);border-left:3px solid var(--teal);padding:12px 14px;border-radius:6px"><span class="ans-title at-key">💡 解析</span><div style="margin-top:6px">'+quiz.explanation+'</div></div>'; }
   if(parts.key) html += '<div class="ans-sec"><span class="ans-title at-key">💡 关键思路</span><div>'+parts.key+'</div></div>';
   if(parts.sol) html += '<div class="ans-sec"><span class="ans-title at-sol">📝 参考解答</span><div>'+parts.sol+'</div></div>';
   if(parts.final) html += '<div class="ans-sec"><span class="ans-title at-sol">✅ 最终答案</span><div>'+parts.final+'</div></div>';
