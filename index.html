@@ -845,9 +845,9 @@ function startQuiz(mode){
   var pool;
   if(quiz.mode==='dont'){pool = QUESTIONS.filter(function(q){return mastery[q.id]==='dont';});}
   else if(quiz.mode==='book'){var b=document.querySelector('.flt-item[data-book].active');pool = b&&b.dataset.book!=='all' ? QUESTIONS.filter(function(q){return q.book===b.dataset.book;}) : getFiltered();}
-  else{pool = getFiltered().filter(function(q){return mastery[q.id]!=='know';});}
+  else{pool = getFiltered().filter(function(q){var m=mastery[q.id]; return m!=='know' && m!=='dont';});}
   pool = pool.filter(function(q){return ansOf(q);});
-  // v3.8.4: 如果过滤后池子为空（全部已掌握），回退到全集（强制刷题）
+  // v3.8.4: 全部已掌握时回退全集；v3.8.5: 进一步要求排除 dont，todo 也空时回退全集
   if(!pool.length && quiz.mode!=='dont'){pool = getFiltered(); pool = pool.filter(function(q){return ansOf(q);});}
   if(!pool.length){alert(quiz.mode==='dont'?'当前没有错题，太棒了！':quiz.mode==='book'?'当前来源下没有题目':'当前筛选下没有支持选择题的题目（需能提取简洁答案）');return;}
   pool = pool.slice().sort(function(){return Math.random()-.5;}).slice(0, Math.min(20, pool.length));
