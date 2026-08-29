@@ -208,6 +208,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .choice-correct .choice__key{background:var(--green);color:#fff}
 .choice-wrong{border-color:var(--red)!important;background:var(--red-l)!important;color:var(--red)!important}
 .choice-wrong .choice__key{background:var(--red);color:#fff}
+.ai-genning{padding:22px 16px;text-align:center;color:var(--muted);font-size:13px}
 .confidence{margin-top:18px;padding:14px 16px;background:var(--surf);border-radius:10px}
 .confidence__label{font-size:12px;color:var(--dim);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .confidence__label b{color:var(--bright);font-weight:500}
@@ -874,18 +875,42 @@ function renderQuiz(){
   }
   var q = quiz.list[quiz.idx];
   if(quiz.answer === null){
-    if(!quiz.choices || quiz.choicesQ !== q.id){ quiz.choices = makeChoices(q); quiz.choicesQ = q.id; }
-    var letters = ['A','B','C','D'];
-    var cHtml = quiz.choices.map(function(c,i){
-      return '<button class="choice" onclick="chooseAns('+i+')"><span class="choice__key">'+letters[i]+'</span><span class="choice__txt">'+c+'</span></button>';
-    }).join('');
-    el.innerHTML = '<div class="qcard"><div class="qcard__meta">'+
+    var metaHtml = '<div class="qcard"><div class="qcard__meta">'+
       '<span class="qcard__id">#'+String(q.id).padStart(3,'0')+'</span>'+
       '<span class="tag tag-cat">'+(CAT_ICONS[q.cat]||'')+' '+(CAT_NAMES[q.cat]||q.cat)+'</span>'+
       '<span class="qcard__diff qcard__diff-'+(DIFF_CLASS[q.diff]||'medium')+'">● '+(DIFF_NAMES[q.diff]||q.diff)+'</span>'+
       '<span class="tag tag-book">'+(BOOK_NAMES[q.book]||q.book)+'</span>'+
-      '</div><div class="qcard__q">'+((q.parts && q.parts.orig) || q.title)+'</div></div>'+
-      '<div class="choices">'+cHtml+'</div>';
+      '</div><div class="qcard__q">'+((q.parts && q.parts.orig) || q.title)+'</div></div>';
+    if(!quiz.choicesReady || quiz.choicesQ !== q.id){
+      quiz.choicesReady = false;
+      quiz.choicesQ = q.id;
+      el.innerHTML = metaHtml + '<div class="choices"><div class="ai-genning">⏳ AI 正在生成选项…（长答案题，约 3-8 秒）</div></div>';
+      foot.innerHTML = '<span class="qp-hint">⏳ 生成选项中…</span>'+
+        '<button class="qbtn qbtn-ghost" onclick="quizSkip()">⏭ 跳过</button>';
+      makeChoices(q).then(function(res){
+        var cur = quiz.list[quiz.idx];
+        if(cur && cur.id === q.id){
+          quiz.choices = res.choices; quiz.correctIdx = res.correctIdx;
+          quiz.choicesReady = true;
+          renderQuiz();
+        }
+      }).catch(function(e){
+        var cur = quiz.list[quiz.idx];
+        if(cur && cur.id === q.id){
+          var fb = progChoices(q, ansOf(q) || '以上都不对');
+          quiz.choices = fb.choices; quiz.correctIdx = fb.correctIdx;
+          quiz.choicesReady = true;
+          renderQuiz();
+        }
+      });
+      renderDots();
+      return;
+    }
+    var letters = ['A','B','C','D'];
+    var cHtml = quiz.choices.map(function(c,i){
+      return '<button class="choice" onclick="chooseAns('+i+')"><span class="choice__key">'+letters[i]+'</span><span class="choice__txt">'+c+'</span></button>';
+    }).join('');
+    el.innerHTML = metaHtml + '<div class="choices">'+cHtml+'</div>';
     foot.innerHTML = '<span class="qp-hint">点选项或按 <kbd>1</kbd>–<kbd>4</kbd> 选答案 · <kbd>S</kbd> 跳过 · <kbd>Esc</kbd> 退出</span>'+
       '<button class="qbtn qbtn-ghost" onclick="quizSkip()">⏭ 跳过</button>';
   }else{
@@ -919,9 +944,8 @@ function buildAnsPool(){
   return m;
 }
 function shuffleArr(arr){var a=arr.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
-function makeChoices(q){
+function progChoices(q, correct){
   if(!ANS_POOL)ANS_POOL=buildAnsPool();
-  var correct=ansOf(q);
   var all=Object.keys(ANS_POOL).map(function(k){return ANS_POOL[k];});
   var pool=all.filter(function(a){return a.id!==q.id&&a.cat===q.cat&&a.ans!==correct;});
   var dist=shuffleArr(pool).slice(0,3).map(function(a){return a.ans;});
@@ -930,12 +954,39 @@ function makeChoices(q){
     dist=dist.concat(shuffleArr(rest).slice(0,3-dist.length));
   }
   while(dist.length<3)dist.push('以上都不对');
-  return shuffleArr([correct].concat(dist));
+  var choices=shuffleArr([correct].concat(dist));
+  return {choices:choices, correctIdx:choices.indexOf(correct)};
+}
+function aiChoices(q){
+  var cacheKey='qib-ai-choices-v1';
+  var cache={};try{cache=JSON.parse(localStorage.getItem(cacheKey)||'{}');}catch(e){}
+  if(cache[q.id])return Promise.resolve(cache[q.id]);
+  var correct=ansOf(q);
+  var orig=(q.parts&&q.parts.orig)||q.title||'';
+  var prompt='这是一道量化面试题：\n\n【题目】'+orig.slice(0,300)+'\n\n【正确答案】'+correct+'\n\n请为它设计一道选择题：1 个正确选项 + 3 个看似合理但错误的干扰选项。每个选项必须≤30字，简洁、像这道题的答案。\n严格按以下格式输出 4 行（不要其他文字）：\n【正确】...\n【干扰】...\n【干扰】...\n【干扰】...';
+  return aiAsk(prompt,'你是资深量化面试出题官。输出严格 4 行，每行以【正确】或【干扰】开头，选项≤30字，只输出这4行。').then(function(content){
+    var correctLine='',dist=[];
+    content.split(/\r?\n/).forEach(function(line){
+      line=line.trim().replace(/^#{1,6}\s*/,'');
+      if(line.indexOf('【正确】')===0)correctLine=line.replace('【正确】','').replace(/[：:]?\s*$/,'').trim();
+      else if(line.indexOf('【干扰】')===0)dist.push(line.replace('【干扰】','').replace(/[：:]?\s*$/,'').trim());
+    });
+    if(!correctLine||dist.length<3)throw new Error('LLM 输出格式不符: '+content.slice(0,80));
+    var choices=shuffleArr([correctLine].concat(dist.slice(0,3)));
+    var res={choices:choices,correctIdx:choices.indexOf(correctLine)};
+    cache[q.id]=res;try{localStorage.setItem(cacheKey,JSON.stringify(cache));}catch(e){}
+    return res;
+  });
+}
+function makeChoices(q){
+  var correct=ansOf(q);
+  if(correct&&correct.length<=30)return Promise.resolve(progChoices(q,correct));
+  return aiChoices(q);
 }
 function chooseAns(n){
   if(quiz.answer!==null)return;
   var q=quiz.list[quiz.idx];
-  var isCorrect=quiz.choices[n]===ansOf(q);
+  var isCorrect=(n===quiz.correctIdx);
   quiz.answer=isCorrect?'know':'dont';
   quiz.picked=n;
   quiz.log[quiz.idx]={id:q.id,ans:quiz.answer,picked:n,correct:isCorrect};
@@ -949,11 +1000,10 @@ function renderAnsweredView(q){
   var parts = q.parts || {};
   var isCorrect = quiz.answer === 'know';
   var letters = ['A','B','C','D'];
-  var correctAns = ansOf(q);
   var cHtml = quiz.choices.map(function(c,i){
     var cls = 'choice';
     var mark = '';
-    if(c === correctAns){ cls += ' choice-correct'; mark = ' ✓'; }
+    if(i === quiz.correctIdx){ cls += ' choice-correct'; mark = ' ✓'; }
     if(i === quiz.picked && !isCorrect){ cls += ' choice-wrong'; }
     return '<div class="'+cls+'"><span class="choice__key">'+letters[i]+'</span><span class="choice__txt">'+c+mark+'</span></div>';
   }).join('');
