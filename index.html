@@ -973,7 +973,9 @@ function progChoices(q, correct){
   return {choices:choices, correctIdx:choices.indexOf(correct)};
 }
 function aiChoices(q){
-  var cacheKey='qib-ai-choices-v1';
+  var cacheKey='qib-ai-choices-v2';
+  // 兼容 v1：v1 缓存基于截断题干生成（v3.7 时代），v3.7.3 恢复完整原题后，v1 缓存的选项对不上，强制失效
+  try{var v1=JSON.parse(localStorage.getItem('qib-ai-choices-v1')||'{}');if(v1&&Object.keys(v1).length){console.log('[quiz] 弃用 v1 旧缓存',Object.keys(v1).length,'道');localStorage.removeItem('qib-ai-choices-v1');}}catch(e){}
   var cache={};try{cache=JSON.parse(localStorage.getItem(cacheKey)||'{}');}catch(e){}
   if(cache[q.id])return Promise.resolve(cache[q.id]);
   var correct=ansOf(q);
