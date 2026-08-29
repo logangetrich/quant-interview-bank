@@ -847,7 +847,9 @@ function startQuiz(mode){
   if(quiz.mode==='dont'){pool = QUESTIONS.filter(function(q){return mastery[q.id]==='dont';});}
   else if(quiz.mode==='book'){var b=document.querySelector('.flt-item[data-book].active');pool = b&&b.dataset.book!=='all' ? QUESTIONS.filter(function(q){return q.book===b.dataset.book;}) : getFiltered();}
   else{pool = getFiltered().filter(function(q){return !mastery[q.id];});}
-  pool = pool.filter(function(q){return ansOf(q);});
+  // v3.9: 本地/局域网全量进池（无答案题走 aiChoicesFree LLM 自主解）；公网只含有答案的题（prog 兜底）
+  if(IS_LOCAL){ pool = pool.filter(function(q){return (q.title||'').trim().length>3;}); }
+  else{ pool = pool.filter(function(q){return ansOf(q);}); }
   // v3.8.6: 池空时（所有题都至少碰过一次）—— 自动重置 mastery 让用户能"再来一轮"从 todo 开始
   if(!pool.length && quiz.mode!=='dont'){
     mastery = {}; saveM(mastery);
@@ -1040,9 +1042,39 @@ function aiChoices(q){
   });
 }
 function makeChoices(q){
+  // v3.9: 公网无 LLM → 程序生成兜底；本地/局域网 → 全量 LLM（含无预置答案的题自主解题）
+  if(!IS_LOCAL){
+    var c2 = ansOf(q);
+    if(c2) return Promise.resolve(progChoices(q, c2));
+    return Promise.resolve(progChoices(q, '以上都不对'));
+  }
   var correct=ansOf(q);
-  // v3.7.5: 彻底删除 prog 阈值——任何长度都走 LLM（prog 路径对短答案题如'9月1日'会抽到同分类别题答案，体验灾难）
-  return aiChoices(q);
+  if(correct) return aiChoices(q);           // 有预置答案 → LLM 出题
+  return aiChoicesFree(q);                    // 无预置答案 → LLM 自主解题+出题（v3.9）
+}
+/* v3.9: 无预置答案题——LLM 自主解题并生成 4 选项（1 正确 + 3 干扰 + 解析） */
+function aiChoicesFree(q){
+  var cacheKey='qib-ai-free-v1';
+  var cache={};try{cache=JSON.parse(localStorage.getItem(cacheKey)||'{}');}catch(e){}
+  if(cache[q.id])return Promise.resolve(cache[q.id]);
+  var orig=(q.parts&&q.parts.orig)||q.title||'';
+  var prompt='这是一道量化面试题（无参考答案）：\n\n【题目】'+orig.slice(0,300)+'\n\n请完成两件事：\n1. 你自己解出这道题，给出你认为正确的答案\n2. 为它设计一道选择题：1 个正确选项（=你的答案，简洁≤40字）+ 3 个看似合理但错误的干扰选项（每个≤40字）\n3. 用一句话解释为什么正确项是对的\n严格按以下格式输出 6 行（不要其他文字）：\n【正确】...\n【干扰】...\n【干扰】...\n【干扰】...\n【解析】...（≤80字）\n【备注】如果你认为题目信息不足无法确定唯一答案，【正确】行写"信息不足，需补全条件"，并在解析里说明缺什么';
+  return aiAsk(prompt,'你是资深量化面试出题官。严格输出 6 行：4 行选项（【正确】/【干扰】开头，≤40字）+【解析】+【备注】。只输出这些行。').then(function(content){
+    var correctLine='',dist=[],explanation='',note='';
+    content.split(/\r?\n/).forEach(function(line){
+      line=line.trim().replace(/^#{1,6}\s*/,'');
+      if(line.indexOf('【正确】')===0)correctLine=line.replace('【正确】','').replace(/[：:]?\s*$/,'').trim();
+      else if(line.indexOf('【干扰】')===0)dist.push(line.replace('【干扰】','').replace(/[：:]?\s*$/,'').trim());
+      else if(line.indexOf('【解析】')===0)explanation=line.replace('【解析】','').replace(/[：:]?\s*$/,'').trim();
+      else if(line.indexOf('【备注】')===0)note=line.replace('【备注】','').replace(/[：:]?\s*$/,'').trim();
+    });
+    if(!correctLine||dist.length<3)throw new Error('LLM 输出格式不符: '+content.slice(0,80));
+    var choices=shuffleArr([correctLine].concat(dist.slice(0,3)));
+    var exp=explanation||'本题无标准答案，请参考 AI 给出的解答思路。'+(note?'（备注：'+note+'）':'');
+    var res={choices:choices,correctIdx:choices.indexOf(correctLine),explanation:exp};
+    cache[q.id]=res;try{localStorage.setItem(cacheKey,JSON.stringify(cache));}catch(e){}
+    return res;
+  });
 }
 function preloadNext(){
   var nxt = quiz.list[quiz.idx+1];
