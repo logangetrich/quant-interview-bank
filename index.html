@@ -894,6 +894,7 @@ function renderQuiz(){
       if(quiz._nextChoices && quiz._nextChoices.id===q.id && quiz._nextChoices.ready){
         quiz.choices = quiz._nextChoices.choices;
         quiz.correctIdx = quiz._nextChoices.correctIdx;
+        quiz.explanation = quiz._nextChoices.explanation || '';
         quiz.choicesReady = true;
         delete quiz._nextChoices;
         renderQuiz();
@@ -903,7 +904,7 @@ function renderQuiz(){
       makeChoices(q).then(function(res){
         var cur = quiz.list[quiz.idx];
         if(cur && cur.id === q.id){
-          quiz.choices = res.choices; quiz.correctIdx = res.correctIdx;
+          quiz.choices = res.choices; quiz.correctIdx = res.correctIdx; quiz.explanation = res.explanation || '';
           quiz.choicesReady = true;
           renderQuiz();
           preloadNext();
@@ -912,7 +913,7 @@ function renderQuiz(){
         var cur = quiz.list[quiz.idx];
         if(cur && cur.id === q.id){
           var fb = progChoices(q, ansOf(q) || '以上都不对');
-          quiz.choices = fb.choices; quiz.correctIdx = fb.correctIdx;
+          quiz.choices = fb.choices; quiz.correctIdx = fb.correctIdx; quiz.explanation = '该题无 AI 解析（LLM 失败 fallback）。';
           quiz.choicesReady = true;
           renderQuiz();
           preloadNext();
@@ -1012,6 +1013,9 @@ function preloadNext(){
     if(quiz._nextChoices && quiz._nextChoices.id===nxt.id){
       quiz._nextChoices.ready = true;
       quiz._nextChoices.choices = res.choices;
+      quiz._nextChoices.correctIdx = res.correctIdx;
+      quiz._nextChoices.explanation = res.explanation || '';
+    }
       quiz._nextChoices.correctIdx = res.correctIdx;
     }
   }).catch(function(){});
