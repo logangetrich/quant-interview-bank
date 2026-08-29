@@ -837,6 +837,7 @@ function pickQuestion(id){sIn.value='';filters.q='';renderList();
 /* ===== 测试模式 v3.1 ===== */
 document.getElementById('quiz-btn').onclick = function(){ startQuiz('all'); };
 document.getElementById('quiz-overlay').addEventListener('click', function(e){ if(e.target===e.currentTarget) closeQuiz(); });
+document.getElementById('quiz-close').onclick = closeQuiz;
 var quiz = {list:[], idx:0, score:0, wrong:0, skip:0, total:0, mode:'random', confidence:0, answer:null, startedAt:0, _t:null, log:[]};
 
 function startQuiz(mode){
