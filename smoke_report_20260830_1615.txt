@@ -1,0 +1,50 @@
+════════════════════════════════════════════
+  量化面试题库 · 内测找茬报告
+  时间: 2026/8/30 16:15:17
+  结果: ✅ 39 项通过 | ❌ 0 项失败
+════════════════════════════════════════════
+
+🎉 全部通过，没找到茬！
+
+──────── 明细 ────────
+✅ 总题数 4302 — 实际 4302
+✅ id 全部唯一
+✅ 无空 title — 有 0
+✅ kind 分布合理 (essay 100-300) — essay=174
+✅ 无非法 LaTeX 转义(仅老哥题) — 老哥题有 0 道
+✅ answer_zh 已翻译 400 — 实际 400
+✅ 老哥题 parts 有内容 — 有 0
+✅ renderList 正常
+✅ 卡片含标题 — len=76312
+✅ 卡片含收藏星标
+✅ 卡片含状态点
+✅ 筛选 cat=brain — 实际 129
+✅ 筛选 diff=2 — 实际 2512
+✅ 筛选 book=green — 实际 97
+✅ 筛选 kind=essay — 实际 174
+✅ 搜索"生日" — 实际 6
+✅ 中文模式显示 answer_zh — <strong>原题：</strong>该期权在到期时刻 $
+✅ 英文模式显示原 answer — <strong>原题：</strong>一个期权在到期时支付
+✅ startQuiz 抽 20 题 — 实际 20
+✅ 抽题无 essay
+✅ quiz.done 重置 false
+✅ renderQuiz 未答态渲染
+✅ chooseAns 选对判分
+✅ mastery 记录 know
+✅ chooseAns 已答后忽略
+✅ quizNext 前进
+✅ quizSkip 记 seen
+✅ 到结果页 done=true
+✅ 结果页含成绩
+✅ 结果页含"再来一轮" — <span class="qp-hint">🎯 完成 20 题 · 用时 </span><butt
+✅ 再来一轮重置
+✅ 错题本打开
+✅ 收藏 2 道
+✅ 取消收藏
+✅ 仪表盘渲染 — 长度6446
+✅ essayAns 默认空
+✅ saveEssay 保存 — 实际: "我的测试答案"
+✅ chooseAns/quizNext/quizSkip/closeQuiz 存在
+✅ startQuiz 支持 dont 模式
+
+════════ 报告结束 ════════

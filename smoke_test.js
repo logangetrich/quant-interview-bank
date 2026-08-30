@@ -3,6 +3,7 @@
  * 用法: node smoke_test.js
  * 覆盖: 数据完整性 / 渲染 / 筛选 / 测试模式 / 错题本 / 收藏
  *       仪表盘 / 语言切换 / essay / 快捷键 —— 输出 PASS/FAIL 找茬报告
+ * 报告: 自动写入 smoke_report_YYYYMMDD_HHMM.txt（同目录）
  * ============================================================ */
 const fs = require('fs');
 const vm = require('vm');
@@ -43,9 +44,12 @@ vm.runInContext(code, ctx, { timeout: 30000 });
 /* ---------- 结果统计 ---------- */
 let pass = 0, fail = 0;
 const failures = [];
+const logLines = [];
 function t(name, cond, detail) {
-  if (cond) { pass++; console.log(`  ✅ ${name}`); }
-  else { fail++; failures.push(`${name}${detail ? ' — ' + detail : ''}`); console.log(`  ❌ ${name}${detail ? ' — ' + detail : ''}`); }
+  const line = `${cond ? '✅' : '❌'} ${name}${detail ? ' — ' + detail : ''}`;
+  logLines.push(line);
+  if (cond) { pass++; console.log(`  ${line}`); }
+  else { fail++; failures.push(`${name}${detail ? ' — ' + detail : ''}`); console.log(`  ${line}`); }
 }
 
 console.log('\n═══════════ 一、数据完整性 ═══════════');
@@ -187,5 +191,35 @@ vm.runInContext(`var __realMake = makeChoices; makeChoices = function(q){ return
   } else {
     console.log('🎉 全部通过，没找到茬！');
   }
+
+  /* ---------- 写找茬报告文件 ---------- */
+  try {
+    const now = new Date();
+    const pad = x => String(x).padStart(2, '0');
+    const ts = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
+    const reportPath = path.join(__dirname, `smoke_report_${ts}.txt`);
+    const lines = [
+      '════════════════════════════════════════════',
+      '  量化面试题库 · 内测找茬报告',
+      `  时间: ${now.toLocaleString('zh-CN')}`,
+      `  结果: ✅ ${pass} 项通过 | ❌ ${fail} 项失败`,
+      '════════════════════════════════════════════',
+      '',
+    ];
+    if (failures.length) {
+      lines.push(`🔧 找茬清单（${failures.length} 项）:`);
+      failures.forEach((f, i) => lines.push(`  ${i + 1}. ${f}`));
+    } else {
+      lines.push('🎉 全部通过，没找到茬！');
+    }
+    lines.push('', '──────── 明细 ────────');
+    logLines.forEach(l => lines.push(l));
+    lines.push('', '════════ 报告结束 ════════');
+    fs.writeFileSync(reportPath, lines.join('\n'), 'utf8');
+    console.log(`\n📄 找茬报告已保存: ${reportPath}`);
+  } catch (e) {
+    console.log('⚠️ 报告写入失败:', e.message);
+  }
+
   process.exit(fail ? 1 : 0);
 })().catch(e => { console.log('❌ 内测异常:', e.message); process.exit(2); });

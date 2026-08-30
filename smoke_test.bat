@@ -12,5 +12,6 @@ if %errorlevel%==0 (
 ) else (
   echo [FAIL] 有失败项，见上方找茬清单
 )
+echo 报告文件在同目录 smoke_report_*.txt
 echo.
 pause
