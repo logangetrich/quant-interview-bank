@@ -394,19 +394,19 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     <label class="flt-status" data-st="dont"><span class="st-dot dont"></span>不会<span class="flt-cnt" id="cnt-dont">0</span></label>
     <div class="sb-title">分类</div>
     <label class="flt-item active" data-cat="all"><span class="flt-dot" style="background:var(--muted)"></span><span>全部分类</span><span class="flt-cnt" id="cnt-cat-all">0</span></label>
-    <label class="flt-item" data-cat="brain"><span class="flt-dot" style="background:var(--cat-brain)"></span><span>🧠 脑筋急转弯</span><span class="flt-cnt">28</span></label>
-<label class="flt-item" data-cat="prob"><span class="flt-dot" style="background:var(--cat-prob)"></span><span>🎲 概率论</span><span class="flt-cnt">242</span></label>
-<label class="flt-item" data-cat="calc"><span class="flt-dot" style="background:var(--cat-calc)"></span><span>∫ 微积分/线代</span><span class="flt-cnt">38</span></label>
-<label class="flt-item" data-cat="stoch"><span class="flt-dot" style="background:var(--cat-stoch)"></span><span>📈 随机过程</span><span class="flt-cnt">37</span></label>
-<label class="flt-item" data-cat="finance"><span class="flt-dot" style="background:var(--cat-finance)"></span><span>💹 衍生品/金融</span><span class="flt-cnt">123</span></label>
-<label class="flt-item" data-cat="algo"><span class="flt-dot" style="background:var(--cat-algo)"></span><span>💻 编程算法</span><span class="flt-cnt">122</span></label>
-<label class="flt-item" data-cat="logic"><span class="flt-dot" style="background:var(--cat-logic)"></span><span>🔗 逻辑推理</span><span class="flt-cnt">45</span></label>
+    <label class="flt-item" data-cat="brain"><span class="flt-dot" style="background:var(--cat-brain)"></span><span>🧠 脑筋急转弯</span><span class="flt-cnt" id="cnt-cat-brain">0</span></label>
+<label class="flt-item" data-cat="prob"><span class="flt-dot" style="background:var(--cat-prob)"></span><span>🎲 概率论</span><span class="flt-cnt" id="cnt-cat-prob">0</span></label>
+<label class="flt-item" data-cat="calc"><span class="flt-dot" style="background:var(--cat-calc)"></span><span>∫ 微积分/线代</span><span class="flt-cnt" id="cnt-cat-calc">0</span></label>
+<label class="flt-item" data-cat="stoch"><span class="flt-dot" style="background:var(--cat-stoch)"></span><span>📈 随机过程</span><span class="flt-cnt" id="cnt-cat-stoch">0</span></label>
+<label class="flt-item" data-cat="finance"><span class="flt-dot" style="background:var(--cat-finance)"></span><span>💹 衍生品/金融</span><span class="flt-cnt" id="cnt-cat-finance">0</span></label>
+<label class="flt-item" data-cat="algo"><span class="flt-dot" style="background:var(--cat-algo)"></span><span>💻 编程算法</span><span class="flt-cnt" id="cnt-cat-algo">0</span></label>
+<label class="flt-item" data-cat="logic"><span class="flt-dot" style="background:var(--cat-logic)"></span><span>🔗 逻辑推理</span><span class="flt-cnt" id="cnt-cat-logic">0</span></label>
     <div class="lang-switch" style="margin:10px 0 6px;display:flex;gap:6px;padding:0 4px">
       <button class="lang-btn active" data-lang="zh" onclick="setLang('zh')" style="flex:1;padding:6px 0;border-radius:7px;border:1px solid var(--border);background:var(--accent-l);color:var(--accent);font-size:12px;cursor:pointer;font-family:var(--sans)">🌐 中文</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')" style="flex:1;padding:6px 0;border-radius:7px;border:1px solid var(--border);background:var(--surf);color:var(--muted);font-size:12px;cursor:pointer;font-family:var(--sans)">EN</button>
     </div>
     <label class="flt-item" data-kind="essay" style="margin-top:6px;border-top:1px solid var(--border);padding-top:10px"><span class="flt-dot" style="background:var(--teal)"></span><span>🎤 简答/行为题</span><span class="flt-cnt" id="cnt-kind-essay">0</span></label>
-    <label class="flt-item" data-kind="choice" style="margin-bottom:12px"><span class="flt-dot" style="background:var(--accent)"></span><span>✅ 选择题</span><span class="flt-cnt">0</span></label>
+    <label class="flt-item" data-kind="choice" style="margin-bottom:12px"><span class="flt-dot" style="background:var(--accent)"></span><span>✅ 选择题</span><span class="flt-cnt" id="cnt-kind-choice">0</span></label>
 
     <div class="sb-title">难度</div>
     <label class="flt-item active" data-diff="all"><span>全部难度</span></label>
@@ -415,11 +415,14 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     <label class="flt-item" data-diff="3"><span class="flt-dot" style="background:var(--red)"></span><span>进阶</span><span class="flt-cnt" id="cnt-d3">0</span></label>
     <div class="sb-title">来源</div>
     <label class="flt-item active" data-book="all"><span>全部来源</span></label>
-    <label class="flt-item" data-book="green"><span class="flt-book-green">绿宝书</span><span class="flt-cnt">97</span></label>
-<label class="flt-item" data-book="red"><span class="flt-book-red">红宝书</span><span class="flt-cnt">224</span></label>
-<label class="flt-item" data-book="yellow"><span class="flt-book-yellow">黄皮书</span><span class="flt-cnt">53</span></label>
-<label class="flt-item" data-book="hots"><span class="flt-book-hots">Heard on the Street</span><span class="flt-cnt">261</span></label>
-    <label class="flt-item" data-book="neiz"><span class="flt-book-red" style="color:var(--gold)">内资真题</span><span class="flt-cnt">381</span></label>
+    <label class="flt-item" data-book="green"><span class="flt-book-green">绿宝书</span><span class="flt-cnt" id="cnt-book-green">0</span></label>
+<label class="flt-item" data-book="red"><span class="flt-book-red">红宝书</span><span class="flt-cnt" id="cnt-book-red">0</span></label>
+<label class="flt-item" data-book="yellow"><span class="flt-book-yellow">黄皮书</span><span class="flt-cnt" id="cnt-book-yellow">0</span></label>
+<label class="flt-item" data-book="hots"><span class="flt-book-hots">Heard on the Street</span><span class="flt-cnt" id="cnt-book-hots">0</span></label>
+    <label class="flt-item" data-book="neiz"><span class="flt-book-red" style="color:var(--gold)">内资真题</span><span class="flt-cnt" id="cnt-book-neiz">0</span></label>
+    <label class="flt-item" data-book="qv-qt"><span class="flt-book-hots" style="color:var(--accent)">QV·量化交易</span><span class="flt-cnt" id="cnt-book-qv-qt">0</span></label>
+    <label class="flt-item" data-book="qv-qr"><span class="flt-book-hots" style="color:var(--accent)">QV·量化研究</span><span class="flt-cnt" id="cnt-book-qv-qr">0</span></label>
+    <label class="flt-item" data-book="qv-swe"><span class="flt-book-hots" style="color:var(--accent)">QV·量化开发</span><span class="flt-cnt" id="cnt-book-qv-swe">0</span></label>
     <div class="sb-title">公司</div>
     <div id="company-filter-list">
       <label class="flt-item active" data-company="all"><span class="flt-dot" style="background:var(--muted)"></span><span>全部公司</span></label>
@@ -900,6 +903,20 @@ function updateCounts(){
   mt.textContent=c.know>0?`· 已掌握 ${c.know} 题 · 今日 ${stats.today} 题`:'';
   const rb=document.getElementById('retry-btn');
   rb.disabled=c.dont===0; rb.textContent=c.dont>0?`📕 重练错题（${c.dont} 道）`:'📕 重练错题';
+  // v4.1: 分类/题型/难度/来源计数全部动态计算（旧版为写死的快照数字，与 4302 全库严重不符）
+  const byCat={},byBook={},byKind={essay:0,choice:0},byDiff={1:0,2:0,3:0};
+  QUESTIONS.forEach(q=>{
+    byCat[q.cat]=(byCat[q.cat]||0)+1;
+    byBook[q.book]=(byBook[q.book]||0)+1;
+    byKind[q.kind==='essay'?'essay':'choice']++;
+    if(byDiff[q.diff]!==undefined)byDiff[q.diff]++;
+  });
+  const setC=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  setC('cnt-cat-all',QUESTIONS.length);
+  ['brain','prob','calc','stoch','finance','algo','logic'].forEach(k=>setC('cnt-cat-'+k,byCat[k]||0));
+  setC('cnt-kind-essay',byKind.essay); setC('cnt-kind-choice',byKind.choice);
+  setC('cnt-d1',byDiff[1]); setC('cnt-d2',byDiff[2]); setC('cnt-d3',byDiff[3]);
+  ['green','red','yellow','hots','neiz','qv-qt','qv-qr','qv-swe'].forEach(k=>setC('cnt-book-'+k,byBook[k]||0));
 }
 function renderSidebar(){
   QUESTIONS.forEach(q=>{});
