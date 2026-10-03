@@ -40,3 +40,6 @@ ocr_all.log
 .DS_Store
 Thumbs.db
 .llmx_key
+
+# 本地备份（部署前回滚用，不入仓）
+index.html.bak.*
